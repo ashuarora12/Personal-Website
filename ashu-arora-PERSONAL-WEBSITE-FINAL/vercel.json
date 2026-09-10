@@ -1,0 +1,25 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/research",
+      "destination": "/research.html"
+    },
+    {
+      "source": "/experience",
+      "destination": "/experience.html"
+    },
+    {
+      "source": "/data-buff",
+      "destination": "/data-buff.html"
+    },
+    {
+      "source": "/consultancy",
+      "destination": "/consultancy.html"
+    },
+    {
+      "source": "/book-a-meeting",
+      "destination": "/book-a-meeting.html"
+    }
+  ]
+}
