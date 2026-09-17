@@ -1,188 +1,206 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Data Buff | Development Economics Research Explorer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Data Buff — a research discovery workspace for development economics and public policy.">
+<title>Data Buff | Research Discovery</title>
 <style>
-:root{--ink:#20252a;--muted:#707983;--line:#e2e5e5;--paper:#fbfaf7;--blue:#294c70;--pale:#edf2f4;--green:#dce9e2;--white:#fff}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 "Palatino Linotype",Palatino,Georgia,serif}
-a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
-.shell{max-width:1280px;margin:auto;padding:0 30px}
-header{height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:18px}
-.brand{font-size:25px;letter-spacing:-.5px}nav{display:flex;gap:25px;font:13px Arial,sans-serif}nav a{color:#3d454c}
-.hero{padding:45px 0 30px;display:grid;grid-template-columns:1.3fr .7fr;gap:36px;align-items:center}
-.kicker,.eyebrow{font:11px Arial,sans-serif;text-transform:uppercase;letter-spacing:2px;color:var(--muted)}
-h1{font-size:clamp(38px,5vw,56px);font-weight:400;line-height:1.05;letter-spacing:-1.7px;margin:12px 0}
-.hero p{font-size:17px;color:#68717a;max-width:650px;margin:0}
-.map-card{background:#eef1ee;border:1px solid #e0e4df;border-radius:10px;padding:14px;min-height:190px;overflow:hidden}
-.map-head{display:flex;justify-content:space-between;font:11px Arial,sans-serif;color:#6e777b;letter-spacing:.7px}
-.world{width:100%;height:155px;display:block;margin-top:3px}
-.toolbar{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:8px 0 15px}
-h2{font-weight:400;font-size:26px;margin:0}.sub{font-size:13px;color:var(--muted);margin:3px 0 0}
-.tabs{display:flex;gap:7px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:22px}
-.tab{font:13px Arial,sans-serif;border:1px solid transparent;background:transparent;color:#59636b;padding:9px 14px;border-radius:4px;cursor:pointer}
-.tab.active{background:var(--blue);color:white}
-.layout{display:grid;grid-template-columns:265px minmax(0,1fr);gap:22px;align-items:start}
-.filters{background:white;border:1px solid var(--line);border-radius:8px;padding:19px;position:sticky;top:14px}
-.filters h3{font-size:21px;font-weight:400;margin:0 0 7px}
-label{display:block;font:10px Arial,sans-serif;letter-spacing:.8px;text-transform:uppercase;color:#727b83;margin:13px 0 5px}
-select,input,textarea{width:100%;border:1px solid #d8dddf;border-radius:4px;padding:9px;background:white;color:var(--ink);font:13px Arial,sans-serif}
-.yearrow{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.btn{background:var(--blue);color:white;border:0;border-radius:4px;padding:11px 14px;font:13px Arial,sans-serif;cursor:pointer}
-.btn.alt{background:white;color:var(--blue);border:1px solid #ccd5dc}.btn.full{width:100%;margin-top:15px}
-.results{min-width:0}.summarybar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}.summarybar small{font:12px Arial,sans-serif;color:var(--muted)}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 17px}.chip{border:1px solid #dce1e2;background:white;border-radius:20px;padding:4px 9px;font:11px Arial,sans-serif;color:#5c6870}
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.dataset{background:white;border:1px solid var(--line);border-radius:7px;padding:16px;display:flex;flex-direction:column;gap:9px;min-height:210px}
-.dataset-top{display:flex;justify-content:space-between;gap:8px;align-items:start}.dataset h3{font-size:20px;font-weight:400;line-height:1.2;margin:0}
-.tag{font:9px Arial,sans-serif;text-transform:uppercase;letter-spacing:.6px;background:var(--pale);color:#45617a;padding:5px 7px;border-radius:3px;white-space:nowrap}
-.dataset p{font-size:13px;color:#68717a;margin:0}.meta{display:flex;gap:6px;flex-wrap:wrap;font:10px Arial,sans-serif;color:#858c92}
-.features{display:flex;gap:5px;flex-wrap:wrap}.feature{font:10px Arial,sans-serif;background:#f4f5f2;color:#68716e;padding:3px 6px;border-radius:3px}
-.links{display:flex;gap:13px;flex-wrap:wrap;margin-top:auto;font:12px Arial,sans-serif}
-.empty{display:none;border:1px dashed #ccd3d5;padding:25px;text-align:center;color:var(--muted);border-radius:7px}
-.section{margin-top:38px}.sectionhead{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid var(--line);padding-bottom:11px;margin-bottom:14px}.sectionhead p{font-size:12px;color:var(--muted);margin:0}
-.sources{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.source{background:white;border:1px solid var(--line);border-radius:6px;padding:14px}.source strong{font-size:17px;font-weight:400}.source p{font-size:12px;color:var(--muted);margin:4px 0 9px}.source a{font:12px Arial,sans-serif}
-.resource-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.resource{border:1px solid var(--line);background:#fff;border-radius:6px;padding:15px}.resource h3{font-size:18px;font-weight:400;margin:0 0 5px}.resource p{font-size:12px;color:var(--muted);margin:0 0 9px}.resource a{font:12px Arial,sans-serif}
-.brief{display:none;background:#edf1f0;border:1px solid #dce4e0;border-radius:8px;padding:23px;margin-top:38px}.brief h2{font-size:27px}.brief-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}.brief-card{background:#ffffffc9;border:1px solid #e0e5e1;border-radius:5px;padding:14px}.brief-card h3{font-size:16px;font-weight:400;margin:0 0 5px}.brief-card p,.brief-card li{font-size:13px;color:#626c70;margin:0}.brief-card ul{padding-left:17px;margin:0}
-.note{font:11px Arial,sans-serif;color:#7c858a;margin-top:12px}
-footer{border-top:1px solid var(--line);margin-top:42px;padding:22px 0;display:flex;justify-content:space-between;gap:15px;color:#858b90;font:11px Arial,sans-serif}
-.hidden{display:none!important}
-@media(max-width:850px){.hero{grid-template-columns:1fr}.layout{grid-template-columns:1fr}.filters{position:static}.cards{grid-template-columns:1fr}.sources{grid-template-columns:repeat(2,1fr)}nav{gap:12px;flex-wrap:wrap;justify-content:end}}
-@media(max-width:560px){.shell{padding:0 16px}header{height:auto;padding:16px 0;align-items:flex-start}.brand{font-size:21px}nav{font-size:11px;max-width:68%}.sources,.resource-grid,.brief-grid{grid-template-columns:1fr}.hero{padding-top:32px}.toolbar{align-items:start;flex-direction:column}}
+:root{--ink:#202b35;--muted:#697681;--line:#e5e9e8;--paper:#f8f9f7;--white:#fff;--blue:#244c6b;--blue2:#dfeaf0;--sage:#e7eee8;--gold:#b88748;--shadow:0 10px 30px #1d34400a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:1240px;margin:auto;padding:0 28px}
+header{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:20px}
+.brand{font:600 23px/1 Georgia,serif;letter-spacing:-.7px;color:var(--ink)}.brand span{color:var(--gold)}
+nav{display:flex;align-items:center;gap:24px;font-size:13px}nav a{color:#4e5b64}
+.hero{padding:58px 0 38px;display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:1.8px;font-weight:700;color:#74818a}
+h1{font:400 clamp(40px,5.3vw,66px)/1.02 Georgia,serif;letter-spacing:-2.1px;margin:15px 0 18px;max-width:720px}
+.hero p{font-size:17px;color:var(--muted);max-width:640px;margin:0}
+.hero-note{background:linear-gradient(135deg,#e9efeb,#e7edf1);border:1px solid #dce5e2;border-radius:14px;padding:24px;min-height:200px;display:flex;flex-direction:column;justify-content:space-between}
+.hero-note .big{font:400 30px/1.2 Georgia,serif;max-width:340px}.hero-note p{font-size:13px;margin-top:15px}
+.searchbox{display:flex;gap:10px;background:white;border:1px solid #dce3e4;border-radius:10px;padding:9px;box-shadow:var(--shadow);margin:8px 0 28px}
+.searchbox input{border:0;outline:0;flex:1;min-width:0;padding:11px 12px;font:15px inherit;background:transparent;color:var(--ink)}
+.btn{border:0;border-radius:7px;padding:12px 17px;background:var(--blue);color:white;font:600 13px inherit;cursor:pointer}.btn:hover{background:#173b56}.btn.secondary{background:white;border:1px solid #d6dfe1;color:var(--blue)}.btn:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #a9c7d8;outline-offset:2px}
+.quick{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.quick button{background:transparent;border:1px solid #d7dfdf;border-radius:30px;padding:7px 12px;color:#596771;font-size:12px;cursor:pointer}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin:18px 0 16px}.section-head h2{font:400 29px Georgia,serif;margin:0}.section-head p{margin:3px 0 0;color:var(--muted);font-size:13px}
+.layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:22px;align-items:start}
+.filters{background:white;border:1px solid var(--line);border-radius:10px;padding:19px;position:sticky;top:14px}
+.filter-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.filter-title h3{font:400 22px Georgia,serif;margin:0}
+label{display:block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#7a858b;margin:16px 0 6px}
+select,input[type=number]{width:100%;border:1px solid #dce2e3;border-radius:6px;padding:10px;background:#fff;color:var(--ink);font:13px inherit}
+.year{display:grid;grid-template-columns:1fr 1fr;gap:8px}.checkrow{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:13px;color:#58656e}.checkrow input{accent-color:var(--blue)}
+.results-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}.count{font-size:13px;color:var(--muted)}.sort{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}.sort select{width:auto;min-width:150px;padding:8px}
+.active-chips{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}.chip{background:#eaf0f2;border-radius:30px;padding:5px 10px;font-size:11px;color:#476274}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.card{background:white;border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:10px;min-height:245px;box-shadow:0 2px 7px #1d344006}
+.card-top{display:flex;align-items:center;justify-content:space-between;gap:8px}.type{font-size:10px;text-transform:uppercase;letter-spacing:.8px;font-weight:700;color:#527083;background:var(--blue2);padding:5px 8px;border-radius:4px}.verified{font-size:10px;color:#64816e}
+.card h3{font:400 22px/1.2 Georgia,serif;margin:0}.card p{font-size:13px;color:var(--muted);margin:0}.metadata{display:flex;gap:7px;flex-wrap:wrap;font-size:11px;color:#687781}.metadata span{border-right:1px solid #d8dfe0;padding-right:8px}.metadata span:last-child{border:0}
+.tags{display:flex;flex-wrap:wrap;gap:5px}.tag{font-size:10px;background:#f2f4f1;color:#637169;padding:4px 7px;border-radius:4px}
+.why{font-size:12px;color:#536d60;background:#f1f5f0;padding:8px 10px;border-radius:5px}
+.card-foot{margin-top:auto;padding-top:9px;border-top:1px solid #eef0ef;display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:12px}
+.card-foot a{font-weight:600}.save{border:1px solid #dce2e2;background:white;border-radius:5px;padding:6px 9px;color:#60717a;cursor:pointer;font-size:11px}.save.saved{background:var(--sage);border-color:#cbd9ce;color:#42644d}
+.empty{display:none;text-align:center;border:1px dashed #cbd5d7;border-radius:10px;padding:35px;color:var(--muted);background:white}
+.lower{margin-top:56px}.collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.collection{background:white;border:1px solid var(--line);border-radius:9px;padding:19px}.collection h3{font:400 19px Georgia,serif;margin:0 0 6px}.collection p{font-size:12px;color:var(--muted);margin:0 0 12px}.collection a{font-size:12px;font-weight:600}
+.callout{margin-top:38px;background:#e9efeb;border:1px solid #dce5df;border-radius:12px;padding:25px;display:flex;justify-content:space-between;align-items:center;gap:20px}.callout h2{font:400 27px Georgia,serif;margin:0 0 5px}.callout p{font-size:13px;color:#63716a;margin:0;max-width:700px}
+footer{border-top:1px solid var(--line);margin-top:50px;padding:24px 0;display:flex;justify-content:space-between;gap:15px;color:#7b858a;font-size:11px}
+.notice{font-size:11px;color:#7b858a;margin-top:13px}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:22px}.layout{grid-template-columns:1fr}.filters{position:static}.cards{grid-template-columns:1fr}.collection-grid{grid-template-columns:repeat(2,1fr)}nav{gap:13px}}
+@media(max-width:580px){.wrap{padding:0 16px}header{height:auto;padding:18px 0;align-items:flex-start}.brand{font-size:20px}nav{max-width:65%;justify-content:flex-end;flex-wrap:wrap;font-size:11px}.hero{padding:38px 0 25px}h1{letter-spacing:-1.3px}.searchbox{flex-wrap:wrap}.searchbox input{flex-basis:100%}.searchbox .btn{width:100%}.collection-grid{grid-template-columns:1fr}.callout,footer{align-items:flex-start;flex-direction:column}.section-head{align-items:flex-start;flex-direction:column}.results-head{align-items:flex-start;flex-direction:column}}
 </style>
 </head>
-<body><div class="shell">
-<header><a class="brand" href="/">Ashu Arora</a><nav aria-label="Main navigation"><a href="/">Home</a><a href="/research">Research</a><a href="/experience">Experience</a><a href="/data-buff" aria-current="page">Data Buff</a><a href="/consultancy">Consultancy</a><a href="https://calendly.com/aashuzarora/30-minutes-meeting" target="_blank" rel="noopener">Get in Touch</a><a href="#explore">Explore Data ↓</a></nav></header>
+<body>
+<div class="wrap">
+<header>
+  <a class="brand" href="/">Ashu Arora<span>.</span></a>
+  <nav aria-label="Main navigation">
+    <a href="/">Home</a><a href="/research">Research</a><a href="/experience">Experience</a><a href="/data-buff" aria-current="page">Data Buff</a><a href="/consultancy">Consultancy</a>
+  </nav>
+</header>
+<main>
 <section class="hero">
-<div><div class="kicker">Development economics · Research discovery</div><h1>Find the data<br>behind your question.</h1><p>Explore development datasets, indicators, papers and code across countries, regions and global groupings. Narrow your search, then build a practical research brief.</p></div>
-<div class="map-card"><div class="map-head"><span>EXPLORE BY GEOGRAPHY</span><span>COUNTRY → GLOBAL</span></div>
-<svg class="world" viewBox="0 0 600 240" role="img" aria-label="Stylised world map highlighting regions"><g fill="#cdd8d5" stroke="#fbfaf7" stroke-width="3">
-<path d="M42 61l35-28 61 5 26 23-12 25-29 7-8 27-28 16-17-20-26-5-19-24z"/><path d="M140 133l29 10 22 36-8 43-20 8-12-43-19-24z"/><path d="M258 53l37-19 44 11 17 19-19 19-38-5-14 25-28-10-18-22z"/><path d="M289 106l36-14 38 18 16 41-26 48-26 13-18-42-20-21z"/><path d="M349 51l56-17 65 17 44 32-16 25-44-6-25 20-36-20-24 5-21-26z"/><path d="M475 157l39-7 24 24-20 25-36-9z"/>
-</g><g fill="#8ba7b8" opacity=".92"><path d="M64 63l38-21 48 13-5 26-30 8-8 20-27-7-17-20z"/><path d="M286 56l41-14 29 18-24 21-35-5z"/><path d="M356 58l52-14 49 13 30 23-36 10-22 18-34-20-24 4z"/><path d="M302 119l22-13 26 18 9 29-22 36-17-39z"/></g><g fill="#294c70"><circle cx="106" cy="78" r="5"/><circle cx="326" cy="68" r="5"/><circle cx="403" cy="84" r="5"/></g></svg></div>
+  <div>
+    <div class="eyebrow">Data Buff · Research discovery</div>
+    <h1>Find the evidence<br>behind your question.</h1>
+    <p>A curated research workspace for development economics and public policy. Discover datasets, papers, methods and code—and follow the connections between them.</p>
+    <div class="quick" aria-label="Suggested searches">
+      <button type="button" data-query="labour India">Labour in India</button><button type="button" data-query="health survey">Health surveys</button><button type="button" data-query="panel data">Panel data</button><button type="button" data-query="causal inference">Causal inference</button>
+    </div>
+  </div>
+  <aside class="hero-note">
+    <div class="eyebrow">A research companion</div>
+    <div class="big">From a broad idea to a workable research starting point.</div>
+    <p>Search curated resources, refine by research design and geography, then verify details at the original source.</p>
+  </aside>
 </section>
-<div class="tabs"><button class="tab active" data-mode="data">Data explorer</button><button class="tab" data-mode="papers">Papers &amp; code</button><button class="tab" data-mode="ai">AI &amp; research</button></div>
-<section id="explore" class="layout">
-<aside class="filters" id="filterpanel"><h3>Research filters</h3><div class="sub">Choose your scope</div>
-<label for="topic">Topic</label><select id="topic"><option value="all">All development topics</option><option>Health</option><option>Education</option><option>Labour &amp; employment</option><option>Poverty &amp; inequality</option><option>Gender</option><option>Agriculture &amp; food</option><option>Migration</option><option>Governance</option><option>Environment &amp; climate</option><option>Macroeconomics &amp; finance</option><option>Trade</option><option>Infrastructure</option><option>Social protection</option><option>AI &amp; technology</option></select>
-<label for="geoLevel">Geographic layer</label><select id="geoLevel"><option>Country</option><option>Subregion</option><option>Continent</option><option>Regional bloc</option><option>Global</option></select>
-<label for="geo">Country / region / bloc</label><select id="geo"></select>
-<label>Time period (years)</label><div class="yearrow"><input id="fromYear" type="number" min="1900" max="2026" placeholder="From e.g. 2000"><input id="toYear" type="number" min="1900" max="2026" placeholder="To e.g. 2024"></div>
-<label for="unit">Unit of observation</label><select id="unit"><option value="all">Any unit</option><option>Individual / household</option><option>District / state</option><option>Country</option><option>School / facility</option><option>Firm / worker</option><option>Geospatial grid</option></select>
-<label for="kind">Data format</label><select id="kind"><option value="all">Any format</option><option>Survey microdata</option><option>Administrative data</option><option>Aggregate indicators</option><option>Panel data</option><option>Geospatial / satellite</option><option>Qualitative / text</option></select>
-<label for="question">Research question (optional)</label><textarea id="question" rows="3" placeholder="e.g. Did maternal care access improve across Indian states?"></textarea>
-<button class="btn full" id="build">Build my research brief →</button><button class="btn alt full" id="reset">Reset filters</button>
+<form class="searchbox" id="searchForm" role="search">
+  <icon></icon><input id="q" type="search" placeholder="Search datasets, papers, indicators, methods, researchers or code…" aria-label="Search all resources">
+  <button class="btn" type="submit">Search resources →</button>
+</form>
+<div class="section-head" id="explore">
+  <div><h2>Explore the catalogue</h2><p>Search across resource types, then narrow the results to your research context.</p></div>
+</div>
+<section class="layout">
+<aside class="filters" aria-label="Search filters">
+  <div class="filter-title"><h3>Refine search</h3><button class="btn secondary" id="reset" type="button" style="padding:7px 10px">Reset</button></div>
+  <label for="type">Resource type</label>
+  <select id="type"><option value="all">All resources</option><option>Dataset</option><option>Paper</option><option>Indicator</option><option>Method</option><option>Code</option><option>Researcher</option></select>
+  <label for="topic">Research topic</label>
+  <select id="topic"><option value="all">All topics</option><option>Health</option><option>Education</option><option>Labour & employment</option><option>Poverty & inequality</option><option>Gender</option><option>Agriculture</option><option>Migration</option><option>Governance</option><option>Climate</option><option>Macroeconomics & finance</option><option>Trade</option><option>Technology</option></select>
+  <label for="geo">Geography</label>
+  <select id="geo"><option value="all">Any geography</option><option>India</option><option>South Asia</option><option>Global</option><option>Sub-Saharan Africa</option><option>OECD</option><option>United States</option></select>
+  <label for="method">Method / design</label>
+  <select id="method"><option value="all">Any method</option><option>Panel data</option><option>Difference-in-differences</option><option>Randomized controlled trial</option><option>Instrumental variables</option><option>Regression discontinuity</option><option>Fixed effects</option><option>Descriptive statistics</option><option>Machine learning</option></select>
+  <label>Publication / data years</label>
+  <div class="year"><input id="from" type="number" min="1900" max="2035" placeholder="From"><input id="to" type="number" min="1900" max="2035" placeholder="To"></div>
+  <label for="access">Access</label>
+  <select id="access"><option value="all">Any access</option><option>Open</option><option>Registration</option><option>Restricted</option></select>
+  <label for="software">Software</label>
+  <select id="software"><option value="all">Any software</option><option>Stata</option><option>R</option><option>Python</option><option>Excel</option></select>
+  <div class="checkrow"><input type="checkbox" id="connections"><label for="connections" style="margin:0;text-transform:none;letter-spacing:0;font-size:12px;color:#58656e">Has linked resources</label></div>
+  <p class="notice">This starter catalogue is curated and illustrative. Check the original source for current coverage, access and licensing.</p>
 </aside>
-<main class="results">
-<div class="summarybar"><div><h2>Explore data</h2><div class="sub" id="count">Showing curated examples</div></div><small>Dataset cards · direct links</small></div>
-<div class="chips" id="chips"></div>
-<div class="cards" id="cards">
-<article class="dataset" data-topics="Health Gender" data-geo="India South Asia Asia Global" data-unit="Individual / household" data-kind="Survey microdata Panel data" data-start="1992" data-end="2021"><div class="dataset-top"><h3>National Family Health Survey (NFHS)</h3><span class="tag">Survey</span></div><p>Population, maternal and child health, nutrition, fertility, household conditions and women’s health.</p><div class="meta"><span>India</span><span>Multiple rounds</span><span>Household / individual</span></div><div class="features"><span class="feature">Repeated cross-sections</span><span class="feature">State / district analysis varies</span></div><div class="links"><a href="https://rchiips.org/nfhs/" target="_blank" rel="noopener">India portal ↗</a><a href="https://dhsprogram.com/data/" target="_blank" rel="noopener">Data access ↗</a><a href="https://dhsprogram.com/" target="_blank" rel="noopener">Documentation ↗</a></div></article>
-<article class="dataset" data-topics="Health Education Poverty Gender" data-geo="India" data-unit="Individual / household" data-kind="Survey microdata Panel data" data-start="2004" data-end="2012"><div class="dataset-top"><h3>India Human Development Survey (IHDS)</h3><span class="tag">Panel survey</span></div><p>Household, health, education, employment, gender, income and social conditions across survey rounds.</p><div class="meta"><span>India</span><span>2004–05, 2011–12</span><span>Household / individual</span></div><div class="features"><span class="feature">Longitudinal</span><span class="feature">Multi-topic</span></div><div class="links"><a href="https://ihds.umd.edu/" target="_blank" rel="noopener">Project &amp; access ↗</a><a href="https://dataverse.unc.edu/" target="_blank" rel="noopener">Dataverse ↗</a></div></article>
-<article class="dataset" data-topics="Health Gender Poverty" data-geo="India" data-unit="Individual / household" data-kind="Survey microdata" data-start="2017" data-end="2018"><div class="dataset-top"><h3>Longitudinal Ageing Study in India (LASI)</h3><span class="tag">Longitudinal</span></div><p>Health, ageing, family, economic security and social conditions among older adults.</p><div class="meta"><span>India</span><span>Wave 1: 2017–18</span><span>Adults 45+</span></div><div class="features"><span class="feature">Ageing</span><span class="feature">Health &amp; household</span></div><div class="links"><a href="https://lasi-india.org/" target="_blank" rel="noopener">LASI portal ↗</a><a href="https://g2aging.org/" target="_blank" rel="noopener">Gateway ↗</a></div></article>
-<article class="dataset" data-topics="Education Labour Poverty" data-geo="India" data-unit="Individual / household" data-kind="Survey microdata" data-start="2017" data-end="2024"><div class="dataset-top"><h3>Periodic Labour Force Survey (PLFS)</h3><span class="tag">Labour</span></div><p>Employment, unemployment, labour-force participation, earnings and worker characteristics.</p><div class="meta"><span>India</span><span>Annual / quarterly releases</span><span>Person / household</span></div><div class="features"><span class="feature">Labour markets</span><span class="feature">Repeated survey</span></div><div class="links"><a href="https://www.mospi.gov.in/" target="_blank" rel="noopener">MoSPI ↗</a><a href="https://microdata.gov.in/" target="_blank" rel="noopener">Microdata catalogue ↗</a></div></article>
-<article class="dataset" data-topics="Education" data-geo="India" data-unit="School / facility" data-kind="Administrative data" data-start="2012" data-end="2025"><div class="dataset-top"><h3>UDISE+</h3><span class="tag">Administrative</span></div><p>School infrastructure, enrolment, teachers and school-level education indicators.</p><div class="meta"><span>India</span><span>Annual</span><span>School / administrative unit</span></div><div class="features"><span class="feature">School system</span><span class="feature">Check release-level access</span></div><div class="links"><a href="https://udiseplus.gov.in/" target="_blank" rel="noopener">UDISE+ ↗</a><a href="https://dashboard.udiseplus.gov.in/" target="_blank" rel="noopener">Dashboard ↗</a></div></article>
-<article class="dataset" data-topics="Education" data-geo="India" data-unit="District / state Individual / household" data-kind="Survey microdata" data-start="2005" data-end="2024"><div class="dataset-top"><h3>ASER</h3><span class="tag">Learning survey</span></div><p>Foundational reading and arithmetic, schooling and learning-related indicators.</p><div class="meta"><span>India</span><span>Survey rounds</span><span>Children / rural households</span></div><div class="features"><span class="feature">Learning outcomes</span><span class="feature">Rural focus</span></div><div class="links"><a href="https://asercentre.org/" target="_blank" rel="noopener">Reports &amp; resources ↗</a></div></article>
-<article class="dataset" data-topics="Health Education Labour Poverty Gender Agriculture Migration Governance Environment & climate Macroeconomics & finance Trade Infrastructure Social protection AI & technology" data-geo="Global India South Asia Asia Africa Europe North America South America Oceania SAARC BRICS ASEAN OECD OPEC European Union" data-unit="Country" data-kind="Aggregate indicators Panel data" data-start="1960" data-end="2025"><div class="dataset-top"><h3>World Development Indicators (WDI)</h3><span class="tag">Indicators</span></div><p>Broad country-level development indicators across health, education, poverty, labour and the economy.</p><div class="meta"><span>Global</span><span>Time series</span><span>Country</span></div><div class="features"><span class="feature">Cross-country</span><span class="feature">API available</span></div><div class="links"><a href="https://data.worldbank.org/indicator" target="_blank" rel="noopener">Browse indicators ↗</a><a href="https://api.worldbank.org/" target="_blank" rel="noopener">API ↗</a><a href="https://databank.worldbank.org/source/world-development-indicators" target="_blank" rel="noopener">DataBank ↗</a></div></article>
-<article class="dataset" data-topics="Health Education Poverty Gender Agriculture & food Labour & employment Migration Governance Environment & climate Macroeconomics & finance Trade Infrastructure Social protection AI & technology" data-geo="Global India South Asia Asia Africa Europe North America South America Oceania SAARC BRICS ASEAN OECD OPEC European Union" data-unit="Country" data-kind="Aggregate indicators Panel data" data-start="1948" data-end="2025"><div class="dataset-top"><h3>UN Data &amp; agency databases</h3><span class="tag">Indicators</span></div><p>Official statistics across population, health, education, labour, trade, environment and development.</p><div class="meta"><span>Global</span><span>Agency-specific coverage</span><span>Country / region</span></div><div class="features"><span class="feature">Multi-agency</span><span class="feature">Definitions vary</span></div><div class="links"><a href="https://data.un.org/" target="_blank" rel="noopener">UN Data ↗</a><a href="https://unstats.un.org/unsd/databases.htm" target="_blank" rel="noopener">UN databases ↗</a><a href="https://unstats.un.org/sdgs/dataportal" target="_blank" rel="noopener">SDG data portal ↗</a></div></article>
-<article class="dataset" data-topics="Health Education Poverty Gender Agriculture & food Labour & employment Migration Governance Environment & climate Macroeconomics & finance Trade Infrastructure Social protection AI & technology" data-geo="Global India South Asia Asia Africa Europe North America South America Oceania SAARC BRICS ASEAN OECD OPEC European Union" data-unit="Country" data-kind="Aggregate indicators Panel data" data-start="1945" data-end="2025"><div class="dataset-top"><h3>IMF Data</h3><span class="tag">Macro / finance</span></div><p>Macroeconomic, fiscal, external-sector, financial and selected country statistics.</p><div class="meta"><span>Global coverage varies</span><span>Time series</span><span>Country</span></div><div class="features"><span class="feature">Macro indicators</span><span class="feature">Download / API options vary</span></div><div class="links"><a href="https://www.imf.org/en/Data" target="_blank" rel="noopener">IMF data hub ↗</a><a href="https://data.imf.org/" target="_blank" rel="noopener">IMF Data portal ↗</a></div></article>
-<article class="dataset" data-topics="Health Education Poverty Gender Agriculture & food Labour & employment Migration Governance Environment & climate Macroeconomics & finance Trade Infrastructure Social protection AI & technology" data-geo="Global India South Asia Asia Africa Europe North America South America Oceania SAARC BRICS ASEAN OECD OPEC European Union" data-unit="Country" data-kind="Aggregate indicators Panel data" data-start="1800" data-end="2025"><div class="dataset-top"><h3>Our World in Data</h3><span class="tag">Indicators</span></div><p>Research-backed topic pages, interactive charts and downloadable datasets.</p><div class="meta"><span>Global</span><span>Topic-specific periods</span><span>Country / subnational varies</span></div><div class="features"><span class="feature">Charts</span><span class="feature">Downloadable data</span></div><div class="links"><a href="https://ourworldindata.org/" target="_blank" rel="noopener">Explore topics ↗</a><a href="https://github.com/owid" target="_blank" rel="noopener">GitHub ↗</a></div></article>
-<article class="dataset" data-topics="Health Education Poverty Gender Agriculture & food Labour & employment Migration Governance Environment & climate Macroeconomics & finance Trade Infrastructure Social protection AI & technology" data-geo="Global India South Asia Asia Africa Europe North America South America Oceania SAARC BRICS ASEAN OECD OPEC European Union" data-unit="Country Individual / household District / state Firm / worker School / facility" data-kind="Survey microdata Administrative data Aggregate indicators Panel data Geospatial / satellite Qualitative / text" data-start="1900" data-end="2026"><div class="dataset-top"><h3>Harvard Dataverse</h3><span class="tag">Repository</span></div><p>Research datasets, replication files, codebooks and persistent dataset records.</p><div class="meta"><span>Global / researcher-deposited</span><span>Varies by study</span></div><div class="features"><span class="feature">Search by keyword</span><span class="feature">Check license &amp; access</span></div><div class="links"><a href="https://dataverse.harvard.edu/" target="_blank" rel="noopener">Search Harvard Dataverse ↗</a><a href="https://dataverse.org/" target="_blank" rel="noopener">Dataverse network ↗</a></div></article>
-<article class="dataset" data-topics="Health Education Poverty Gender Agriculture & food Labour & employment Migration Governance Environment & climate Macroeconomics & finance Trade Infrastructure Social protection AI & technology" data-geo="Global India South Asia Asia Africa Europe North America South America Oceania SAARC BRICS ASEAN OECD OPEC European Union" data-unit="Country Individual / household District / state Firm / worker School / facility" data-kind="Survey microdata Administrative data Aggregate indicators Panel data Geospatial / satellite Qualitative / text" data-start="1900" data-end="2026"><div class="dataset-top"><h3>World Bank Microdata Library</h3><span class="tag">Microdata</span></div><p>Survey and census microdata, metadata, questionnaires and documentation from many countries.</p><div class="meta"><span>Multi-country</span><span>Survey-specific</span><span>Access varies</span></div><div class="features"><span class="feature">Catalogued surveys</span><span class="feature">Access conditions vary</span></div><div class="links"><a href="https://microdata.worldbank.org/" target="_blank" rel="noopener">Search microdata ↗</a></div></article>
-<article class="dataset" data-topics="Health Education Poverty Gender Agriculture & food Labour & employment Migration Governance Environment & climate Macroeconomics & finance Trade Infrastructure Social protection AI & technology" data-geo="Global India South Asia Asia Africa Europe North America South America Oceania SAARC BRICS ASEAN OECD OPEC European Union" data-unit="Country Individual / household District / state" data-kind="Survey microdata Aggregate indicators Panel data" data-start="1980" data-end="2026"><div class="dataset-top"><h3>DHS Program</h3><span class="tag">Survey library</span></div><p>Demographic and health surveys across many low- and middle-income countries.</p><div class="meta"><span>Multi-country</span><span>Survey rounds</span><span>Microdata access application</span></div><div class="features"><span class="feature">Health &amp; population</span><span class="feature">Comparable modules</span></div><div class="links"><a href="https://dhsprogram.com/" target="_blank" rel="noopener">DHS home ↗</a><a href="https://dhsprogram.com/data/" target="_blank" rel="noopener">Request data ↗</a></div></article>
-</div><div class="empty" id="empty">No sample cards match every selected filter. Try broadening your geography, year range or data type. The full catalogue would include more records.</div>
-</main></section>
-<section id="portals" class="section"><div class="sectionhead"><h2>Direct indicator portals</h2><p>Browse at the source</p></div><div class="sources">
-<div class="source"><strong>World Bank Data</strong><p>Indicators, DataBank, microdata and APIs.</p><a href="https://data.worldbank.org/indicator" target="_blank" rel="noopener">Indicators ↗</a> · <a href="https://microdata.worldbank.org/" target="_blank" rel="noopener">Microdata ↗</a></div>
-<div class="source"><strong>UN Statistics</strong><p>UN Data, SDG indicators and agency databases.</p><a href="https://data.un.org/" target="_blank" rel="noopener">UN Data ↗</a> · <a href="https://unstats.un.org/sdgs/dataportal/" target="_blank" rel="noopener">SDGs ↗</a></div>
-<div class="source"><strong>IMF Data</strong><p>Macro, financial, fiscal and external-sector datasets.</p><a href="https://www.imf.org/en/Data" target="_blank" rel="noopener">IMF Data ↗</a></div>
-<div class="source"><strong>Our World in Data</strong><p>Indicators, topic charts and downloadable data.</p><a href="https://ourworldindata.org/" target="_blank" rel="noopener">Explore ↗</a></div>
-<div class="source"><strong>OECD Data Explorer</strong><p>Comparable statistics across OECD and partner economies.</p><a href="https://data-explorer.oecd.org/" target="_blank" rel="noopener">Explore ↗</a></div>
-<div class="source"><strong>Asian Development Bank</strong><p>Asia-Pacific development indicators and publications.</p><a href="https://data.adb.org/" target="_blank" rel="noopener">ADB Data Library ↗</a></div>
-<div class="source"><strong>WHO Data</strong><p>Health statistics, observatories and country indicators.</p><a href="https://www.who.int/data" target="_blank" rel="noopener">WHO Data ↗</a></div>
-<div class="source"><strong>UNESCO UIS</strong><p>Education, science and culture statistics.</p><a href="https://uis.unesco.org/" target="_blank" rel="noopener">UIS ↗</a></div>
-<div class="source"><strong>ILOSTAT</strong><p>Labour market and decent work statistics.</p><a href="https://ilostat.ilo.org/data/" target="_blank" rel="noopener">ILOSTAT ↗</a></div>
-<div class="source"><strong>FAOSTAT</strong><p>Agriculture, food, land and nutrition statistics.</p><a href="https://www.fao.org/faostat/" target="_blank" rel="noopener">FAOSTAT ↗</a></div>
-<div class="source"><strong>UNICEF Data</strong><p>Child wellbeing, education, health and protection.</p><a href="https://data.unicef.org/" target="_blank" rel="noopener">UNICEF Data ↗</a></div>
-<div class="source"><strong>India Open Government Data</strong><p>Government-published datasets and resources.</p><a href="https://data.gov.in/" target="_blank" rel="noopener">data.gov.in ↗</a></div>
-<div class="source"><strong>India MoSPI / Microdata</strong><p>Official statistics, surveys and microdata catalogues.</p><a href="https://www.mospi.gov.in/" target="_blank" rel="noopener">MoSPI ↗</a> · <a href="https://microdata.gov.in/" target="_blank" rel="noopener">Microdata ↗</a></div>
-<div class="source"><strong>IPUMS</strong><p>Harmonized census and survey microdata.</p><a href="https://www.ipums.org/" target="_blank" rel="noopener">IPUMS ↗</a></div>
-<div class="source"><strong>FAO / World Bank / IMF etc.</strong><p>Use the source’s metadata and definitions before comparing values.</p><a href="https://datacatalog.worldbank.org/" target="_blank" rel="noopener">World Bank catalogue ↗</a></div>
-</div></section>
-<section id="research" class="section"><div class="sectionhead"><h2>Papers, repositories &amp; researchers</h2><p>Discover connected research</p></div><div class="resource-grid">
-<div class="resource"><h3>Economics papers</h3><p>Search papers by topic, author, keyword and field.</p><a href="https://ideas.repec.org/" target="_blank" rel="noopener">IDEAS/RePEc ↗</a> · <a href="https://www.nber.org/papers" target="_blank" rel="noopener">NBER ↗</a></div>
-<div class="resource"><h3>Working papers &amp; development research</h3><p>Browse research series and institutional publications.</p><a href="https://openknowledge.worldbank.org/" target="_blank" rel="noopener">World Bank Open Knowledge ↗</a> · <a href="https://www.cgdev.org/publications" target="_blank" rel="noopener">CGD ↗</a></div>
-<div class="resource"><h3>GitHub &amp; replication code</h3><p>Find code and replication packages; confirm version, license and data availability.</p><a href="https://github.com/search" target="_blank" rel="noopener">Search GitHub ↗</a></div>
-<div class="resource"><h3>Harvard Dataverse</h3><p>Search research datasets and replication packages.</p><a href="https://dataverse.harvard.edu/" target="_blank" rel="noopener">Search repository ↗</a></div>
-<div class="resource"><h3>Researchers &amp; scholars</h3><p>Discover authors by publications and research topics—not a single “top” ranking.</p><a href="https://ideas.repec.org/" target="_blank" rel="noopener">Author profiles ↗</a> · <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar ↗</a></div>
-<div class="resource"><h3>Methods &amp; reproducibility</h3><p>Look for methods notes, codebooks, preregistrations and replication files.</p><a href="https://www.socialscienceregistry.org/" target="_blank" rel="noopener">A​​EA RCT Registry ↗</a></div>
-</div></section>
-<section id="ai" class="section"><div class="sectionhead"><h2>AI &amp; development research</h2><p>Tools and research questions</p></div><div class="resource-grid">
-<div class="resource"><h3>AI as a research method</h3><p>Text-as-data, coding assistance, data cleaning, satellite imagery and research workflows.</p><a href="https://github.com/" target="_blank" rel="noopener">Explore open-source tools ↗</a></div>
-<div class="resource"><h3>AI as a development topic</h3><p>Employment, wages, skills, education, health, productivity and inequality.</p><a href="https://arxiv.org/" target="_blank" rel="noopener">Search papers ↗</a></div>
-<div class="resource"><h3>Responsible research practice</h3><p>Verify generated outputs, protect sensitive data, disclose AI use and preserve reproducibility.</p></div>
-<div class="resource"><h3>Potential data sources</h3><p>Labour surveys, firm data, education and health administrative data, text corpora and geospatial imagery—subject to access and ethics.</p></div>
-</div></section>
-<section class="brief" id="brief"><div class="eyebrow">Your research snapshot</div><h2 id="brief-title">Research starting point</h2><p class="sub">A concise planning summary based on your selections.</p><div class="brief-grid">
-<div class="brief-card"><h3>Your scope</h3><p id="b-scope"></p></div>
-<div class="brief-card"><h3>What may be available</h3><p id="b-available"></p></div>
-<div class="brief-card"><h3>Suggested next steps</h3><ul id="b-steps"><li>Define your outcome and unit of analysis.</li><li>Check coverage, documentation and access conditions.</li><li>Find papers and code using comparable data.</li></ul></div>
-<div class="brief-card"><h3>Potential strengths &amp; cautions</h3><p id="b-strength"></p></div>
-</div><div class="note">This demo generates a rule-based planning snapshot from your filters, not a live audit of all datasets or a validated literature review. A production version should ground each recommendation in verified catalogue metadata.</div></section>
-<footer><span>Data Buff · Prototype</span><span>Check source metadata, definitions, licenses and access rules before analysis.</span></footer>
+<div class="results">
+  <div class="results-head"><div class="count" id="count" aria-live="polite">Loading catalogue…</div><div class="sort"><label for="sort" style="margin:0">Sort</label><select id="sort"><option value="relevance">Relevance</option><option value="az">Title A–Z</option><option value="newest">Newest year</option></select></div></div>
+  <div class="active-chips" id="chips"></div>
+  <div class="cards" id="cards"></div>
+  <div class="empty" id="empty"><strong>No resources match these filters.</strong><p>Try removing a filter or broadening your search.</p><button class="btn secondary" id="emptyReset" type="button">Clear filters</button></div>
+</div>
+</section>
+
+<section class="lower">
+  <div class="section-head"><div><h2>Browse by research need</h2><p>Start with a field or a practical research task.</p></div></div>
+  <div class="collection-grid">
+    <article class="collection"><h3>Data & indicators</h3><p>National surveys, official statistics, cross-country indicators and research repositories.</p><a href="#explore" data-query="dataset indicator">Explore data →</a></article>
+    <article class="collection"><h3>Papers & replication</h3><p>Find research papers and trace their methods, data and available code.</p><a href="#explore" data-query="paper replication">Find papers →</a></article>
+    <article class="collection"><h3>Methods & code</h3><p>Discover applied methods and reproducible workflows in common research software.</p><a href="#explore" data-query="method code">Explore methods →</a></article>
+    <article class="collection"><h3>Labour & employment</h3><p>Explore labour-market data, employment research and policy questions.</p><a href="#explore" data-query="labour employment">Browse labour →</a></article>
+    <article class="collection"><h3>Health & education</h3><p>Find surveys and indicators for human development research.</p><a href="#explore" data-query="health education">Browse human development →</a></article>
+    <article class="collection"><h3>Research design</h3><p>Compare empirical approaches and inspect assumptions before choosing a design.</p><a href="#explore" data-query="causal inference">Explore designs →</a></article>
+  </div>
+</section>
+<section class="callout">
+  <div><h2>Have a research resource to add?</h2><p>Help improve the catalogue by suggesting a dataset, paper, code repository or correction. Submissions can be connected to a future review workflow.</p></div>
+  <a class="btn" href="mailto:hello@ashuarora.com?subject=Data%20Buff%20resource%20suggestion">Suggest a resource ↗</a>
+</section>
+</main>
+<footer><span>Data Buff · A research discovery project by Ashu Arora</span><span>Verify source metadata, definitions, access conditions and licenses before analysis.</span></footer>
 </div>
 <script>
+const resources = [
+ {id:"nfhs",type:"Dataset",title:"National Family Health Survey (NFHS)",description:"India’s large-scale survey covering population, maternal and child health, nutrition, fertility, household conditions and women’s health.",topics:["Health","Gender"],geos:["India","South Asia"],methods:["Descriptive statistics"],years:[1992,2021],access:"Registration",unit:"Household / individual",format:"Repeated cross-sections",tags:["Survey microdata","State / district analysis varies"],url:"https://rchiips.org/nfhs/",source:"IIPS / DHS",linked:true,software:[],why:"A core source for population and health outcomes in India."},
+ {id:"ihds",type:"Dataset",title:"India Human Development Survey (IHDS)",description:"Longitudinal household survey spanning health, education, employment, gender, income and social conditions.",topics:["Health","Education","Poverty & inequality","Gender","Labour & employment"],geos:["India"],methods:["Panel data","Fixed effects"],years:[2004,2012],access:"Registration",unit:"Household / individual",format:"Longitudinal survey",tags:["Two main waves","Multi-topic"],url:"https://ihds.umd.edu/",source:"IHDS",linked:true,software:[],why:"Useful for studying changes within households across survey rounds."},
+ {id:"plfs",type:"Dataset",title:"Periodic Labour Force Survey (PLFS)",description:"Employment, unemployment, labour-force participation, earnings and worker characteristics in India.",topics:["Labour & employment","Education","Poverty & inequality","Gender"],geos:["India"],methods:["Descriptive statistics"],years:[2017,2025],access:"Registration",unit:"Person / household",format:"Annual / quarterly survey",tags:["Labour markets","Repeated survey"],url:"https://www.mospi.gov.in/",source:"MoSPI",linked:true,software:[],why:"Directly relevant to labour-market outcomes and employment trends."},
+ {id:"wdi",type:"Dataset",title:"World Development Indicators (WDI)",description:"A broad collection of country-level development indicators covering health, education, poverty, labour and the economy.",topics:["Health","Education","Labour & employment","Poverty & inequality","Macroeconomics & finance","Trade","Climate"],geos:["Global","India","South Asia","Sub-Saharan Africa","OECD"],methods:["Panel data","Descriptive statistics"],years:[1960,2025],access:"Open",unit:"Country",format:"Aggregate indicators / time series",tags:["Cross-country","API available"],url:"https://data.worldbank.org/indicator",source:"World Bank",linked:true,software:["R","Python","Excel"],why:"Supports cross-country comparisons and country-level time-series analysis."},
+ {id:"owid",type:"Dataset",title:"Our World in Data",description:"Research-backed topic pages, interactive charts and downloadable datasets with source documentation.",topics:["Health","Education","Poverty & inequality","Climate","Technology","Agriculture","Governance"],geos:["Global","India","South Asia","Sub-Saharan Africa","OECD"],methods:["Descriptive statistics"],years:[1800,2026],access:"Open",unit:"Country / subnational varies",format:"Indicators / time series",tags:["Downloadable data","Topic-specific coverage"],url:"https://ourworldindata.org/",source:"Our World in Data",linked:true,software:["R","Python"],why:"A convenient entry point for exploring and tracing global indicators."},
+ {id:"lasi",type:"Dataset",title:"Longitudinal Ageing Study in India (LASI)",description:"Research on health, ageing, family, economic security and social conditions among older adults.",topics:["Health","Poverty & inequality","Gender"],geos:["India"],methods:["Panel data"],years:[2017,2018],access:"Registration",unit:"Adults 45+",format:"Longitudinal survey",tags:["Ageing","Health and household"],url:"https://lasi-india.org/",source:"LASI",linked:true,software:[],why:"Relevant for ageing, health and later-life economic security questions."},
+ {id:"udise",type:"Dataset",title:"UDISE+",description:"Administrative data on school infrastructure, enrolment, teachers and school-level education indicators.",topics:["Education","Gender"],geos:["India"],methods:["Descriptive statistics"],years:[2012,2025],access:"Open",unit:"School / administrative unit",format:"Administrative data",tags:["School system","Annual"],url:"https://udiseplus.gov.in/",source:"Ministry of Education",linked:false,software:["Excel"],why:"Provides school-system measures at administrative levels; verify release-level access."},
+ {id:"dhs",type:"Dataset",title:"Demographic and Health Surveys (DHS) Program",description:"Standardized household surveys covering population, health and related outcomes across many countries.",topics:["Health","Gender","Poverty & inequality"],geos:["Global","South Asia","Sub-Saharan Africa"],methods:["Descriptive statistics"],years:[1980,2026],access:"Registration",unit:"Household / individual",format:"Survey microdata",tags:["Multi-country","Access application"],url:"https://dhsprogram.com/data/",source:"DHS Program",linked:true,software:["Stata","R"],why:"Enables cross-country health and demographic research with survey documentation."},
+ {id:"fh",type:"Paper",title:"Domestic Saving and International Capital Flows",description:"Foundational research associated with the Feldstein–Horioka puzzle and the relationship between domestic saving and investment.",topics:["Macroeconomics & finance"],geos:["OECD","Global"],methods:["Panel data","Fixed effects"],years:[1980,1980],access:"Open",unit:"Country",format:"Journal article",tags:["Capital mobility","Macro"],url:"https://www.jstor.org/",source:"Journal literature",linked:true,software:[],why:"A starting point for research on saving–investment correlations and capital mobility."},
+ {id:"did",type:"Method",title:"Difference-in-differences (DiD)",description:"A quasi-experimental design comparing outcome changes between treated and comparison groups; assumptions and timing matter.",topics:["Health","Education","Labour & employment","Poverty & inequality","Governance"],geos:["Global"],methods:["Difference-in-differences"],years:[1990,2026],access:"Open",unit:"Study-dependent",format:"Causal inference",tags:["Parallel trends","Treatment timing"],url:"https://www.nber.org/",source:"Methods literature",linked:true,software:["Stata","R","Python"],why:"Useful when a policy or intervention creates plausibly comparable treated and comparison groups."},
+ {id:"pstr",type:"Method",title:"Panel Smooth Transition Regression (PSTR)",description:"A nonlinear panel-data framework allowing coefficients to vary smoothly with a transition variable.",topics:["Macroeconomics & finance","Trade","Labour & employment"],geos:["Global"],methods:["Panel data","Fixed effects"],years:[1990,2026],access:"Open",unit:"Panel unit",format:"Nonlinear panel econometrics",tags:["Threshold-like transitions","Model specification"],url:"https://www.sciencedirect.com/",source:"Econometrics literature",linked:true,software:["Stata","R"],why:"Relevant when theory suggests relationships change gradually across regimes."},
+ {id:"rct",type:"Method",title:"Randomized controlled trials (RCTs)",description:"Experimental designs that use random assignment to estimate treatment effects, subject to implementation and external-validity considerations.",topics:["Health","Education","Poverty & inequality","Governance"],geos:["Global"],methods:["Randomized controlled trial"],years:[1950,2026],access:"Open",unit:"Study-dependent",format:"Experimental design",tags:["Random assignment","Implementation fidelity"],url:"https://www.socialscienceregistry.org/",source:"AEA RCT Registry",linked:true,software:["Stata","R"],why:"Useful for evaluating interventions where random assignment is feasible and ethical."},
+ {id:"iv",type:"Method",title:"Instrumental variables (IV)",description:"An approach for identification when a credible instrument shifts endogenous treatment while satisfying exclusion and relevance assumptions.",topics:["Labour & employment","Health","Education","Macroeconomics & finance"],geos:["Global"],methods:["Instrumental variables"],years:[1950,2026],access:"Open",unit:"Study-dependent",format:"Causal inference",tags:["Relevance","Exclusion restriction"],url:"https://www.nber.org/",source:"Methods literature",linked:true,software:["Stata","R","Python"],why:"Relevant when endogeneity is central and a defensible instrument is available."},
+ {id:"code",type:"Code",title:"World Bank Development Indicators API examples",description:"Programmatic access patterns for retrieving and working with World Development Indicators.",topics:["Macroeconomics & finance","Health","Education","Labour & employment"],geos:["Global","India"],methods:["Descriptive statistics"],years:[2010,2026],access:"Open",unit:"Country",format:"API / code",tags:["Reproducible workflow","Data retrieval"],url:"https://api.worldbank.org/",source:"World Bank API",linked:true,software:["R","Python"],why:"Helps automate repeatable indicator retrieval rather than manual downloads."},
+ {id:"dataverse",type:"Dataset",title:"Harvard Dataverse",description:"A repository for research datasets, replication files, codebooks and persistent dataset records.",topics:["Health","Education","Labour & employment","Poverty & inequality","Governance"],geos:["Global"],methods:["Panel data","Descriptive statistics"],years:[1900,2026],access:"Open",unit:"Study-dependent",format:"Research repository",tags:["Replication packages","Check individual license"],url:"https://dataverse.harvard.edu/",source:"Harvard Dataverse",linked:true,software:["Stata","R","Python"],why:"Useful for locating deposited datasets and replication materials; access varies by record."},
+ {id:"researcher",type:"Researcher",title:"Researcher discovery: IDEAS/RePEc",description:"Find economics authors and publication records through a bibliographic discovery service.",topics:["Macroeconomics & finance","Trade","Labour & employment","Development"],geos:["Global"],methods:[],years:[1900,2026],access:"Open",unit:"Author profile",format:"Bibliographic index",tags:["Author publications","Verify profile identity"],url:"https://ideas.repec.org/",source:"IDEAS/RePEc",linked:true,software:[],why:"A starting point for finding authors by publications and research field."},
+ {id:"plfs-paper",type:"Paper",title:"Labour-market research using repeated surveys",description:"Search literature using PLFS and related labour surveys to identify outcomes, definitions and empirical designs.",topics:["Labour & employment","Gender","Poverty & inequality"],geos:["India"],methods:["Panel data","Descriptive statistics","Difference-in-differences"],years:[2017,2026],access:"Open",unit:"Person / household",format:"Research literature",tags:["Search topic phrase","Inspect data vintage"],url:"https://scholar.google.com/",source:"Literature search",linked:true,software:["Stata","R"],why:"Use as a discovery query, then verify each paper and its underlying data."},
+ {id:"fixed",type:"Method",title:"Panel fixed-effects models",description:"Control for time-invariant unit-level factors in panel data; interpretation depends on variation, specification and assumptions.",topics:["Macroeconomics & finance","Labour & employment","Health","Education"],geos:["Global"],methods:["Fixed effects","Panel data"],years:[1970,2026],access:"Open",unit:"Panel unit",format:"Panel econometrics",tags:["Within-unit variation","Time-varying confounding"],url:"https://www.stata.com/",source:"Econometrics methods",linked:true,software:["Stata","R"],why:"Useful for panel questions where unit-specific time-invariant differences are a concern."}
+];
 const $=id=>document.getElementById(id);
-const geoSets={
-"Country":["India","Afghanistan","Bangladesh","Bhutan","Maldives","Nepal","Pakistan","Sri Lanka","China","Indonesia","Japan","Malaysia","Mongolia","Myanmar","Philippines","Singapore","South Korea","Thailand","Vietnam","Australia","Brazil","Canada","Egypt","Ethiopia","France","Germany","Ghana","Kenya","Mexico","Nigeria","South Africa","United Kingdom","United States"],
-"Subregion":["South Asia","Southeast Asia","East Asia","Central Asia","West Asia / Middle East","Pacific","North Africa","Sub-Saharan Africa","Latin America","Caribbean","Eastern Europe","Western Europe"],
-"Continent":["Asia","Africa","Europe","North America","South America","Oceania","Antarctica"],
-"Regional bloc":["SAARC","BRICS","ASEAN","OECD","OPEC","European Union","African Union","G20","G7","GCC","MERCOSUR","SADC","ECOWAS","EAC","APEC","CPTPP","RCEP","CARICOM"],
-"Global":["Global / all countries"]};
-function setGeo(){const opts=geoSets[$("geoLevel").value];$("geo").innerHTML=opts.map(x=>`<option>${x}</option>`).join("");}
-setGeo();$("geoLevel").addEventListener("change",setGeo);
-const allCards=[...document.querySelectorAll(".dataset")];
-function matches(card){
- const t=$("topic").value,g=$("geo").value,u=$("unit").value,k=$("kind").value;
- const start=Number($("fromYear").value)||null,end=Number($("toYear").value)||null;
- const topics=card.dataset.topics.split(" "),geos=card.dataset.geo.split(" "),units=card.dataset.unit.split(" "),kinds=card.dataset.kind.split(" ");
- if(t!=="all"&&!topics.includes(t))return false;
- if(!geos.includes(g)&&!geos.includes("Global"))return false;
- if(u!=="all"&&!units.includes(u))return false;
- if(k!=="all"&&!kinds.includes(k))return false;
- if(start&&Number(card.dataset.end)<start)return false;
- if(end&&Number(card.dataset.start)>end)return false;
+const norm=s=>(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+function text(r){return [r.title,r.description,r.type,r.source,r.unit,r.format,...r.topics,...r.geos,...r.methods,...r.tags,...r.software].join(" ").toLowerCase()}
+function selected(id){return $(id).value}
+function matches(r){
+ const q=norm($("q").value.trim()),t=selected("type"),topic=selected("topic"),geo=selected("geo"),method=selected("method"),access=selected("access"),software=selected("software");
+ const from=Number($("from").value)||null,to=Number($("to").value)||null,hay=text(r);
+ if(q&&!q.split(/\s+/).every(term=>hay.includes(term)))return false;
+ if(t!=="all"&&r.type!==t)return false;
+ if(topic!=="all"&&!r.topics.includes(topic))return false;
+ if(geo!=="all"&&!r.geos.includes(geo))return false;
+ if(method!=="all"&&!r.methods.includes(method))return false;
+ if(access!=="all"&&r.access!==access)return false;
+ if(software!=="all"&&!r.software.includes(software))return false;
+ if(from&&r.years[1]<from)return false;
+ if(to&&r.years[0]>to)return false;
+ if($("connections").checked&&!r.linked)return false;
  return true;
 }
-function render(){
- const shown=allCards.filter(matches);allCards.forEach(c=>c.classList.toggle("hidden",!shown.includes(c)));
- $("count").textContent=`${shown.length} curated resource${shown.length===1?"":"s"} match these filters`;
- $("empty").style.display=shown.length?"none":"block";
- $("chips").innerHTML=[$("topic").value==="all"?"All topics":$("topic").value,$("geo").value,$("fromYear").value||"Any start", $("toYear").value||"Any end",$("unit").value==="all"?"Any unit":$("unit").value,$("kind").value==="all"?"Any format":$("kind").value].map(x=>`<span class="chip">${x}</span>`).join("");
+function relevance(r){
+ const q=norm($("q").value.trim());if(!q)return 0;
+ const title=norm(r.title),terms=q.split(/\s+/);let score=0;
+ terms.forEach(w=>{if(title.includes(w))score+=4;if(norm(r.description).includes(w))score+=2;if(norm([...r.topics,...r.methods,...r.tags].join(" ")).includes(w))score+=1;});
+ return score;
 }
-["topic","geo","fromYear","toYear","unit","kind"].forEach(id=>$(id).addEventListener("input",render));
-$("geoLevel").addEventListener("change",()=>{setGeo();render()});
-$("reset").addEventListener("click",()=>{$("topic").value="all";$("geoLevel").value="Country";setGeo();$("geo").value="India";$("fromYear").value="";$("toYear").value="";$("unit").value="all";$("kind").value="all";$("question").value="";$("brief").style.display="none";render()});
-$("build").addEventListener("click",()=>{
- const topic=$("topic").value==="all"?"development economics":$("topic").value.toLowerCase(),geo=$("geo").value,from=$("fromYear").value,to=$("toYear").value,unit=$("unit").value,kind=$("kind").value,q=$("question").value.trim();
- const found=allCards.filter(matches);
- $("brief-title").textContent=q?`Research snapshot: ${q}`:`Research snapshot: ${topic}`;
- $("b-scope").textContent=`${topic}; ${geo}; ${from||"start year unspecified"}–${to||"end year unspecified"}; ${unit==="all"?"any unit":unit}; ${kind==="all"?"any data format":kind}.`;
- $("b-available").textContent=found.length?`${found.length} sample catalogue entries match your filters. Examples include: ${found.slice(0,4).map(c=>c.querySelector("h3").textContent).join("; ")}. Open the source pages to verify exact indicators, years, geography and access.`:"No sample entries match all filters. Broaden your search or check official portals directly; the prototype catalogue is not exhaustive.";
- $("b-strength").textContent=`A clearly stated geography, period and unit can make the research question more focused and help assess feasibility. Check representativeness, comparability, missingness, definitions, access restrictions and whether the design supports descriptive or causal claims.`;
- $("brief").style.display="block";$("brief").scrollIntoView({behavior:"smooth",block:"start"});
-});
-document.querySelectorAll(".tab").forEach(btn=>btn.addEventListener("click",()=>{
- document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b===btn));
- const mode=btn.dataset.mode;
- $("filterpanel").classList.toggle("hidden",mode!=="data");
- $("cards").classList.toggle("hidden",mode!=="data");
- $("empty").classList.toggle("hidden",mode!=="data");
- $("portals").classList.toggle("hidden",mode!=="data");
- $("research").classList.toggle("hidden",mode==="ai");
- $("ai").classList.toggle("hidden",mode==="papers");
- if(mode==="papers")$("research").scrollIntoView({behavior:"smooth",block:"start"});
- if(mode==="ai")$("ai").scrollIntoView({behavior:"smooth",block:"start"});
-}));
+function render(){
+ let rows=resources.filter(matches);
+ const sort=selected("sort");
+ if(sort==="az")rows.sort((a,b)=>a.title.localeCompare(b.title));
+ else if(sort==="newest")rows.sort((a,b)=>b.years[1]-a.years[1]);
+ else rows.sort((a,b)=>relevance(b)-relevance(a)||(b.linked-a.linked)||a.title.localeCompare(b.title));
+ $("count").textContent=`${rows.length} resource${rows.length===1?"":"s"} · ${resources.length} in this starter catalogue`;
+ $("cards").innerHTML=rows.map(r=>`<article class="card">
+  <div class="card-top"><span class="type">${r.type}</span><span class="verified">${r.linked?"● Connected resource":"Curated entry"}</span></div>
+  <h3>${escapeHtml(r.title)}</h3><p>${escapeHtml(r.description)}</p>
+  <div class="metadata"><span>${escapeHtml(r.geos.join(", "))}</span><span>${r.years[0]}–${r.years[1]}</span><span>${escapeHtml(r.unit)}</span></div>
+  <div class="tags">${[...r.topics.slice(0,2),...r.methods.slice(0,2),...r.tags.slice(0,2)].map(x=>`<span class="tag">${escapeHtml(x)}</span>`).join("")}</div>
+  <div class="why"><strong>Why it may help:</strong> ${escapeHtml(r.why)}</div>
+  <div class="card-foot"><span>${escapeHtml(r.source)} · ${escapeHtml(r.access)} access</span><a href="${r.url}" target="_blank" rel="noopener noreferrer">Visit source ↗</a></div>
+ </article>`).join("");
+ $("empty").style.display=rows.length?"none":"block";
+ $("cards").style.display=rows.length?"grid":"none";
+ const chips=[];
+ [["type","Type"],["topic","Topic"],["geo","Geography"],["method","Method"],["access","Access"],["software","Software"]].forEach(([id,label])=>{if(selected(id)!=="all")chips.push(`${label}: ${selected(id)}`)});
+ if($("from").value)chips.push(`From: ${$("from").value}`);if($("to").value)chips.push(`To: ${$("to").value}`);
+ if($("connections").checked)chips.push("Has linked resources");
+ $("chips").innerHTML=chips.map(x=>`<span class="chip">${escapeHtml(x)}</span>`).join("");
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+["q","type","topic","geo","method","from","to","access","software","connections","sort"].forEach(id=>$(id).addEventListener(id==="q"?"input":"change",render));
+$("searchForm").addEventListener("submit",e=>{e.preventDefault();render();$("explore").scrollIntoView({behavior:"smooth",block:"start"})});
+function reset(){["q"].forEach(id=>$(id).value="");["type","topic","geo","method","access","software"].forEach(id=>$(id).value="all");$("from").value="";$("to").value="";$("connections").checked=false;$("sort").value="relevance";render()}
+$("reset").addEventListener("click",reset);$("emptyReset").addEventListener("click",reset);
+document.querySelectorAll("[data-query]").forEach(el=>el.addEventListener("click",e=>{e.preventDefault();$("q").value=el.dataset.query;render();$("explore").scrollIntoView({behavior:"smooth",block:"start"})}));
 render();
 </script>
-</body></html>
+</body>
+</html>
