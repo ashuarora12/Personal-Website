@@ -1,0 +1,1092 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Research Atlas</title>
+  <meta name="description" content="Connecting health research to better decisions." />
+
+  <style>
+    :root {
+      --teal: #0F766E;
+      --sage: #84A98C;
+      --mist: #EAF1EF;
+      --warm-white: #FAF7F2;
+      --parchment: #F3EBDD;
+      --ink: #183B39;
+      --muted: #687B78;
+      --border: #DCE6E2;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--warm-white);
+      color: var(--ink);
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: "Palatino Linotype", Palatino, Georgia, serif;
+      line-height: 1.2;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: auto;
+    }
+
+    header {
+      background: rgba(250, 247, 242, 0.96);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: Georgia, serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--teal);
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border: 2px solid var(--teal);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: var(--mist);
+    }
+
+    .brand-mark svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      font-size: 13px;
+      color: #355653;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    .nav-cta {
+      background: var(--teal);
+      color: white;
+      padding: 10px 16px;
+      border-radius: 7px;
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 85% 25%, rgba(132,169,140,.22), transparent 28%),
+        linear-gradient(120deg, var(--mist), var(--warm-white) 72%);
+      padding: 82px 0 70px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 5.4vw, 68px);
+      max-width: 760px;
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: var(--teal);
+      font-style: italic;
+    }
+
+    .hero-copy {
+      max-width: 610px;
+      font-size: 17px;
+      color: #526966;
+      margin-bottom: 28px;
+    }
+
+    .search-box {
+      display: flex;
+      background: white;
+      border: 1px solid #C7D8D2;
+      border-radius: 12px;
+      padding: 7px;
+      box-shadow: 0 12px 35px rgba(15, 70, 64, .08);
+      max-width: 720px;
+    }
+
+    .search-box input {
+      flex: 1;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      padding: 14px;
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .search-box button {
+      border: 0;
+      background: var(--teal);
+      color: white;
+      border-radius: 8px;
+      padding: 0 25px;
+      cursor: pointer;
+    }
+
+    .search-hint {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    .hero-art {
+      min-height: 300px;
+      border-radius: 24px;
+      background: linear-gradient(145deg, #DCEAE4, #F3EBDD);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid #D6E3DD;
+    }
+
+    .atlas-grid {
+      width: 260px;
+      height: 260px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 9px;
+      transform: rotate(-8deg);
+    }
+
+    .atlas-grid span {
+      border-radius: 10px;
+      background: var(--sage);
+      opacity: .75;
+    }
+
+    .atlas-grid span:nth-child(3n) {
+      background: var(--teal);
+      opacity: .9;
+    }
+
+    .atlas-grid span:nth-child(4n) {
+      background: #C6D9CE;
+    }
+
+    .atlas-grid span:nth-child(7n) {
+      background: var(--parchment);
+      border: 1px solid #D9CBB5;
+    }
+
+    .floating-label {
+      position: absolute;
+      background: white;
+      padding: 12px 16px;
+      border-radius: 10px;
+      box-shadow: 0 8px 25px #153f3718;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .label-one { top: 22px; left: 18px; }
+    .label-two { bottom: 24px; right: 18px; }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(29px, 3vw, 39px);
+      margin-bottom: 8px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 620px;
+      font-size: 14px;
+    }
+
+    .text-link {
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .topic-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .topic-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 22px;
+      min-height: 150px;
+      transition: .2s ease;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--sage);
+      box-shadow: 0 12px 25px #163c3510;
+    }
+
+    .topic-icon {
+      width: 37px;
+      height: 37px;
+      display: grid;
+      place-items: center;
+      background: var(--mist);
+      border-radius: 10px;
+      color: var(--teal);
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .topic-card h3 {
+      font-size: 19px;
+      margin-bottom: 7px;
+    }
+
+    .topic-card p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .indicators {
+      background: var(--mist);
+    }
+
+    .indicator-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .indicator-card {
+      background: white;
+      padding: 25px;
+      border: 1px solid #D4E2DC;
+      border-radius: 14px;
+    }
+
+    .indicator-card .category {
+      font-size: 11px;
+      color: var(--teal);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .indicator-card h3 {
+      font-size: 21px;
+      margin: 12px 0;
+    }
+
+    .indicator-value {
+      font-size: 30px;
+      font-family: Georgia, serif;
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    .indicator-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .placeholder-note {
+      font-size: 11px;
+      color: #8A6B3D;
+      background: #F8F0E2;
+      padding: 5px 8px;
+      display: inline-block;
+      border-radius: 5px;
+      margin-top: 12px;
+    }
+
+    .research-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .research-tools input,
+    .research-tools select {
+      border: 1px solid var(--border);
+      background: white;
+      border-radius: 8px;
+      padding: 11px 13px;
+      color: var(--ink);
+    }
+
+    .research-tools input {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .research-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .research-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 22px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 24px;
+    }
+
+    .resource-type {
+      color: var(--teal);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .research-card h3 {
+      font-size: 22px;
+      margin: 8px 0;
+    }
+
+    .research-card p {
+      color: var(--muted);
+      font-size: 13px;
+      max-width: 800px;
+    }
+
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .tag {
+      background: var(--mist);
+      color: #38635D;
+      border-radius: 20px;
+      padding: 5px 10px;
+      font-size: 11px;
+    }
+
+    .resource-link {
+      align-self: center;
+      color: var(--teal);
+      font-weight: 700;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .comparison {
+      background: var(--parchment);
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .comparison-card {
+      background: rgba(255,255,255,.75);
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid #E4D8C6;
+    }
+
+    .comparison-card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .comparison-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .comparison-link {
+      color: var(--teal);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .callout {
+      background: var(--teal);
+      color: white;
+      padding: 46px;
+      border-radius: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .callout h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .callout p {
+      color: #D7EAE5;
+      max-width: 650px;
+      font-size: 14px;
+    }
+
+    .callout a {
+      background: white;
+      color: var(--teal);
+      border-radius: 8px;
+      padding: 13px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    footer {
+      background: #173F3B;
+      color: white;
+      padding: 45px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 35px;
+      margin-bottom: 35px;
+    }
+
+    footer p, footer a {
+      color: #C4D8D2;
+      font-size: 13px;
+    }
+
+    footer h3 {
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+
+    footer .footer-links {
+      display: grid;
+      gap: 8px;
+    }
+
+    .copyright {
+      border-top: 1px solid #ffffff28;
+      padding-top: 20px;
+      font-size: 11px;
+      color: #B7CEC7;
+    }
+
+    .empty-state {
+      padding: 25px;
+      background: white;
+      border: 1px dashed var(--sage);
+      border-radius: 12px;
+      color: var(--muted);
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-art {
+        min-height: 250px;
+      }
+
+      .topic-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .indicator-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 55px 0;
+      }
+
+      .search-box {
+        flex-direction: column;
+      }
+
+      .search-box button {
+        padding: 13px;
+      }
+
+      .topic-grid,
+      .comparison-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .research-card {
+        grid-template-columns: 1fr;
+      }
+
+      .resource-link {
+        justify-self: start;
+      }
+
+      .callout {
+        padding: 28px;
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand" aria-label="Health Research Atlas home">
+        <span class="brand-mark">
+          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M5 8H35V32H5Z" stroke="#0F766E" stroke-width="1.5"/>
+            <path d="M15 8V32M25 8V32M5 16H35M5 24H35"
+              stroke="#84A98C" stroke-width="1.2"/>
+            <circle cx="15" cy="16" r="3" fill="#0F766E"/>
+            <circle cx="25" cy="24" r="3" fill="#0F766E"/>
+            <path d="M15 16L25 24" stroke="#0F766E" stroke-width="1.5"/>
+          </svg>
+        </span>
+        <span>Health Research Atlas</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#topics">Health Topics</a>
+        <a href="#indicators">Data & Indicators</a>
+        <a href="#research">Research</a>
+        <a href="#compare">Comparisons</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#research">Explore Atlas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">A health evidence discovery platform</div>
+          <h1>Connecting Health Research to <span>Better Decisions</span></h1>
+          <p class="hero-copy">
+            Discover health research, datasets, indicators and policy evidence
+            across India and the world—all in one place.
+          </p>
+
+          <form class="search-box" id="mainSearch">
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Search India’s health evidence and global comparisons…"
+              aria-label="Search health research"
+            />
+            <button type="submit">Search Atlas →</button>
+          </form>
+          <p class="search-hint">
+            Try: health expenditure, maternal health, NFHS, mental health
+          </p>
+        </div>
+
+        <div class="hero-art" aria-label="Abstract atlas grid illustration">
+          <div class="floating-label label-one">Research + Data</div>
+          <div class="atlas-grid" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="floating-label label-two">India ↔ Global Evidence</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="topics">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Explore the evidence</div>
+            <h2>Explore Health Topics</h2>
+            <p>
+              Navigate research and data through a shared health-topic
+              classification.
+            </p>
+          </div>
+          <a class="text-link" href="#research">Browse all topics →</a>
+        </div>
+
+        <div class="topic-grid" id="topicGrid"></div>
+      </div>
+    </section>
+
+    <section class="indicators" id="indicators">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Numbers with context</div>
+            <h2>Health Indicators & Data</h2>
+            <p>
+              Explore indicators by geography, year and source. Values below
+              are illustrative placeholders until verified data is connected.
+            </p>
+          </div>
+          <a class="text-link" href="#compare">Explore comparisons →</a>
+        </div>
+
+        <div class="indicator-grid" id="indicatorGrid"></div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Find the evidence</div>
+            <h2>Research & Resources</h2>
+            <p>
+              Search across papers, datasets, reports and other research
+              resources.
+            </p>
+          </div>
+        </div>
+
+        <div class="research-tools">
+          <input
+            id="resourceSearch"
+            type="search"
+            placeholder="Search titles, topics, authors…"
+            aria-label="Search resources"
+          />
+
+          <select id="typeFilter" aria-label="Filter by resource type">
+            <option value="">All resource types</option>
+            <option value="Research paper">Research papers</option>
+            <option value="Dataset">Datasets</option>
+            <option value="Report">Reports</option>
+          </select>
+
+          <select id="topicFilter" aria-label="Filter by topic">
+            <option value="">All health topics</option>
+          </select>
+        </div>
+
+        <div class="research-list" id="researchList"></div>
+        <div class="empty-state" id="emptyState">
+          No matching sample resources. Try a broader search or clear the
+          filters.
+        </div>
+      </div>
+    </section>
+
+    <section class="comparison" id="compare">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Understand the differences</div>
+            <h2>Explore Health Across Places</h2>
+            <p>
+              Compare trends across India, countries, and Indian states and
+              union territories where data are comparable.
+            </p>
+          </div>
+        </div>
+
+        <div class="comparison-grid">
+          <article class="comparison-card">
+            <h3>India & the World</h3>
+            <p>
+              Explore country-level health indicators, trends and research
+              comparisons with transparent source notes.
+            </p>
+            <a class="comparison-link" href="#indicators">
+              Explore global comparisons →
+            </a>
+          </article>
+
+          <article class="comparison-card">
+            <h3>States & Union Territories</h3>
+            <p>
+              Discover differences across Indian states and UTs, with
+              attention to year, coverage and indicator definitions.
+            </p>
+            <a class="comparison-link" href="#indicators">
+              Explore Indian regions →
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="callout">
+          <div>
+            <h2>Make health evidence easier to discover.</h2>
+            <p>
+              The Health Research Atlas brings together research, data and
+              sources to support learning, analysis and informed decisions.
+              Data coverage and source limitations will be clearly documented.
+            </p>
+          </div>
+          <a href="mailto:hello@example.com">Contact the Atlas</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="color:white; margin-bottom:14px">
+            <span class="brand-mark">
+              <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <path d="M5 8H35V32H5Z" stroke="#0F766E" stroke-width="1.5"/>
+                <path d="M15 8V32M25 8V32M5 16H35M5 24H35"
+                  stroke="#84A98C" stroke-width="1.2"/>
+                <circle cx="15" cy="16" r="3" fill="#0F766E"/>
+                <circle cx="25" cy="24" r="3" fill="#0F766E"/>
+              </svg>
+            </span>
+            Health Research Atlas
+          </div>
+          <p>
+            Connecting health research to better decisions through accessible,
+            traceable evidence.
+          </p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <div class="footer-links">
+            <a href="#topics">Health Topics</a>
+            <a href="#indicators">Data & Indicators</a>
+            <a href="#research">Research Resources</a>
+            <a href="#compare">Comparisons</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>About</h3>
+          <div class="footer-links">
+            <a href="#about">About the Atlas</a>
+            <a href="mailto:hello@example.com">Suggest a resource</a>
+            <a href="mailto:hello@example.com">Corrections & feedback</a>
+            <a href="#about">Data methodology</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © <span id="year"></span> Health Research Atlas. Prototype content
+        includes illustrative sample records, not verified health estimates.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /*
+      STARTER DATA
+      Replace these illustrative records with verified source data.
+      Keep source, year, unit, geography and definition with each indicator.
+    */
+
+    const topics = [
+      { name: "Communicable diseases", icon: "＋",
+        description: "Infectious diseases and their prevention." },
+      { name: "Noncommunicable diseases", icon: "♡",
+        description: "Chronic conditions and risk factors." },
+      { name: "Maternal, newborn and child health", icon: "✳",
+        description: "Health across pregnancy, birth and childhood." },
+      { name: "Sexual and reproductive health", icon: "◉",
+        description: "Reproductive health, rights and services." },
+      { name: "Mental health", icon: "☼",
+        description: "Mental wellbeing, conditions and care." },
+      { name: "Nutrition and food safety", icon: "❋",
+        description: "Nutrition, food systems and safety." },
+      { name: "Environmental and occupational health", icon: "⌁",
+        description: "Health risks in environments and workplaces." },
+      { name: "Health systems and services", icon: "▦",
+        description: "Financing, access, quality and delivery." },
+      { name: "Health emergencies and preparedness", icon: "⚑",
+        description: "Preparedness, response and resilience." },
+      { name: "Immunization and vaccines", icon: "◇",
+        description: "Vaccination coverage and vaccine research." },
+      { name: "Health promotion and prevention", icon: "↗",
+        description: "Prevention, awareness and healthy behaviours." },
+      { name: "Injuries and violence", icon: "＋",
+        description: "Injury prevention, safety and violence." },
+      { name: "Ageing and older people", icon: "◷",
+        description: "Healthy ageing, care and older populations." },
+      { name: "Disability and rehabilitation", icon: "◎",
+        description: "Disability, inclusion and rehabilitation." },
+      { name: "Medicines and medical products", icon: "⌬",
+        description: "Access, safety and use of medical products." },
+      { name: "Social determinants and health equity", icon: "⇄",
+        description: "How social and economic conditions shape health." }
+    ];
+
+    const indicators = [
+      {
+        name: "Health expenditure",
+        category: "Health financing",
+        value: "Add verified value",
+        note: "Select indicator, year, geography and source."
+      },
+      {
+        name: "Maternal health",
+        category: "Maternal, newborn and child health",
+        value: "Add verified value",
+        note: "Keep survey round and definition attached."
+      },
+      {
+        name: "Life expectancy",
+        category: "Population health",
+        value: "Add verified value",
+        note: "Compare only compatible estimates."
+      }
+    ];
+
+    const resources = [
+      {
+        title: "Sample: Health expenditure and financing in India",
+        type: "Research paper",
+        authors: "Example author record",
+        year: "YYYY",
+        description:
+          "Placeholder record for a study examining health spending, financing and access.",
+        topics: ["Health systems and services"],
+        geography: "India",
+        url: ""
+      },
+      {
+        title: "Sample: National health survey dataset",
+        type: "Dataset",
+        authors: "Example data provider",
+        year: "YYYY",
+        description:
+          "Placeholder dataset record. Add survey round, documentation, access conditions and variables.",
+        topics: ["Maternal, newborn and child health", "Nutrition and food safety"],
+        geography: "India",
+        url: ""
+      },
+      {
+        title: "Sample: Health systems policy report",
+        type: "Report",
+        authors: "Example institution",
+        year: "YYYY",
+        description:
+          "Placeholder report record for policy analysis and health-system evidence.",
+        topics: ["Health systems and services", "Social determinants and health equity"],
+        geography: "India",
+        url: ""
+      }
+    ];
+
+    const topicGrid = document.getElementById("topicGrid");
+    const indicatorGrid = document.getElementById("indicatorGrid");
+    const researchList = document.getElementById("researchList");
+    const emptyState = document.getElementById("emptyState");
+    const resourceSearch = document.getElementById("resourceSearch");
+    const typeFilter = document.getElementById("typeFilter");
+    const topicFilter = document.getElementById("topicFilter");
+
+    function renderTopics() {
+      topicGrid.innerHTML = topics.slice(0, 8).map(topic => `
+        <a class="topic-card" href="#research"
+           data-topic="${escapeHtml(topic.name)}">
+          <div class="topic-icon">${escapeHtml(topic.icon)}</div>
+          <h3>${escapeHtml(topic.name)}</h3>
+          <p>${escapeHtml(topic.description)}</p>
+        </a>
+      `).join("");
+
+      topicFilter.innerHTML =
+        '<option value="">All health topics</option>' +
+        topics.map(topic =>
+          `<option value="${escapeHtml(topic.name)}">${escapeHtml(topic.name)}</option>`
+        ).join("");
+
+      topicGrid.querySelectorAll("[data-topic]").forEach(card => {
+        card.addEventListener("click", () => {
+          topicFilter.value = card.dataset.topic;
+          renderResources();
+        });
+      });
+    }
+
+    function renderIndicators() {
+      indicatorGrid.innerHTML = indicators.map(indicator => `
+        <article class="indicator-card">
+          <div class="category">${escapeHtml(indicator.category)}</div>
+          <h3>${escapeHtml(indicator.name)}</h3>
+          <div class="indicator-value">${escapeHtml(indicator.value)}</div>
+          <p class="indicator-note">${escapeHtml(indicator.note)}</p>
+          <span class="placeholder-note">Sample placeholder — not a statistic</span>
+        </article>
+      `).join("");
+    }
+
+    function renderResources() {
+      const query = resourceSearch.value.trim().toLowerCase();
+      const selectedType = typeFilter.value;
+      const selectedTopic = topicFilter.value;
+
+      const filtered = resources.filter(resource => {
+        const searchable = [
+          resource.title,
+          resource.authors,
+          resource.description,
+          resource.geography,
+          resource.topics.join(" ")
+        ].join(" ").toLowerCase();
+
+        return (!query || searchable.includes(query)) &&
+          (!selectedType || resource.type === selectedType) &&
+          (!selectedTopic || resource.topics.includes(selectedTopic));
+      });
+
+      researchList.innerHTML = filtered.map(resource => `
+        <article class="research-card">
+          <div>
+            <div class="resource-type">${escapeHtml(resource.type)}</div>
+            <h3>${escapeHtml(resource.title)}</h3>
+            <p>${escapeHtml(resource.description)}</p>
+            <div class="metadata">
+              <span class="tag">${escapeHtml(resource.authors)}</span>
+              <span class="tag">${escapeHtml(resource.year)}</span>
+              <span class="tag">${escapeHtml(resource.geography)}</span>
+              ${resource.topics.map(topic =>
+                `<span class="tag">${escapeHtml(topic)}</span>`
+              ).join("")}
+            </div>
+          </div>
+          ${
+            resource.url
+              ? `<a class="resource-link" href="${escapeHtml(resource.url)}"
+                   target="_blank" rel="noopener noreferrer">View source →</a>`
+              : `<span class="resource-link">Source to be added</span>`
+          }
+        </article>
+      `).join("");
+
+      emptyState.style.display = filtered.length ? "none" : "block";
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      })[char]);
+    }
+
+    document.getElementById("mainSearch").addEventListener("submit", event => {
+      event.preventDefault();
+      resourceSearch.value = document.getElementById("searchInput").value;
+      renderResources();
+      document.getElementById("research").scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+
+    resourceSearch.addEventListener("input", renderResources);
+    typeFilter.addEventListener("change", renderResources);
+    topicFilter.addEventListener("change", renderResources);
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    renderTopics();
+    renderIndicators();
+    renderResources();
+  </script>
+</body>
+</html>
