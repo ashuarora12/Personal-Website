@@ -6,6 +6,8 @@ Static HTML website, ready for GitHub Pages or Vercel.
 - `index.html` — homepage
 - `research.html` — research and publications
 - `experience.html` — experience timeline
+- `projects.html` — projects index
+- `patent-dashboard.html` — interactive WIPO patent dashboard (What Drives Global Patenting Activity?)
 - `data-buff.html` — interactive Data Buff prototype
 - `consultancy.html` — BridgeMinds Lab / consultancy
 - `book-a-meeting.html` — contact page
