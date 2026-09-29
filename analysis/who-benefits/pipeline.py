@@ -34,6 +34,7 @@ from sklearn.preprocessing import StandardScaler
 
 warnings.filterwarnings("ignore")
 RNG = np.random.default_rng(20250630)
+LAST = {}  # internals kept for report_stats.py
 HERE = Path(__file__).parent
 RAW = HERE / "data" / "raw"
 OUT = HERE / "output"
@@ -317,6 +318,7 @@ def fit_delivery_model(g):
                      "brier": r(brier_score_loss(y, pred), 3), "pred": pred}
     best = max(res, key=lambda k: res[k]["auc"])
     pred = res[best]["pred"]
+    LAST["delivery"] = {"X": X, "y": y, "groups": groups, "g": g, "preds": {k: v["pred"] for k, v in res.items()}, "best": best}
 
     # fairness / robustness: performance by subgroup (out-of-fold predictions)
     def subgroup(col, labels=None):
@@ -446,6 +448,7 @@ def gender_gap(p):
         balance.append({"covariate": cov_names[c],
                         "before": r(smd(X[c].values[ti], X[c].values[ci]), 3),
                         "after": r(smd(X[c].values[mi], X[c].values[mc]), 3)})
+    LAST["psm"] = {"info": info, "X": X, "mi": mi, "mc": mc, "ti": ti, "ci": ci, "logit": logit}
     gap = info.gap.values
     att = float(np.mean(gap[mi] - gap[mc]))
     naive = float(gap[ti].mean() - gap[ci].mean())

@@ -8,7 +8,14 @@ Source for the dashboard at `/who-benefits` (`ashu-arora-complete-website/who-be
 pip install -r requirements.txt
 python3 pipeline.py     # raw Scorecard exports -> output/dashboard_data.json
 python3 build_page.py   # embeds the JSON into page_template.html -> all site pages
+
+# written report (PDF)
+python3 report_stats.py            # uncertainty + robustness stats -> output/report_stats.json
+python3 report/make_figures.py     # SVG figures -> report/figures/
+python3 report/build_report.py     # -> report/who-benefits-report.pdf (+ copy on the site)
 ```
+
+The report adds Wilson intervals for classifier precision, a cluster-bootstrap CI for the model AUC, a timing-only baseline, and regression-adjustment checks of the matched estimate.
 
 Every number on the page comes from `pipeline.py`. Nothing is typed into the page by hand.
 
