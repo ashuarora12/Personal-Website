@@ -4,6 +4,8 @@ Builds two layouts from the same template, so data and chart code can't drift ap
   who-benefits.html        long-scroll, five numbered sections (default)
   who-benefits-story.html  story-first: three headline findings up top, each
                            linking to its evidence; context and methods after
+  who-benefits-studio.html a different visual design: sidebar app layout,
+                           Space Grotesk / Inter type, teal & violet palette
 """
 import re
 from pathlib import Path
@@ -122,7 +124,25 @@ def story(html):
     return out
 
 
-pages = {"who-benefits.html": template, "who-benefits-story.html": story(template)}
+def studio(html):
+    """Completely different visual design (sidebar app, Space Grotesk/Inter, teal/violet),
+    wrapping the same sections and the same chart code."""
+    shell = (HERE / "redesign_shell.html").read_text()
+    first = html.index('<section id="results">')
+    last = html.index("</section>", html.index('<section id="methods">')) + len("</section>")
+    sections = html[first:last]
+    footer = block(html, "<footer>", "</footer>")
+    script = block(html, "<script>\nconst DATA", "</script>")
+    # chart fonts follow the new type system
+    script = (script.replace("'IBM Plex Sans', sans-serif", "'Inter', sans-serif")
+                    .replace("'IBM Plex Mono',monospace", "'JetBrains Mono',monospace")
+                    .replace("'IBM Plex Mono', monospace", "'JetBrains Mono', monospace"))
+    return (shell.replace("{{SECTIONS}}", sections).replace("{{FOOTER}}", footer)
+                 .replace("{{SCRIPT}}", script))
+
+
+pages = {"who-benefits.html": template, "who-benefits-story.html": story(template),
+         "who-benefits-studio.html": studio(template)}
 for name, html in pages.items():
     path = SITE / name
     path.write_text(html.replace("/*__DATA__*/null", data))

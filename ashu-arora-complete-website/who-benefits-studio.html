@@ -3,205 +3,260 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Who Benefits? (Story view) | Ashu Arora</title>
-<meta name="description" content="Who benefits from World Bank Group projects? An interactive analysis of 1,131 projects' FY25 results on health, jobs and gender: a text classifier, a delivery-gap model and a matched comparison, by Ashu Arora.">
+<title>Who Benefits? (Studio view) | Ashu Arora</title>
+<meta name="description" content="Who benefits from World Bank Group projects? An interactive analysis of 1,131 projects' FY25 results on health, jobs and gender, by Ashu Arora.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
   :root {
-    --paper: #f9f8f4; --paper-raised: #ffffff; --ink: #17233d; --ink-soft: #4d5a72;
-    --ink-faint: #737e90; --rule: #dcd8cd; --gold: #a8721f; --gold-soft: #f1e3cd;
-    --blue: #2a5a8a; --blue-soft: #dfe9f2; --red: #9b3a34; --red-soft: #f3e0dd;
-    --teal: #2f7566; --teal-soft: #dceae5; --focus-bg: #fff6de;
-    /* chart series (validated pair: CVD ΔE ≥ 24, contrast ≥ 3:1 on surface) */
-    --s1: #2a64a8; --s2: #c9761c; --grid: #ebe8df; --muted-mark: #b9b4a6;
+    --paper: #f3f5fa; --paper-raised: #ffffff; --ink: #0f172a; --ink-soft: #475569; --ink-faint: #64748b;
+    --rule: #e3e8f0; --grid: #edf1f6; --muted-mark: #b8c1cf;
+    --s1: #0d8f84; --s2: #8a3ffc;                      /* validated pair: CVD ΔE 21, contrast ≥ 3:1 */
+    --s1-soft: #e3f4f2; --s2-soft: #f1e9ff; --teal-soft: #dff3f0;
+    --warn: #b42318; --warn-soft: #fde8e7;
+    --side: #0c1a33; --side-ink: #c7d1e4; --side-faint: #8394b3; --side-active: #16284a;
+    --shadow: 0 1px 2px rgba(15, 23, 42, .05), 0 10px 28px -14px rgba(15, 23, 42, .18);
+    --radius: 14px;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --paper: #14181f; --paper-raised: #1c212b; --ink: #eef0f3; --ink-soft: #b3bac7;
-      --ink-faint: #8a94a5; --rule: #333a46; --gold: #d4a24f; --gold-soft: #3a3122;
-      --blue: #7fb0dd; --blue-soft: #1f2c38; --red: #d98b83; --red-soft: #3a2422;
-      --teal: #6fc2a8; --teal-soft: #1c2e29; --focus-bg: #33291a;
-      --s1: #4383c8; --s2: #c2801f; --grid: #2a303b; --muted-mark: #5a6272;
+      --paper: #0b1220; --paper-raised: #131c2e; --ink: #e8ecf3; --ink-soft: #aab5c7; --ink-faint: #8391a8;
+      --rule: #22304a; --grid: #1c2740; --muted-mark: #4b5a74;
+      --s1: #1f9d91; --s2: #9068f5;
+      --s1-soft: #10302f; --s2-soft: #231b3d; --teal-soft: #12302d;
+      --warn: #f28b82; --warn-soft: #3a1d1c;
+      --side: #070d19; --side-ink: #c7d1e4; --side-faint: #7485a3; --side-active: #13213b;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 28px -14px rgba(0, 0, 0, .6);
     }
   }
   :root[data-theme="dark"] {
-    --paper: #14181f; --paper-raised: #1c212b; --ink: #eef0f3; --ink-soft: #b3bac7;
-    --ink-faint: #8a94a5; --rule: #333a46; --gold: #d4a24f; --gold-soft: #3a3122;
-    --blue: #7fb0dd; --blue-soft: #1f2c38; --red: #d98b83; --red-soft: #3a2422;
-    --teal: #6fc2a8; --teal-soft: #1c2e29; --focus-bg: #33291a;
-    --s1: #4383c8; --s2: #c2801f; --grid: #2a303b; --muted-mark: #5a6272;
+    --paper: #0b1220; --paper-raised: #131c2e; --ink: #e8ecf3; --ink-soft: #aab5c7; --ink-faint: #8391a8;
+    --rule: #22304a; --grid: #1c2740; --muted-mark: #4b5a74;
+    --s1: #1f9d91; --s2: #9068f5;
+    --s1-soft: #10302f; --s2-soft: #231b3d; --teal-soft: #12302d;
+    --warn: #f28b82; --warn-soft: #3a1d1c;
+    --side: #070d19; --side-ink: #c7d1e4; --side-faint: #7485a3; --side-active: #13213b;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 28px -14px rgba(0, 0, 0, .6);
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'IBM Plex Sans', sans-serif; line-height: 1.55; }
-  a { color: var(--blue); }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
-  @media (max-width: 640px) { .wrap { padding: 0 16px; } }
+  html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { color: var(--s1); }
+  code { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; }
 
-  .topbar { position: sticky; top: 0; z-index: 40; background: var(--paper); border-bottom: 1px solid var(--rule); }
-  .topbar-inner { max-width: 1120px; margin: 0 auto; padding: 10px 28px; display: flex; align-items: center; gap: 16px; }
-  .topbar-title { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-faint); flex: 1; }
-  .theme-btn, .link-btn { font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid var(--rule); background: var(--paper-raised); color: var(--ink-soft); padding: 6px 12px; border-radius: 3px; cursor: pointer; white-space: nowrap; text-decoration: none; }
-  .theme-btn:hover, .link-btn:hover { border-color: var(--gold); color: var(--ink); }
-  .toc { display: flex; gap: 14px; font-size: 12px; }
-  .toc a { color: var(--ink-faint); text-decoration: none; font-family: 'IBM Plex Mono', monospace; }
-  .toc a:hover { color: var(--ink); }
-  @media (max-width: 900px) { .toc { display: none; } }
-  @media (max-width: 640px) { .topbar-title { display: none; } .topbar-inner { justify-content: space-between; padding: 10px 16px; } }
+  /* ---------------- app shell ---------------- */
+  .app { display: grid; grid-template-columns: 256px minmax(0, 1fr); min-height: 100vh; }
+  .side { position: sticky; top: 0; height: 100vh; border-right: 1px solid rgba(255, 255, 255, .06); background: var(--side); color: var(--side-ink); display: flex; flex-direction: column; padding: 26px 20px; gap: 26px; overflow-y: auto; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
+  .mono { width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px; color: #fff; background: linear-gradient(135deg, #0d8f84, #8a3ffc); flex: none; }
+  .brand b { display: block; font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: -.01em; }
+  .brand small { display: block; font-size: 11.5px; color: var(--side-faint); }
+  .side-title { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--side-faint); margin: 0 0 8px 10px; }
+  .snav { display: flex; flex-direction: column; gap: 2px; }
+  .snav a { display: flex; align-items: center; gap: 12px; padding: 9px 10px; border-radius: 10px; color: var(--side-ink); text-decoration: none; font-size: 13.5px; font-weight: 500; }
+  .snav a span { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-family: 'JetBrains Mono', monospace; font-size: 11px; background: rgba(255, 255, 255, .06); color: var(--side-faint); flex: none; }
+  .snav a:hover { background: var(--side-active); color: #fff; }
+  .snav a.on { background: var(--side-active); color: #fff; }
+  .snav a.on span { background: linear-gradient(135deg, #0d8f84, #8a3ffc); color: #fff; }
+  .side-foot { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
+  .side-badge { font-size: 12px; color: var(--side-faint); border: 1px solid rgba(255, 255, 255, .1); border-radius: 10px; padding: 10px 12px; line-height: 1.45; }
+  .side-badge b { color: var(--side-ink); font-weight: 600; }
+  .sbtn { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; background: rgba(255, 255, 255, .06); color: var(--side-ink); border: 1px solid rgba(255, 255, 255, .1); padding: 9px 12px; border-radius: 10px; cursor: pointer; text-align: left; text-decoration: none; }
+  .sbtn:hover { background: var(--side-active); color: #fff; }
 
-  header.hero { border-bottom: 1px solid var(--rule); padding: 44px 0 40px; }
-  .hero-grid { display: grid; grid-template-columns: 1fr 320px; gap: 40px; align-items: start; }
-  @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } }
-  .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.04em; color: var(--gold); margin: 0 0 14px; }
-  h1 { font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(30px, 4.4vw, 46px); line-height: 1.12; margin: 0 0 18px; max-width: 18ch; }
-  .lede { font-size: 17px; color: var(--ink-soft); max-width: 66ch; margin: 0 0 30px; }
-  .statrow { display: flex; flex-wrap: wrap; gap: 34px; margin-top: 8px; }
-  .stat .num { font-family: 'Source Serif 4', serif; font-size: 34px; font-weight: 600; color: var(--ink); display: block; }
-  .stat .label { font-size: 13px; color: var(--ink-faint); margin-top: 2px; }
-  .glance-card { background: var(--paper-raised); border: 1px solid var(--rule); border-left: 3px solid var(--gold); border-radius: 3px; padding: 20px 22px; }
-  .glance-title { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.05em; color: var(--gold); margin: 0 0 14px; }
-  .glance-card dl { margin: 0; }
-  .glance-card dt { font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--ink-faint); margin: 0 0 3px; }
-  .glance-card dd { margin: 0 0 14px; font-size: 13px; line-height: 1.45; color: var(--ink-soft); }
-  .glance-card dd:last-child { margin-bottom: 0; }
-  .glance-card dd strong { color: var(--ink); font-weight: 600; }
+  main { padding: 40px clamp(20px, 4vw, 56px) 60px; max-width: 1240px; width: 100%; }
+  @media (max-width: 960px) {
+    .app { grid-template-columns: minmax(0, 1fr); }
+    .side { position: sticky; top: 0; z-index: 50; height: auto; flex-direction: row; align-items: center; padding: 10px 14px; gap: 12px; overflow: visible; }
+    .brand small, .side-title, .side-badge, .side-foot a.sbtn { display: none; }
+    .brand b { font-size: 14px; }
+    .mono { width: 32px; height: 32px; font-size: 13px; }
+    .snav { flex-direction: row; overflow-x: auto; gap: 4px; flex: 1; min-width: 0; scrollbar-width: none; }
+    .side { min-width: 0; }
+    .snav a { padding: 6px 8px; font-size: 12.5px; white-space: nowrap; }
+    .snav a span { display: none; }
+    .side-foot { margin: 0; }
+    .sbtn { padding: 6px 10px; font-size: 12px; }
+    .side-nav-wrap { display: contents; }
+  }
+  @media (max-width: 560px) { .brand b { display: none; } main { padding: 24px 16px 48px; } }
 
-  section { padding: 52px 0; border-bottom: 1px solid var(--rule); }
-  .section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 6px; }
-  .section-no { font-family: 'IBM Plex Mono', monospace; color: var(--ink-faint); font-size: 13px; }
-  h2 { font-family: 'Source Serif 4', serif; font-size: 27px; font-weight: 600; margin: 0; }
-  h3 { font-family: 'Source Serif 4', serif; font-size: 19px; font-weight: 600; margin: 30px 0 8px; }
-  .section-intro { color: var(--ink-soft); max-width: 72ch; margin: 14px 0 26px; font-size: 15.5px; }
+  /* ---------------- header ---------------- */
+  .kicker { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: var(--s1); background: var(--s1-soft); padding: 5px 12px; border-radius: 999px; margin-bottom: 18px; }
+  .kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--s1); }
+  h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 4.2vw, 48px); line-height: 1.06; letter-spacing: -.03em; margin: 0 0 16px; max-width: 20ch; }
+  h1 em { font-style: normal; background: linear-gradient(90deg, var(--s1), var(--s2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .lede { font-size: 17px; color: var(--ink-soft); max-width: 64ch; margin: 0 0 28px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 18px; }
+  @media (max-width: 900px) { .kpis { grid-template-columns: 1fr 1fr; } }
+  .kpi { background: var(--paper-raised); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px 20px; position: relative; overflow: hidden; }
+  .kpi::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--s1); }
+  .kpi.alt::after { background: var(--s2); }
+  .kpi .num { font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -.02em; line-height: 1.1; display: block; }
+  .kpi .label { font-size: 12.5px; color: var(--ink-faint); }
+  .banner { display: flex; gap: 14px; align-items: flex-start; background: linear-gradient(100deg, var(--s1-soft), var(--s2-soft)); border-radius: var(--radius); padding: 16px 20px; font-size: 14.5px; color: var(--ink); margin-bottom: 8px; }
+  .banner .bk { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--s2); white-space: nowrap; padding-top: 2px; }
+
+  /* ---------------- sections (content shared with the other layouts) ---------------- */
+  section { padding: 56px 0 8px; }
+  .section-head { display: flex; align-items: center; gap: 14px; margin-bottom: 4px; }
+  .section-no { width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #fff; background: linear-gradient(135deg, #0d8f84, #8a3ffc); flex: none; }
+  h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 2.4vw, 28px); font-weight: 600; letter-spacing: -.02em; line-height: 1.2; margin: 0; }
+  h3 { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: -.01em; margin: 34px 0 10px; }
+  .section-intro { color: var(--ink-soft); max-width: 74ch; margin: 14px 0 22px; font-size: 15px; }
   .section-intro p { margin: 0 0 10px; }
-  .card { background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 3px; padding: 22px 24px 16px; }
-  .card + .card, .grid2 + .card, .card + .grid2 { margin-top: 20px; }
-  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  @media (max-width: 860px) { .grid2 { grid-template-columns: 1fr; } }
-  .chart-title { font-size: 13.5px; font-weight: 600; color: var(--ink-soft); margin-bottom: 4px; }
-  .chart-sub { font-size: 12px; color: var(--ink-faint); margin-bottom: 12px; }
+  .card { background: var(--paper-raised); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px 24px 18px; }
+  .card + .card, .grid2 + .card, .card + .grid2 { margin-top: 18px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 1000px) { .grid2 { grid-template-columns: 1fr; } }
+  .chart-title { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+  .chart-sub { font-size: 12.5px; color: var(--ink-faint); margin-bottom: 14px; }
   .chart-box { position: relative; width: 100%; height: 320px; }
   .chart-box.short { height: 250px; }
   .chart-box.tall { height: 400px; }
-  .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink-soft); margin: 2px 0 10px; }
-  .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
-  .callout { background: var(--gold-soft); border-left: 3px solid var(--gold); padding: 16px 18px; font-size: 14.5px; color: var(--ink-soft); margin-top: 20px; }
+  .legend { display: flex; gap: 8px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink-soft); margin: 2px 0 12px; }
+  .legend span { background: var(--paper); border-radius: 999px; padding: 3px 10px 3px 8px; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50% !important; margin-right: 6px; vertical-align: 0; }
+  .callout { position: relative; background: var(--paper-raised); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px 22px 18px 22px; font-size: 14.5px; color: var(--ink-soft); margin-top: 18px; border: 1px solid var(--s1-soft); }
+  .callout::before { content: "Insight"; display: block; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--s1); margin-bottom: 6px; }
+  .callout.note { border-color: var(--s2-soft); }
+  .callout.note::before { content: "Interpretation"; color: var(--s2); }
+  #methods .callout.note::before { content: "Related research"; }
   .callout strong { color: var(--ink); }
-  .callout.note { background: var(--blue-soft); border-left-color: var(--blue); }
 
-  .tag { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.04em; text-transform: uppercase; padding: 2px 7px; border-radius: 10px; vertical-align: 2px; margin-left: 6px; white-space: nowrap; }
-  .tag.src { background: var(--teal-soft); color: var(--teal); }
-  .tag.est { background: var(--blue-soft); color: var(--blue); }
-  .tag.chk { background: var(--red-soft); color: var(--red); }
-  .src-line { font-size: 11.5px; color: var(--ink-faint); margin-top: 10px; }
+  .tag { display: inline-block; font-family: 'Inter', sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: .02em; padding: 2px 8px; border-radius: 6px; vertical-align: 1px; margin-left: 6px; white-space: nowrap; text-transform: none; }
+  .tag.src { background: var(--s1-soft); color: var(--s1); }
+  .tag.est { background: var(--s2-soft); color: var(--s2); }
+  .tag.chk { background: var(--warn-soft); color: var(--warn); }
+  .src-line { font-size: 12px; color: var(--ink-faint); margin-top: 10px; }
 
-  .pillbar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
-  .pill { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; padding: 5px 11px; border-radius: 14px; border: 1px solid var(--rule); background: transparent; color: var(--ink-soft); cursor: pointer; }
-  .pill.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-  .pill:hover:not(.active) { border-color: var(--gold); color: var(--ink); }
+  .pillbar { display: inline-flex; gap: 4px; flex-wrap: wrap; margin-bottom: 16px; background: var(--paper-raised); box-shadow: var(--shadow); border-radius: 12px; padding: 4px; }
+  .pill { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; padding: 7px 14px; border-radius: 9px; border: 0; background: transparent; color: var(--ink-soft); cursor: pointer; }
+  .pill.active { background: var(--ink); color: var(--paper-raised); }
+  .pill:hover:not(.active) { background: var(--paper); color: var(--ink); }
 
   table.data-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
-  table.data-table th { text-align: left; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.03em; color: var(--ink-faint); font-weight: 500; padding: 8px 6px; border-bottom: 1px solid var(--rule); vertical-align: bottom; }
+  table.data-table th { text-align: left; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-faint); padding: 10px 8px; border-bottom: 1px solid var(--rule); vertical-align: bottom; }
   table.data-table th.num, table.data-table td.num { text-align: right; }
-  table.data-table td { padding: 8px 6px; border-bottom: 1px solid var(--rule); vertical-align: top; }
-  table.data-table td.num { font-family: 'IBM Plex Mono', monospace; color: var(--ink-soft); white-space: nowrap; }
-  table.data-table tr.total td { font-weight: 600; background: var(--focus-bg); }
-  .table-scroll { max-height: 460px; overflow: auto; border: 1px solid var(--rule); border-radius: 3px; background: var(--paper-raised); }
+  table.data-table td { padding: 10px 8px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  table.data-table tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--paper) 55%, transparent); }
+  table.data-table td.num { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--ink-soft); white-space: nowrap; }
+  table.data-table tr.total td { font-weight: 600; background: var(--s1-soft) !important; color: var(--ink); }
+  .table-scroll { max-height: 480px; overflow: auto; border-radius: var(--radius); box-shadow: var(--shadow); background: var(--paper-raised); }
   .table-scroll table th { position: sticky; top: 0; background: var(--paper-raised); z-index: 1; }
   .table-x { overflow-x: auto; position: relative; }
   .table-meta { font-size: 12px; color: var(--ink-faint); margin: 10px 2px 0; }
   .ev { font-size: 12.5px; color: var(--ink-soft); }
-  .ev mark { background: var(--gold-soft); color: var(--ink); padding: 0 2px; border-radius: 2px; }
-  .tchip { display: inline-block; font-size: 10.5px; font-family: 'IBM Plex Mono', monospace; padding: 1px 6px; border-radius: 8px; background: var(--blue-soft); color: var(--ink-soft); margin: 2px 3px 0 0; white-space: nowrap; }
+  .ev mark { background: var(--s2-soft); color: var(--ink); padding: 0 3px; border-radius: 4px; }
+  .tchip { display: inline-block; font-size: 11px; font-weight: 500; padding: 1px 8px; border-radius: 6px; background: var(--s1-soft); color: var(--s1); margin: 2px 4px 0 0; white-space: nowrap; }
   .search-row { display: flex; gap: 8px; margin-bottom: 12px; }
-  .search-row input { flex: 1; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; padding: 9px 12px; border: 1px solid var(--rule); border-radius: 3px; background: var(--paper-raised); color: var(--ink); min-width: 0; }
-  .search-row input:focus { outline: none; border-color: var(--gold); }
+  .search-row input { flex: 1; font-family: 'Inter', sans-serif; font-size: 14px; padding: 11px 14px; border: 1px solid var(--rule); border-radius: 12px; background: var(--paper-raised); color: var(--ink); min-width: 0; box-shadow: var(--shadow); }
+  .search-row input:focus { outline: 2px solid var(--s1); outline-offset: 1px; }
 
-  .theme-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
-  @media (max-width: 860px) { .theme-cards { grid-template-columns: 1fr 1fr; } }
+  .theme-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 18px; }
+  @media (max-width: 900px) { .theme-cards { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 520px) { .theme-cards { grid-template-columns: 1fr; } }
-  .tcard { background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 3px; padding: 14px 16px; cursor: pointer; }
-  .tcard:hover, .tcard.active { border-color: var(--gold); }
-  .tcard.active { box-shadow: inset 3px 0 0 var(--gold); }
+  .tcard { background: var(--paper-raised); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px 18px; cursor: pointer; border: 2px solid transparent; transition: transform .12s; }
+  .tcard:hover { transform: translateY(-2px); }
+  .tcard.active { border-color: var(--s1); }
   .tcard .tl { font-size: 13px; font-weight: 600; color: var(--ink-soft); }
-  .tcard .tn { font-family: 'Source Serif 4', serif; font-size: 28px; font-weight: 600; line-height: 1.1; margin: 4px 0 2px; }
-  .tcard .tn small { font-family: 'IBM Plex Sans', sans-serif; font-size: 12px; font-weight: 400; color: var(--ink-faint); }
+  .tcard .tn { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -.02em; line-height: 1.15; margin: 4px 0 2px; }
+  .tcard .tn small { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; color: var(--ink-faint); letter-spacing: 0; }
   .tcard .tp { font-size: 11.5px; color: var(--ink-faint); }
 
-  .model-compare { display: flex; gap: 18px; margin-bottom: 20px; flex-wrap: wrap; }
-  .model-box { flex: 1; min-width: 200px; border: 1px solid var(--rule); border-radius: 3px; padding: 16px 20px; background: var(--paper-raised); }
-  .model-box.winner { border-color: var(--gold); }
-  .model-box .mt { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.04em; }
-  .model-box .big { font-family: 'Source Serif 4', serif; font-size: 30px; font-weight: 600; margin: 6px 0 2px; }
+  .model-compare { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 18px; }
+  @media (max-width: 900px) { .model-compare { grid-template-columns: 1fr; } }
+  .model-box { background: var(--paper-raised); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px 20px; border: 2px solid transparent; }
+  .model-box.winner { border-color: var(--s1); }
+  .model-box .mt { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); }
+  .model-box.winner .mt { color: var(--s1); }
+  .model-box .big { font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -.02em; margin: 6px 0 2px; }
   .model-box .desc { font-size: 12.5px; color: var(--ink-soft); }
 
-  .result-box { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; margin-bottom: 20px; }
-  @media (max-width: 700px) { .result-box { grid-template-columns: 1fr; } }
-  .result-box > div { background: var(--paper-raised); padding: 16px 20px; }
-  .result-box .mt { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.04em; }
-  .result-box .big { font-family: 'Source Serif 4', serif; font-size: 28px; font-weight: 600; margin: 4px 0; }
+  .result-box { display: grid; gap: 14px; margin-bottom: 18px; }
+  .result-box > div { background: var(--paper-raised); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px 20px; }
+  .result-box > div:first-child { border: 2px solid var(--s2); }
+  .result-box .mt { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); }
+  .result-box .big { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -.02em; margin: 4px 0; }
   .result-box .desc { font-size: 12.5px; color: var(--ink-soft); }
 
-  .method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  @media (max-width: 860px) { .method-grid { grid-template-columns: 1fr; } }
-  .method-grid .card h4 { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--gold); margin: 0 0 10px; font-weight: 500; }
+  .method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 1000px) { .method-grid { grid-template-columns: 1fr; } }
+  .method-grid .card h4 { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; color: var(--ink); margin: 0 0 12px; }
   .method-grid .card ul { margin: 0; padding-left: 18px; font-size: 14px; color: var(--ink-soft); }
   .method-grid .card li { margin-bottom: 8px; }
   .method-grid .card p { font-size: 14px; color: var(--ink-soft); margin: 0 0 10px; }
-  footer { padding: 36px 0 70px; font-size: 13px; color: var(--ink-faint); }
+  footer { margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--rule); font-size: 12.5px; color: var(--ink-faint); }
   .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-  details.tableview { margin-top: 12px; font-size: 13px; }
-  details.tableview summary { cursor: pointer; color: var(--ink-faint); font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; }
-
-  header.hero.story { padding-bottom: 34px; }
-  .findings { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 6px 0 22px; }
-  @media (max-width: 860px) { .findings { grid-template-columns: 1fr; } }
-  .finding { display: flex; flex-direction: column; gap: 6px; background: var(--paper-raised); border: 1px solid var(--rule); border-top: 3px solid var(--gold); border-radius: 3px; padding: 18px 20px; text-decoration: none; color: var(--ink); }
-  .finding:hover { border-color: var(--gold); }
-  .finding .fk { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--gold); }
-  .finding .fn { font-family: 'Source Serif 4', serif; font-size: 34px; font-weight: 700; line-height: 1.05; }
-  .finding .ft { font-size: 14px; color: var(--ink-soft); line-height: 1.45; flex: 1; }
-  .finding .fg { font-size: 12px; color: var(--blue); font-family: 'IBM Plex Mono', monospace; }
-  .strip { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 13px; color: var(--ink-faint); border-top: 1px solid var(--rule); padding-top: 14px; }
-  .strip strong { color: var(--ink); font-family: 'IBM Plex Mono', monospace; font-weight: 500; }
-  .strip .strip-src { flex-basis: 100%; font-size: 12px; }
-  details.methods-fold > summary { cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-faint); margin-bottom: 16px; }
-  details.methods-fold > summary:hover { color: var(--ink); }
+  :focus-visible { outline: 2px solid var(--s1); outline-offset: 2px; }
 </style>
 </head>
 <body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="/projects"><span class="mono">AA</span><span><b>Ashu Arora</b><small>Projects &middot; development analytics</small></span></a>
+    <div class="side-nav-wrap">
+      <p class="side-title">Sections</p>
+      <nav class="snav" aria-label="Sections">
+        <a href="#results"><span>01</span>Who is reached</a>
+        <a href="#themes"><span>02</span>What is measured</a>
+        <a href="#delivery"><span>03</span>Delivery model</a>
+        <a href="#gender"><span>04</span>Gender &amp; fragility</a>
+        <a href="#methods"><span>05</span>Methods</a>
+      </nav>
+    </div>
+    <div class="side-foot">
+      <div class="side-badge"><b>WBG Scorecard &middot; FY25</b><br>Results as of 30 June 2025<br>Python &rarr; static JSON &rarr; this page</div>
+      <button class="sbtn" id="themeToggle">&#9680; Light / dark</button>
+      <a class="sbtn" href="/projects">&larr; All projects</a>
+    </div>
+  </aside>
 
-<div class="topbar"><div class="topbar-inner">
-  <a class="link-btn" href="/projects">&larr; Ashu Arora &middot; Projects</a>
-  <span class="topbar-title">WHO BENEFITS? &middot; HEALTH, JOBS &amp; GENDER IN THE WBG PORTFOLIO</span>
-  <nav class="toc" aria-label="Sections"><a href="#themes">01 Workforce</a><a href="#delivery">02 Delivery</a><a href="#gender">03 Gender</a><a href="#results">04 Context</a><a href="#methods">05 Methods</a></nav>
-  <button class="theme-btn" id="themeToggle">&#9788; / &#9789; theme</button>
-</div></div>
+  <main>
+    <header>
+      <span class="kicker">Data science portfolio &middot; development analytics</span>
+      <h1>Who benefits? <em>Health, jobs &amp; gender</em> in the World Bank Group portfolio</h1>
+      <p class="lede">Can health investment create jobs, especially for women, and does labour mobility play a part? Before asking whether it works, it helps to ask what is measured. This dashboard uses the World Bank Group's own FY25 results data to ask three questions. Who is being reached? Does the portfolio measure the health–jobs–mobility link? Do projects deliver to women as planned?</p>
+      <div class="kpis">
+        <div class="kpi"><span class="num" id="statProjects">–</span><span class="label">projects analysed</span></div>
+        <div class="kpi"><span class="num" id="statCountries">–</span><span class="label">countries</span></div>
+        <div class="kpi"><span class="num" id="statRecords">–</span><span class="label">project-indicator records</span></div>
+        <div class="kpi alt"><span class="num" id="statHW">–</span><span class="label">projects that measure health workers</span></div>
+      </div>
+      <div class="banner"><span class="bk">Headline</span><span id="glanceHW">–</span></div>
+    </header>
 
-<div class="wrap">
-
-<header class="hero story">
-  <p class="eyebrow">DATA SCIENCE PORTFOLIO PROJECT &middot; DEVELOPMENT ANALYTICS</p>
-  <h1 style="max-width:24ch">Who benefits? Health, jobs &amp; gender in the World Bank Group portfolio</h1>
-  <p class="lede">Three findings from the Bank Group's own FY25 results data on <span id="ledeN">–</span> projects. Each card links to the evidence, the method and its limits.</p>
-  
-<div class="findings" id="findings">
-  <a class="finding" href="#themes"><span class="fk">Finding 1</span><span class="fn" id="f1n">–</span><span class="ft" id="f1t"></span><span class="fg">See the text classifier &darr;</span></a>
-  <a class="finding" href="#delivery"><span class="fk">Finding 2</span><span class="fn" id="f2n">–</span><span class="ft" id="f2t"></span><span class="fg">See the early-warning model &darr;</span></a>
-  <a class="finding" href="#gender"><span class="fk">Finding 3</span><span class="fn" id="f3n">–</span><span class="ft" id="f3t"></span><span class="fg">See the matched comparison &darr;</span></a>
-</div>
-  <div class="strip">
-    <span><strong id="statProjects">–</strong> projects</span><span><strong id="statCountries">–</strong> countries</span>
-    <span><strong id="statRecords">–</strong> project-indicator records</span><span><strong id="statHW">–</strong> measure health workers</span>
-    <span class="strip-src">Source: WBG Scorecard, FY25 (30 June 2025) &middot; Python &rarr; static JSON &rarr; this page</span>
+<section id="results">
+  <div class="section-head"><span class="section-no">01</span><h2>Who is being reached?</h2></div>
+  <div class="section-intro">
+    <p>The people reached by Bank Group projects, by region, and how many of them are women. Pick a result type. Achieved counts are progress to date. Targets are what projects expect to deliver by completion.</p>
   </div>
-  <span id="glanceHW" hidden></span>
-</header>
+  <div class="pillbar" id="resultPills" role="tablist" aria-label="Result type"></div>
+  <div class="card">
+    <div class="chart-title" id="resultTitle"></div>
+    <div class="chart-sub">People reached to date, millions <span class="tag src">Sourced &middot; WBG Scorecard FY25</span></div>
+    <div class="legend"><span><i style="background:var(--s1)"></i>All beneficiaries</span><span><i style="background:var(--s2)"></i>Women</span></div>
+    <div class="chart-box" id="resultBox"><canvas id="resultChart" aria-label="Beneficiaries by region" role="img"></canvas></div>
+  </div>
+  <div class="card table-x">
+    <div class="chart-title">Region detail with development context</div>
+    <table class="data-table" id="resultTable">
+      <thead><tr>
+        <th>Region</th><th class="num">Reached</th><th class="num">% of target</th><th class="num">Women's share</th>
+        <th class="num">Poverty<br>($3.00/day)</th><th class="num">Food<br>insecurity</th><th class="num">Basic<br>hygiene</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+    <p class="table-meta" id="resultMeta"></p>
+  </div>
+  <div class="callout" id="resultCallout"></div>
+</section>
 
-<!-- ============================================================ 01 -->
+<!-- ============================================================ 02 -->
 <section id="themes">
-  <div class="section-head"><span class="section-no">01</span><h2>Finding 1 &middot; The health workforce is almost invisible in measured results</h2></div>
+  <div class="section-head"><span class="section-no">02</span><h2>Does the portfolio measure the health&ndash;jobs&ndash;mobility link?</h2></div>
   <div class="section-intro">
     <p>A small evidence-extraction exercise, in the spirit of tools like the World Bank's ImpactAI. Every project's development objective and results indicators are read by a transparent keyword classifier. It tags six themes and keeps the exact phrase that triggered each tag as evidence.</p>
     <p>For each theme, a random sample of tagged projects was checked by hand to measure <strong>precision</strong>: how many of the tags are correct. The first version failed that check for two themes and was fixed; both versions' scores are shown.</p>
@@ -220,8 +275,9 @@
   <p class="table-meta" id="projMeta"></p>
 </section>
 
+<!-- ============================================================ 03 -->
 <section id="delivery">
-  <div class="section-head"><span class="section-no">02</span><h2>Finding 2 &middot; Results arrive late, and a model can flag which ones are at risk</h2></div>
+  <div class="section-head"><span class="section-no">03</span><h2>Which projects fall behind, and can we predict it?</h2></div>
   <div class="section-intro">
     <p>An early-warning model, the kind of tool a team could use to decide where to adapt. For each result a project reports, it compares the <em>share of the target delivered</em> with the <em>share of the implementation period that has passed</em>. The result is flagged <strong>behind</strong> if delivery trails time elapsed by more than 10 percentage points. Results less than 20% of the way through implementation are too early to judge and are excluded.</p>
     <p>Two models predict that flag from project features: region, income group, fragility, sector, instrument, size and timing. They're scored on out-of-fold predictions, with all of a project's results kept in the same fold so the model never sees a project it's being tested on.</p>
@@ -264,8 +320,9 @@
   <div class="callout note" id="fairCallout"></div>
 </section>
 
+<!-- ============================================================ 04 -->
 <section id="gender">
-  <div class="section-head"><span class="section-no">03</span><h2>Finding 3 &middot; Women are often not counted directly, which hides any gap</h2></div>
+  <div class="section-head"><span class="section-no">04</span><h2>Are women reached as planned, and does fragility widen the gap?</h2></div>
   <div class="section-intro">
     <p>For results reported both in total and for women, compare women's <em>planned</em> share of beneficiaries with their <em>achieved</em> share. A negative gap means women are falling behind plan.</p>
     <p>Then ask whether projects in fragile and conflict-affected settings (FCS) show a larger gap than otherwise similar projects elsewhere. This uses <strong>propensity-score matching</strong>, the same quasi-experimental approach used in impact evaluations when randomisation isn't possible.</p>
@@ -311,36 +368,11 @@
   </div>
 </section>
 
-<section id="results">
-  <div class="section-head"><span class="section-no">04</span><h2>Context &middot; Who is being reached?</h2></div>
-  <div class="section-intro">
-    <p>The people reached by Bank Group projects, by region, and how many of them are women. Pick a result type. Achieved counts are progress to date. Targets are what projects expect to deliver by completion.</p>
-  </div>
-  <div class="pillbar" id="resultPills" role="tablist" aria-label="Result type"></div>
-  <div class="card">
-    <div class="chart-title" id="resultTitle"></div>
-    <div class="chart-sub">People reached to date, millions <span class="tag src">Sourced &middot; WBG Scorecard FY25</span></div>
-    <div class="legend"><span><i style="background:var(--s1)"></i>All beneficiaries</span><span><i style="background:var(--s2)"></i>Women</span></div>
-    <div class="chart-box" id="resultBox"><canvas id="resultChart" aria-label="Beneficiaries by region" role="img"></canvas></div>
-  </div>
-  <div class="card table-x">
-    <div class="chart-title">Region detail with development context</div>
-    <table class="data-table" id="resultTable">
-      <thead><tr>
-        <th>Region</th><th class="num">Reached</th><th class="num">% of target</th><th class="num">Women's share</th>
-        <th class="num">Poverty<br>($3.00/day)</th><th class="num">Food<br>insecurity</th><th class="num">Basic<br>hygiene</th>
-      </tr></thead>
-      <tbody></tbody>
-    </table>
-    <p class="table-meta" id="resultMeta"></p>
-  </div>
-  <div class="callout" id="resultCallout"></div>
-</section>
-
+<!-- ============================================================ 05 -->
 <section id="methods">
   <div class="section-head"><span class="section-no">05</span><h2>Methods, limitations &amp; responsible data</h2></div>
   <p class="section-intro">What each number is, where it comes from, and what it cannot tell you.</p>
-  <details class="methods-fold" open><summary>Show / hide provenance, limitations, privacy &amp; reproducibility</summary><div class="method-grid">
+  <div class="method-grid">
     <div class="card">
       <h4>Data provenance</h4>
       <ul>
@@ -360,9 +392,9 @@
     <div class="card">
       <h4>Limitations</h4>
       <ul>
-        <li><strong>Matching is not randomisation.</strong> Propensity-score matching only balances what is observed. Unobserved differences between FCS and non-FCS projects, such as implementation capacity or security, could still bias the comparison. Balance on three covariates stays slightly above 0.1 after matching (section 03). The result is a matched association, not a causal effect.</li>
+        <li><strong>Matching is not randomisation.</strong> Propensity-score matching only balances what is observed. Unobserved differences between FCS and non-FCS projects, such as implementation capacity or security, could still bias the comparison. Balance on three covariates stays slightly above 0.1 after matching (section 04). The result is a matched association, not a causal effect.</li>
         <li><strong>Small informative sample.</strong> Only results where women are counted directly can show a gap, which leaves a few hundred results. The confidence interval is correspondingly wide.</li>
-        <li><strong>&ldquo;Behind&rdquo; uses a straight-line benchmark.</strong> Many results are back-loaded, so young projects look behind more often (section 02). The model learns this, but the flag is a screening signal, not a verdict on performance.</li>
+        <li><strong>&ldquo;Behind&rdquo; uses a straight-line benchmark.</strong> Many results are back-loaded, so young projects look behind more often (section 03). The model learns this, but the flag is a screening signal, not a verdict on performance.</li>
         <li><strong>The text classifier is rule-based, and recall is unmeasured.</strong> Precision was checked on small samples (5&ndash;12 per theme). Projects that describe a theme in words the rules don't anticipate will be missed.</li>
         <li><strong>Coverage.</strong> The Scorecard reports corporate results indicators, not every indicator a project tracks.</li>
       </ul>
@@ -371,14 +403,14 @@
       <h4>Privacy, fairness &amp; reproducibility</h4>
       <ul>
         <li><strong>Privacy:</strong> the analysis uses only public, aggregated, project-level data. No individual or household records are used or stored.</li>
-        <li><strong>Fairness:</strong> model performance is reported by region, income group and FCS status (section 02). The subgroup where it is weakest is named, not hidden.</li>
+        <li><strong>Fairness:</strong> model performance is reported by region, income group and FCS status (section 03). The subgroup where it is weakest is named, not hidden.</li>
         <li><strong>Validation:</strong> the classifier's review samples, labels and the failing first version are saved in the repository. The review is a draft pending the author's confirmation.</li>
         <li><strong>Reproducibility:</strong> one script (<code>analysis/who-benefits/pipeline.py</code>) rebuilds every number from the raw exports with fixed random seeds. <a href="https://github.com/ashuarora12/Personal-Website/tree/main/analysis/who-benefits" target="_blank" rel="noopener">Code and data on GitHub &rarr;</a></li>
       </ul>
     </div>
   </div>
-  </details><div class="callout note">
-    <strong>Related research.</strong> This dashboard links to two strands of the author's work. The first is ongoing research on <em>Global Skill Partnerships, skills and international labour mobility</em>, which evaluates a skills-mobility pilot with propensity-score matching. The second is <a href="https://doi.org/10.1080/00220388.2023.2252139" id="paperLink" target="_blank" rel="noopener"><em>Bleeding at the Margins</em></a> (Journal of Development Studies, 2023) on menstrual health among SC/ST women in India. Section 01 shows how rarely either topic appears among the Bank's measured results.
+  <div class="callout note">
+    <strong>Related research.</strong> This dashboard links to two strands of the author's work. The first is ongoing research on <em>Global Skill Partnerships, skills and international labour mobility</em>, which evaluates a skills-mobility pilot with propensity-score matching. The second is <a href="https://doi.org/10.1080/00220388.2023.2252139" id="paperLink" target="_blank" rel="noopener"><em>Bleeding at the Margins</em></a> (Journal of Development Studies, 2023) on menstrual health among SC/ST women in India. Section 02 shows how rarely either topic appears among the Bank's measured results.
   </div>
 </section>
 
@@ -386,6 +418,7 @@
   <p><strong style="color:var(--ink-soft)">Sources.</strong> World Bank Group Scorecard (scorecard.worldbank.org): corporate results indicators CSC_RES_HEA_SERV, CSC_RES_WAT_SAN_HYG_TOT, CSC_RES_GEN_EQU_BENE, CSC_RES_FIN_SERV_WOM and CSC_RES_HEA_EMER_BENE, with their WB project information sheets; vision indicators SI_POV_DDAY, SN_ITK_MSFI_ZS, SH_STA_HYGN_ZS. FY25 reporting cycle, results as of 30 June 2025. Analysis and interpretation are the author's own and do not represent the World Bank Group.</p>
   <p id="footGen"></p>
 </footer>
+  </main>
 </div>
 
 <script>
@@ -419,7 +452,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ren
 
 function baseOpts(extra = {}) {
   const ink = css('--ink-soft'), grid = css('--grid'), faint = css('--ink-faint');
-  Chart.defaults.font.family = "'IBM Plex Sans', sans-serif";
+  Chart.defaults.font.family = "'Inter', sans-serif";
   Chart.defaults.color = faint;
   return Object.assign({
     responsive: true, maintainAspectRatio: false, animation: { duration: 300 },
@@ -521,7 +554,7 @@ function renderResults() {
   const topR = hs.reduce((a, b) => a.reached > b.reached ? a : b);
   const topHyg = ctx.hygiene[topR.c], worldHyg = ctx.hygiene.ACW;
   const allH = resultRow('CSC_RES_HEA_SERV', 'ACW');
-  $('#resultCallout').innerHTML = `<strong>${fmtM(allH.reached)} people</strong> have been reached with health, nutrition and population services so far, ${pct(allH.progress)} of the ${fmtM(allH.expected)} target. Two things stand out. First, in <strong>South Asia only ${pct(sar.share)} of the ${fmtM(sar.reached)} people reached are recorded as women</strong>. For population-wide health services that almost certainly reflects missing sex-disaggregated reporting, not a real gap, and it is the kind of measurement problem section 03 investigates. Second, the region with the largest health caseload, ${esc(DATA.regions[topR.c])} (${pct(topR.reached / allH.reached)} of everyone reached), has the weakest basics: <strong>only ${topHyg.value.toFixed(1)}% of people have basic hygiene services</strong>, against ${worldHyg.value.toFixed(1)}% worldwide (${topHyg.year}).`;
+  $('#resultCallout').innerHTML = `<strong>${fmtM(allH.reached)} people</strong> have been reached with health, nutrition and population services so far, ${pct(allH.progress)} of the ${fmtM(allH.expected)} target. Two things stand out. First, in <strong>South Asia only ${pct(sar.share)} of the ${fmtM(sar.reached)} people reached are recorded as women</strong>. For population-wide health services that almost certainly reflects missing sex-disaggregated reporting, not a real gap, and it is the kind of measurement problem section 04 investigates. Second, the region with the largest health caseload, ${esc(DATA.regions[topR.c])} (${pct(topR.reached / allH.reached)} of everyone reached), has the weakest basics: <strong>only ${topHyg.value.toFixed(1)}% of people have basic hygiene services</strong>, against ${worldHyg.value.toFixed(1)}% worldwide (${topHyg.year}).`;
 }
 
 // ---------------------------------------------------------------- 02 themes
@@ -569,7 +602,7 @@ function renderProjTable() {
   if (q) rows = rows.filter(p => (p.name + ' ' + p.country + ' ' + Object.values(p.evidence).join(' ')).toLowerCase().includes(q));
   const showKey = p => themeSel === 'all' ? p.themes[0] : themeSel;
   $('#projTable tbody').innerHTML = rows.slice(0, 400).map(p => `<tr>
-    <td><strong style="font-weight:600">${esc(p.name)}</strong><br><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-faint)">${esc(p.id)}${p.fcv ? ' &middot; FCS' : ''}</span></td>
+    <td><strong style="font-weight:600">${esc(p.name)}</strong><br><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-faint)">${esc(p.id)}${p.fcv ? ' &middot; FCS' : ''}</span></td>
     <td>${esc(p.country)}</td>
     <td>${p.themes.map(k => `<span class="tchip">${esc(label(k))}</span>`).join('')}</td>
     <td class="ev">${highlight(p.evidence[showKey(p)], showKey(p))}</td></tr>`).join('') ||
@@ -607,7 +640,7 @@ function renderModel() {
     type: 'bar',
     data: { labels: M.by_dept.map(x => x.dept), datasets: [{ data: M.by_dept.map(x => x.rate * 100), backgroundColor: css('--s1'), ...bar }] },
     options: baseOpts({ indexAxis: 'y', plugins: { legend: { display: false }, tooltip: Object.assign(baseOpts().plugins.tooltip, { displayColors: false, callbacks: { label: c => ` ${c.raw.toFixed(0)}% behind (n = ${M.by_dept[c.dataIndex].n})` } }) },
-      scales: { x: { min: 0, max: 100, grid: { color: css('--grid') }, border: { display: false }, ticks: { color: css('--ink-faint'), callback: v => v + '%' } }, y: { grid: { display: false }, border: { display: false }, ticks: { color: css('--ink-soft'), font: { family: "'IBM Plex Mono', monospace", size: 11 } } } } })
+      scales: { x: { min: 0, max: 100, grid: { color: css('--grid') }, border: { display: false }, ticks: { color: css('--ink-faint'), callback: v => v + '%' } }, y: { grid: { display: false }, border: { display: false }, ticks: { color: css('--ink-soft'), font: { family: "'JetBrains Mono', monospace", size: 11 } } } } })
   });
   mk('calChart', {
     type: 'scatter',
@@ -701,20 +734,16 @@ function renderGender() {
 function renderAll() { renderHero(); renderResults(); renderThemes(); renderModel(); renderGender(); }
 renderAll();
 </script>
-
 <script>
+// highlight the section currently in view
 (function () {
-  const T = DATA.themes, M = DATA.model, A = DATA.gender_audit, P = DATA.psm;
-  const hw = T.summary.find(x => x.key === 'health_workforce');
-  const a0 = M.by_age[0], a3 = M.by_age[M.by_age.length - 1];
-  const p = x => Math.round(x * 100) + '%';
-  document.getElementById('ledeN').textContent = DATA.meta.projects.toLocaleString('en-US');
-  document.getElementById('f1n').textContent = `${hw.projects} of ${T.n_projects.toLocaleString('en-US')}`;
-  document.getElementById('f1t').textContent = `projects report an indicator about health workers, and ${T.health_workforce_and_migration} link them to labour mobility. Jobs and skills indicators appear in ${T.summary.find(x => x.key === 'jobs_skills').projects}.`;
-  document.getElementById('f2n').textContent = `${p(a0.rate)} vs ${p(a3.rate)}`;
-  document.getElementById('f2t').textContent = `of results trail schedule in projects under 3 years old vs. 7+ years. A cross-validated model ranks at-risk results with AUC ${M.models[M.best].auc.toFixed(2)}.`;
-  document.getElementById('f3n').textContent = p(A.imputed / A.pairs);
-  document.getElementById('f3t').textContent = `of the ${A.pairs.toLocaleString('en-US')} results reported for women use a fixed share of the total, not a count. Where women are counted, fragile settings show no detectable extra gap (${P.att > 0 ? '+' : ''}${P.att.toFixed(1)} pp, 95% CI ${P.ci[0].toFixed(1)} to +${P.ci[1].toFixed(1)}).`;
+  const links = [...document.querySelectorAll('.snav a')];
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  document.querySelectorAll('main section[id]').forEach(s => obs.observe(s));
 })();
 </script>
 </body>
