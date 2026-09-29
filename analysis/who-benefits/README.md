@@ -1,13 +1,13 @@
 # Who Benefits? Health, Jobs & Gender in the WBG Portfolio
 
-Source for the dashboard at `/who-benefits` (`ashu-arora-complete-website/who-benefits.html`).
+Source for the dashboard at `/who-benefits` (`ashu-arora-complete-website/who-benefits.html`) and its story-first layout at `/who-benefits-story`. Both pages are built from the same template and data.
 
 ## Rebuild
 
 ```bash
 pip install -r requirements.txt
 python3 pipeline.py     # raw Scorecard exports -> output/dashboard_data.json
-python3 build_page.py   # embeds the JSON into page_template.html -> site page
+python3 build_page.py   # embeds the JSON into page_template.html -> both site pages
 ```
 
 Every number on the page comes from `pipeline.py`. Nothing is typed into the page by hand.
