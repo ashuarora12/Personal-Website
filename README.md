@@ -35,7 +35,7 @@ analysis/data-finder/          catalogue, page build, user guide
 vercel.json                    clean URLs (/projects -> projects.html)
 ```
 
-Each `analysis/` folder has its own README with rebuild commands. Builds need Python 3.11 with pandas, numpy, scipy, scikit-learn, statsmodels, matplotlib, playwright and pypdf (see `analysis/who-benefits/requirements.txt`).
+Each `analysis/` folder has its own README with rebuild commands. Builds need Python 3.11 with pandas, numpy, scipy, scikit-learn, statsmodels, matplotlib, playwright and pypdf (pinned in `analysis/who-benefits/requirements.txt`).
 
 ## Site pages
 
