@@ -192,7 +192,7 @@ def body_html(toc):
   <h4>Disclaimer</h4>
   <p>This is an independent analysis by the author. It is not a World Bank Group publication and has not been reviewed or endorsed by the World Bank Group. The findings, interpretations and conclusions are the author's own. Any errors are the author's.</p>
   <h4>Suggested citation</h4>
-  <div class="cite">Arora, Ashu. 2026. <em>Who Benefits? Health, Jobs and Gender in the World Bank Group Portfolio: Evidence from FY25 Corporate Scorecard Results.</em> Independent analytical report, September 2026.</div>
+  <div class="cite">Arora, Ashu. 2026. <em>Who Benefits? Health, Jobs and Gender in the World Bank Group Portfolio: Evidence from FY25 Corporate Scorecard Results.</em> Independent analytical report, July 2026.</div>
   <h4>Data and reproducibility</h4>
   <p>All inputs are public downloads from scorecard.worldbank.org. One Python pipeline (<code>analysis/who-benefits/pipeline.py</code> and <code>report_stats.py</code>) rebuilds every number, table and figure from the raw exports with fixed random seeds. The classifier's validation samples, including the failed first version, are stored with the code. The review labels are a draft pending the author's confirmation.</p>
   <h4>Abbreviations</h4>
@@ -422,7 +422,7 @@ def body_html(toc):
 <li>Pedregosa, F., et al. 2011. "Scikit-learn: Machine Learning in Python." <em>Journal of Machine Learning Research</em> 12: 2825–30.</li>
 <li>Rosenbaum, P. R., and D. B. Rubin. 1983. "The Central Role of the Propensity Score in Observational Studies for Causal Effects." <em>Biometrika</em> 70 (1): 41–55.</li>
 <li>Wilson, E. B. 1927. "Probable Inference, the Law of Succession, and Statistical Inference." <em>Journal of the American Statistical Association</em> 22 (158): 209–12.</li>
-<li>World Bank Group. 2025. <em>World Bank Group Scorecard</em>, FY25 reporting cycle. Data exports for indicators CSC_RES_HEA_SERV, CSC_RES_WAT_SAN_HYG_TOT, CSC_RES_GEN_EQU_BENE, CSC_RES_FIN_SERV_WOM, CSC_RES_HEA_EMER_BENE, SI_POV_DDAY, SI_POV_PROS, SN_ITK_MSFI_ZS and SH_H2O_STA_HYGN_TO. scorecard.worldbank.org (downloaded September 2026).</li>
+<li>World Bank Group. 2025. <em>World Bank Group Scorecard</em>, FY25 reporting cycle. Data exports for indicators CSC_RES_HEA_SERV, CSC_RES_WAT_SAN_HYG_TOT, CSC_RES_GEN_EQU_BENE, CSC_RES_FIN_SERV_WOM, CSC_RES_HEA_EMER_BENE, SI_POV_DDAY, SI_POV_PROS, SN_ITK_MSFI_ZS and SH_H2O_STA_HYGN_TO. scorecard.worldbank.org (accessed 2026).</li>
 </ol>
 </section>
 """
@@ -455,15 +455,16 @@ h1 { font-family: 'SS4'; font-weight: 700; font-size: 44pt; line-height: 1.02; m
 <div class="band b1"></div><div class="band b2"></div><div class="band b3"></div><div class="band b4"></div><div class="band b5"></div><div class="band b6"></div>
 <div class="shade"></div>
 <div class="dots">__DOTS__</div><div style="position:absolute;right:16mm;top:74mm;width:67mm;font-family:'SS3';font-size:7.5pt;color:rgba(255,255,255,.6);text-align:right">Each dot ≈ 0.7% of 1,131 projects; gold = share whose results measure the health workforce (1.3%)</div>
-<div class="title"><div class="k">Independent analytical report · September 2026</div>
+<div class="title"><div class="k">Independent analytical report · July 2026</div>
 <h1>Who Benefits?</h1>
 <div class="st">Health, Jobs and Gender in the World Bank Group Portfolio: Evidence from FY25 Corporate Scorecard Results</div></div>
-<div class="meta"><div><b>Ashu Arora</b>Economist · Researcher</div><div style="text-align:right">Data: World Bank Group Scorecard, FY25<br>Not a World Bank Group publication</div></div>
+<div class="meta"><div><b>Ashu Arora</b>MA, Economics, Johns Hopkins University<br>School of Advanced International Studies, Washington, D.C.</div><div style="text-align:right">Data: World Bank Group Scorecard, FY25<br>Not a World Bank Group publication</div></div>
+<div style="position:absolute;left:20mm;bottom:8mm;font-family:'SS3';font-size:7.5pt;color:rgba(255,255,255,.55)">&copy; Ashu Arora</div>
 </div></body></html>"""
 
 
 FOOT = """<div style="width:100%;font-family:'Liberation Sans',Arial,sans-serif;font-size:7.5px;color:#7a8494;padding:0 18mm;display:flex;justify-content:space-between">
-<span>Who Benefits? Health, Jobs and Gender in the World Bank Group Portfolio</span><span class="pageNumber"></span></div>"""
+<span>Who Benefits? Health, Jobs and Gender in the World Bank Group Portfolio</span><span>&copy; Ashu Arora&nbsp;&nbsp;·&nbsp;&nbsp;<span class="pageNumber"></span></span></div>"""
 
 
 def render(pw, html_path, pdf_path, footer):
