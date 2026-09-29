@@ -47,6 +47,9 @@
   .theme-btn, .link-btn { font-family: 'IBM Plex Mono', monospace; font-size: 12px; border: 1px solid var(--rule); background: var(--paper-raised); color: var(--ink-soft); padding: 6px 12px; border-radius: 3px; cursor: pointer; }
   .theme-btn:hover, .link-btn:hover { border-color: var(--gold); color: var(--ink); }
   .theme-btn, .link-btn { white-space: nowrap; }
+  .paper-cta { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: -6px 0 22px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; }
+  .paper-cta a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 2px; }
+  .paper-cta a:first-child { color: var(--gold, var(--ink)); border-bottom-color: currentColor; }
   @media (max-width: 640px) { .topbar-title { display: none; } .topbar-inner { justify-content: space-between; padding: 10px 16px; gap: 8px; flex-wrap: wrap; } }
 
   header.hero { border-bottom: 1px solid var(--rule); padding: 44px 0 40px; }
@@ -237,6 +240,7 @@
       <p class="eyebrow">DATA SCIENCE PORTFOLIO PROJECT</p>
       <h1>What drives global patenting activity?</h1>
       <p class="lede">Resident patent filings from 141 countries, matched against GDP, population and energy-use data. Compare countries and regions, explore the world map, or build your own hypothetical country and see what the model predicts for it.</p>
+      <p class="paper-cta"><a href="/patent-report.pdf" target="_blank" rel="noopener">Read the working paper (PDF, 16 pp.) &rarr;</a><a href="/patent-report.pdf" download="Arora-2026-Global-Patenting-working-paper.pdf">Download &darr;</a></p>
       <div class="statrow">
         <div class="stat"><span class="num">141</span><span class="label">countries analyzed</span></div>
         <div class="stat"><span class="num">73%</span><span class="label">variance explained (OLS, in-sample)</span></div>
@@ -444,7 +448,7 @@
 
 <footer>
   <p><strong style="color:var(--ink-soft)">Methodology &amp; sources.</strong> Resident patent applications: WIPO Patent Report: Statistics on Worldwide Patent Activity, via World Bank indicator IP.PAT.RESD (1980&ndash;2021). Economic data: Our World in Data's country panel (population, GDP, energy use). Regions follow the World Bank's country classification. World map boundaries: Natural Earth via the world-atlas project. Each country's most recent available year was used (median 2021 for patents).</p>
-  <p>A companion Jupyter notebook and Word report with full regression tables and equations accompany this dashboard.</p>
+  <p>The full methodology, regression tables and equations are in the accompanying working paper: <a href="/patent-report.pdf" target="_blank" rel="noopener">What Drives Global Patenting Activity? (PDF)</a>.</p>
 </footer>
 
 </div>
