@@ -6,6 +6,8 @@ Builds two layouts from the same template, so data and chart code can't drift ap
                            linking to its evidence; context and methods after
   who-benefits-studio.html a different visual design: sidebar app layout,
                            Space Grotesk / Inter type, teal & violet palette
+  who-benefits-flow.html   standalone scroll-driven data story (flow_template.html):
+                           animated dot grids, calm sage/sand palette, no Chart.js
 """
 import re
 from pathlib import Path
@@ -142,7 +144,8 @@ def studio(html):
 
 
 pages = {"who-benefits.html": template, "who-benefits-story.html": story(template),
-         "who-benefits-studio.html": studio(template)}
+         "who-benefits-studio.html": studio(template),
+         "who-benefits-flow.html": (HERE / "flow_template.html").read_text()}
 for name, html in pages.items():
     path = SITE / name
     path.write_text(html.replace("/*__DATA__*/null", data))
