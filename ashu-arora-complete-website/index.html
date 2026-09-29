@@ -52,6 +52,19 @@ p{margin:0 0 16px}
 @media(max-width:760px){.container{width:min(100% - 32px,1180px)}.nav{align-items:flex-start;padding:14px 0;flex-direction:column;gap:10px}.navlinks{gap:10px 17px}.hero{grid-template-columns:1fr;gap:28px;padding-top:10px}.portrait-wrap{max-width:240px;order:0}.interests{grid-template-columns:repeat(2,1fr)}.interest:nth-child(2){border-right:0}.work-row{grid-template-columns:1fr 24px}.work-meta{grid-column:1}.work-row>a:last-child{grid-column:2;grid-row:1 / span 2}.site-footer{align-items:flex-start;flex-direction:column}}
 
 .project-num{font-size:13px;color:var(--muted);margin-right:8px}
+.wb-feature{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(22px,4vw,44px);align-items:center;padding:24px 0 28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.wb-feature-media{display:block;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--soft)}
+.wb-feature-media img{display:block;width:100%;height:auto;transition:transform .4s}
+.wb-feature-media:hover img{transform:scale(1.02)}
+.wb-feature h3{font-size:clamp(20px,2vw,24px);margin:8px 0 10px}
+.wb-feature p{font-size:14px;color:#555b61;margin:0 0 16px}
+.wb-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 16px;border-top:1px solid var(--line);padding-top:12px}
+.wb-stats strong{display:block;font-size:20px;font-weight:400;color:var(--ink);line-height:1.2}
+.wb-stats span{font-size:12px;color:var(--muted);line-height:1.35;display:block}
+.wb-feature .actions{gap:8px 22px}
+.wb-feature + .work-list{border-top:0}
+@media(max-width:760px){.wb-feature{grid-template-columns:1fr}.wb-stats{grid-template-columns:1fr 1fr 1fr;gap:10px}}
+
 .bml-feature{margin:64px 0 20px;border-top:1px solid var(--line);padding-top:24px}
 .bml-row{display:flex;justify-content:space-between;align-items:center;gap:24px}
 .bml-row h2{font-size:27px;margin:0 0 5px}
@@ -96,9 +109,26 @@ p{margin:0 0 16px}
 <a class="work-row" href="/research"><div><h3>Global Skill Partnerships</h3><p>Skills, labour mobility, and international development.</p></div><div class="work-meta">Ongoing Research</div><span>→</span></a>
 </div></section>
 <section class="projects-feature" style="margin-top:64px"><div class="section-head"><div class="section-label">Projects</div><a class="text-link" href="/projects">View all →</a></div>
+<article class="wb-feature">
+  <a class="wb-feature-media" href="/who-benefits-flow"><img src="/assets/who-benefits-preview.jpg" alt="Preview of the Who Benefits? interactive data story" loading="lazy" width="1000" height="537"></a>
+  <div class="wb-feature-body">
+    <div class="eyebrow">Featured · Data story &amp; research report · 2026</div>
+    <h3><span class="project-num">1.</span>Who Benefits? Health, Jobs &amp; Gender in the World Bank Group Portfolio</h3>
+    <p>What do the World Bank Group's own results data show about who is reached, and whether women are counted? This independent analysis of 1,131 projects' FY25 results combines text classification, an early-warning model and propensity-score matching.</p>
+    <div class="wb-stats">
+      <div><strong>15 / 1,131</strong><span>projects measure health workers</span></div>
+      <div><strong>22%</strong><span>of results reported for women use a fixed share, not a count</span></div>
+      <div><strong>0.77</strong><span>AUC, early-warning model</span></div>
+    </div>
+    <div class="actions">
+      <a class="text-link" href="/who-benefits-flow">Explore the data story →</a>
+      <a class="text-link" href="/who-benefits-report.pdf" download="Arora-2026-Who-Benefits-report.pdf">Download the report (PDF) ↓</a>
+    </div>
+  </div>
+</article>
 <div class="work-list">
-<a class="work-row" href="/patent-dashboard"><div><h3><span class="project-num">1.</span>Patent Study</h3><p>What drives global patenting activity? An interactive dashboard of WIPO patent filings across 141 countries, modelled against GDP, population and energy use.</p></div><div class="work-meta">Interactive Dashboard</div><span>→</span></a>
-<a class="work-row" href="/data-buff"><div><h3><span class="project-num">2.</span>Health Data Dashboard</h3><p>Health Research Atlas: a prototype portal for finding health research, datasets and indicators across India and the world.</p></div><div class="work-meta">Interactive Prototype</div><span>→</span></a>
+<a class="work-row" href="/patent-dashboard"><div><h3><span class="project-num">2.</span>Patent Study</h3><p>What drives global patenting activity? An interactive dashboard of WIPO patent filings across 141 countries, modelled against GDP, population and energy use.</p></div><div class="work-meta">Interactive Dashboard</div><span>→</span></a>
+<a class="work-row" href="/data-buff"><div><h3><span class="project-num">3.</span>Health Data Dashboard</h3><p>Health Research Atlas: a prototype portal for finding health research, datasets and indicators across India and the world.</p></div><div class="work-meta">Interactive Prototype</div><span>→</span></a>
 </div></section>
 <section class="bml-feature">
   <div class="section-head"><div class="section-label">Consultancy</div></div>
