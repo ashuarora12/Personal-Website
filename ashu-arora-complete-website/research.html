@@ -60,6 +60,13 @@ p{margin:0 0 16px}
 .sidebar-note{margin-top:auto;padding-top:60px;font-size:10px;letter-spacing:.16em;line-height:1.7;color:var(--muted)}
 .research-main{padding:54px 0 60px;min-width:0}
 .research-main h1{margin:12px 0}
+.sort-bar{display:flex;align-items:center;gap:8px;margin:-30px 0 40px;font-size:12px;color:var(--muted)}
+.sort-bar span{letter-spacing:.14em;text-transform:uppercase;font-size:11px;margin-right:4px}
+.sort-bar button{font:inherit;font-size:13px;color:#3d4650;background:transparent;border:1px solid var(--line);border-radius:999px;padding:4px 12px;cursor:pointer}
+.sort-bar button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+a.slot[href=""]{display:none}
+.entry-links{display:flex;flex-wrap:wrap;gap:4px 20px}
+.timeline-copy .meta a{color:var(--blue)}
 .research-lede{font-family:'Palatino Linotype',Palatino,'Book Antiqua',serif;color:var(--muted);font-size:18px;max-width:640px;margin-bottom:54px}
 .timeline-section{margin:0 0 58px;scroll-margin-top:90px}
 .timeline-section h2{font-size:28px;margin-bottom:22px}
@@ -86,13 +93,13 @@ p{margin:0 0 16px}
 </style></head><body><header class="topbar"><div class="container nav">
 <a class="brand" href="/">Ashu Arora</a>
 <nav class="navlinks" aria-label="Main navigation">
-<a href="/">Home</a><a href="/research">Research</a><a href="/experience">Experience</a><a href="/projects">Projects</a><a href="/data-buff">Data Buff</a><a href="/consultancy">Consultancy</a><a href="https://calendly.com/aashuzarora/30-minutes-meeting" target="_blank" rel="noopener">Get in Touch</a>
+<a href="/">Home</a><a href="/research">Research</a><a href="/experience">Experience</a><a href="/projects">Projects</a><a href="/consultancy">Consultancy</a><a href="https://calendly.com/aashuzarora/30-minutes-meeting" target="_blank" rel="noopener">Get in Touch</a>
 </nav></div></header><main class="container">
 <div class="research-layout">
   <aside class="research-sidebar" aria-label="Research sections">
     <div class="sidebar-mark">—</div>
     <nav class="sidebar-nav">
-      <a href="#papers" class="active">Papers</a>
+      <a href="#papers" class="active">Papers / Reports</a>
       <a href="#blogs">Blogs / Articles</a>
     </nav>
     <div class="sidebar-note">ECONOMICS<br>FOR A MORE<br>INCLUSIVE WORLD.</div>
@@ -101,74 +108,74 @@ p{margin:0 0 16px}
     <div class="eyebrow">Selected work</div>
     <h1>Research</h1>
     <p class="research-lede">Papers, reports, and writing on economics, policy, and development.</p>
+    <div class="sort-bar" role="group" aria-label="Sort by year"><span>Sort by year</span><button type="button" data-order="desc" aria-pressed="true">Newest first</button><button type="button" data-order="asc" aria-pressed="false">Oldest first</button></div>
 
     <section class="timeline-section" id="papers">
-      <h2>Papers</h2>
+      <h2>Papers / Reports</h2>
       <div class="timeline-list">
-        <article class="timeline-entry">
-          <div class="timeline-date">2023</div><div class="timeline-dash">—</div>
-          <div class="timeline-copy">
-            <h3>Bleeding at the Margins: Understanding Period Poverty among SC and ST Women Using Decomposition Analysis</h3>
-            <div class="meta">Journal Article · Published · Karan Babbar and Vandana</div>
-            <p>Uses NFHS-5 and decomposition analysis to examine period poverty among Scheduled Caste and Scheduled Tribe women in India.</p>
-            <a href="https://doi.org/10.1080/00220388.2023.2252139">Read article →</a>
-          </div>
-        </article>
-        <article class="timeline-entry">
-          <div class="timeline-date">2024–Present</div><div class="timeline-dash">—</div>
-          <div class="timeline-copy">
-            <h3>Do the Feldstein–Horioka Results Hold After COVID?</h3>
-            <div class="meta">Working Paper · Ongoing</div>
-            <p>Revisits the savings–investment relationship and capital mobility using OECD panel data, with an updated post-COVID period and planned transition-regression analysis.</p>
-          </div>
-        </article>
-        <article class="timeline-entry">
+        <article class="timeline-entry" data-year="9998">
           <div class="timeline-date">2025–Present</div><div class="timeline-dash">—</div>
           <div class="timeline-copy">
-            <h3>Global Skill Partnerships, Skills and International Labour Mobility</h3>
-            <div class="meta">Working Paper · Ongoing · Limon Bade Rodriguez</div>
-            <p>Policy research on skills partnerships between labour-abundant and labour-short economies, including skills development and migration.</p>
+            <h3>Research on Migration, Health and Global Skills Partnerships</h3>
+            <div class="meta">Ongoing research · Multiple projects</div>
+            <div class="meta">With <a href="https://blogs.worldbank.org/en/team/l/limon-bade-rodriguez" target="_blank" rel="noopener">Limon Rodriguez</a>, Economist, World Bank</div>
+            <p>Research on international migration, health and global skills partnerships between labour-abundant and labour-short economies.</p>
+            <div class="entry-links"><a href="https://blogs.worldbank.org/en/team/l/limon-bade-rodriguez" target="_blank" rel="noopener">Limon Rodriguez’s profile ↗</a></div>
           </div>
         </article>
-        <article class="timeline-entry">
-          <div class="timeline-date">2023–24</div><div class="timeline-dash">—</div>
+        <article class="timeline-entry" data-year="2024">
+          <div class="timeline-date">2024</div><div class="timeline-dash">—</div>
           <div class="timeline-copy">
-            <h3>Bureaucracy, Recruitment and Development in India</h3>
-            <div class="meta">Working Paper · Submitted</div>
-            <p>Research assistant work examining civil-service recruitment, bureaucracy, and development outcomes in India.</p>
+            <h3>Bleeding at the Margins: Understanding Period Poverty among SC and ST Women Using Decomposition Analysis</h3>
+            <div class="meta">Peer-reviewed journal article · Published · <em>Journal of Development Studies</em></div>
+            <div class="meta">With Karan Babbar (corresponding author) and Vandana</div>
+            <p>Uses NFHS-5 and decomposition analysis to examine period poverty among Scheduled Caste and Scheduled Tribe women in India.</p>
+            <div class="entry-links"><a href="https://www.tandfonline.com/doi/full/10.1080/00220388.2023.2252139">Read article →</a></div>
           </div>
         </article>
-        <article class="timeline-entry">
-          <div class="timeline-date">2018</div><div class="timeline-dash">—</div>
+        <article class="timeline-entry" data-year="2024">
+          <div class="timeline-date">2024</div><div class="timeline-dash">—</div>
           <div class="timeline-copy">
-            <h3>Does the National Healthcare Program Work for the Elderly in India? A Panel Data Study</h3>
-            <div class="meta">Working Paper · Submitted</div>
-            <p>Master’s dissertation examining healthcare policy and outcomes for older adults using panel-data methods.</p>
+            <h3>The Feldstein–Horioka Puzzle at Forty-Five: A Panel Smooth Transition Regression Approach</h3>
+            <div class="meta">Working Paper · Completed · Master’s thesis</div>
+            <div class="meta">Guided by Prof. Jaime Marquez, Senior Lecturer, Johns Hopkins SAIS</div>
+            <p>Revisits the savings–investment relationship and capital mobility using a panel smooth transition regression.</p>
+            <div class="entry-links"><a class="slot" href=""><!-- paste draft link in href -->Read the draft →</a></div>
           </div>
         </article>
-        <article class="timeline-entry">
-          <div class="timeline-date">2018</div><div class="timeline-dash">—</div>
-          <div class="timeline-copy">
-            <h3>Expanding the Reach of Justice: Strengthening the National Human Rights Commission’s Outreach in Rural India</h3>
-            <div class="meta">Report · Submitted</div>
-            <p>A report exploring how the NHRC can strengthen its reach and accessibility in rural communities.</p>
-            <a href="https://drive.google.com/file/d/1TPoYXEPAsaDb3QT1IrDTUPN92_LiGUq_/view?usp=sharing">View report →</a>
-          </div>
-        </article>
-        <article class="timeline-entry">
-          <div class="timeline-date">2021</div><div class="timeline-dash">—</div>
-          <div class="timeline-copy">
-            <h3>Collective Action and Property Ownership for Indian Married Women</h3>
-            <div class="meta">Working Paper · Submitted · Shreya Sharma</div>
-            <p>Econometrics project examining collective action and women’s property ownership in India.</p>
-          </div>
-        </article>
-        <article class="timeline-entry">
+        <article class="timeline-entry" data-year="2024">
           <div class="timeline-date">2024</div><div class="timeline-dash">—</div>
           <div class="timeline-copy">
             <h3>Walmart–SAIS Policy Challenge Report</h3>
-            <div class="meta">Working Paper · Submitted</div>
+            <div class="meta">Report · Submitted</div>
             <p>Policy challenge research completed as part of the SAIS–Walmart Global Policy Challenge.</p>
+            <div class="entry-links"><a class="slot" href=""><!-- paste draft link in href -->Read the draft →</a></div>
+          </div>
+        </article>
+        <article class="timeline-entry" data-year="2023">
+          <div class="timeline-date">2023</div><div class="timeline-dash">—</div>
+          <div class="timeline-copy">
+            <h3>Does India’s National Programme for Health Care of the Elderly Improve Health Satisfaction? A Difference-in-Differences Analysis Using WHO-SAGE India, 2007–2015</h3>
+            <div class="meta">Working Paper · Completed</div>
+            <div class="meta">Guided by Prof. Tarun Jain, Professor, IIM Ahmedabad</div>
+            <div class="entry-links"><a class="slot" href=""><!-- paste draft link in href -->Read the draft →</a></div>
+          </div>
+        </article>
+        <article class="timeline-entry" data-year="2022">
+          <div class="timeline-date">2022</div><div class="timeline-dash">—</div>
+          <div class="timeline-copy">
+            <h3>Collective Action and Property Ownership Among Married Women in India: Evidence from the India Human Development Survey</h3>
+            <div class="meta">Working Paper · Completed · Shreya Sharma</div>
+            <div class="entry-links"><a class="slot" href=""><!-- paste draft link in href -->Read the draft →</a></div>
+          </div>
+        </article>
+        <article class="timeline-entry" data-year="2022">
+          <div class="timeline-date">2022</div><div class="timeline-dash">—</div>
+          <div class="timeline-copy">
+            <h3>Functional Independence, Widowhood, and Cardiometabolic Health: Evidence from India’s Longitudinal Ageing Study</h3>
+            <div class="meta">Working Paper · Completed</div>
+            <p>Does marital status moderate the protective effect of functional status on hypertension and sleep problems in elderly Indian women?</p>
+            <div class="entry-links"><a class="slot" href=""><!-- paste draft link in href -->Read the draft →</a></div>
           </div>
         </article>
       </div>
@@ -177,27 +184,61 @@ p{margin:0 0 16px}
     <section class="timeline-section" id="blogs">
       <h2>Blogs / Articles</h2>
       <div class="timeline-list">
-        <article class="timeline-entry">
+        <article class="timeline-entry" data-year="9999">
+          <div class="timeline-date">Forthcoming</div><div class="timeline-dash">—</div>
+          <div class="timeline-copy">
+            <h3>Does Kerala’s Nurse Emigration Constitute a “Brain Drain”?</h3>
+            <div class="meta">Peer-reviewed article · Forthcoming · <em>Journal of International Affairs</em>, SIPA, Columbia University</div>
+            <div class="meta">With Limon B. Rodriguez</div>
+            <div class="entry-links"><a href="https://jia.sipa.columbia.edu/" target="_blank" rel="noopener">Journal of International Affairs ↗</a></div>
+          </div>
+        </article>
+        <article class="timeline-entry" data-year="2020">
+          <div class="timeline-date">2020</div><div class="timeline-dash">—</div>
+          <div class="timeline-copy">
+            <h3>Does the Education of Political Representatives Matter?</h3>
+            <div class="meta">Article · Completed</div>
+            <div class="entry-links"><a class="slot" href=""><!-- paste article link in href -->Read article →</a></div>
+          </div>
+        </article>
+        <article class="timeline-entry" data-year="2018">
+          <div class="timeline-date">2018</div><div class="timeline-dash">—</div>
+          <div class="timeline-copy">
+            <h3>Health as a Human Right: A Critical Assessment of Public Health Governance and Health Outcomes in Uttar Pradesh, India</h3>
+            <div class="meta">Internship Report · Submitted · National Human Rights Commission, India</div>
+          </div>
+        </article>
+        <article class="timeline-entry" data-year="2018">
+          <div class="timeline-date">2018</div><div class="timeline-dash">—</div>
+          <div class="timeline-copy">
+            <h3>Expanding the Reach of Justice: Strengthening the National Human Rights Commission’s Outreach in Rural India</h3>
+            <div class="meta">Internship Report · Submitted · National Human Rights Commission, India</div>
+            <p>A report exploring how the NHRC can strengthen its reach and accessibility in rural communities.</p>
+            <div class="entry-links"><a href="https://drive.google.com/file/d/1TPoYXEPAsaDb3QT1IrDTUPN92_LiGUq_/view?usp=sharing">View report →</a></div>
+          </div>
+        </article>
+
+        <article class="timeline-entry" data-year="2026">
        <div class="timeline-date">2026</div><div class="timeline-dash">—</div>
           <div class="timeline-copy"><h3>India’s progress in global university rankings: Concentrated, not broad-based excellence</h3><div class="meta">Blog / Article · Published · IdeasforIndia</div><p>The paradox between the QS rankings of Indian institutions and India's overall performance in higher education.</p><a href="https://www.ideasforindia.in/topics/human-development/indias-progress-in-global-university-rankings-concentrated-not-broad-based-excellence">Read article →</a></div>
         </article>   
-        <article class="timeline-entry">
+        <article class="timeline-entry" data-year="2025">
           <div class="timeline-date">2025</div><div class="timeline-dash">—</div>
           <div class="timeline-copy"><h3>Numbers and Narratives: The Human Side of Economics Research</h3><div class="meta">Blog / Article · Published</div><p>Reflection on the human dimensions of economics research.</p><a href="https://anthroposindiafoundation.com/documents/newsletters/AIF_AnthroBulletin_November2025.pdf">Read article →</a></div>
         </article>
-        <article class="timeline-entry">
+        <article class="timeline-entry" data-year="2023">
           <div class="timeline-date">2023</div><div class="timeline-dash">—</div>
           <div class="timeline-copy"><h3>Can Policy and Narratives Go Hand in Hand?</h3><div class="meta">Blog / Article · Published</div><p>Explores the relationship between policy and public narratives.</p><a href="https://saisobserver.org/2023/10/24/can-policy-and-narratives-go-hand-in-hand/">Read article →</a></div>
         </article>
-        <article class="timeline-entry">
+        <article class="timeline-entry" data-year="2016">
           <div class="timeline-date">2016</div><div class="timeline-dash">—</div>
           <div class="timeline-copy"><h3>Government Implementation of Demonetisation</h3><div class="meta">Blog / Article · Published</div><a href="https://www.youthkiawaaz.com/2016/12/govt-implementation-of-demonetisation">Read article →</a></div>
         </article>
-        <article class="timeline-entry">
+        <article class="timeline-entry" data-year="2018">
           <div class="timeline-date">2018</div><div class="timeline-dash">—</div>
           <div class="timeline-copy"><h3>A Letter to My Favourite Books</h3><div class="meta">Blog / Article · Published</div><a href="https://www.differenttruths.com/a-letter-to-my-favourite-books/">Read article →</a></div>
         </article>
-        <article class="timeline-entry">
+        <article class="timeline-entry" data-year="0">
           <div class="timeline-date">—</div><div class="timeline-dash">—</div>
           <div class="timeline-copy"><h3>An Afternoon of Verse: American-Czech Poetry Reading at I-House DC</h3><div class="meta">Blog / Article · Published</div><a href="https://ihousedc.org/an-afternoon-of-verse-american-czech-poetry-reading-at-i-house-dc/">Read article →</a></div>
         </article>
@@ -207,4 +248,23 @@ p{margin:0 0 16px}
 </div>
 </main><div class="container"><footer class="site-footer"><span>© 2026 Ashu Arora</span><div class="footer-links">
 <a href="mailto:aashuarora@gmail.com">Email</a><a href="https://www.linkedin.com/in/ashuarora093/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/ashuarora12" target="_blank" rel="noopener">GitHub</a><span>Substack · coming soon</span>
-</div></footer></div></body></html>
+</div></footer></div><script>
+(function(){
+  var lists=[].slice.call(document.querySelectorAll('.timeline-list'));
+  lists.forEach(function(l){[].forEach.call(l.children,function(a,i){a.dataset.idx=i;});});
+  function sort(order){
+    lists.forEach(function(l){
+      var items=[].slice.call(l.children);
+      items.sort(function(a,b){
+        var ya=+a.dataset.year, yb=+b.dataset.year;
+        if(!ya!==!yb) return ya?-1:1;            /* undated entries always last */
+        return (order==='asc'?ya-yb:yb-ya) || (a.dataset.idx-b.dataset.idx);
+      });
+      items.forEach(function(a){l.appendChild(a);});
+    });
+    [].forEach.call(document.querySelectorAll('.sort-bar button'),function(b){b.setAttribute('aria-pressed',b.dataset.order===order);});
+  }
+  [].forEach.call(document.querySelectorAll('.sort-bar button'),function(b){b.addEventListener('click',function(){sort(b.dataset.order);});});
+  sort('desc');
+})();
+</script></body></html>
