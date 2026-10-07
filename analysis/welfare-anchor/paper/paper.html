@@ -1,0 +1,381 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>Counting Reach, Not Welfare</title><style>
+@font-face { font-family: 'SS3'; src: url('fonts/source-sans-3-400-normal.woff2'); font-weight: 400; }
+@font-face { font-family: 'SS3'; src: url('fonts/source-sans-3-600-normal.woff2'); font-weight: 600; }
+@font-face { font-family: 'SS3'; src: url('fonts/source-sans-3-700-normal.woff2'); font-weight: 700; }
+@font-face { font-family: 'SS4'; src: url('fonts/source-serif-4-400-normal.woff2'); font-weight: 400; }
+@font-face { font-family: 'SS4'; src: url('fonts/source-serif-4-400-italic.woff2'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'SS4'; src: url('fonts/source-serif-4-600-normal.woff2'); font-weight: 600; }
+@font-face { font-family: 'SS4'; src: url('fonts/source-serif-4-700-normal.woff2'); font-weight: 700; }
+@font-face { font-family: 'Mono'; src: url('fonts/ibm-plex-mono-400-normal.woff2'); font-weight: 400; }
+@page { size: A4; margin: 22mm; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: 'SS4', Georgia, serif; font-size: 10.6pt; line-height: 1.5; color: #16212e; margin: 0; }
+p { margin: 0 0 7pt; text-align: justify; hyphens: auto; }
+h1 { font-size: 19pt; line-height: 1.2; margin: 0 0 6pt; font-weight: 700; }
+h2 { font-family: 'SS3', sans-serif; font-size: 13pt; margin: 18pt 0 6pt; font-weight: 700; color: #0f2a44; break-after: avoid; }
+h3 { font-family: 'SS3', sans-serif; font-size: 11pt; margin: 12pt 0 4pt; font-weight: 600; color: #0f2a44; break-after: avoid; }
+.wp { font-family: 'SS3'; font-size: 8.5pt; letter-spacing: .08em; text-transform: uppercase; color: #0e7c74; margin-bottom: 14pt; }
+.author { font-family: 'SS3'; font-size: 11pt; margin: 6pt 0 2pt; }
+.aff { font-family: 'SS3'; font-size: 9pt; color: #465264; margin-bottom: 14pt; }
+.abstract { border-top: 0.8pt solid #16212e; border-bottom: 0.8pt solid #16212e; padding: 8pt 0; margin: 10pt 0 8pt; font-size: 10pt; }
+.abstract p { margin: 0; }
+.kw { font-family: 'SS3'; font-size: 8.8pt; color: #465264; }
+.mono { font-family: 'Mono', monospace; font-size: 8.6pt; }
+.eq { text-align: center; margin: 6pt 0 9pt; font-style: italic; }
+figure { margin: 10pt 0 12pt; }
+figcaption { font-family: 'SS3'; font-size: 9.4pt; margin-bottom: 5pt; }
+figure img { width: 100%; }
+.note { font-family: 'SS3'; font-size: 8pt; color: #465264; line-height: 1.35; margin-top: 4pt; text-align: left; }
+table { border-collapse: collapse; width: 100%; font-family: 'SS3', sans-serif; font-size: 8.6pt; }
+thead th { border-top: 0.9pt solid #16212e; border-bottom: 0.6pt solid #16212e; padding: 3pt 4pt; font-weight: 600; text-align: center; vertical-align: bottom; }
+thead th:first-child { text-align: left; }
+tbody td { padding: 1.6pt 4pt; text-align: center; }
+tbody td:first-child { text-align: left; }
+tbody tr:last-child td { border-bottom: 0.9pt solid #16212e; }
+table.reg tr.se td { color: #465264; font-size: 7.8pt; padding-top: 0; }
+table.reg tr.grp td { font-style: italic; color: #0e7c74; padding-top: 4pt; }
+table.reg tr.stat:first-of-type td { border-top: 0.6pt solid #16212e; }
+table.reg tr.stat td { padding-top: 2pt; }
+table.simple td { border-bottom: 0.3pt solid #dfe3e8; padding: 3pt 4pt; }
+table.small { font-size: 8.2pt; }
+table.small td { text-align: left; }
+.sub { font-weight: 400; font-size: 7.6pt; color: #465264; }
+.avoid { break-inside: avoid; }
+.pb { break-before: page; }
+ol.recs li { margin-bottom: 6pt; text-align: justify; }
+.refs p { padding-left: 18pt; text-indent: -18pt; text-align: left; font-size: 9.4pt; margin-bottom: 4pt; }
+.author-note { background: #f8f1de; padding: 6pt 8pt; font-size: 9.4pt; }
+</style></head><body>
+<div class="wp">Working paper &middot; Draft for comment &middot; October 2026</div>
+<h1>Counting Reach, Not Welfare: Testing the World Bank Group Scorecard Against a Welfare Anchor</h1>
+<div class="author">Ashu Arora</div>
+<div class="aff">Independent researcher [affiliation and contact to be added]</div>
+<div class="abstract"><p><b>Abstract.</b> 
+The World Bank Group&rsquo;s FY24&ndash;FY30 Scorecard was presented as a shift from counting inputs to measuring outcomes. This paper
+tests that claim against a welfare anchor, extending the welfare-economics criterion that Gonz&aacute;lez (2026) proposes for private
+sector development to the Scorecard&rsquo;s people-level results. Using the public project-level records behind the FY25 Scorecard
+(3,617 results from 1,129 projects in 124 countries), I apply three tests. <b>Welfare relevance:</b>
+62% of contributing project indicators count people or firms reached and only 14%
+measure a change in welfare (14% in a hand-coded sample); 80% of projects
+report no outcome indicator at all, and projects approved after the new Scorecard are not significantly more outcome-oriented. <b>Measurement integrity:</b>
+91% of results start from a zero baseline, 29% of the reported achieved total
+(63% in health) comes from figures rescaled by conversion factors, and only
+14% of female figures can show whether women were reached as planned. <b>Progress judgement:</b> under a linear
+on-track rule, 57% of results look &ldquo;behind&rdquo;, falling from 80% in projects under three
+years old to 32% after seven; and outcome indicators are 13 percentage points more likely to be rated behind
+than reach indicators with the same age, sector and country characteristics. A results system built this way rewards counting reach and
+penalises measuring welfare. I propose five changes that would anchor the Scorecard in welfare without adding reporting burden.
+</p></div>
+<p class="kw"><b>Keywords:</b> results measurement; World Bank; corporate scorecard; performance indicators; gender data; development effectiveness.
+<b>JEL:</b> F35, O19, H43, C25.</p>
+<h2>1. Introduction</h2>
+<p>In April 2024 the World Bank Group (WBG) replaced its corporate scorecard of roughly 150 indicators with a new Scorecard of 22 results
+indicators for FY24&ndash;FY30. Management described the change as a milestone in the Group&rsquo;s efforts &ldquo;to focus on outcomes,
+rather than inputs&rdquo; (World Bank 2024b), and the Scorecard now serves as both a communication device and a management tool that
+cascades into unit-level targets (World Bank 2024a). Its headline numbers&mdash;hundreds of millions of people receiving health services,
+water, financial services or gender-equality actions&mdash;have become the Group&rsquo;s main public account of what its lending achieves.</p>
+
+<p>Whether those numbers measure welfare is a question with a long history inside the institution. The Independent Evaluation Group (IEG)
+has repeatedly found the Bank Group&rsquo;s self-evaluation systems geared to results reporting and upward accountability rather than learning
+(IEG 2016), and in November 2025 it launched a formative evaluation of the Scorecard itself, whose approach paper draws on the literature on
+gaming in centralised performance systems (IEG 2025; see also Hood 2006). From outside, Gonz&aacute;lez (2026) argues that the Bank&rsquo;s
+private sector work has been reorganised repeatedly because it lacks a fixed objective, and proposes a welfare-economics &ldquo;anchor&rdquo;:
+an operation qualifies only if it addresses a binding market failure, acts on that failure, and changes outcomes that would not otherwise occur.</p>
+
+<p>This paper applies the same discipline to the measurement side. If the Scorecard is anchored in welfare, three things should be true of
+the results it aggregates. First, they should measure changes in people&rsquo;s welfare, not only how many people a project touched
+(<i>welfare relevance</i>). Second, the reported figures should be measured rather than constructed from conversion factors, assumed shares
+and zero baselines (<i>measurement integrity</i>). Third, the way progress is judged should reflect performance rather than the passage of time,
+and should not penalise teams that choose to measure welfare (<i>progress judgement</i>).</p>
+
+<p>I test each condition with the public project-level records that underlie the FY25 Scorecard: 3,617 project indicators
+(&ldquo;results&rdquo;) from 1,129 IDA- and IBRD-financed projects in 124 countries, feeding five people-level
+results areas (health, nutrition and population; water, sanitation and hygiene; gender-equality actions; economic opportunity; and
+financial services). Each indicator is classified by its position in the results chain&mdash;reach, output or outcome&mdash;using transparent
+rules validated against a held-out hand-coded sample (&kappa; = 0.66). The econometrics is deliberately simple:
+linear probability models, a fractional logit, and logit checks, all with standard errors clustered by project.</p>
+
+<p>The results are consistent across the three tests. Most of what the Scorecard counts is reach: 62% of
+contributing indicators count people or firms served, and 80% of projects feed it no outcome indicator at all.
+A large share of the reported totals is constructed: 29% of the achieved total comes from rescaled figures,
+and more than half of female figures in health and WASH are the total multiplied by an assumed share. And a linear on-track rule mostly
+measures project age, while rating outcome indicators as behind 13 percentage points more often than comparable reach
+indicators&mdash;a direct, if unintended, penalty on measuring welfare.</p>
+
+<p>The paper contributes in three ways. It provides a systematic, reproducible audit of the Scorecard&rsquo;s project-level evidence,
+complementing IEG&rsquo;s ongoing formative evaluation. It extends the welfare-anchor argument from what the Bank finances to how it counts.
+And it converts the familiar warning that &ldquo;what gets measured gets done&rdquo; (Narayanaswamy 2021) into specific, testable
+quantities that management could track. Data and code in R and Stata are released with the paper.</p>
+
+<h2>2. Background and related literature</h2>
+<h3>2.1 The Scorecard and its project-level evidence</h3>
+<p>The WBG adopted a corporate scorecard in 2011, extended it to IFC and MIGA in 2014 and revised it in 2017 and 2020 (IEG 2025). The
+FY24&ndash;FY30 Scorecard reduced the indicator set to a short list of WBG results indicators alongside vision and client-context indicators
+(World Bank 2024a). Each people-level results indicator is an aggregate of project indicators: every active or recently closed project that
+contributes reports a baseline, a target and a latest progress value, and these are converted into the Scorecard&rsquo;s unit (usually
+&ldquo;people&rdquo;) and summed. The public data release reports, for each contributing project indicator, the original wording, the
+baseline, progress and target values, the conversion and disaggregation factors applied, and a flag for results masked to avoid double counting.
+These records are what make the tests in this paper possible.</p>
+
+<h3>2.2 Performance measurement and its distortions</h3>
+<p>A large literature warns that quantitative targets change behaviour in ways that can undermine their purpose. Campbell (1979) observed that
+the more a quantitative indicator is used for decisions, the more it is subject to corruption pressures. Hood (2006) and Bevan and Hood (2006)
+document ratchet, threshold and output-distortion effects in the British &ldquo;targets regime&rdquo;. In principal&ndash;agent terms,
+Holmstr&ouml;m and Milgrom (1991) show that when some dimensions of a task are easier to measure than others, strong incentives on the measurable
+dimension pull effort away from the rest. In aid, Natsios (2010) describes how compliance-driven measurement crowds out the most transformational
+work, and Honig (2018) shows that tight top-down measurement performs worst precisely where outcomes are hardest to verify. Andrews, Pritchett and
+Woolcock (2013) and Pritchett, Samji and Hammer (2013) argue for monitoring that supports learning about what works rather than reporting
+compliance.</p>
+
+<h3>2.3 What predicts World Bank project performance</h3>
+<p>Studies of the Bank&rsquo;s own project ratings find that project-level factors explain much more of the variation in outcomes than country
+characteristics (Denizer, Kaufmann and Kraay 2013; Bulman, Kolkma and Kraay 2017), that preparation matters (Kilby 2015), and that projects with
+better monitoring and evaluation are rated more highly (Raimondo 2016). IEG&rsquo;s annual <i>Results and Performance of the World Bank Group</i>
+reports identify improving results monitoring as one of the main levers for better outcomes (IEG 2024). This literature uses ex-post ratings of
+closed projects; the present paper looks instead at the indicators that the Scorecard aggregates while projects are under way.</p>
+
+<h3>2.4 From a welfare anchor for operations to a welfare anchor for results</h3>
+<p>Gonz&aacute;lez (2026) shows that each wave of private sector development doctrine redefined success&mdash;privatisation transactions,
+reforms achieved, capital mobilised, accounts opened&mdash;and that &ldquo;a structural remedy cannot resolve an analytical problem&rdquo;.
+His remedy is a test any operation must pass before public money is committed. The analogue for results is a test that any reported result
+should pass before it is counted as evidence of development impact. Appendix B maps his three hurdles onto the three tests used here.</p>
+
+<h2>3. Data</h2>
+<p><b>Source.</b> The data are the FY25 Scorecard exports published at scorecard.worldbank.org, with results as of 30 June 2025. I use the
+project-level sheet of the four files that cover the people-level results areas: health, nutrition and population services; water, sanitation
+and hygiene; gender-equality and economic-opportunity actions; and financial services. Each record is a project indicator mapped to a Scorecard
+sub-indicator, with project characteristics (region, country, lead department, lending instrument, financing source, commitment, approval and
+closing dates, FCV and LDC flags, income group).</p>
+
+<p><b>Unit of analysis.</b> A <i>result</i> is one non-disaggregated project indicator contributing to one Scorecard sub-indicator. Female and youth
+rows are disaggregations of these results and are used only in the gender test, where the unit is a project &times; sub-indicator pair. Table 1
+shows how the samples are built; Table 2 describes the projects.</p>
+<figure class="tbl avoid "><figcaption><b>Table 1.</b> Construction of the analysis samples</figcaption><table class="simple"><thead><tr><th>Step</th><th>Records</th><th>Projects</th></tr></thead><tbody><tr><td>Project-indicator records in the FY25 Scorecard exports (four results files)</td><td>10,893</td><td>1,131</td></tr><tr><td>&nbsp;&nbsp;of which disaggregation rows (female, youth)</td><td>7,276</td><td></td></tr><tr><td>Results: total (non-disaggregated) project indicators &mdash; <i>Tests 1&ndash;2</i></td><td>3,617</td><td>1,129</td></tr><tr><td>&nbsp;&nbsp;not masked for double counting</td><td>3,132</td><td>999</td></tr><tr><td>&nbsp;&nbsp;with positive target, dates, and &ge;20% of implementation period elapsed</td><td>1,809</td><td>762</td></tr><tr><td>&nbsp;&nbsp;excluding unclassifiable indicators &mdash; <i>Test 3</i></td><td>1,709</td><td>730</td></tr><tr><td>Project &times; Scorecard sub-indicator pairs with a female figure &mdash; <i>Test 2 (gender)</i></td><td>1,734</td><td>990</td></tr></tbody></table><p class="note">Source: World Bank Group Scorecard, FY25 cycle (results as of 30 June 2025), sheet &ldquo;WB Project Information&rdquo; of the health, WASH, gender and financial-services results files. Rows that appear in two files are counted once.</p></figure>
+<figure class="tbl avoid "><figcaption><b>Table 2.</b> Project characteristics</figcaption><table class="simple"><thead><tr><th>Variable (project level, N = 1,129)</th><th>Mean</th><th>SD</th><th>Min</th><th>Max</th></tr></thead><tbody><tr><td>Fragile and conflict-affected (FCV) country</td><td>0.29</td><td>0.45</td><td>0.00</td><td>1.00</td></tr><tr><td>Least developed country</td><td>0.46</td><td>0.50</td><td>0.00</td><td>1.00</td></tr><tr><td>IDA-financed</td><td>0.67</td><td>0.47</td><td>0.00</td><td>1.00</td></tr><tr><td>Active (not closed) at cutoff</td><td>0.78</td><td>0.42</td><td>0.00</td><td>1.00</td></tr><tr><td>Net commitment (US$ million)</td><td>190.26</td><td>208.01</td><td>0.00</td><td>1862.00</td></tr><tr><td>Years since approval</td><td>4.15</td><td>2.91</td><td>0.00</td><td>16.06</td></tr><tr><td>Planned duration (years)</td><td>6.09</td><td>2.00</td><td>0.86</td><td>16.81</td></tr><tr><td>Approved FY25 (after new Scorecard)</td><td>0.15</td><td>0.36</td><td>0.00</td><td>1.00</td></tr></tbody></table><p class="note">Commitment is the net commitment recorded in the Scorecard export. Regional distribution of projects: AFE 267, AFW 248, EAP 108, ECA 141, LCR 133, MENAAP 131, SAR 101.</p></figure>
+
+<p><b>Key variables.</b> <i>Indicator type</i> is the results-chain classification described in Section 4.1. <i>Rescaled</i> equals one when the
+progress conversion factor is positive and different from one, i.e. the project&rsquo;s own figure is multiplied to express it in the Scorecard
+unit (for example, sewer connections multiplied by household size, or a vaccination percentage multiplied by a population). <i>Zero baseline</i>
+equals one when the calculated baseline value is zero. <i>Fixed-share female figure</i> follows the export&rsquo;s disaggregation factor: when the
+factor lies strictly between zero and one, the female figure is the total multiplied by an assumed share rather than a separate count.
+<i>Behind</i> applies a linear on-track rule: a result is behind if the share of its target achieved is more than 10 percentage points below the
+share of the implementation period elapsed (approval to closing). The rule is not an official WBG rating; it formalises the benchmark implicit
+whenever cumulative progress is compared with elapsed time, and alternative thresholds are reported.</p>
+
+<p><b>Dataset release.</b> The clean files <span class="mono">results_clean</span>, <span class="mono">gender_pairs</span> and
+<span class="mono">projects_clean</span> are released in CSV and Stata (.dta) formats with variable labels, together with the Python build
+script that produces them from the raw exports, an R script and a Stata do-file that reproduce every table and figure.</p>
+
+<h2>4. Methods</h2>
+<h3>4.1 Classifying what each indicator measures</h3>
+<p>Each indicator&rsquo;s wording is classified into one of four types using ordered, transparent rules (Appendix A):
+<b>outcome</b>&mdash;a change in a condition or behaviour of people or firms (income, employment, sales, health status, adoption of a practice,
+service-use rates); <b>output</b>&mdash;something the project produces or does (people trained or certified, works built, loans issued, plans adopted);
+<b>reach</b>&mdash;a count of people, households or firms who receive, access or benefit from project goods or services; and
+<b>unclassifiable</b>&mdash;breakdown labels such as &ldquo;of which women&rdquo; or a country name. To guard against tuning the rules to the
+data used to evaluate them, I drew two independent random samples of 200 results. The first (development set) was used to refine the rules;
+the second (test set) was coded by hand without sight of the rule labels and is used only for evaluation. On the test set the rules agree with
+the hand coding in 83.5% of cases (&kappa; = 0.66, &ldquo;substantial&rdquo; agreement; Cohen 1960).
+Reach is identified with high precision and recall; outcome labels are rarely wrong (precision 0.89) but some outcomes
+are missed (recall 0.57). The rule-based share of outcome indicators should therefore be read as a lower bound, and I report
+the hand-coded share alongside it (Table 4).</p>
+
+<h3>4.2 Test 1: welfare relevance</h3>
+<p>I estimate linear probability models (LPM) of the form</p>
+<p class="eq">Outcome<sub>ip</sub> = &alpha; + &Sigma;<sub>s</sub> &beta;<sub>s</sub> Area<sub>s,ip</sub> + &Sigma;<sub>c</sub> &delta;<sub>c</sub> Cohort<sub>c,p</sub> + X&prime;<sub>p</sub>&gamma; + &mu;<sub>d(p)</sub> + &epsilon;<sub>ip</sub></p>
+<p>where <i>i</i> indexes results and <i>p</i> projects, <i>Area</i> are Scorecard results areas, <i>Cohort</i> are approval-year groups (the FY25
+cohort, approved after the new Scorecard was adopted, is of particular interest), <i>X</i> contains region, FCV status, income group, IDA
+financing, lending instrument and log commitment, and &mu; are lead-department fixed effects. The LPM coefficients are directly interpretable
+as percentage-point differences; logit average marginal effects are reported as a check.</p>
+
+<h3>4.3 Test 2: measurement integrity</h3>
+<p>I first document the prevalence of zero baselines, rescaled figures and fixed-share female figures, and the share of the reported achieved
+total that comes from rescaled figures. I then estimate the same LPM with <i>Rescaled<sub>ip</sub></i> and, at the pair level,
+<i>FixedShare<sub>jp</sub></i> as dependent variables, adding indicator type and a percentage-unit dummy in the rescaling model.</p>
+
+<h3>4.4 Test 3: progress judgement</h3>
+<p>Two questions matter: how does progress accumulate over a project&rsquo;s life, and what does the linear on-track rule actually pick up?
+For the first, I estimate a fractional logit (Papke and Wooldridge 1996) for the share of target achieved, <i>y</i><sub>ip</sub> &isin; [0, 1]:</p>
+<p class="eq">E[y<sub>ip</sub> | &middot;] = &Lambda;( &theta;<sub>1</sub>E<sub>ip</sub> + &theta;<sub>2</sub>E<sup>2</sup><sub>ip</sub> + &lambda;<sub>1</sub>Output<sub>ip</sub> + &lambda;<sub>2</sub>Outcome<sub>ip</sub> + &kappa;Rescaled<sub>ip</sub> + Area&prime;&beta; + X&prime;<sub>p</sub>&gamma; )</p>
+<p>where <i>E</i> is the share of the implementation period elapsed and &Lambda; is the logistic function. If progress were linear, the predicted curve
+would track the 45-degree line. For the second, I estimate LPMs of <i>Behind<sub>ip</sub></i> on project-age bins alone and then add indicator type,
+rescaling, results area, project characteristics and department fixed effects. Comparing the R&sup2; of the timing-only model with the full model
+shows how much of the explainable variation in &ldquo;behind&rdquo; is about time; the coefficient on <i>Outcome</i> shows whether the rule penalises
+welfare measurement holding age constant.</p>
+
+<p><b>Inference.</b> Results within a project share design, team and context, so all standard errors are clustered by project (Cameron and Miller
+2015); clustering by country is reported as a robustness check. The analysis is descriptive and associational: the tests ask whether the
+Scorecard&rsquo;s evidence has the properties a welfare-anchored system would need, not what causes project success.</p>
+
+<h2>5. Results</h2>
+<h3>5.1 Test 1: the Scorecard mostly counts reach</h3>
+<p>Figure 1 and Table 3 show the composition of the evidence. Across all five results areas, 62% of contributing
+indicators count people or firms reached, 16% are outputs, and 14% measure a welfare
+outcome. The hand-coded samples give a very similar picture: 69% reach and 14%
+outcome (95% CI 11%&ndash;17%). Water, sanitation and hygiene results contain essentially no outcome
+indicators&mdash;every result counts people provided with a service&mdash;while economic opportunity and health have the highest outcome shares,
+reflecting indicators such as jobs created, sales or income gains, and vaccination or service-coverage rates.</p>
+<figure class="fig avoid"><figcaption><b>Figure 1.</b> What the Scorecard counts, by results area</figcaption><img src="../output/figures/fig1_indicator_types.png"><p class="note">Share of the 3,617 project indicators feeding each Scorecard results area, by results-chain type. Source: author&rsquo;s classification of FY25 Scorecard project records.</p></figure>
+<figure class="tbl avoid "><figcaption><b>Table 3.</b> What the Scorecard counts: results-chain type of contributing project indicators</figcaption><table class="simple"><thead><tr><th>Scorecard results area</th><th>Results</th><th>Reach</th><th>Output</th><th>Outcome</th><th>Unclassifiable</th></tr></thead><tbody><tr><td>Health, nutrition & population</td><td>226</td><td>71%</td><td>2%</td><td>22%</td><td>5%</td></tr><tr><td>Water, sanitation & hygiene</td><td>396</td><td>94%</td><td>4%</td><td>0%</td><td>2%</td></tr><tr><td>Gender equality actions</td><td>1,725</td><td>59%</td><td>19%</td><td>14%</td><td>8%</td></tr><tr><td>Economic opportunity</td><td>967</td><td>50%</td><td>21%</td><td>22%</td><td>8%</td></tr><tr><td>Financial services</td><td>303</td><td>75%</td><td>8%</td><td>8%</td><td>10%</td></tr><tr><td>All results areas</td><td>3,617</td><td>62%</td><td>16%</td><td>14%</td><td>7%</td></tr></tbody></table><p class="note">Rule-based classification of the indicator wording (Appendix A). Shares are row percentages.</p></figure>
+<figure class="tbl avoid "><figcaption><b>Table 4.</b> Validation of the indicator classification</figcaption><table class="simple"><thead><tr><th>Type</th><th>Precision (test set)</th><th>Recall (test set)</th><th>Rule-based share, all results</th><th>Hand-coded share (n = 400)</th></tr></thead><tbody><tr><td>Reach</td><td>0.92 [0.86, 0.95]</td><td>0.90 [0.84, 0.94]</td><td>62.4%</td><td>68.8% [64.0%, 73.1%]</td></tr><tr><td>Output</td><td>0.69 [0.52, 0.81]</td><td>0.80 [0.63, 0.90]</td><td>15.7%</td><td>16.5% [13.2%, 20.5%]</td></tr><tr><td>Outcome</td><td>0.89 [0.69, 0.97]</td><td>0.57 [0.39, 0.73]</td><td>14.4%</td><td>13.8% [10.7%, 17.5%]</td></tr></tbody></table><p class="note">Held-out test set of 200 randomly drawn results coded by hand without sight of the rule labels; overall agreement 83.5%, Cohen&rsquo;s &kappa; = 0.66. A separate development set of 200 results was used to refine the rules and is not used for these statistics. The last column pools both hand-coded sets. 95% Wilson intervals in brackets.</p></figure>
+<p>At the project level, 80% of the 1,129 projects contribute no outcome indicator to the Scorecard,
+and 54% contribute only reach indicators. For most projects, then, the Scorecard can say how many people were
+touched but not whether anything changed for them.</p>
+
+<p>Table 5 shows that these differences are systematic. Relative to health, WASH results are 23.7 percentage points less likely
+to be outcome indicators, financial-services results 16.0 points less likely, and gender-equality actions 8.6 points less
+likely, holding region, fragility, income group, financing, instrument and size constant. Project characteristics other than the results area
+explain little. Logit average marginal effects are almost identical (for example -16.1 points for financial services).
+Importantly, there is no sign that the new Scorecard shifted design toward welfare measurement: projects approved in FY25, after its adoption,
+are 5.7 points more likely to use outcome indicators than pre-FY20 projects (p = 0.07), and the difference falls to
+3.0 points (p = 0.33) with department fixed effects. The hand-coded subsample tells the same story (Appendix Table A1).</p>
+<figure class="tbl avoid"><figcaption><b>Table 5.</b> Test 1 &mdash; Which results are outcome indicators? Linear probability models</figcaption><table class="reg"><thead><tr><th></th><th>(1)</th><th>(2)</th><th>(3)</th></tr></thead><tbody><tr class="grp"><td colspan="4">Results area (base: health, nutrition &amp; population)</td></tr><tr><td>WASH</td><td>-0.217***</td><td>-0.237***</td><td>-0.296***</td></tr><tr class="se"><td></td><td>(0.038)</td><td>(0.037)</td><td>(0.041)</td></tr><tr><td>Gender equality actions</td><td>-0.084**</td><td>-0.086**</td><td>-0.143***</td></tr><tr class="se"><td></td><td>(0.038)</td><td>(0.036)</td><td>(0.034)</td></tr><tr><td>Economic opportunity</td><td>-0.008</td><td>-0.016</td><td>-0.099***</td></tr><tr class="se"><td></td><td>(0.042)</td><td>(0.039)</td><td>(0.035)</td></tr><tr><td>Financial services</td><td>-0.146***</td><td>-0.160***</td><td>-0.238***</td></tr><tr class="se"><td></td><td>(0.042)</td><td>(0.040)</td><td>(0.041)</td></tr><tr class="grp"><td colspan="4">Approval cohort (base: FY19 or earlier)</td></tr><tr><td>Approved FY20-21</td><td>0.068**</td><td>0.075**</td><td>0.068**</td></tr><tr class="se"><td></td><td>(0.035)</td><td>(0.030)</td><td>(0.026)</td></tr><tr><td>Approved FY22-23</td><td>0.037</td><td>0.035</td><td>0.014</td></tr><tr class="se"><td></td><td>(0.024)</td><td>(0.024)</td><td>(0.023)</td></tr><tr><td>Approved FY24</td><td>0.025</td><td>0.024</td><td>-0.002</td></tr><tr class="se"><td></td><td>(0.036)</td><td>(0.033)</td><td>(0.031)</td></tr><tr><td>Approved FY25 (new Scorecard)</td><td>0.061*</td><td>0.057*</td><td>0.030</td></tr><tr class="se"><td></td><td>(0.032)</td><td>(0.031)</td><td>(0.031)</td></tr><tr class="grp"><td colspan="4">Project characteristics</td></tr><tr><td>FCV country</td><td></td><td>-0.035</td><td>-0.031</td></tr><tr class="se"><td></td><td></td><td>(0.022)</td><td>(0.021)</td></tr><tr><td>IDA-financed</td><td></td><td>-0.015</td><td>-0.023</td></tr><tr class="se"><td></td><td></td><td>(0.039)</td><td>(0.035)</td></tr><tr><td>Log commitment</td><td></td><td>-0.002</td><td>-0.001</td></tr><tr class="se"><td></td><td></td><td>(0.008)</td><td>(0.008)</td></tr><tr class="stat"><td>Region, income group, instrument</td><td></td><td>Yes</td><td>Yes</td></tr><tr class="stat"><td>Lead department fixed effects</td><td></td><td></td><td>Yes</td></tr><tr class="stat"><td>Observations (results)</td><td>3,617</td><td>3,617</td><td>3,617</td></tr><tr class="stat"><td>Clusters (projects)</td><td>1,129</td><td>1,129</td><td>1,129</td></tr><tr class="stat"><td>R&sup2;</td><td>0.041</td><td>0.065</td><td>0.095</td></tr></tbody></table><p class="note">Dependent variable = 1 if the project indicator measures a welfare outcome. Standard errors clustered by project in parentheses. *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.10. A logit version gives the same pattern (average marginal effects in the text); no WASH result is an outcome indicator, so WASH is perfectly predicted in the logit.</p></figure>
+
+<h3>5.2 Test 2: much of the reported total is constructed</h3>
+<p>Three features of the data show how far the Scorecard&rsquo;s numbers are built rather than measured (Table 6, Figure 2). First, 91%
+of results start from a zero baseline, so they record cumulative contact with the project rather than change against a counterfactual or starting
+level. Second, 10% of results are rescaled by a conversion factor, but these account for 29% of the
+803 million achieved &ldquo;units&rdquo; reported across the five areas. In health the figure is 63%:
+most of the reported number of people receiving health services is derived by multiplying project indicators&mdash;often coverage percentages&mdash;by
+population or household factors. Among indicators measured in percentages, 49% are converted into counts of people in this way.
+Third, 13% of results are masked to avoid double counting, a sensible correction that also signals how much overlap the
+aggregation must manage.</p>
+<figure class="fig avoid"><figcaption><b>Figure 2.</b> Constructed figures in the Scorecard, by results area</figcaption><img src="../output/figures/fig2_constructed.png"><p class="note">Left: share of the reported achieved total that comes from project figures multiplied by a conversion factor. Right: share of project &times; sub-indicator pairs whose female figure is the total multiplied by a fixed share.</p></figure>
+<figure class="tbl avoid "><figcaption><b>Table 6.</b> Test 2 &mdash; How Scorecard figures are constructed</figcaption><table class="simple"><thead><tr><th>Scorecard results area</th><th>Results</th><th>Zero baseline</th><th>Rescaled</th><th>Share of reported total from rescaled results</th><th>Female figure = fixed share of total</th></tr></thead><tbody><tr><td>Health, nutrition & population</td><td>103</td><td>65%</td><td>52%</td><td>63%</td><td>55%</td></tr><tr><td>Water, sanitation & hygiene</td><td>374</td><td>97%</td><td>14%</td><td>11%</td><td>53%</td></tr><tr><td>Gender equality actions</td><td>1,552</td><td>90%</td><td>7%</td><td>3%</td><td>14%</td></tr><tr><td>Economic opportunity</td><td>882</td><td>94%</td><td>9%</td><td>16%</td><td>21%</td></tr><tr><td>Financial services</td><td>221</td><td>88%</td><td>13%</td><td>13%</td><td>4%</td></tr><tr><td>All results areas</td><td>3,132</td><td>91%</td><td>10%</td><td>29%</td><td>22%</td></tr></tbody></table><p class="note">Results not masked for double counting (N = 3,132). &ldquo;Rescaled&rdquo;: the project figure is multiplied by a conversion factor (positive and different from 1) to express it in the Scorecard unit. Last column: project &times; sub-indicator pairs with a female figure (N = 1,734).</p></figure>
+<p>Gender disaggregation shows the same pattern more sharply. Of 1,734 project &times; sub-indicator pairs with a female figure,
+387 (22%) are fixed-share constructions, 665 report no progress yet, 349
+concern women-only interventions and 91 report an identical planned and achieved share. Only 235
+(14%) can show whether women were reached in the proportion planned. Fixed-share figures dominate in health (55%)
+and WASH (53%), the two areas where the Scorecard reports the largest numbers of women reached.</p>
+
+<p>Table 7 shows that the construction of figures is mainly a property of the results area rather than of the country or project. There is one
+encouraging trend: projects approved in FY24 and FY25 are 9.9 and 7.9 percentage points less likely than pre-FY20 projects
+to report fixed-share female figures, and FY25 projects are 9.8 points less likely to be rescaled. Percentage-unit indicators are
+31.0 points more likely to be rescaled, as expected.</p>
+<figure class="tbl avoid"><figcaption><b>Table 7.</b> Test 2 &mdash; Which figures are constructed rather than measured? Linear probability models</figcaption><table class="reg"><thead><tr><th></th><th>(1) Female figure is a fixed share</th><th>(2) Result is rescaled</th></tr></thead><tbody><tr class="grp"><td colspan="3">Results area (base: health, nutrition &amp; population)</td></tr><tr><td>WASH</td><td>-0.033</td><td>-0.295***</td></tr><tr class="se"><td></td><td>(0.068)</td><td>(0.059)</td></tr><tr><td>Gender equality actions</td><td>-0.398***</td><td>-0.404***</td></tr><tr class="se"><td></td><td>(0.062)</td><td>(0.051)</td></tr><tr><td>Economic opportunity</td><td>-0.337***</td><td>-0.370***</td></tr><tr class="se"><td></td><td>(0.062)</td><td>(0.054)</td></tr><tr><td>Financial services</td><td>-0.504***</td><td>-0.341***</td></tr><tr class="se"><td></td><td>(0.062)</td><td>(0.058)</td></tr><tr class="grp"><td colspan="3">Indicator</td></tr><tr><td>Unit is a percentage</td><td></td><td>0.310***</td></tr><tr class="se"><td></td><td></td><td>(0.056)</td></tr><tr><td>Output indicator</td><td></td><td>0.073**</td></tr><tr class="se"><td></td><td></td><td>(0.030)</td></tr><tr><td>Outcome indicator</td><td></td><td>0.039*</td></tr><tr class="se"><td></td><td></td><td>(0.024)</td></tr><tr class="grp"><td colspan="3">Approval cohort (base: FY19 or earlier)</td></tr><tr><td>Approved FY20-21</td><td>-0.043</td><td>-0.039</td></tr><tr class="se"><td></td><td>(0.029)</td><td>(0.045)</td></tr><tr><td>Approved FY22-23</td><td>-0.062**</td><td>-0.054</td></tr><tr class="se"><td></td><td>(0.027)</td><td>(0.038)</td></tr><tr><td>Approved FY24</td><td>-0.099***</td><td>-0.014</td></tr><tr class="se"><td></td><td>(0.038)</td><td>(0.057)</td></tr><tr><td>Approved FY25 (new Scorecard)</td><td>-0.079**</td><td>-0.098***</td></tr><tr class="se"><td></td><td>(0.031)</td><td>(0.034)</td></tr><tr class="grp"><td colspan="3">Project characteristics</td></tr><tr><td>FCV country</td><td>0.003</td><td>0.027</td></tr><tr class="se"><td></td><td>(0.025)</td><td>(0.027)</td></tr><tr><td>IDA-financed</td><td>0.001</td><td>0.050*</td></tr><tr class="se"><td></td><td>(0.029)</td><td>(0.027)</td></tr><tr><td>Log commitment</td><td>0.011</td><td>0.040***</td></tr><tr class="se"><td></td><td>(0.010)</td><td>(0.013)</td></tr><tr class="stat"><td>Region, income group, instrument</td><td>Yes</td><td>Yes</td></tr><tr class="stat"><td>Observations</td><td>1,734</td><td>3,132</td></tr><tr class="stat"><td>R&sup2;</td><td>0.145</td><td>0.195</td></tr></tbody></table><p class="note">Column (1): project &times; Scorecard sub-indicator pairs with a female figure. Column (2): results not masked for double counting. Standard errors clustered by project. *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.10.</p></figure>
+
+<h3>5.3 Test 3: a linear on-track rule measures time and penalises welfare measurement</h3>
+<p>Under the linear rule, 57% of the 1,709 judgeable results are behind schedule. Figure 4 shows that this share falls from
+80% for projects less than three years old to 68%, 47% and 32%
+in successive age groups. Age bins alone explain an R&sup2; of 0.125, 48% of the 0.260 explained by
+the full model with design, project characteristics and department fixed effects (Table 8).</p>
+<figure class="fig avoid"><figcaption><b>Figure 4.</b> Share of results rated &ldquo;behind&rdquo; falls steeply with project age</figcaption><img src="../output/figures/fig4_behind_by_age.png"><p class="note">N = 1,709 results in 730 projects. Error bars: 95% Wilson intervals.</p></figure>
+<p>The reason is visible in Figure 3. Progress does not accumulate in a straight line: the fractional logit implies that a typical reach result
+has achieved about 25% of its target at the midpoint of implementation, not 50%, and an outcome result about 16%.
+Results follow an S-shaped path in which early years are spent on procurement, works and institutional set-up. A benchmark that expects
+proportional progress will therefore flag most young projects as failing, whatever their eventual performance.</p>
+<figure class="fig avoid"><figcaption><b>Figure 3.</b> Results accumulate along a curve, not a straight line</figcaption><img src="../output/figures/fig3_delivery_curve.png"><p class="note">Lines: average predicted share of target achieved from the fractional logit in Table 8, column (1), evaluated over the estimation sample. Dots: binned means (size proportional to the number of results). Dashed line: the linear benchmark implied by comparing cumulative progress with elapsed time.</p></figure>
+<p>The most consequential finding is the coefficient on outcome indicators. Holding project age, rescaling, results area, region, fragility,
+income group, instrument, size and lead department constant, outcome indicators are 13.3 percentage points more likely to be rated behind
+than reach indicators (Table 8, column 5; 16.5 points without department fixed effects). In the fractional logit their progress is
+significantly lower (-0.59 log-odds). Outcomes come later in the results chain, so a time-proportional rule systematically
+makes them look worse. Rescaled figures move the other way: they are 11.5 points less likely to be behind, and their progress is
+higher (0.65 log-odds), consistent with constructed numbers flattering performance. Combined with the Scorecard&rsquo;s role in cascading
+targets, this creates exactly the multitask incentive that Holmstr&ouml;m and Milgrom (1991) describe: teams that choose to measure welfare are
+penalised on the dimension that is monitored.</p>
+<figure class="tbl avoid"><figcaption><b>Table 8.</b> Test 3 &mdash; Progress and the &ldquo;behind&rdquo; judgement</figcaption><table class="reg"><thead><tr><th></th><th>(1) Progress<br><span class='sub'>frac. logit</span></th><th>(2) Behind</th><th>(3) Behind</th><th>(4) Behind</th><th>(5) Behind</th></tr></thead><tbody><tr class="grp"><td colspan="6">Timing</td></tr><tr><td>Share of period elapsed</td><td>3.475*</td><td></td><td></td><td></td><td></td></tr><tr class="se"><td></td><td>(1.940)</td><td></td><td></td><td></td><td></td></tr><tr><td>Share elapsed, squared</td><td>2.236</td><td></td><td></td><td></td><td></td></tr><tr class="se"><td></td><td>(1.471)</td><td></td><td></td><td></td><td></td></tr><tr><td>3&ndash;5 years since approval</td><td></td><td>-0.115***</td><td>-0.106**</td><td>-0.139***</td><td>-0.139***</td></tr><tr class="se"><td></td><td></td><td>(0.043)</td><td>(0.042)</td><td>(0.041)</td><td>(0.039)</td></tr><tr><td>5&ndash;7 years</td><td></td><td>-0.327***</td><td>-0.325***</td><td>-0.358***</td><td>-0.344***</td></tr><tr class="se"><td></td><td></td><td>(0.053)</td><td>(0.050)</td><td>(0.047)</td><td>(0.047)</td></tr><tr><td>7+ years</td><td></td><td>-0.480***</td><td>-0.487***</td><td>-0.511***</td><td>-0.496***</td></tr><tr class="se"><td></td><td></td><td>(0.048)</td><td>(0.053)</td><td>(0.052)</td><td>(0.049)</td></tr><tr class="grp"><td colspan="6">What is measured (base: reach indicator)</td></tr><tr><td>Output indicator</td><td>-0.191</td><td></td><td>0.102</td><td>0.099</td><td>0.087</td></tr><tr class="se"><td></td><td>(0.180)</td><td></td><td>(0.065)</td><td>(0.061)</td><td>(0.064)</td></tr><tr><td>Outcome indicator</td><td>-0.595***</td><td></td><td>0.175***</td><td>0.165***</td><td>0.133***</td></tr><tr class="se"><td></td><td>(0.197)</td><td></td><td>(0.051)</td><td>(0.045)</td><td>(0.043)</td></tr><tr><td>Rescaled figure</td><td>0.648***</td><td></td><td>-0.085*</td><td>-0.129***</td><td>-0.115***</td></tr><tr class="se"><td></td><td>(0.191)</td><td></td><td>(0.050)</td><td>(0.042)</td><td>(0.039)</td></tr><tr class="grp"><td colspan="6">Results area (base: health, nutrition &amp; population)</td></tr><tr><td>WASH</td><td>-2.168***</td><td></td><td>0.483***</td><td>0.462***</td><td>0.339***</td></tr><tr class="se"><td></td><td>(0.304)</td><td></td><td>(0.068)</td><td>(0.070)</td><td>(0.103)</td></tr><tr><td>Gender equality actions</td><td>-1.044***</td><td></td><td>0.248***</td><td>0.233***</td><td>0.162**</td></tr><tr class="se"><td></td><td>(0.278)</td><td></td><td>(0.061)</td><td>(0.061)</td><td>(0.076)</td></tr><tr><td>Economic opportunity</td><td>-1.325***</td><td></td><td>0.313***</td><td>0.299***</td><td>0.206**</td></tr><tr class="se"><td></td><td>(0.280)</td><td></td><td>(0.063)</td><td>(0.063)</td><td>(0.085)</td></tr><tr><td>Financial services</td><td>-0.838**</td><td></td><td>0.239***</td><td>0.228***</td><td>0.178*</td></tr><tr class="se"><td></td><td>(0.350)</td><td></td><td>(0.076)</td><td>(0.076)</td><td>(0.098)</td></tr><tr class="grp"><td colspan="6">Project characteristics</td></tr><tr><td>FCV country</td><td>-0.212</td><td></td><td></td><td>0.061</td><td>0.075*</td></tr><tr class="se"><td></td><td>(0.177)</td><td></td><td></td><td>(0.042)</td><td>(0.041)</td></tr><tr><td>Log commitment</td><td>0.136*</td><td></td><td></td><td>0.001</td><td>0.016</td></tr><tr class="se"><td></td><td>(0.074)</td><td></td><td></td><td>(0.016)</td><td>(0.017)</td></tr><tr class="stat"><td>Region, income group, instrument</td><td>Yes</td><td></td><td></td><td>Yes</td><td>Yes</td></tr><tr class="stat"><td>Lead department fixed effects</td><td></td><td></td><td></td><td></td><td>Yes</td></tr><tr class="stat"><td>Observations (results)</td><td>1,709</td><td>1,709</td><td>1,709</td><td>1,709</td><td>1,709</td></tr><tr class="stat"><td>Clusters (projects)</td><td>730</td><td>730</td><td>730</td><td>730</td><td>730</td></tr><tr class="stat"><td>R&sup2;</td><td>&ndash;</td><td>0.125</td><td>0.184</td><td>0.226</td><td>0.260</td></tr></tbody></table><p class="note">Column (1): fractional logit (Papke and Wooldridge 1996) of the share of target achieved (capped at 1), coefficients in log-odds. Columns (2)&ndash;(5): linear probability models; &ldquo;behind&rdquo; = share of target achieved below share of implementation period elapsed minus 10 percentage points. Base age category: under 3 years. Standard errors clustered by project. *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.10.</p></figure>
+
+<h3>5.4 Robustness</h3>
+<p>Table 9 shows that the two central Test 3 results hold across alternative definitions and samples. The outcome-indicator penalty ranges from
+10.1 to 13.6 percentage points across thresholds of 0 and
+20 points, active projects only, excluding rescaled results, and clustering by country, and is significant in every specification; the logit
+gives the same sign and significance. The age gradient is large and precise in all specifications. For Test 1, re-estimating on the 400 hand-coded
+results (Appendix Table A1) reproduces the WASH gap and the absence of a post-Scorecard shift. Misclassification of a binary dependent variable
+biases LPM coefficients toward zero when it is unrelated to the regressors (Hausman, Abrevaya and Scott-Morton 1998), so the Test 1 differences are,
+if anything, understated.</p>
+<figure class="tbl avoid "><figcaption><b>Table 9.</b> Robustness of the Test 3 results</figcaption><table class="simple"><thead><tr><th>Specification</th><th>Outcome indicator</th><th>7+ years since approval</th><th>N</th></tr></thead><tbody><tr><td>Baseline (Table 8, column 5)</td><td>0.133*** (0.043)</td><td>-0.496*** (0.049)</td><td>1,709</td></tr><tr><td>Threshold 0 pp</td><td>0.101** (0.042)</td><td>-0.463*** (0.050)</td><td>1,709</td></tr><tr><td>Threshold 20 pp</td><td>0.102** (0.044)</td><td>-0.559*** (0.047)</td><td>1,709</td></tr><tr><td>Active projects only</td><td>0.119** (0.046)</td><td>-0.440*** (0.063)</td><td>1,262</td></tr><tr><td>Excluding rescaled results</td><td>0.136*** (0.048)</td><td>-0.518*** (0.052)</td><td>1,468</td></tr><tr><td>Clustered by country</td><td>0.133*** (0.044)</td><td>-0.496*** (0.059)</td><td>1,709</td></tr><tr><td>Logit (log-odds)</td><td>0.850*** (0.240)</td><td>-2.640*** (0.318)</td><td>1,709</td></tr></tbody></table><p class="note">Each row re-estimates column (5) of Table 8 with one change. Thresholds redefine &ldquo;behind&rdquo; as progress below elapsed share (0 pp) or elapsed share minus 20 pp. The logit omits department fixed effects. Clustered standard errors in parentheses. *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.10.</p></figure>
+
+<h2>6. Discussion</h2>
+<p>Taken together, the three tests suggest that the Scorecard is anchored in reach rather than welfare. That is partly by design: aggregating
+outcomes across heterogeneous projects is hard, and counts of people served are additive in a way that income gains or mortality reductions are
+not. The 2024 reform recognised this tension and moved some indicators from access toward use (World Bank 2024b). But the project-level evidence
+shows how far there is still to go. The numbers that headline the Group&rsquo;s annual reporting are dominated by cumulative counts from zero
+baselines; a substantial part of them is produced by conversion factors and assumed shares; and the implicit standard for judging progress rewards
+counting reach early and penalises measuring welfare.</p>
+
+<p>Three caveats shape the interpretation. First, reach is not worthless: in WASH, for instance, connecting people to safely managed water is
+itself close to a welfare outcome, and the Scorecard&rsquo;s vision indicators track country-level welfare separately. The point is that the
+<i>results</i> layer, the part attributable to WBG operations, rarely measures change. Second, conversion factors are often reasonable
+(household size is a sensible way to turn connections into people), but they are undocumented in the public release, so readers cannot tell which
+totals are counted and which are modelled. Third, the &ldquo;behind&rdquo; finding concerns a linear rule that any reader of cumulative progress data
+implicitly applies; it is not a claim about how WBG managers formally rate projects. The concern is that the same benchmark shapes how teams, managers
+and the Board read the Scorecard.</p>
+
+<p>The findings complement those of the project-performance literature. That literature shows that good monitoring and evaluation is associated
+with better project outcomes (Raimondo 2016) and that most variation in performance is within countries (Bulman, Kolkma and Kraay 2017). Here too,
+the results area and indicator choice&mdash;design decisions made by teams&mdash;explain far more than country characteristics. This means the
+problem is fixable through the rules that govern what projects report.</p>
+
+<h2>7. Recommendations</h2>
+<p>Five changes would anchor the Scorecard in welfare without adding new reporting burdens.</p>
+<ol class="recs">
+<li><b>Publish an outcome-coverage ratio for each results area.</b> Alongside each people-level total, report the share of contributing projects that
+also report at least one outcome indicator for the same beneficiaries (currently 20% of projects overall and none in WASH).
+Setting a rising floor for this ratio would reward teams for measuring change without redesigning the Scorecard.</li>
+<li><b>Flag how every number was built.</b> Add a method code to each contributing figure&mdash;measured, rescaled, fixed-share disaggregation, zero
+baseline&mdash;and publish totals with and without constructed components. In health, where 63% of the
+achieved total is rescaled, this single change would materially alter how the headline is read.</li>
+<li><b>Count women only when women are counted.</b> Report the number of women reached only from directly measured disaggregations, and show
+estimated figures separately. With 14% of female figures currently able to show whether women were reached as planned,
+the gender headline mostly restates assumptions.</li>
+<li><b>Replace linear benchmarks with empirical trajectories.</b> Judge progress against curves estimated from closed projects, by results area and
+indicator type, rather than against elapsed time. The fractional-logit approach used here is one simple way to do this; it would remove most
+of the spurious &ldquo;behind&rdquo; ratings for young projects.</li>
+<li><b>Remove the penalty on outcome indicators.</b> When the Scorecard cascades into unit targets, assess outcome indicators against later milestones
+or give them separate weight, so that choosing to measure welfare does not make a team look worse. IEG&rsquo;s formative evaluation is well placed to
+test whether this penalty affects indicator choice in practice.</li>
+</ol>
+<p>For researchers and evaluators, the most valuable single step would be for the WBG to publish earlier Scorecard cycles in the same format.
+That would allow trajectories, rather than snapshots, to be analysed, and would make it possible to test whether the 2024 reform changed reporting
+behaviour.</p>
+
+<h2>8. Limitations</h2>
+<p>The analysis uses one Scorecard cycle and is therefore cross-sectional; it cannot follow individual results over time or link them to
+ex-post ratings. The indicator classification is rule-based and imperfect, although validated on a held-out sample and conservative for outcomes.
+Some fields&mdash;notably conversion factors of zero or missing&mdash;are not documented in the public release, and I treat only explicit factors
+different from one as rescaling. Results masked for double counting are excluded from Tests 2 and 3. The &ldquo;behind&rdquo; rule is an analytical
+construct. Finally, the associations reported here are not causal estimates of the effect of indicator choice on project success; they describe the
+properties of the evidence that the Scorecard aggregates.</p>
+
+<h2>9. Conclusion</h2>
+<p>The FY24&ndash;FY30 Scorecard set out to measure outcomes rather than inputs. Its own project-level evidence shows that it mostly measures reach:
+most contributing indicators count people served, a large share of reported totals is constructed from conversion factors and assumed shares, and
+the implicit standard for judging progress mostly reflects time while penalising the indicators that measure welfare. None of this requires a new
+Scorecard. It requires the existing one to be anchored: to report how much of each number is measured, to show whether anything changed for the
+people counted, and to judge progress against realistic trajectories. Those changes would let the Scorecard do what its designers intended&mdash;tell
+the Group&rsquo;s shareholders and the public whether lives are improving, not just how many were reached.</p>
+
+<h2 class="pb">References</h2><div class="refs"><p>Andrews, M., Pritchett, L., and Woolcock, M. (2013). Escaping capability traps through problem driven iterative adaptation (PDIA). <i>World Development</i>, 51, 234&ndash;244.</p><p>Bevan, G., and Hood, C. (2006). What&rsquo;s measured is what matters: Targets and gaming in the English public health care system. <i>Public Administration</i>, 84(3), 517&ndash;538.</p><p>Bulman, D., Kolkma, W., and Kraay, A. (2017). Good countries or good projects? Comparing macro and micro correlates of World Bank and Asian Development Bank project performance. <i>Review of International Organizations</i>, 12(3), 335&ndash;363.</p><p>Cameron, A. C., and Miller, D. L. (2015). A practitioner&rsquo;s guide to cluster-robust inference. <i>Journal of Human Resources</i>, 50(2), 317&ndash;372.</p><p>Campbell, D. T. (1979). Assessing the impact of planned social change. <i>Evaluation and Program Planning</i>, 2(1), 67&ndash;90.</p><p>Cohen, J. (1960). A coefficient of agreement for nominal scales. <i>Educational and Psychological Measurement</i>, 20(1), 37&ndash;46.</p><p>Denizer, C., Kaufmann, D., and Kraay, A. (2013). Good countries or good projects? Macro and micro correlates of World Bank project performance. <i>Journal of Development Economics</i>, 105, 288&ndash;302.</p><p>Gonz&aacute;lez, &Aacute;. S. (2026). <i>The World Bank Cannot Stop Reorganizing Its Private Sector Work: The Missing Welfare Anchor</i>. CGD Policy Paper 402. Washington, DC: Center for Global Development.</p><p>Hausman, J. A., Abrevaya, J., and Scott-Morton, F. M. (1998). Misclassification of the dependent variable in a discrete-response setting. <i>Journal of Econometrics</i>, 87(2), 239&ndash;269.</p><p>Holmstr&ouml;m, B., and Milgrom, P. (1991). Multitask principal&ndash;agent analyses: Incentive contracts, asset ownership, and job design. <i>Journal of Law, Economics, and Organization</i>, 7, 24&ndash;52.</p><p>Honig, D. (2018). <i>Navigation by Judgment: Why and When Top-Down Management of Foreign Aid Doesn&rsquo;t Work</i>. New York: Oxford University Press.</p><p>Hood, C. (2006). Gaming in Targetworld: The targets approach to managing British public services. <i>Public Administration Review</i>, 66(4), 515&ndash;521.</p><p>IEG (Independent Evaluation Group) (2016). <i>Behind the Mirror: A Report on the Self-Evaluation Systems of the World Bank Group</i>. Washington, DC: World Bank.</p><p>IEG (2024). <i>Results and Performance of the World Bank Group 2024</i>. Washington, DC: World Bank.</p><p>IEG (2025). <i>World Bank Group Scorecard Formative Evaluation: Approach Paper</i>. Washington, DC: World Bank, November.</p><p>Kilby, C. (2015). Assessing the impact of World Bank preparation on project outcomes. <i>Journal of Development Economics</i>, 115, 111&ndash;123.</p><p>Narayanaswamy, M. (2021). <i>What Gets Measured Gets Done: Using a Corporate Scorecard to Drive Greater Investment Impact</i>. EM Compass Note 108. Washington, DC: International Finance Corporation.</p><p>Natsios, A. (2010). <i>The Clash of the Counter-bureaucracy and Development</i>. CGD Essay. Washington, DC: Center for Global Development.</p><p>Papke, L. E., and Wooldridge, J. M. (1996). Econometric methods for fractional response variables with an application to 401(k) plan participation rates. <i>Journal of Applied Econometrics</i>, 11(6), 619&ndash;632.</p><p>Pritchett, L., Samji, S., and Hammer, J. (2013). <i>It&rsquo;s All About MeE: Using Structured Experiential Learning (&ldquo;e&rdquo;) to Crawl the Design Space</i>. CGD Working Paper 322. Washington, DC: Center for Global Development.</p><p>Raimondo, E. (2016). <i>What Difference Does Good Monitoring and Evaluation Make to World Bank Project Performance?</i> Policy Research Working Paper 7726. Washington, DC: World Bank.</p><p>Wilson, E. B. (1927). Probable inference, the law of succession, and statistical inference. <i>Journal of the American Statistical Association</i>, 22(158), 209&ndash;212.</p><p>World Bank (2024a). <i>New World Bank Group Scorecard FY24&ndash;FY30: Driving Action, Measuring Results</i>. Washington, DC: World Bank Group.</p><p>World Bank (2024b). &ldquo;World Bank Group Announces New Approach to Measuring Impact.&rdquo; Press release, April 9, 2024.</p><p>World Bank Group (2025). <i>World Bank Group Scorecard</i>, FY25 data release (results as of June 30, 2025). scorecard.worldbank.org.</p></div>
+<h2 class="pb">Appendix</h2>
+<h3>Appendix A. Classification rules</h3>
+<p>Indicator wording is lower-cased and stripped of ID prefixes and numbering. Rules are applied in order; the first match determines the type.</p>
+<table class="simple small"><thead><tr><th>Order</th><th>Type</th><th>Rule (abbreviated; full regular expressions in <span class="mono">code/01_build_dataset.py</span>)</th></tr></thead><tbody>
+<tr><td>1</td><td>Unclassifiable</td><td>Breakdown labels (&ldquo;of which&hellip;&rdquo;, &ldquo;female&rdquo;, &ldquo;regional&rdquo;) or fewer than four characters</td></tr>
+<tr><td>2</td><td>Reach</td><td>Scorecard template wording &ldquo;benefiting from actions to&hellip;&rdquo;</td></tr>
+<tr><td>3</td><td>Outcome</td><td>Income, earnings, sales, profits; mortality, stunting, prevalence; learning; employment status; new firms; people or firms adopting a practice; vaccinated; rates, proportions and shares; &ldquo;increase/reduction in&rdquo; (not &ldquo;in the number of&rdquo;)</td></tr>
+<tr><td>4</td><td>Output</td><td>Trained, training, certified, apprenticeship, courses</td></tr>
+<tr><td>5</td><td>Outcome</td><td>Jobs, employment (after training rules)</td></tr>
+<tr><td>6</td><td>Reach</td><td>A person/household/firm noun followed by receiving, provided with, access, benefiting, using, enrolled, reached, supported, covered, served, participating</td></tr>
+<tr><td>7</td><td>Output</td><td>Issued, disbursed, loans; constructed, rehabilitated, installed; prepared, approved, established; systems, plans, policies, registries</td></tr>
+<tr><td>8</td><td>Reach</td><td>Any remaining person/household/firm noun</td></tr>
+</tbody></table>
+
+<h3>Appendix B. Mapping the welfare anchor to results</h3>
+<table class="simple small"><thead><tr><th>Gonz&aacute;lez (2026) hurdle for operations</th><th>Test for reported results (this paper)</th><th>Evidence used</th></tr></thead><tbody>
+<tr><td>Justification: a binding market failure is diagnosed</td><td>Welfare relevance: the result measures a change in welfare</td><td>Indicator wording; results-chain type</td></tr>
+<tr><td>Effectiveness: the instrument acts on the distortion</td><td>Measurement integrity: the figure is measured, not constructed</td><td>Baselines, conversion and disaggregation factors</td></tr>
+<tr><td>Additionality: outcomes would not occur otherwise</td><td>Progress judgement: ratings reflect performance, not time</td><td>Progress, targets, dates</td></tr>
+</tbody></table>
+<figure class="tbl avoid"><figcaption><b>Table A1.</b> Test 1 re-estimated on the 400 hand-coded results</figcaption><table class="reg"><thead><tr><th></th><th>Outcome (hand-coded)</th></tr></thead><tbody><tr><td>WASH</td><td>-0.160**</td></tr><tr class="se"><td></td><td>(0.073)</td></tr><tr><td>Gender equality actions</td><td>-0.012</td></tr><tr class="se"><td></td><td>(0.077)</td></tr><tr><td>Economic opportunity</td><td>0.023</td></tr><tr class="se"><td></td><td>(0.084)</td></tr><tr><td>Financial services</td><td>-0.124</td></tr><tr class="se"><td></td><td>(0.077)</td></tr><tr><td>Approved FY20-21</td><td>0.039</td></tr><tr class="se"><td></td><td>(0.057)</td></tr><tr><td>Approved FY22-23</td><td>0.078</td></tr><tr class="se"><td></td><td>(0.052)</td></tr><tr><td>Approved FY24</td><td>-0.104***</td></tr><tr class="se"><td></td><td>(0.035)</td></tr><tr><td>Approved FY25 (new Scorecard)</td><td>0.052</td></tr><tr class="se"><td></td><td>(0.061)</td></tr><tr class="stat"><td>Observations</td><td>400</td></tr></tbody></table><p class="note">Dependent variable = 1 if the hand coder classified the indicator as an outcome. Standard errors clustered by project.</p></figure>
+
+<h3>Data and code availability</h3>
+<p>All data are public WBG Scorecard exports. The replication package contains the clean datasets (CSV and .dta), the Python build script, the R
+script and the Stata do-file, the hand-coded validation samples, and this paper&rsquo;s build script: [repository link].</p>
+
+<h3>Use of AI tools</h3>
+<p class="author-note">[Author to confirm before circulation.] The author used Claude (Anthropic) under the author&rsquo;s direction for drafting
+analysis code, a first-pass coding of the validation samples, figure preparation and copy editing. All coding decisions, results and
+interpretations were reviewed by the author, who is responsible for any remaining errors.</p>
+
+</body></html>

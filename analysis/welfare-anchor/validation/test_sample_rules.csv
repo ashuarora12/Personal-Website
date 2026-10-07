@@ -1,0 +1,201 @@
+result_id,project_id,scorecard_sub,unit,indicator_text,rule_type
+1513,P171607,CSC_RES_FIN_SERV,Number,Number of SME loans at Tier I institutions amortization extension,reach
+3357,P501274,CSC_RES_WAT_SAN_HYG,Number of people,People provided with at least basic sanitation services,reach
+3307,P181495,CSC_RES_GEN_EQU,Number,Cash transfer beneficiary households with children under 5 years old participating in caregiver groups,reach
+698,P162042,CSC_RES_GEN_EQU,Number,"People who have received essential health, nutrition, and population (HNP) services (Number)",reach
+3381,P502128,CSC_RES_GEN_EQU,Number,Girls benefiting from the Girls Education Initiative,reach
+2749,P178609,CSC_RES_BENE_ENAB_ECO_OPP,Number,Number of women utilizing advanced digital skills to secure new employment opportunities or receive promotions or additional responsibilities as a result of training received under the project,output
+2725,P178497,CSC_RES_GEN_EQU,Number,Female Scholarship students who succeed in graduating,reach
+2553,P177722,CSC_RES_FIN_SERV,Number of businesses,Businesses using debt financing,reach
+1942,P174135,CSC_RES_BENE_ENAB_ECO_OPP,Number,New or existing natural resource-based enterprises that receive financing,reach
+776,P163088,CSC_RES_GEN_EQU,Number,Beneficiaries of social safety net programs,reach
+912,P164448,CSC_RES_GEN_EQU,Number,Number of farmers participating in training,output
+418,P158215,CSC_RES_GEN_EQU,Number,1B Number of new jobs created in project-supported creative industries and tourism facilities (disaggregated by bottom 40% and gender),outcome
+129,P150080,CSC_RES_GEN_EQU,Number,2 (new): Number of new users of a modern contraceptive methods in the project's intervention areas,reach
+2984,P179534,CSC_RES_HEA_SERV,Number,"Patients with a consultation properly registered in the IHR, by gender",reach
+3286,P181328,CSC_RES_FIN_SERV,Number,DRE and clean cooking companies received equity financing (Number),reach
+1700,P173168,CSC_RES_GEN_EQU,Number,Number of deliveries attended by skilled health personnel,reach
+2567,P177814,CSC_RES_GEN_EQU,Number,Number of program beneficiaries receiving economic inclusion interventions,reach
+86,P148447,CSC_RES_GEN_EQU,Number,Number of women owned SMEs that received business development service,reach
+2705,P178481,CSC_RES_GEN_EQU,Number of people,Women eligible for shock-responsive cash assistance,reach
+2890,P179211,CSC_RES_GEN_EQU,Number of people,Beneficiaries of cash-based interventions,reach
+1610,P172425,CSC_RES_FIN_SERV,Number,Private sector firms receiving financing from supported MFIs,reach
+240,P151847,CSC_RES_GEN_EQU,Number,Regional students enrolled in ACEs: (i) Masters (no. of which are female) and (ii) PhD programs (no. of which are female),reach
+1571,P171933,CSC_RES_GEN_EQU,Number,Women participating in decision making processes through membership in District Management and Planning Committees (gender indicator),reach
+3454,P505643,CSC_RES_BENE_ENAB_ECO_OPP,Number,The number of Women-MSMEs that received green guarantees,reach
+2630,P178132,CSC_RES_GEN_EQU,Number,Private-sector actors involved in regional agriculture trade that are supported by the Project,reach
+368,P156239,CSC_RES_WAT_SAN_HYG,Number,People provided with access to ‘improved sanitation facilities” under the proj.,reach
+1095,P166685,CSC_RES_GEN_EQU,Number,Commercial enterprises benefited from modern energy solutions,reach
+3202,P180749,CSC_RES_GEN_EQU,Number,Number of poor and vulnerable households eligible for emergency social assistance following eligible flood and drought events.,reach
+1074,P166328,CSC_RES_BENE_ENAB_ECO_OPP,Number,Farmers receiving technical assistance and training for climate resilience technologies,output
+1283,P169165,CSC_RES_BENE_ENAB_ECO_OPP,Number,Beneficiary HHs receiving enhanced livelihood support including appropriate basic and skilll training and livelihood grant,output
+1634,P172605,CSC_RES_GEN_EQU,Number,Number of adult women victims of domestic violence attended by the Protection and Comprehensive Service to Families and Individuals (PAEFI),reach
+1889,P174005,CSC_RES_FIN_SERV,Number,Number of clients served by microfinance institutions,reach
+1444,P171158,CSC_RES_HEA_SERV,Number,New users of a modern contraceptive methods,reach
+942,P164696,CSC_RES_GEN_EQU,Number,Women using modern contraceptives,reach
+244,P151847,CSC_RES_GEN_EQU,Number,Students (national and regional) enrolled in ACEs: (i) Master's (no. of which are female) and (ii) PhD programs (no. of which are female),reach
+2365,P176693,CSC_RES_HEA_SERV,Number of people,Number of people receiving outpatient services,reach
+1677,P172988,CSC_RES_GEN_EQU,Percentage,Percentage of graduates who report being employed 12 months after they complete the internship of which are women,outcome
+1829,P173749,CSC_RES_GEN_EQU,Number,"Micro, small and medium enterprises provided with new or improved electricity services",reach
+2559,P177786,CSC_RES_GEN_EQU,Number,MSMEs reporting an increase in profit of 20% or more from grants supported by the project,outcome
+2142,P175720,CSC_RES_GEN_EQU,Number,"Women facilitators hired and trained to undertake outreach, training and advocacy activities",output
+2538,P177671,CSC_RES_BENE_ENAB_ECO_OPP,Number,(5) Livestock farmers adopting biosecurity measures (Number),outcome
+671,P161885,CSC_RES_BENE_ENAB_ECO_OPP,Number,Households provided with new electricity services,reach
+481,P159712,CSC_RES_BENE_ENAB_ECO_OPP,Number,Female-headed households provided with solar home systems,reach
+1481,P171465,CSC_RES_BENE_ENAB_ECO_OPP,Number,6: Number of new fisheries’ workers formally registered for the climate risk insurance mechanism.,reach
+1189,P167996,CSC_RES_HEA_SERV,Number,"People who have received essential health, nutrition, and population (HNP) services",reach
+3572,P508124,CSC_RES_WAT_SAN_HYG,Number,Additional people provided with access to safely managed rural water supply services,reach
+1438,P171144,CSC_RES_HEA_SERV,Number,"Children receiving nutrition services (ages 0-5 years, disaggregated by gender)",reach
+3193,P180708,CSC_RES_GEN_EQU,Number,Number of active e-wallet accounts,unclassifiable
+940,P164584,CSC_RES_BENE_ENAB_ECO_OPP,Number,"Number of established firms/cooperatives that receive matching grants, with breakdown for women-owned companies",reach
+1354,P170425,CSC_RES_FIN_SERV,Number of people,People using payment services,reach
+3344,P500620,CSC_RES_GEN_EQU,Number,People who received training in the Professional and Vocational Development Program who are then hired in technical or managerial roles in the water services sector,output
+1608,P172425,CSC_RES_BENE_ENAB_ECO_OPP,Number,Private sector firms receiving financing from the LTIF,reach
+1257,P168943,CSC_RES_WAT_SAN_HYG,Number,People provided with access to safely managed water services,reach
+2071,P175137,CSC_RES_BENE_ENAB_ECO_OPP,Number,Female graduates recruited in ENR in a wide range of engineering roles,output
+529,P160613,CSC_RES_BENE_ENAB_ECO_OPP,Number,Land certificates issued,output
+2563,P177814,CSC_RES_BENE_ENAB_ECO_OPP,Number,Number of program beneficiaries receiving economic inclusion interventions,reach
+201,P150937,CSC_RES_BENE_ENAB_ECO_OPP,Number,Number of graduate transport professionals received structured professional training,output
+963,P164786,CSC_RES_FIN_SERV,Number,Number of women benefiting from FAARF loans through a bank or mobile money account,reach
+3022,P179703,CSC_RES_BENE_ENAB_ECO_OPP,Number,Female interns employed in permanent roles in rail companies,outcome
+2822,P178878,CSC_RES_BENE_ENAB_ECO_OPP,Number,Number of female unemployed supported by income generating activities,unclassifiable
+1452,P171331,CSC_RES_GEN_EQU,Number,Land recipient households with use of ownership rights recorded as a result of the project,reach
+1679,P173025,CSC_RES_BENE_ENAB_ECO_OPP,Percentage,Of which received a resilient housing loan,unclassifiable
+1671,P172945,CSC_RES_BENE_ENAB_ECO_OPP,Number,Landowners whose land records newly registered and/or updated in LRMIS,unclassifiable
+2077,P175143,CSC_RES_GEN_EQU,Number,Number of technology-based start-ups registered and/or strengthened,unclassifiable
+577,P160948,CSC_RES_GEN_EQU,Number,Pregnant women who are HIV positive that deliver at a health facility (cumulative),reach
+1948,P174169,CSC_RES_FIN_SERV,Number,Number of MSMEs received financing under the project,reach
+2588,P178033,CSC_RES_GEN_EQU,Number,Expectant women using a transport voucher or staying in a maternal waiting home to ensure safe deliveries,reach
+1378,P170542,CSC_RES_GEN_EQU,Number,Children aged 1-5 years enrolled in project-supported full-day ECEC centers,reach
+2122,P175483,CSC_RES_GEN_EQU,Number,"IRI # 2: Number of trainees reimbursed after completing qualifications online (disaggregated by gender, disability and refugee status)",output
+2405,P176898,CSC_RES_GEN_EQU,Number,Female graduates of women's college and WDC programs in leadership roles (cumulative),reach
+3256,P181081,CSC_RES_GEN_EQU,Number,"Number of families benefiting from the GMI program with increased eligibility income thresholds reaches at least 200,000 in 2024, of which at least 80% are able to work women",outcome
+1303,P169403,CSC_RES_WAT_SAN_HYG,Percentage,Reconstructed houses provided with housing connection for water supply,output
+516,P160170,CSC_RES_GEN_EQU,Number,Number of households provided with electricity access from new solar mini-grid systems (Component 2),reach
+1936,P174114,CSC_RES_GEN_EQU,Number,Targeted female beneficiaries receiving transfers and stipends,reach
+1234,P168613,CSC_RES_GEN_EQU,Number,c. Targeted beneficiaries with increased income due to access to alternative income-generating activities intervention,outcome
+7,P105680,CSC_RES_WAT_SAN_HYG,Number,Number of beneficiaries with improved access to water and sanitation services in poor settlements and low-income neighborhoods.,reach
+658,P161770,CSC_RES_WAT_SAN_HYG,Number,Household latrines installed within the context of the project,output
+310,P154778,CSC_RES_WAT_SAN_HYG,Number,Number of people in rural areas provided with access to Improved Water Sources under the project,reach
+918,P164486,CSC_RES_GEN_EQU,Number,Beneficiaries,reach
+2926,P179286,CSC_RES_GEN_EQU,Number,SMEs receiving commercial loans based on alternative credit scores,reach
+2647,P178176,CSC_RES_BENE_ENAB_ECO_OPP,Number,Additional jobs created by supported MSMEs,outcome
+1400,P170669,CSC_RES_GEN_EQU,Number,Number of individuals with digital skills benefiting from technology adoption by nonprofit company/civil society organizations (CSOs) and private sector companies supported (GIG platforms),reach
+947,P164748,CSC_RES_GEN_EQU,Number,Beneficiaries in targeted areas included in the Unified Social Registry,reach
+287,P154112,CSC_RES_GEN_EQU,Number,"4. Citizen engagement: e) Female staff at the PIUs/WSCs level (number, female participation)",reach
+949,P164748,CSC_RES_GEN_EQU,Number,Cash transfer beneficiaries (households),reach
+2475,P177005,CSC_RES_BENE_ENAB_ECO_OPP,Number,2. Businesses adopting a more sophisticated technology or organizational practice,outcome
+1353,P170425,CSC_RES_BENE_ENAB_ECO_OPP,Number,Young women coming from very poor households or areas at risk of violent extremism supported for apprenticeship,output
+235,P151847,CSC_RES_GEN_EQU,Number,Number of female students who receive scholarships,reach
+2859,P179017,CSC_RES_WAT_SAN_HYG,Number,People with access to enhanced water services under the project,reach
+3362,P501648,CSC_RES_GEN_EQU,Number,Number of girls completing STEM mentoring program in host communities schools,reach
+3041,P179913,CSC_RES_HEA_SERV,Number,"Number of screenings for hypertension, diabetes, and cervical cancer at district health facilities",output
+135,P150080,CSC_RES_GEN_EQU,Number,"New: Number of GBV and harmful practice cases reported in project intervention areas that have been referred for health, social, legal and safety care according to the referral process in place",reach
+697,P162042,CSC_RES_GEN_EQU,Number,Number of vulnerable beneficiaries (children aged 0-5) covered by the CBHIS,reach
+2704,P178481,CSC_RES_FIN_SERV_WOM_CUS,Number,Female-owned mobile financial services accounts. (millions),unclassifiable
+2035,P174867,CSC_RES_WAT_SAN_HYG,Number of people,People provided with a Limited drinking water service,reach
+223,P151451,CSC_RES_FIN_SERV,Number,Number of beneficiaries of SCT program,reach
+1818,P173731,CSC_RES_GEN_EQU,Number,"Female Health Workers selected according to guidelines, trained, and actively providing services",output
+2820,P178836,CSC_RES_FIN_SERV,Number,Subprojects financed by the Project,unclassifiable
+679,P161885,CSC_RES_GEN_EQU,Number,"Micro-, Small-, and Medium-Sized Enterprises (MSMEs) with new or improved electricity service",reach
+366,P156210,CSC_RES_WAT_SAN_HYG,Number of people,"People provided with water, sanitation, and hygiene",reach
+2479,P177005,CSC_RES_GEN_EQU,Number,"4. Number of trainees who complete a credentialed, industry-oriented program from TVET schools and centers (cumulative)",output
+631,P161386,CSC_RES_GEN_EQU,Text,Number of faculty and students benefiting from competitive research grants and innovator seed funds (of which females) (Cumulative),reach
+70,P147827,CSC_RES_GEN_EQU,Number,People provided with access to Improved Water Sources (Rural + Estates),reach
+1612,P172425,CSC_RES_GEN_EQU,Number,"Increase in new active accounts opened (physical and digital) at MFIs supported by the Project, including farmers and firms supported by the project",outcome
+3589,P508960,CSC_RES_BENE_ENAB_ECO_OPP,Number,Female-headed households provided with access to electricity,reach
+1471,P171448,CSC_RES_FIN_SERV_WOM_CUS,Number,Number of women-inclusive firms financed under the Project,reach
+3266,P181238,CSC_RES_GEN_EQU,Number,Number of Flagship safety net beneficiary households with a female designated beneficiary,reach
+2746,P178581,CSC_RES_BENE_ENAB_ECO_OPP,Number,Women households textile/ handicraft/ dairy products producers living within 2 km of roads/collection points,output
+3328,P500471,CSC_RES_FIN_SERV,Number,Startups receiving equity/quasi equity financing through the project,reach
+131,P150080,CSC_RES_GEN_EQU,Number,"New: Number of GBV and harmful practice cases reported in project intervention areas that have been referred for health, social, legal and safety care according to the referral process in place",reach
+2094,P175298,CSC_RES_HEA_SERV,Number of people,Displaced people and people in host communities provided with services and livelihoods,reach
+208,P150993,CSC_RES_GEN_EQU,Number,3.1. Number of households receiving demand side home ownership subsidies for new units under the AMP,reach
+2233,P176157,CSC_RES_GEN_EQU,Number,Number of beneficiaries with improved access to livelihoods support,reach
+3413,P504253,CSC_RES_GEN_EQU,Number,Social inclusion and gender: Women engineers trained and certified in medium and high skilled jobs in road construction,output
+3243,P180927,CSC_RES_BENE_ENAB_ECO_OPP,Number,Placement of women by public employment services (cumulated value),outcome
+3525,P507382,CSC_RES_GEN_EQU,Percentage,RI 4: Increase in Female Labor Force,outcome
+2579,P177902,CSC_RES_GEN_EQU,Number,New women-owned enterprises established along the project corridor (through skills training),output
+2138,P175672,CSC_RES_GEN_EQU,Number,Technical Service Providers trained to work effectively with RCOs and RCOs in alliances,output
+797,P163264,CSC_RES_FIN_SERV,Number,7. Beneficiaries reached with financial services,reach
+996,P165534,CSC_RES_HEA_SERV,Number,"People who have received essential health, nutrition, and population (HNP) services",reach
+34,P130471,CSC_RES_BENE_ENAB_ECO_OPP,Number,Land parcel with use or ownership rights recorded as a result of the project,unclassifiable
+3509,P507190,CSC_RES_BENE_ENAB_ECO_OPP,Number of people,People benefiting from financial support in response to a disaster,reach
+1751,P173240,CSC_RES_BENE_ENAB_ECO_OPP,Number,Participating farmers using e-vouchers for agricultural inputs,reach
+1237,P168633,CSC_RES_WAT_SAN_HYG,Number,"Million of people provided with water, sanitation, and hygiene (CS indicator)",reach
+910,P164448,CSC_RES_GEN_EQU,Number,Farmers with access to climate-resilient seed varieties of selected value chains,reach
+211,P151026,CSC_RES_GEN_EQU,Number,Job opportunities created under PBCs,outcome
+2119,P175483,CSC_RES_GEN_EQU,Number,"IRI # 10: Number of Certificate, Diploma Students who complete their training (disaggregated by gender, disability and refugee status)",output
+1962,P174266,CSC_RES_HEA_SERV,Number,"People who have received essential health, nutrition, and population (HNP) services",reach
+2533,P177663,CSC_RES_GEN_EQU,Number,Number of beneficiaries households receiving cash for performing labor intensive public works who are female,reach
+3331,P500471,CSC_RES_GEN_EQU,Number,SMEs with a PCG covered bank loan,reach
+3333,P500488,CSC_RES_GEN_EQU,Number,"Women trained and certified in vocational skills including concrete and masonry, road maintenance, plumbing, and auto mechanics, etc.",output
+108,P149960,CSC_RES_GEN_EQU,Number,Registered pregnancies in health facilities in selected townships,output
+340,P155617,CSC_RES_GEN_EQU,Number,Farmers reached with agricultural assets or services (CRI),reach
+210,P151026,CSC_RES_BENE_ENAB_ECO_OPP,Number,Job opportunities created under PBCs,outcome
+752,P162835,CSC_RES_FIN_SERV,Number,Number of entrepreneurs receiving financing through the project,reach
+2938,P179293,CSC_RES_GEN_EQU,Number,Women entrepreneurs supported with grants (cash/in-kind),reach
+2211,P176108,CSC_RES_BENE_ENAB_ECO_OPP,Number,Number of people with digital IDs,reach
+1857,P173855,CSC_RES_GEN_EQU,Number,Number of deliveries conducted within the facility,reach
+1101,P166697,CSC_RES_WAT_SAN_HYG,Number,"Girls who benefited from having school sanitation with adequate WASH, MHM facilities and MHM education.",reach
+3103,P180323,CSC_RES_BENE_ENAB_ECO_OPP,Number,Housing units restored/reconstructed,output
+1491,P171528,CSC_RES_BENE_ENAB_ECO_OPP,Number,Regional: Number of individuals utilizing advanced digital skills to improve workplace productivity or secure new employment opportunities,outcome
+3086,P180231,CSC_RES_GEN_EQU,Number,Number of deliveries attended by skilled health personnel,reach
+115,P150080,CSC_RES_BENE_ENAB_ECO_OPP,Number,"Number of adolescent girls and women that have been beneficiaries of at least one intervention for economic empowerment (professional training, credit, productive asset grant)",output
+2218,P176129,CSC_RES_BENE_ENAB_ECO_OPP,Number,Smallholder farm households with improved access to land resources.,reach
+3275,P181278,CSC_RES_BENE_ENAB_ECO_OPP,Number,People using digitally enabled enhanced services,reach
+1752,P173240,CSC_RES_GEN_EQU,Number,Beneficiaries who have adopted digital agriculture solutions to improve their access to agricultural markets,outcome
+3048,P179923,CSC_RES_GEN_EQU,Number,Number of women-heads of households that have used the PGH Household Portal to register or update information,reach
+1589,P172031,CSC_RES_GEN_EQU,Percentage,Percentage of births attended by skilled health personnel in a health facility,outcome
+2489,P177043,CSC_RES_BENE_ENAB_ECO_OPP,Number,Number of women-led business supported with registration of their businesses,reach
+55,P145196,CSC_RES_GEN_EQU,Number,Direct beneficiaries of cash for work,reach
+3298,P181456,CSC_RES_GEN_EQU,Number,"DFS customers per 10,000 adults",reach
+2395,P176883,CSC_RES_GEN_EQU,Number,"Professionalization of upper management through the training under the Civil Service Excellence Program of civil servants appointed to senior management and key technical positions, of which women",output
+402,P157715,CSC_RES_FIN_SERV,Number,Number of MSMEs receiving guaranteed loans through Project,reach
+889,P164302,CSC_RES_FIN_SERV,Number of people,People and businesses using financial services,reach
+969,P164845,CSC_RES_WAT_SAN_HYG,Number,Number of eligible households with improved latrines (from project interventions),reach
+995,P165534,CSC_RES_GEN_EQU,Number,"People who have received essential health, nutrition, and population (HNP) services",reach
+2148,P175783,CSC_RES_BENE_ENAB_ECO_OPP,Number,Firms benefiting from private sector initiatives,reach
+1477,P171462,CSC_RES_BENE_ENAB_ECO_OPP,Number,Number of sub-projects benefitting from matching grants provided by the project,unclassifiable
+2246,P176232,CSC_RES_BENE_ENAB_ECO_OPP,Number,Number of producers using climate change information and data services and tools provided by the project,reach
+512,P160170,CSC_RES_BENE_ENAB_ECO_OPP,Number,People provided with new or improved electricity service (Corporate Results Indicator),reach
+1694,P173076,CSC_RES_WAT_SAN_SAFE,Number,People provided with access to safely managed sanitation services in selected rural areas and towns,reach
+1823,P173734,CSC_RES_WAT_SAN_SAFE,Number,People provided with access to safely managed water supply services,reach
+2047,P174915,CSC_RES_WAT_SAN_SAFE,Percentage,People provided with access to safely managed sanitation services under the project (Female),reach
+3494,P506825,CSC_RES_GEN_EQU,Number,Business development plans with 1st disbursement of matching grants completed by the project,output
+1990,P174461,CSC_RES_GEN_EQU,Number,Users provided with enhanced internet access under the project,reach
+1897,P174028,CSC_RES_FIN_SERV,Number,Number of MSMEs that received RFA under the project.,reach
+3117,P180398,CSC_RES_GEN_EQU,Number,RI7-B: Number of female-headed households that received benefits from the national safety net program,reach
+308,P154778,CSC_RES_GEN_EQU,Number,Number of people trained to improve hygiene behavior and sanitation practices.,output
+1611,P172425,CSC_RES_FIN_SERV,Number,Private sector firms receiving financing from the LTIF,reach
+1043,P166165,CSC_RES_GEN_EQU,Number,"People who have received essential health, nutrition, and population (HNP) services",reach
+1020,P165855,CSC_RES_FIN_SERV,Number of people,People and businesses using financial services,reach
+3203,P180781,CSC_RES_GEN_EQU,Number,"Health workers with the knowledge to identify and refer GBV survivors to health, justice, and protection services during public health emergencies",reach
+2427,P176905,CSC_RES_GEN_EQU,Number,Number of staff in INTA that complete doctoral programs (PHDs) financed by the Project,reach
+304,P154778,CSC_RES_BENE_ENAB_ECO_OPP,Number,Number of people in project areas provided with access to improved sanitation through social institutions.,reach
+2207,P176040,CSC_RES_GEN_EQU,Number,Females that cycle on a regular basis to work and report time and/or money savings as a result of cycling,unclassifiable
+2798,P178775,CSC_RES_BENE_ENAB_ECO_OPP,Number,Births occurring at project-financed facilities,output
+1382,P170561,CSC_RES_GEN_EQU,Number,Number of students enrolled in targeted general secondary schools meeting standards critical for learning environment,reach
+1655,P172809,CSC_RES_GEN_EQU,Number,Beneficiary children receiving cash transfers programs,reach
+215,P151224,CSC_RES_WAT_SAN_HYG,Number,Number of people provided with safely managed sanitation service delivery under the project,reach
+109,P149990,CSC_RES_BENE_ENAB_ECO_OPP,Number,Number of female technical staff trained,output
+1859,P173855,CSC_RES_GEN_EQU,Number,"Number of people screened for underlying chronic conditions, disaggregated sex and age group",reach
+1994,P174484,CSC_RES_GEN_EQU,Number,Number of girls receiving bonuses or other completion incentives for transition to secondary school,reach
+1209,P168326,CSC_RES_GEN_EQU,Number,"Number of jobs created through the project interventions in GBAO and Khatlon, of which 50% for women and youth",outcome
+2499,P177077,CSC_RES_GEN_EQU,Number,People participating in the development challenge and hackathons events,reach
+2997,P179599,CSC_RES_GEN_EQU,Number,Fisheries staff trained and warranted as authorized officers under the Marine Resources Act (cumulative),output
+2927,P179286,CSC_RES_GEN_EQU,Number,SMEs that introduced an innovation,reach
+3263,P181237,CSC_RES_BENE_ENAB_ECO_OPP,Number of people,"IR-6 Number of individuals completing certifications in specialized technical areas and retained within GoFSM (US GASB, AT, Procurement, Internal Audit)",output
+73,P147827,CSC_RES_WAT_SAN_HYG,Number,People provided with access to Improved Water Sources (Rural + Estates),reach
+3096,P180283,CSC_RES_GEN_EQU,Number,"Newly registered pregnant women receiving MMS during any antenatal care visits at the Community Clinics in Sylhet and Chattogram divisions, reported for the previous CY",reach
+3046,P179923,CSC_RES_BENE_ENAB_ECO_OPP,Number,Number of women-heads of households that have used the PGH Household Portal to register or update information,reach
+2160,P175828,CSC_RES_BENE_ENAB_ECO_OPP,Number,Children from women in groups 1 and 2 benefitting from access to all-day childcare services and childcare subsidies,reach
+1225,P168564,CSC_RES_HEA_SERV,Percentage,Percentage of women receiving post-partum check-up within 14 days,outcome
+2536,P177671,CSC_RES_BENE_ENAB_ECO_OPP,Number,(14) Value chain actors trained in good animal health and good animal product handling practices through the Program,output
+3354,P500727,CSC_RES_HEA_SERV,Number of people,"People receiving quality health, nutrition, and population services",reach
+395,P157599,CSC_RES_GEN_EQU,Number,Number of trainees and tourism professionals completing competency based certification,output
+3057,P180000,CSC_RES_BENE_ENAB_ECO_OPP,Number of people,People using broadband internet (new use),reach
+1880,P173974,CSC_RES_GEN_EQU,Number,Number of households receiving cash transfers under the Takaful program,reach
+3134,P180495,CSC_RES_GEN_EQU,Number,Graduates of advanced digital skills training programs,output
+1360,P170435,CSC_RES_HEA_SERV,Number,Number of referral cases handled through the dispatch systems established by the regions,reach
+2702,P178418,CSC_RES_FIN_SERV,Number of people,People and businesses using financial services,reach
