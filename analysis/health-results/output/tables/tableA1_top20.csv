@@ -1,0 +1,21 @@
+"rank_achieved","project_id","country","indicator_text","method","family","conv_factor","achieved_m","approval_fy"
+1,"P175167","Ethiopia","People receiving quality health, nutrition, and population services","adjusted","aggregate",0.96,37.25323872,2023
+2,"P180811","Indonesia","Number of annual outpatient visits, disaggregated by gender","unit","outpatient",0.29154519,29.374039,2024
+3,"P164696","Burkina Faso","People who have received essential health, nutrition, and population (HNP) services","direct","aggregate",1,21.342846,2019
+4,"P174352","Sudan","Percentage of priority population vaccinated based on the targets defined in national plan, disaggregated by gender.","coverage","vaccination",457000,15.995,2021
+5,"P178775","Afghanistan","People receiving quality health, nutrition, and population services","direct","aggregate",1,15.151665,2022
+6,"P178252","India","Increased population-based screening for key NCDs","coverage","ncd_screening",352260,14.8688946,2023
+7,"P152799","Türkiye","Direct project beneficiaries (number)","direct","aggregate",1,12.741454,2016
+8,"P174041","Uganda","Total number of people receiving quality health, nutrition and population services","adjusted","aggregate",0.89,12.510285,2021
+9,"P173825","Congo, Democratic Republic of","Percentage of population vaccinated, which is included in the priority population targets defined in national plan [by gender]), with a target of 25%.","coverage","vaccination",341400,12.2904,2020
+10,"P173820","Kenya","Percentage of population fully vaccinated as targeted in national plan (by gender)","coverage","vaccination",305000,12.2,2020
+11,"P173855","Rwanda","Percentage of the population fully vaccinated which is included in the priority population targets as defined in the national plan disaggregated by sex, age group and location.","coverage","vaccination",132463.94,10.58386881,2020
+12,"P167156","Nigeria","People who have received essential health, nutrition, and population (HNP) services","direct","aggregate",1,9.107921,2020
+13,"P176630","Angola","Percentage (%) of population vaccinated, which is included in the priority population targets defined in the national plan [disaggregated by sex].","coverage","vaccination",177000,8.7084,2022
+14,"P176570","Yemen, Republic of","People who have received essential health, nutrition, and population (HNP) services","adjusted","aggregate",0.77,8.19699419,2021
+15,"P179550","Cote d'Ivoire","People receiving essential health, nutrition, and population services","direct","aggregate",1,7.093049,2023
+16,"P172504","Chad","People who have received essential health, nutrition, and population (HNP) services","direct","aggregate",1,6.456103,2022
+17,"P125229","Zimbabwe","People who have received essential health, nutrition, and population (HNP) services","direct","aggregate",1,5.906403,2012
+18,"P175884","Mozambique","Percentage of priority population fully vaccinated against COVID-19, based on the targets defined in national plan [disaggregated by sex]","coverage","vaccination",45724,4.5724,2021
+19,"P159213","Guatemala","People who have received essential health, nutrition, and population (HNP) services","direct","aggregate",1,4.493037,2017
+20,"P175884","Mozambique","People who have received essential health, nutrition, and population (HNP) services","direct","aggregate",1,4.03011,2021

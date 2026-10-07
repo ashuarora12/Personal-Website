@@ -1,0 +1,5252 @@
+[
+ {
+  "type": "title",
+  "runs": [
+   {
+    "text": "Online Appendix"
+   },
+   {
+    "br": true
+   },
+   {
+    "text": "What Is Behind “People Receiving Quality Health Services”? Measurement in the World Bank Group’s Health Results"
+   }
+  ]
+ },
+ {
+  "type": "h2",
+  "runs": [
+   {
+    "text": "Appendix A. Contributing results"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "table",
+  "kind": "simple",
+  "label": "Table A1",
+  "caption": [
+   {
+    "text": "All 92 results contributing to the World Bank health total, with codes"
+   }
+  ],
+  "note": [
+   {
+    "text": "Results not masked for double counting, positive achieved value, sorted by contribution. Method and family codes as defined in section 3.2 and appendix B; each was reviewed by hand."
+   }
+  ],
+  "head": [
+   [
+    {
+     "text": "Rank"
+    }
+   ],
+   [
+    {
+     "text": "Project"
+    }
+   ],
+   [
+    {
+     "text": "Country"
+    }
+   ],
+   [
+    {
+     "text": "Indicator (as published)"
+    }
+   ],
+   [
+    {
+     "text": "Factor"
+    }
+   ],
+   [
+    {
+     "text": "Method"
+    }
+   ],
+   [
+    {
+     "text": "Family"
+    }
+   ],
+   [
+    {
+     "text": "Achieved (m)"
+    }
+   ]
+  ],
+  "rows": [
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "P175167"
+      }
+     ],
+     [
+      {
+       "text": "Ethiopia"
+      }
+     ],
+     [
+      {
+       "text": "People receiving quality health, nutrition, and population services"
+      }
+     ],
+     [
+      {
+       "text": "0.96"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "37.253"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "2"
+      }
+     ],
+     [
+      {
+       "text": "P180811"
+      }
+     ],
+     [
+      {
+       "text": "Indonesia"
+      }
+     ],
+     [
+      {
+       "text": "Number of annual outpatient visits, disaggregated by gender"
+      }
+     ],
+     [
+      {
+       "text": "0.292"
+      }
+     ],
+     [
+      {
+       "text": "unit"
+      }
+     ],
+     [
+      {
+       "text": "outpatient"
+      }
+     ],
+     [
+      {
+       "text": "29.374"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "3"
+      }
+     ],
+     [
+      {
+       "text": "P164696"
+      }
+     ],
+     [
+      {
+       "text": "Burkina Faso"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "21.343"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "4"
+      }
+     ],
+     [
+      {
+       "text": "P174352"
+      }
+     ],
+     [
+      {
+       "text": "Sudan"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of priority population vaccinated based on the targets defined in national plan, disaggregated by gender."
+      }
+     ],
+     [
+      {
+       "text": "4.57e+05"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "vaccination"
+      }
+     ],
+     [
+      {
+       "text": "15.995"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "5"
+      }
+     ],
+     [
+      {
+       "text": "P178775"
+      }
+     ],
+     [
+      {
+       "text": "Afghanistan"
+      }
+     ],
+     [
+      {
+       "text": "People receiving quality health, nutrition, and population services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "15.152"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "6"
+      }
+     ],
+     [
+      {
+       "text": "P178252"
+      }
+     ],
+     [
+      {
+       "text": "India"
+      }
+     ],
+     [
+      {
+       "text": "Increased population-based screening for key NCDs"
+      }
+     ],
+     [
+      {
+       "text": "3.52e+05"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "ncd_screening"
+      }
+     ],
+     [
+      {
+       "text": "14.869"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "7"
+      }
+     ],
+     [
+      {
+       "text": "P152799"
+      }
+     ],
+     [
+      {
+       "text": "Türkiye"
+      }
+     ],
+     [
+      {
+       "text": "Direct project beneficiaries (number)"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "12.741"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "8"
+      }
+     ],
+     [
+      {
+       "text": "P174041"
+      }
+     ],
+     [
+      {
+       "text": "Uganda"
+      }
+     ],
+     [
+      {
+       "text": "Total number of people receiving quality health, nutrition and population services"
+      }
+     ],
+     [
+      {
+       "text": "0.89"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "12.510"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "9"
+      }
+     ],
+     [
+      {
+       "text": "P173825"
+      }
+     ],
+     [
+      {
+       "text": "Congo, Democratic Republic of"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of population vaccinated, which is included in the priority population targets defined in national plan [by g"
+      }
+     ],
+     [
+      {
+       "text": "3.41e+05"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "vaccination"
+      }
+     ],
+     [
+      {
+       "text": "12.290"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "10"
+      }
+     ],
+     [
+      {
+       "text": "P173820"
+      }
+     ],
+     [
+      {
+       "text": "Kenya"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of population fully vaccinated as targeted in national plan (by gender)"
+      }
+     ],
+     [
+      {
+       "text": "3.05e+05"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "vaccination"
+      }
+     ],
+     [
+      {
+       "text": "12.200"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "11"
+      }
+     ],
+     [
+      {
+       "text": "P173855"
+      }
+     ],
+     [
+      {
+       "text": "Rwanda"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of the population fully vaccinated which is included in the priority population targets as defined in the nat"
+      }
+     ],
+     [
+      {
+       "text": "1.32e+05"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "vaccination"
+      }
+     ],
+     [
+      {
+       "text": "10.584"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "12"
+      }
+     ],
+     [
+      {
+       "text": "P167156"
+      }
+     ],
+     [
+      {
+       "text": "Nigeria"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "9.108"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "13"
+      }
+     ],
+     [
+      {
+       "text": "P176630"
+      }
+     ],
+     [
+      {
+       "text": "Angola"
+      }
+     ],
+     [
+      {
+       "text": "Percentage (%) of population vaccinated, which is included in the priority population targets defined in the national pl"
+      }
+     ],
+     [
+      {
+       "text": "1.77e+05"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "vaccination"
+      }
+     ],
+     [
+      {
+       "text": "8.708"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "14"
+      }
+     ],
+     [
+      {
+       "text": "P176570"
+      }
+     ],
+     [
+      {
+       "text": "Yemen, Republic of"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "0.77"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "8.197"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "15"
+      }
+     ],
+     [
+      {
+       "text": "P179550"
+      }
+     ],
+     [
+      {
+       "text": "Cote d'Ivoire"
+      }
+     ],
+     [
+      {
+       "text": "People receiving essential health, nutrition, and population services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "7.093"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "16"
+      }
+     ],
+     [
+      {
+       "text": "P172504"
+      }
+     ],
+     [
+      {
+       "text": "Chad"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "6.456"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "17"
+      }
+     ],
+     [
+      {
+       "text": "P125229"
+      }
+     ],
+     [
+      {
+       "text": "Zimbabwe"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "5.906"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "18"
+      }
+     ],
+     [
+      {
+       "text": "P175884"
+      }
+     ],
+     [
+      {
+       "text": "Mozambique"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of priority population fully vaccinated against COVID-19, based on the targets defined in national plan [disa"
+      }
+     ],
+     [
+      {
+       "text": "4.57e+04"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "vaccination"
+      }
+     ],
+     [
+      {
+       "text": "4.572"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "19"
+      }
+     ],
+     [
+      {
+       "text": "P159213"
+      }
+     ],
+     [
+      {
+       "text": "Guatemala"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "4.493"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "20"
+      }
+     ],
+     [
+      {
+       "text": "P175884"
+      }
+     ],
+     [
+      {
+       "text": "Mozambique"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "4.030"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "21"
+      }
+     ],
+     [
+      {
+       "text": "P172426"
+      }
+     ],
+     [
+      {
+       "text": "Egypt, Arab Republic of"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "4.015"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "22"
+      }
+     ],
+     [
+      {
+       "text": "P176480"
+      }
+     ],
+     [
+      {
+       "text": "South Sudan"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of eligible population fully vaccinated against COVID-19, based on the targets defined in national plan"
+      }
+     ],
+     [
+      {
+       "text": "4.8e+04"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "vaccination"
+      }
+     ],
+     [
+      {
+       "text": "3.997"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "23"
+      }
+     ],
+     [
+      {
+       "text": "P176956"
+      }
+     ],
+     [
+      {
+       "text": "Somalia, Federal Republic of"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of population fully vaccinated, which is included in the priority population targets defined in the national"
+      }
+     ],
+     [
+      {
+       "text": "8.1e+04"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "vaccination"
+      }
+     ],
+     [
+      {
+       "text": "3.807"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "24"
+      }
+     ],
+     [
+      {
+       "text": "P176480"
+      }
+     ],
+     [
+      {
+       "text": "South Sudan"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "3.774"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "25"
+      }
+     ],
+     [
+      {
+       "text": "P174266"
+      }
+     ],
+     [
+      {
+       "text": "Togo"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "0.236"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "3.539"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "26"
+      }
+     ],
+     [
+      {
+       "text": "P164771"
+      }
+     ],
+     [
+      {
+       "text": "Malawi"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "3.401"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "27"
+      }
+     ],
+     [
+      {
+       "text": "P174903"
+      }
+     ],
+     [
+      {
+       "text": "Madagascar"
+      }
+     ],
+     [
+      {
+       "text": "Number of women using a modern contraceptive method"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "rmnch_fp"
+      }
+     ],
+     [
+      {
+       "text": "2.771"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "28"
+      }
+     ],
+     [
+      {
+       "text": "P165253"
+      }
+     ],
+     [
+      {
+       "text": "Burundi"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "0.396"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "2.532"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "29"
+      }
+     ],
+     [
+      {
+       "text": "P164771"
+      }
+     ],
+     [
+      {
+       "text": "Malawi"
+      }
+     ],
+     [
+      {
+       "text": "Adolescent girls aged 10-19 who received iron-folate supplementation"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "rmnch_fp"
+      }
+     ],
+     [
+      {
+       "text": "2.116"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "30"
+      }
+     ],
+     [
+      {
+       "text": "P167512"
+      }
+     ],
+     [
+      {
+       "text": "Haiti"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "2.024"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "31"
+      }
+     ],
+     [
+      {
+       "text": "P163954"
+      }
+     ],
+     [
+      {
+       "text": "Guinea-Bissau"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "0.68"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "1.848"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "32"
+      }
+     ],
+     [
+      {
+       "text": "P171767"
+      }
+     ],
+     [
+      {
+       "text": "Niger"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "1.733"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "33"
+      }
+     ],
+     [
+      {
+       "text": "P163345"
+      }
+     ],
+     [
+      {
+       "text": "Argentina"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of eligible population with effective health coverage."
+      }
+     ],
+     [
+      {
+       "text": "2.02e+05"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "other"
+      }
+     ],
+     [
+      {
+       "text": "1.677"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "34"
+      }
+     ],
+     [
+      {
+       "text": "P162042"
+      }
+     ],
+     [
+      {
+       "text": "Senegal"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services (Number)"
+      }
+     ],
+     [
+      {
+       "text": "0.5"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "1.516"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "35"
+      }
+     ],
+     [
+      {
+       "text": "P167598"
+      }
+     ],
+     [
+      {
+       "text": "Kyrgyz Republic"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "1.374"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "36"
+      }
+     ],
+     [
+      {
+       "text": "P144893"
+      }
+     ],
+     [
+      {
+       "text": "Ukraine"
+      }
+     ],
+     [
+      {
+       "text": "Health facilities constructed, renovated, and/or equipped (number)"
+      }
+     ],
+     [
+      {
+       "text": "1e+04"
+      }
+     ],
+     [
+      {
+       "text": "unit"
+      }
+     ],
+     [
+      {
+       "text": "facilities"
+      }
+     ],
+     [
+      {
+       "text": "1.370"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "37"
+      }
+     ],
+     [
+      {
+       "text": "P175884"
+      }
+     ],
+     [
+      {
+       "text": "Mozambique"
+      }
+     ],
+     [
+      {
+       "text": "Average outpatient visits per month"
+      }
+     ],
+     [
+      {
+       "text": "2.84"
+      }
+     ],
+     [
+      {
+       "text": "unit"
+      }
+     ],
+     [
+      {
+       "text": "outpatient"
+      }
+     ],
+     [
+      {
+       "text": "1.249"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "38"
+      }
+     ],
+     [
+      {
+       "text": "P173168"
+      }
+     ],
+     [
+      {
+       "text": "Ghana"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "0.219"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "1.203"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "39"
+      }
+     ],
+     [
+      {
+       "text": "P167184"
+      }
+     ],
+     [
+      {
+       "text": "Papua New Guinea"
+      }
+     ],
+     [
+      {
+       "text": "People receiving quality health, nutrition, and population services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "1.202"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "40"
+      }
+     ],
+     [
+      {
+       "text": "P162675"
+      }
+     ],
+     [
+      {
+       "text": "Cambodia"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "1.162"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "41"
+      }
+     ],
+     [
+      {
+       "text": "P170278"
+      }
+     ],
+     [
+      {
+       "text": "Lesotho"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "1.078"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "42"
+      }
+     ],
+     [
+      {
+       "text": "P174903"
+      }
+     ],
+     [
+      {
+       "text": "Madagascar"
+      }
+     ],
+     [
+      {
+       "text": "Number of children vaccinated with Penta 3 under the project"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "vaccination"
+      }
+     ],
+     [
+      {
+       "text": "0.909"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "43"
+      }
+     ],
+     [
+      {
+       "text": "P173287"
+      }
+     ],
+     [
+      {
+       "text": "Gambia, The"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "0.191"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "0.897"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "44"
+      }
+     ],
+     [
+      {
+       "text": "P179558"
+      }
+     ],
+     [
+      {
+       "text": "Mauritania"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "0.22"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "0.835"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "45"
+      }
+     ],
+     [
+      {
+       "text": "P167890"
+      }
+     ],
+     [
+      {
+       "text": "Congo, Republic of"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "0.810"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "46"
+      }
+     ],
+     [
+      {
+       "text": "P161283"
+      }
+     ],
+     [
+      {
+       "text": "Viet Nam"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "0.771"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "47"
+      }
+     ],
+     [
+      {
+       "text": "P155658"
+      }
+     ],
+     [
+      {
+       "text": "Lesotho"
+      }
+     ],
+     [
+      {
+       "text": "TB case notification in target geographic areas"
+      }
+     ],
+     [
+      {
+       "text": "0.26"
+      }
+     ],
+     [
+      {
+       "text": "unit"
+      }
+     ],
+     [
+      {
+       "text": "infectious"
+      }
+     ],
+     [
+      {
+       "text": "0.649"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "48"
+      }
+     ],
+     [
+      {
+       "text": "P503036"
+      }
+     ],
+     [
+      {
+       "text": "West Bank and Gaza"
+      }
+     ],
+     [
+      {
+       "text": "Number of beneficiaries of essential health and nutrition services (disaggregated by gender and age)"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "0.615"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "49"
+      }
+     ],
+     [
+      {
+       "text": "P172940"
+      }
+     ],
+     [
+      {
+       "text": "Benin"
+      }
+     ],
+     [
+      {
+       "text": "People who have received quality health, nutrition, and population services (Corporate Scorecard (CS), number)"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "0.529"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "50"
+      }
+     ],
+     [
+      {
+       "text": "P175840"
+      }
+     ],
+     [
+      {
+       "text": "Comoros"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of the population fully vaccinated, based on prioritized populations as defined in national plan, by gender"
+      }
+     ],
+     [
+      {
+       "text": "8.82e+03"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "vaccination"
+      }
+     ],
+     [
+      {
+       "text": "0.435"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "51"
+      }
+     ],
+     [
+      {
+       "text": "P128442"
+      }
+     ],
+     [
+      {
+       "text": "Armenia"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of population aged 35-68 screened for diabetes mellitus at PHC level at least once during the last 3 years a)"
+      }
+     ],
+     [
+      {
+       "text": "1.38e+04"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "ncd_screening"
+      }
+     ],
+     [
+      {
+       "text": "0.367"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "52"
+      }
+     ],
+     [
+      {
+       "text": "P180534"
+      }
+     ],
+     [
+      {
+       "text": "Colombia"
+      }
+     ],
+     [
+      {
+       "text": "Pregnant women under follow-up care registered at individual level"
+      }
+     ],
+     [
+      {
+       "text": "4.79e+03"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "rmnch_fp"
+      }
+     ],
+     [
+      {
+       "text": "0.325"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "53"
+      }
+     ],
+     [
+      {
+       "text": "P177003"
+      }
+     ],
+     [
+      {
+       "text": "Central African Republic"
+      }
+     ],
+     [
+      {
+       "text": "Number of women and children who have received basic nutrition services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "nutrition"
+      }
+     ],
+     [
+      {
+       "text": "0.305"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "54"
+      }
+     ],
+     [
+      {
+       "text": "P178957"
+      }
+     ],
+     [
+      {
+       "text": "Lao People's Democratic Republic"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "0.270"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "55"
+      }
+     ],
+     [
+      {
+       "text": "P180534"
+      }
+     ],
+     [
+      {
+       "text": "Colombia"
+      }
+     ],
+     [
+      {
+       "text": "Vulnerable women 50-69 years of age screened for breast cancer"
+      }
+     ],
+     [
+      {
+       "text": "5.33e+04"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "ncd_screening"
+      }
+     ],
+     [
+      {
+       "text": "0.263"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "56"
+      }
+     ],
+     [
+      {
+       "text": "P176956"
+      }
+     ],
+     [
+      {
+       "text": "Somalia, Federal Republic of"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of children aged 12-23 months who received basic vaccinations (BCG, measles, and three doses each of DPT and"
+      }
+     ],
+     [
+      {
+       "text": "4.93e+03"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "vaccination"
+      }
+     ],
+     [
+      {
+       "text": "0.263"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "57"
+      }
+     ],
+     [
+      {
+       "text": "P168564"
+      }
+     ],
+     [
+      {
+       "text": "Eswatini"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "0.219"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "58"
+      }
+     ],
+     [
+      {
+       "text": "P169677"
+      }
+     ],
+     [
+      {
+       "text": "El Salvador"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of elementary schools and pre-schools where MINSAL performs annual dental health check ups."
+      }
+     ],
+     [
+      {
+       "text": "3.75e+03"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "other"
+      }
+     ],
+     [
+      {
+       "text": "0.202"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "59"
+      }
+     ],
+     [
+      {
+       "text": "P171767"
+      }
+     ],
+     [
+      {
+       "text": "Niger"
+      }
+     ],
+     [
+      {
+       "text": "Children who have received curative services by community relays for children who suffer from pneumonia, uncomplicated m"
+      }
+     ],
+     [
+      {
+       "text": "0.25"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "infectious"
+      }
+     ],
+     [
+      {
+       "text": "0.187"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "60"
+      }
+     ],
+     [
+      {
+       "text": "P166308"
+      }
+     ],
+     [
+      {
+       "text": "Pakistan"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "0.181"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "61"
+      }
+     ],
+     [
+      {
+       "text": "P150080"
+      }
+     ],
+     [
+      {
+       "text": "Chad"
+      }
+     ],
+     [
+      {
+       "text": "2 (new): Number of new users of a modern contraceptive methods in the project's intervention areas"
+      }
+     ],
+     [
+      {
+       "text": "0.13"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "rmnch_fp"
+      }
+     ],
+     [
+      {
+       "text": "0.148"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "62"
+      }
+     ],
+     [
+      {
+       "text": "P167598"
+      }
+     ],
+     [
+      {
+       "text": "Kyrgyz Republic"
+      }
+     ],
+     [
+      {
+       "text": "Number of pregnant women who received hemoglobin test and urine analysis for bacteriuria during the first trimester in a"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "rmnch_fp"
+      }
+     ],
+     [
+      {
+       "text": "0.142"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "63"
+      }
+     ],
+     [
+      {
+       "text": "P173783"
+      }
+     ],
+     [
+      {
+       "text": "Sao Tome and Principe"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of population vaccinated, which is included in the priority population targets defined in national plan [disa"
+      }
+     ],
+     [
+      {
+       "text": "1.27e+03"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "vaccination"
+      }
+     ],
+     [
+      {
+       "text": "0.114"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "64"
+      }
+     ],
+     [
+      {
+       "text": "P150080"
+      }
+     ],
+     [
+      {
+       "text": "Chad"
+      }
+     ],
+     [
+      {
+       "text": "2 (new): Number of new users of a modern contraceptive methods in the project's intervention areas"
+      }
+     ],
+     [
+      {
+       "text": "0.1"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "rmnch_fp"
+      }
+     ],
+     [
+      {
+       "text": "0.114"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "65"
+      }
+     ],
+     [
+      {
+       "text": "P180534"
+      }
+     ],
+     [
+      {
+       "text": "Colombia"
+      }
+     ],
+     [
+      {
+       "text": "Number of people screened for mental health services by primary health providers and basic health teams"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "ncd_screening"
+      }
+     ],
+     [
+      {
+       "text": "0.108"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "66"
+      }
+     ],
+     [
+      {
+       "text": "P169641"
+      }
+     ],
+     [
+      {
+       "text": "Liberia"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "0.081"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "67"
+      }
+     ],
+     [
+      {
+       "text": "P167996"
+      }
+     ],
+     [
+      {
+       "text": "Paraguay"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "0.078"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "68"
+      }
+     ],
+     [
+      {
+       "text": "P178033"
+      }
+     ],
+     [
+      {
+       "text": "Djibouti"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "0.46"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "0.076"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "69"
+      }
+     ],
+     [
+      {
+       "text": "P180534"
+      }
+     ],
+     [
+      {
+       "text": "Colombia"
+      }
+     ],
+     [
+      {
+       "text": "Migrants screened for HIV"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "infectious"
+      }
+     ],
+     [
+      {
+       "text": "0.067"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "70"
+      }
+     ],
+     [
+      {
+       "text": "P167890"
+      }
+     ],
+     [
+      {
+       "text": "Congo, Republic of"
+      }
+     ],
+     [
+      {
+       "text": "Women aged 15-49 who have used modern contraceptive methods"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "rmnch_fp"
+      }
+     ],
+     [
+      {
+       "text": "0.042"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "71"
+      }
+     ],
+     [
+      {
+       "text": "P170435"
+      }
+     ],
+     [
+      {
+       "text": "Tanzania"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of new family planning clients who received modern contraceptive methods"
+      }
+     ],
+     [
+      {
+       "text": "9.6e+04"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "rmnch_fp"
+      }
+     ],
+     [
+      {
+       "text": "0.038"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "72"
+      }
+     ],
+     [
+      {
+       "text": "P176532"
+      }
+     ],
+     [
+      {
+       "text": "Honduras"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "0.035"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "73"
+      }
+     ],
+     [
+      {
+       "text": "P170435"
+      }
+     ],
+     [
+      {
+       "text": "Tanzania"
+      }
+     ],
+     [
+      {
+       "text": "Number of referral cases handled through the dispatch systems established by the regions"
+      }
+     ],
+     [
+      {
+       "text": "0.5"
+      }
+     ],
+     [
+      {
+       "text": "unit"
+      }
+     ],
+     [
+      {
+       "text": "other"
+      }
+     ],
+     [
+      {
+       "text": "0.033"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "74"
+      }
+     ],
+     [
+      {
+       "text": "P164771"
+      }
+     ],
+     [
+      {
+       "text": "Malawi"
+      }
+     ],
+     [
+      {
+       "text": "Children aged 6-23 months receiving a minimum acceptable diet"
+      }
+     ],
+     [
+      {
+       "text": "3.18e+03"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "nutrition"
+      }
+     ],
+     [
+      {
+       "text": "0.033"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "75"
+      }
+     ],
+     [
+      {
+       "text": "P166783"
+      }
+     ],
+     [
+      {
+       "text": "St. Lucia"
+      }
+     ],
+     [
+      {
+       "text": "People receiving quality health, nutrition, and population services"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "0.031"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "76"
+      }
+     ],
+     [
+      {
+       "text": "P168564"
+      }
+     ],
+     [
+      {
+       "text": "Eswatini"
+      }
+     ],
+     [
+      {
+       "text": "Number of people screened and diagnosed with hypertension"
+      }
+     ],
+     [
+      {
+       "text": "0.962"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "ncd_screening"
+      }
+     ],
+     [
+      {
+       "text": "0.023"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "77"
+      }
+     ],
+     [
+      {
+       "text": "P171144"
+      }
+     ],
+     [
+      {
+       "text": "Bangladesh"
+      }
+     ],
+     [
+      {
+       "text": "Children receiving nutrition services (ages 0-5 years, disaggregated by gender)"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "nutrition"
+      }
+     ],
+     [
+      {
+       "text": "0.020"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "78"
+      }
+     ],
+     [
+      {
+       "text": "P169677"
+      }
+     ],
+     [
+      {
+       "text": "El Salvador"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of children that breastfeed within the first hour after birth"
+      }
+     ],
+     [
+      {
+       "text": "3.31e+03"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "rmnch_fp"
+      }
+     ],
+     [
+      {
+       "text": "0.017"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "79"
+      }
+     ],
+     [
+      {
+       "text": "P175455"
+      }
+     ],
+     [
+      {
+       "text": "Georgia"
+      }
+     ],
+     [
+      {
+       "text": "Average number of outpatient consultations per person per annum at PHC providers"
+      }
+     ],
+     [
+      {
+       "text": "1.98e+04"
+      }
+     ],
+     [
+      {
+       "text": "unit"
+      }
+     ],
+     [
+      {
+       "text": "outpatient"
+      }
+     ],
+     [
+      {
+       "text": "0.016"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "80"
+      }
+     ],
+     [
+      {
+       "text": "P177329"
+      }
+     ],
+     [
+      {
+       "text": "Marshall Islands"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "0.737"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "aggregate"
+      }
+     ],
+     [
+      {
+       "text": "0.008"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "81"
+      }
+     ],
+     [
+      {
+       "text": "P168564"
+      }
+     ],
+     [
+      {
+       "text": "Eswatini"
+      }
+     ],
+     [
+      {
+       "text": "Number of people screened and diagnosed with diabetes"
+      }
+     ],
+     [
+      {
+       "text": "0.783"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "ncd_screening"
+      }
+     ],
+     [
+      {
+       "text": "0.007"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "82"
+      }
+     ],
+     [
+      {
+       "text": "P128442"
+      }
+     ],
+     [
+      {
+       "text": "Armenia"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of women aged 30-60 screened for cervical cancer at least once during the last 3 years and received the resul"
+      }
+     ],
+     [
+      {
+       "text": "5.06e+03"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "ncd_screening"
+      }
+     ],
+     [
+      {
+       "text": "0.006"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "83"
+      }
+     ],
+     [
+      {
+       "text": "P159544"
+      }
+     ],
+     [
+      {
+       "text": "Uzbekistan"
+      }
+     ],
+     [
+      {
+       "text": "Percent of pre-hospital EMS patients hospitalized"
+      }
+     ],
+     [
+      {
+       "text": "600"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "other"
+      }
+     ],
+     [
+      {
+       "text": "0.005"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "84"
+      }
+     ],
+     [
+      {
+       "text": "P169677"
+      }
+     ],
+     [
+      {
+       "text": "El Salvador"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of pregnancies with early check-ups (before 12 weeks)"
+      }
+     ],
+     [
+      {
+       "text": "2.08e+03"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "rmnch_fp"
+      }
+     ],
+     [
+      {
+       "text": "0.004"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "85"
+      }
+     ],
+     [
+      {
+       "text": "P171767"
+      }
+     ],
+     [
+      {
+       "text": "Niger"
+      }
+     ],
+     [
+      {
+       "text": "Adolescent students enrolled in lower and upper secondary education receiving services from an integrated school-health"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "nutrition"
+      }
+     ],
+     [
+      {
+       "text": "0.003"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "86"
+      }
+     ],
+     [
+      {
+       "text": "P171144"
+      }
+     ],
+     [
+      {
+       "text": "Bangladesh"
+      }
+     ],
+     [
+      {
+       "text": "Children who are fully immunized ages 0-12 months, disaggregated by gender"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "vaccination"
+      }
+     ],
+     [
+      {
+       "text": "0.002"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "87"
+      }
+     ],
+     [
+      {
+       "text": "P171144"
+      }
+     ],
+     [
+      {
+       "text": "Bangladesh"
+      }
+     ],
+     [
+      {
+       "text": "People registered for hypertension screening and follow-up, disaggregated by gender"
+      }
+     ],
+     [
+      {
+       "text": "0.91"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "ncd_screening"
+      }
+     ],
+     [
+      {
+       "text": "0.002"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "88"
+      }
+     ],
+     [
+      {
+       "text": "P171144"
+      }
+     ],
+     [
+      {
+       "text": "Bangladesh"
+      }
+     ],
+     [
+      {
+       "text": "Women receiving four or more antenatal care checkup"
+      }
+     ],
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "rmnch_fp"
+      }
+     ],
+     [
+      {
+       "text": "0.002"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "89"
+      }
+     ],
+     [
+      {
+       "text": "P168564"
+      }
+     ],
+     [
+      {
+       "text": "Eswatini"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of women receiving post-partum check-up within 14 days"
+      }
+     ],
+     [
+      {
+       "text": "38.3"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "rmnch_fp"
+      }
+     ],
+     [
+      {
+       "text": "0.001"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "90"
+      }
+     ],
+     [
+      {
+       "text": "P178957"
+      }
+     ],
+     [
+      {
+       "text": "Lao People's Democratic Republic"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of MSM/TG in the five target sites received an HIV test"
+      }
+     ],
+     [
+      {
+       "text": "77.8"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "infectious"
+      }
+     ],
+     [
+      {
+       "text": "0.001"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "91"
+      }
+     ],
+     [
+      {
+       "text": "P168564"
+      }
+     ],
+     [
+      {
+       "text": "Eswatini"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of pregnant women receiving at least 4 ANC that meet defined quality standards"
+      }
+     ],
+     [
+      {
+       "text": "20"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "rmnch_fp"
+      }
+     ],
+     [
+      {
+       "text": "0.000"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "92"
+      }
+     ],
+     [
+      {
+       "text": "P168564"
+      }
+     ],
+     [
+      {
+       "text": "Eswatini"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of adolescents served or reached with quality sexual and reproductive health services"
+      }
+     ],
+     [
+      {
+       "text": "3.13"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "rmnch_fp"
+      }
+     ],
+     [
+      {
+       "text": "0.000"
+      }
+     ]
+    ],
+    "span": 1
+   }
+  ]
+ },
+ {
+  "type": "table",
+  "kind": "simple",
+  "label": "Table A2",
+  "caption": [
+   {
+    "text": "The twenty largest contributing results"
+   }
+  ],
+  "note": [
+   {
+    "text": "World Bank projects; see table A1 for codes."
+   }
+  ],
+  "head": [
+   [
+    {
+     "text": "Rank"
+    }
+   ],
+   [
+    {
+     "text": "Project"
+    }
+   ],
+   [
+    {
+     "text": "Country"
+    }
+   ],
+   [
+    {
+     "text": "Indicator"
+    }
+   ],
+   [
+    {
+     "text": "Method"
+    }
+   ],
+   [
+    {
+     "text": "Achieved (m)"
+    }
+   ],
+   [
+    {
+     "text": "Approval FY"
+    }
+   ]
+  ],
+  "rows": [
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "P175167"
+      }
+     ],
+     [
+      {
+       "text": "Ethiopia"
+      }
+     ],
+     [
+      {
+       "text": "People receiving quality health, nutrition, and population services"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "37.25"
+      }
+     ],
+     [
+      {
+       "text": "2023"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "2"
+      }
+     ],
+     [
+      {
+       "text": "P180811"
+      }
+     ],
+     [
+      {
+       "text": "Indonesia"
+      }
+     ],
+     [
+      {
+       "text": "Number of annual outpatient visits, disaggregated by gender"
+      }
+     ],
+     [
+      {
+       "text": "unit"
+      }
+     ],
+     [
+      {
+       "text": "29.37"
+      }
+     ],
+     [
+      {
+       "text": "2024"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "3"
+      }
+     ],
+     [
+      {
+       "text": "P164696"
+      }
+     ],
+     [
+      {
+       "text": "Burkina Faso"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "21.34"
+      }
+     ],
+     [
+      {
+       "text": "2019"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "4"
+      }
+     ],
+     [
+      {
+       "text": "P174352"
+      }
+     ],
+     [
+      {
+       "text": "Sudan"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of priority population vaccinated based on the targets defined in national plan"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "15.99"
+      }
+     ],
+     [
+      {
+       "text": "2021"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "5"
+      }
+     ],
+     [
+      {
+       "text": "P178775"
+      }
+     ],
+     [
+      {
+       "text": "Afghanistan"
+      }
+     ],
+     [
+      {
+       "text": "People receiving quality health, nutrition, and population services"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "15.15"
+      }
+     ],
+     [
+      {
+       "text": "2022"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "6"
+      }
+     ],
+     [
+      {
+       "text": "P178252"
+      }
+     ],
+     [
+      {
+       "text": "India"
+      }
+     ],
+     [
+      {
+       "text": "Increased population-based screening for key NCDs"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "14.87"
+      }
+     ],
+     [
+      {
+       "text": "2023"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "7"
+      }
+     ],
+     [
+      {
+       "text": "P152799"
+      }
+     ],
+     [
+      {
+       "text": "Türkiye"
+      }
+     ],
+     [
+      {
+       "text": "Direct project beneficiaries (number)"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "12.74"
+      }
+     ],
+     [
+      {
+       "text": "2016"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "8"
+      }
+     ],
+     [
+      {
+       "text": "P174041"
+      }
+     ],
+     [
+      {
+       "text": "Uganda"
+      }
+     ],
+     [
+      {
+       "text": "Total number of people receiving quality health, nutrition and population services"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "12.51"
+      }
+     ],
+     [
+      {
+       "text": "2021"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "9"
+      }
+     ],
+     [
+      {
+       "text": "P173825"
+      }
+     ],
+     [
+      {
+       "text": "Congo, Democratic Republic of"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of population vaccinated, which is included in the priority population targets"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "12.29"
+      }
+     ],
+     [
+      {
+       "text": "2020"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "10"
+      }
+     ],
+     [
+      {
+       "text": "P173820"
+      }
+     ],
+     [
+      {
+       "text": "Kenya"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of population fully vaccinated as targeted in national plan (by gender)"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "12.20"
+      }
+     ],
+     [
+      {
+       "text": "2020"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "11"
+      }
+     ],
+     [
+      {
+       "text": "P173855"
+      }
+     ],
+     [
+      {
+       "text": "Rwanda"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of the population fully vaccinated which is included in the priority population"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "10.58"
+      }
+     ],
+     [
+      {
+       "text": "2020"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "12"
+      }
+     ],
+     [
+      {
+       "text": "P167156"
+      }
+     ],
+     [
+      {
+       "text": "Nigeria"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "9.11"
+      }
+     ],
+     [
+      {
+       "text": "2020"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "13"
+      }
+     ],
+     [
+      {
+       "text": "P176630"
+      }
+     ],
+     [
+      {
+       "text": "Angola"
+      }
+     ],
+     [
+      {
+       "text": "Percentage (%) of population vaccinated, which is included in the priority population targ"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "8.71"
+      }
+     ],
+     [
+      {
+       "text": "2022"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "14"
+      }
+     ],
+     [
+      {
+       "text": "P176570"
+      }
+     ],
+     [
+      {
+       "text": "Yemen, Republic of"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "adjusted"
+      }
+     ],
+     [
+      {
+       "text": "8.20"
+      }
+     ],
+     [
+      {
+       "text": "2021"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "15"
+      }
+     ],
+     [
+      {
+       "text": "P179550"
+      }
+     ],
+     [
+      {
+       "text": "Cote d'Ivoire"
+      }
+     ],
+     [
+      {
+       "text": "People receiving essential health, nutrition, and population services"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "7.09"
+      }
+     ],
+     [
+      {
+       "text": "2023"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "16"
+      }
+     ],
+     [
+      {
+       "text": "P172504"
+      }
+     ],
+     [
+      {
+       "text": "Chad"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "6.46"
+      }
+     ],
+     [
+      {
+       "text": "2022"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "17"
+      }
+     ],
+     [
+      {
+       "text": "P125229"
+      }
+     ],
+     [
+      {
+       "text": "Zimbabwe"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "5.91"
+      }
+     ],
+     [
+      {
+       "text": "2012"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "18"
+      }
+     ],
+     [
+      {
+       "text": "P175884"
+      }
+     ],
+     [
+      {
+       "text": "Mozambique"
+      }
+     ],
+     [
+      {
+       "text": "Percentage of priority population fully vaccinated against COVID-19, based on the targets"
+      }
+     ],
+     [
+      {
+       "text": "coverage"
+      }
+     ],
+     [
+      {
+       "text": "4.57"
+      }
+     ],
+     [
+      {
+       "text": "2021"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "19"
+      }
+     ],
+     [
+      {
+       "text": "P159213"
+      }
+     ],
+     [
+      {
+       "text": "Guatemala"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "4.49"
+      }
+     ],
+     [
+      {
+       "text": "2017"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "20"
+      }
+     ],
+     [
+      {
+       "text": "P175884"
+      }
+     ],
+     [
+      {
+       "text": "Mozambique"
+      }
+     ],
+     [
+      {
+       "text": "People who have received essential health, nutrition, and population (HNP) services"
+      }
+     ],
+     [
+      {
+       "text": "direct"
+      }
+     ],
+     [
+      {
+       "text": "4.03"
+      }
+     ],
+     [
+      {
+       "text": "2021"
+      }
+     ]
+    ],
+    "span": 1
+   }
+  ]
+ },
+ {
+  "type": "h2",
+  "runs": [
+   {
+    "text": "Appendix B. Classification rules"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Measurement method",
+    "b": true
+   },
+   {
+    "text": " (applied in order): "
+   },
+   {
+    "text": "direct",
+    "i": true
+   },
+   {
+    "text": " if the progress conversion factor equals 1, or no factor is reported and the calculated value equals the raw value; "
+   },
+   {
+    "text": "coverage",
+    "i": true
+   },
+   {
+    "text": " if the unit is a percentage or the wording refers to a percentage, proportion, share or rate; "
+   },
+   {
+    "text": "unit",
+    "i": true
+   },
+   {
+    "text": " if the wording refers to visits, consultations, facilities, cases, referrals or notifications, or does not refer to people; otherwise "
+   },
+   {
+    "text": "adjusted",
+    "i": true
+   },
+   {
+    "text": ". "
+   },
+   {
+    "text": "Service family",
+    "b": true
+   },
+   {
+    "text": " (first match): vaccination (vaccin-, immuni-, Penta, COVID); aggregate HNP count (people or beneficiaries receiving “health, nutrition”, “HNP”, “essential/quality health” services, or “direct project beneficiaries”); outpatient (outpatient, consultation, visits); TB and HIV (TB, tuberculosis, HIV, malaria); screening (NCD, diabetes, hypertension, cancer, screening); maternal, reproductive health and family planning (contraception, family planning, antenatal, pregnancy, post-partum, delivery, birth, breastfeeding, iron-folate, maternal, reproductive); nutrition; facilities; other. Full regular expressions are in "
+   },
+   {
+    "text": "code/01_build_health.py"
+   },
+   {
+    "text": "."
+   }
+  ]
+ }
+]

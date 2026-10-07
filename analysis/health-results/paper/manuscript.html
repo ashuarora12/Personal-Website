@@ -1,0 +1,332 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>WBER manuscript</title><style>
+@font-face { font-family: 'SS3'; src: url('fonts/source-sans-3-400-normal.woff2'); font-weight: 400; }
+@font-face { font-family: 'SS3'; src: url('fonts/source-sans-3-600-normal.woff2'); font-weight: 600; }
+@font-face { font-family: 'SS4'; src: url('fonts/source-serif-4-400-normal.woff2'); font-weight: 400; }
+@font-face { font-family: 'SS4'; src: url('fonts/source-serif-4-400-italic.woff2'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'SS4'; src: url('fonts/source-serif-4-600-normal.woff2'); font-weight: 600; }
+@font-face { font-family: 'SS4'; src: url('fonts/source-serif-4-700-normal.woff2'); font-weight: 700; }
+@page { size: Letter; margin: 1in; }
+body { font-family: 'SS4', 'Times New Roman', serif; font-size: 12pt; line-height: 2; color: #111; margin: 0; }
+p { margin: 0 0 0; text-indent: 0.4in; text-align: left; }
+h1 { font-size: 16pt; line-height: 1.3; text-align: center; margin: 0 0 18pt; }
+h2 { font-size: 12pt; font-weight: 700; margin: 18pt 0 0; line-height: 2; break-after: avoid; }
+h3 { font-size: 12pt; font-weight: 400; font-style: italic; margin: 6pt 0 0; line-height: 2; break-after: avoid; }
+.tp p { text-indent: 0; }
+.center { text-align: center; text-indent: 0; }
+.abstract { line-height: 1.6; margin: 12pt 0; }
+.abstract p { text-indent: 0; }
+.small { font-size: 11pt; line-height: 1.5; }
+figure { margin: 12pt 0 14pt; line-height: 1.25; }
+figcaption { font-family: 'SS3', sans-serif; font-size: 10pt; margin-bottom: 4pt; }
+figure img { width: 100%; }
+.note { font-family: 'SS3', sans-serif; font-size: 8.4pt; line-height: 1.3; color: #333; text-indent: 0; margin-top: 3pt; }
+table { border-collapse: collapse; width: 100%; font-family: 'SS3', sans-serif; font-size: 9pt; line-height: 1.25; }
+thead th { border-top: 1pt solid #111; border-bottom: 0.6pt solid #111; padding: 3pt 4pt; font-weight: 600; text-align: center; vertical-align: bottom; }
+thead th:first-child { text-align: left; }
+tbody td { padding: 2pt 4pt; text-align: center; }
+tbody td:first-child { text-align: left; }
+tbody tr:last-child td { border-bottom: 1pt solid #111; }
+tr.tot td { border-top: 0.6pt solid #111; font-weight: 600; }
+table.reg tr.se td { color: #444; font-size: 8pt; padding-top: 0; }
+table.reg tr.stat td { border-top: 0.6pt solid #111; }
+.avoid { break-inside: avoid; }
+.pb { break-before: page; }
+ol.recs { line-height: 2; }
+ol.recs li { margin-bottom: 0; }
+.refs p { padding-left: 0.4in; text-indent: -0.4in; line-height: 1.6; margin-bottom: 4pt; }
+.author-note { background: #f8f1de; padding: 4pt 6pt; text-indent: 0; line-height: 1.5; font-size: 11pt; }
+td.l { text-align: left; }
+</style></head><body>
+
+<div class="tp">
+<h1>What Is Behind &ldquo;People Receiving Quality Health Services&rdquo;? Measurement in the World Bank Group&rsquo;s Health Results</h1>
+<p class="center">Ashu Arora<sup>*</sup></p>
+<div class="abstract"><p><b>Abstract.</b> 
+How many people did the World Bank Group&rsquo;s health operations reach? The Group&rsquo;s FY24&ndash;FY30 Scorecard answers with a
+single number: 378.9 million people received quality health, nutrition and population services by June 2025. Using the public
+project-level records behind that number, I reconcile it exactly to 92 World Bank project results plus IFC and MIGA
+aggregates and decompose it by how each figure was produced. Only 37% of the World Bank total is a direct count of people.
+29% comes from coverage percentages multiplied by population bases&mdash;overwhelmingly COVID-19 vaccination
+rates&mdash;and 11% from converting outpatient visits, facilities and cases into people; 33.1
+million cannot be reproduced from the published progress values. Restricting the count to people actually counted lowers the headline
+by a third, to 255 million. The total is concentrated: ten results supply 59% of it.
+59% of the 155 million women reported reached are the total multiplied by an assumed
+share of about one half. Health results are 44 percentage points more likely than other
+Scorecard results to be rescaled. The health workforce appears in 15 of 1,131 Scorecard projects. The
+findings argue for reporting effective coverage and publishing how each figure is constructed.
+</p></div>
+<p class="small" style="text-indent:0"><b>JEL codes:</b> I15, I18, F35, O19, H43<br>
+<b>Keywords:</b> results measurement; universal health coverage; effective coverage; development statistics; World Bank; gender data</p>
+<p class="small" style="text-indent:0;margin-top:14pt"><sup>*</sup>Ashu Arora is an independent researcher [affiliation, address and email to be added].
+[Acknowledgements to be added.] The data are public; replication files (Stata and R) are available at [repository link] and will be
+deposited with the journal. The findings, interpretations and conclusions are the author&rsquo;s own.</p>
+<p class="author-note">[Author to confirm before submission.] Use of AI tools: the author used Claude (Anthropic) under the author&rsquo;s
+direction for drafting analysis code, a first-pass classification of indicators, figure preparation and copy editing. All classifications,
+results and interpretations were reviewed by the author, who is responsible for any errors.</p>
+</div>
+<h2 class="pb">1. Introduction</h2>
+<p>Development institutions increasingly summarise their work in a few headline numbers. The World Bank Group&rsquo;s Scorecard for
+FY24&ndash;FY30 replaced roughly 150 indicators with 22 results indicators and was presented as a shift toward measuring outcomes rather
+than inputs (World Bank 2024a, 2024b). In health, the headline is the number of people receiving quality health, nutrition and population
+(HNP) services: 378.9 million by 30 June 2025, against an expected 466.5 million. Numbers of this kind travel
+far: into annual reports, replenishment negotiations and, through the Scorecard&rsquo;s cascade into unit targets, into how staff
+are managed (Narayanaswamy 2021). Yet little is known about what they are made of.</p>
+
+<p>This paper opens the health headline. The Scorecard&rsquo;s public data release reports, for every World Bank project indicator that
+contributes, the original indicator wording, its baseline, progress and target values in the project&rsquo;s own unit, and the conversion
+and disaggregation factors used to express it in the Scorecard&rsquo;s unit of &ldquo;people&rdquo;. I use these records to answer four
+questions. Does the headline reconcile to its parts? How is each part measured? How sensitive is the headline to the way it is constructed?
+And what does the indicator leave out?</p>
+
+<p>The headline reconciles exactly: 310.6 million from 92 World Bank project results plus 68.3
+million reported by IFC and 0.06 million by MIGA, which publish aggregates only. Its construction, however, is far from a
+head-count. Only 37% of the World Bank total is a direct count of people; a further 23% is a count of people
+multiplied by an adjustment factor. 29% is produced by multiplying a percentage&mdash;mostly the share of a priority
+population vaccinated against COVID-19&mdash;by a population base, and 11% by converting outpatient visits, consultations,
+facilities or case notifications into people. In one case, 1.37 million people are inferred from 137 health facilities
+&ldquo;constructed, renovated, and/or equipped&rdquo; at 10,000 people per facility. Four results worth 33.1 million
+report a raw progress value of zero, so their contribution cannot be reproduced from the published fields.</p>
+
+<p>These choices matter for the number. Restricting the headline to results that count people lowers it from 379 million to
+255 million; counting only unadjusted head-counts lowers it to 185 million. The total
+is also concentrated: the largest single result contributes 12% of the World Bank total and ten results contribute
+59%. The gender breakdown is even more assumption-dependent: 59% of the 155.4
+million women reported reached are calculated by multiplying the total by a fixed share, typically 0.50&ndash;0.52. Compared with the other
+people-level results areas in the Scorecard, health results are far more likely to be rescaled and to rely on fixed-share gender figures,
+somewhat more likely to use outcome-type indicators, and much less likely to fall behind schedule. Finally, what is counted is service
+contact: the health workforce, the input most often identified as binding for universal health coverage, appears in only 15 of
+the 1,131 projects in the Scorecard data, and never together with migration.</p>
+
+<p>The paper contributes to three literatures. First, it adds to work on the quality of development statistics, which documents how
+administrative and reported data can diverge from what they purport to measure&mdash;often in the direction of exaggerated progress&mdash;when
+they are tied to funding or reputation (Lim et al. 2008; Jerven 2013; Sandefur and Glassman 2015). Here the reporting entity is a
+multilateral lender rather than a government, and the issue is construction rather than misreporting: every conversion is documented in the
+data, but the published headline does not reveal them. Second, it speaks to the measurement of universal health coverage, where the field has
+moved from counting service contacts toward effective coverage that combines need, use and quality (Shengelia et al. 2005; Ng et al. 2014;
+WHO and World Bank 2023). Evidence that much care in low- and middle-income countries is of low quality (Das and Hammer 2014; Kruk et al. 2018)
+makes the distinction between people &ldquo;reached&rdquo; and people helped central. Third, it contributes to the study of indicators as
+instruments of governance (Kelley and Simmons 2015) and of target regimes in health care (Bevan and Hood 2006), by quantifying how a single
+corporate indicator aggregates heterogeneous measures. The analysis is fully reproducible from public data; replication files in Stata and R
+accompany the paper.</p>
+
+<h2>2. How the Scorecard Counts Health Results</h2>
+<h3>2.1 The indicator</h3>
+<p>The Scorecard indicator &ldquo;Number of people receiving quality health, nutrition, and population services&rdquo; aggregates results from
+World Bank (IBRD/IDA) operations, IFC investments and MIGA guarantees (World Bank 2024a). For World Bank operations, each contributing project
+maps one or more of its own results-framework indicators to the Scorecard indicator. The project reports a baseline, a latest progress value
+and a target in its own unit; these are multiplied by a <i>conversion factor</i> to express them in people, and the achieved result is
+defined as progress minus baseline and the expected result as target minus baseline. Female and youth figures are produced either from
+separately reported disaggregated indicators or by multiplying the total by a <i>disaggregation factor</i>. Where several indicators within
+or across projects could count the same people, some are <i>masked</i> for double counting and enter with a value of zero.</p>
+
+<h3>2.2 Why construction matters</h3>
+<p>Each step is defensible in isolation. Converting households to people with an average household size, or attributing a share of a national
+programme to a project, are standard practices in results reporting. But the steps differ in what they measure. A direct count of people who
+received a service is close to the indicator&rsquo;s wording. A change in vaccination coverage multiplied by a population base is an estimate
+of people newly covered, which depends on the denominator and assumes the percentage-point change applies to the base. A count of outpatient
+visits multiplied by a factor is a count of contacts converted into people with an assumed number of visits per person. A count of facilities
+multiplied by a catchment population measures potential access, not service use. When these are summed into one figure, the headline
+inherits the mixture, and the mixture is invisible in the published total. This matters for interpretation because effective coverage
+requires that people in need actually use services of adequate quality (Ng et al. 2014), and because aggregates of heterogeneous measures
+can move for reasons unrelated to performance&mdash;for example, a single large conversion entering or leaving the portfolio.</p>
+
+<h3>2.3 Related evidence on results reporting</h3>
+<p>The World Bank&rsquo;s own evaluators have long noted that its self-evaluation systems serve reporting and accountability better than learning
+(IEG 2016), and IEG launched a formative evaluation of the Scorecard in 2025 whose approach paper discusses the risk that centralised indicator
+systems direct attention toward what is quantifiable (IEG 2025; Hood 2006). Project-level studies show that the quality of monitoring and evaluation
+is associated with better-rated outcomes (Raimondo 2016) and that most of the variation in project performance lies within rather than between
+countries (Bulman, Kolkma, and Kraay 2017), so how individual projects measure results is consequential. The incentive literature predicts that
+when some dimensions of performance are easier to measure, effort and reporting shift toward them (Campbell 1979; Holmstr&ouml;m and Milgrom 1991),
+a concern that is acute in aid, where top-down measurement fits poorly with outcomes that are hard to verify (Honig 2018). A companion paper shows
+that across all five people-level results areas, most Scorecard indicators count people reached rather than changes in welfare (Arora 2026).
+This paper goes deeper into one indicator, asking how its single headline number is built.</p>
+
+<h2>3. Data</h2>
+<h3>3.1 Source and sample</h3>
+<p>I use the FY25 Scorecard data release (results as of 30 June 2025) from scorecard.worldbank.org: the &ldquo;Aggregates&rdquo; sheet,
+which reports the published totals by institution, and the &ldquo;WB Project Information&rdquo; sheet, which reports one row per project
+indicator and demographic group. The health indicator has 226 non-disaggregated World Bank project results from
+138 projects in 71 countries. Of these, 123 are masked for double counting and carry a
+zero achieved value, leaving 103 results that enter the total, of which 92 have a positive achieved value.
+Table 1 shows that the project records reproduce the published World Bank figure to the last person, and that the WBG headline equals the
+World Bank total plus the IFC and MIGA aggregates. IDA-financed operations account for 73% of the World Bank total.</p>
+<figure class="tbl avoid "><figcaption><b>Table 1.</b> From the published headline to project records</figcaption><table class="simple"><thead><tr><th></th><th>Achieved (million)</th><th>Expected (million)</th></tr></thead><tbody><tr class="tot"><td>WBG headline (published)</td><td>378.93</td><td>466.52</td></tr><tr><td>&nbsp;&nbsp;&nbsp;World Bank (IBRD/IDA) projects</td><td>310.55</td><td>349.46</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum of project records in this paper</td><td>310.55</td><td>349.46</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of which IDA-financed</td><td>225.39</td><td>268.65</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of which IBRD-financed</td><td>78.64</td><td>75.74</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of which other (trust funds)</td><td>6.52</td><td>5.07</td></tr><tr><td>&nbsp;&nbsp;&nbsp;IFC (aggregate only)</td><td>68.31</td><td>115.72</td></tr><tr><td>&nbsp;&nbsp;&nbsp;MIGA (aggregate only)</td><td>0.06</td><td>1.34</td></tr><tr><td>Reconciliation gap</td><td>-0.00</td><td></td></tr></tbody></table><p class="note">Indicator: &ldquo;Number of people receiving quality health, nutrition, and population services&rdquo;, FY25 Scorecard, results as of 30 June 2025, all countries. WB project records exclude the 123 results masked for double counting, which carry zero achieved values. IFC and MIGA publish aggregates only.</p></figure>
+<p>For comparisons with other results areas (section 8) I use the companion dataset of all 3,617 non-disaggregated results that feed the
+Scorecard&rsquo;s five people-level results indicators (health; water, sanitation and hygiene; gender-equality actions; economic opportunity;
+financial services), with project characteristics from the same release (Arora 2026). For the health workforce (section 9) I use a
+rule-based classification of the development objectives and indicator text of all 1,131 projects in the release.</p>
+
+<h3>3.2 Classification</h3>
+<p>Each contributing result is assigned a <i>measurement method</i> using the conversion factor, the unit of measure and the indicator wording:
+(i) <i>direct</i>, when no conversion is applied; (ii) <i>adjusted</i>, when an indicator that counts people is multiplied by a factor other than
+one; (iii) <i>coverage</i>, when a percentage or rate is multiplied by a population base; and (iv) <i>unit</i>, when a count of something other
+than people&mdash;visits, consultations, facilities, case notifications&mdash;is converted into people. Each result is also assigned a
+<i>service family</i> from its wording (vaccination; aggregate HNP service counts; outpatient care; screening; maternal, reproductive health and
+family planning; nutrition; TB and HIV; facilities; other). Because only 92 results contribute to the total, the rule-based
+assignments were checked by hand for every one of them; online appendix table A1 lists each result with its wording, factor and codes so that
+readers can verify them. The results-chain type of each indicator (reach, output or outcome) follows the validated rules in Arora (2026),
+which agree with independent hand coding in 84 percent of a held-out sample (Cohen&rsquo;s &kappa; = 0.66).</p>
+
+<h2>4. What the Headline Is Made Of</h2>
+<p>Table 2 and figure 1 decompose the World Bank total by measurement method. Direct counts of people account for
+116.2 million (37%), from 41 results. Counts of people multiplied by
+an adjustment factor add 70.9 million (23%); the median factor is
+0.48, consistent with attributing a share of a larger programme to the project or removing overlap.
+Coverage conversions add 90.8 million (29%); the median factor is
+8,820 people per percentage point. Conversions from other units add
+32.7 million (11%), dominated by one result that converts 29.4 million
+&ldquo;people&rdquo; from annual outpatient visits.</p>
+<figure class="tbl avoid "><figcaption><b>Table 2.</b> How the World Bank health total is constructed</figcaption><table class="simple"><thead><tr><th>Measurement method</th><th>Results</th><th>Projects</th><th>Median factor</th><th>Achieved (million)</th><th>Share</th></tr></thead><tbody><tr><td>Direct count of people</td><td>41</td><td>40</td><td>1.00</td><td>116.2</td><td>37%</td></tr><tr><td>Count of people &times; adjustment factor</td><td>18</td><td>17</td><td>0.48</td><td>70.9</td><td>23%</td></tr><tr><td>Coverage percentage &times; population base</td><td>27</td><td>21</td><td>8,820</td><td>90.8</td><td>29%</td></tr><tr><td>Other unit (visits, facilities, cases) &times; factor</td><td>6</td><td>6</td><td>1.67</td><td>32.7</td><td>11%</td></tr><tr class="tot"><td>Total</td><td>92</td><td></td><td></td><td>310.6</td><td>100%</td></tr></tbody></table><p class="note">Results with a positive achieved value among results not masked for double counting. Method is assigned from the conversion factor, unit of measure and indicator wording (Section 3.2); all 92 results were also reviewed by hand (online appendix table A1). Median factor: median progress conversion factor among the results in each row.</p></figure>
+<figure class="fig avoid"><figcaption><b>Figure 1.</b> The WBG health headline by source and measurement method</figcaption><img src="../output/figures/fig1_decomposition.png"><p class="note">Total = 378.9 million. Blue: counts of people; orange: figures converted into people from coverage percentages or other units; grey: IFC and MIGA aggregates, which have no public project-level data.</p></figure>
+<p>Table 3 shows the same total by service family. Aggregate HNP service counts&mdash;indicators reported directly in the Scorecard&rsquo;s
+own wording&mdash;make up 58% of the total. These are mostly direct or adjusted counts, but the services behind
+them are not itemised in the public data, so a reader cannot tell whether a person counted received a vaccination, an antenatal visit or a
+nutrition supplement. Vaccination contributes 24%; 99% of it comes from projects
+explicitly named as COVID-19 response or vaccination operations, and 80% of all coverage conversions are vaccination results.
+In other words, about one quarter of the World Bank&rsquo;s health headline (23%) is COVID-19 vaccination
+coverage expressed as people. Outpatient visits and consultations contribute 10%,
+and screening for non-communicable diseases 5%, almost all of it
+through a single coverage conversion. Maternal and reproductive health, nutrition, and TB and HIV&mdash;areas central to the World Bank&rsquo;s
+health strategy&mdash;together contribute about 2%.</p>
+<figure class="tbl avoid "><figcaption><b>Table 3.</b> What the health total is made of: service families</figcaption><table class="simple"><thead><tr><th>Service family</th><th>Results</th><th>Achieved (million)</th><th>Share of total</th><th>Converted from percentages or other units</th></tr></thead><tbody><tr><td>Aggregate HNP service count</td><td>41</td><td>180.1</td><td>58%</td><td>0%</td></tr><tr><td>Vaccination (incl. COVID-19)</td><td>13</td><td>73.9</td><td>24%</td><td>99%</td></tr><tr><td>Outpatient visits and consultations</td><td>3</td><td>30.6</td><td>10%</td><td>100%</td></tr><tr><td>Screening (NCDs, mental health)</td><td>8</td><td>15.6</td><td>5%</td><td>99%</td></tr><tr><td>Maternal, reproductive health and family planning</td><td>14</td><td>5.7</td><td>2%</td><td>7%</td></tr><tr><td>Other services</td><td>4</td><td>1.9</td><td>1%</td><td>100%</td></tr><tr><td>Health facilities</td><td>1</td><td>1.4</td><td>0%</td><td>100%</td></tr><tr><td>TB and HIV</td><td>4</td><td>0.9</td><td>0%</td><td>72%</td></tr><tr><td>Nutrition services</td><td>4</td><td>0.4</td><td>0%</td><td>9%</td></tr><tr class="tot"><td>Total</td><td>92</td><td>310.6</td><td>100%</td><td>40%</td></tr></tbody></table><p class="note">Service family assigned from indicator wording (online appendix B). &ldquo;Aggregate HNP service count&rdquo;: indicators reported directly in the Scorecard&rsquo;s own unit (&ldquo;people who have received essential health, nutrition, and population services&rdquo;), whose underlying services are not itemised in the public data.</p></figure>
+<p>Two features deserve emphasis. First, some conversions measure access rather than use. The facilities example in the introduction
+counts people in the catchment of upgraded facilities; another result converts the percentage of schools receiving dental check-ups into people.
+Second, four results&mdash;including the two largest unit conversions&mdash;report a positive achieved value although their raw progress value
+is zero. Together they account for 33.1 million people (11% of the
+World Bank total). The calculated values may come from information not included in the release, but they cannot be reproduced from it.</p>
+
+<h2>5. How Much Does Construction Matter?</h2><h3>5.1 Bounds</h3>
+<p>How much does the headline depend on these choices? Table 4 and figure 3 recompute it under progressively stricter counting rules, holding
+the IFC and MIGA aggregates at their published values because they cannot be decomposed. Excluding the 4
+non-reproducible results lowers the WBG headline to 346 million. Excluding coverage conversions lowers it to
+288 million. Counting only results that count people&mdash;direct or adjusted&mdash;yields
+255 million, 33% below the published figure, and counting only unadjusted
+head-counts yields 185 million, about half of it. The achieved-to-expected ratio moves less, from
+0.89 to between 0.80 and 0.89, because targets
+are constructed with the same conversions as results. The Scorecard&rsquo;s own measure of progress against expectations is therefore
+robust to construction in a way that its headline level is not.</p>
+<figure class="tbl avoid "><figcaption><b>Table 4.</b> The headline under alternative counting rules</figcaption><table class="simple"><thead><tr><th>Counting rule</th><th>WB achieved (million)</th><th>Achieved / expected</th><th>WBG headline (million)</th><th>Share of published headline</th></tr></thead><tbody><tr><td>(0) As published</td><td>310.6</td><td>0.89</td><td>378.9</td><td>100%</td></tr><tr><td>(1) Excluding figures not reproducible from raw progress</td><td>277.4</td><td>0.86</td><td>345.8</td><td>91%</td></tr><tr><td>(2) Excluding unit-to-people conversions</td><td>277.9</td><td>0.86</td><td>346.2</td><td>91%</td></tr><tr><td>(3) Excluding coverage-to-people conversions</td><td>219.8</td><td>0.87</td><td>288.2</td><td>76%</td></tr><tr><td>(4) People counts only (direct + adjusted)</td><td>187.1</td><td>0.83</td><td>255.5</td><td>67%</td></tr><tr><td>(5) Rule (4) and reproducible</td><td>183.7</td><td>0.83</td><td>252.1</td><td>67%</td></tr><tr><td>(6) Direct counts only (lower bound)</td><td>116.2</td><td>0.80</td><td>184.6</td><td>49%</td></tr></tbody></table><p class="note">WBG headline = WB total under each rule plus the published IFC (68.3 million) and MIGA (0.06 million) aggregates, which cannot be decomposed. Rule (1) drops results with a positive achieved value but a zero raw progress value. Rules are accounting identities; no sampling uncertainty is involved.</p></figure>
+<figure class="fig avoid"><figcaption><b>Figure 3.</b> The headline under alternative counting rules</figcaption><img src="../output/figures/fig3_bounds.png"><p class="note">See table 4 for definitions.</p></figure>
+<h3>5.2 Concentration</h3>
+<p>The headline is also concentrated (table 5, figure 2). The largest result&mdash;a direct-plus-adjustment count from a single country
+programme&mdash;supplies 12% of the World Bank total; the five largest supply 38%, ten supply
+59% and twenty supply 81%. The effective number of results, the inverse of the Herfindahl index, is
+21. Five countries&mdash;Ethiopia, Indonesia, Burkina Faso, Sudan, Afghanistan&mdash;account for 38%. A headline this
+concentrated can change substantially when a single project enters or leaves the portfolio, independently of trends in the services people
+receive. Online appendix table A2 lists the twenty largest results.</p>
+<figure class="tbl avoid "><figcaption><b>Table 5.</b> Concentration of the World Bank health total</figcaption><table class="simple"><thead><tr><th>Statistic</th><th>Value</th></tr></thead><tbody><tr><td>Results with a positive contribution</td><td>92</td></tr><tr><td>Share of total from the largest result</td><td>12%</td></tr><tr><td>Share from the 5 largest results</td><td>38%</td></tr><tr><td>Share from the 10 largest results</td><td>59%</td></tr><tr><td>Share from the 20 largest results</td><td>81%</td></tr><tr><td>Herfindahl index across results</td><td>0.049</td></tr><tr><td>Effective number of results (1/HHI)</td><td>20.6</td></tr><tr><td>Countries with a positive contribution</td><td>62</td></tr><tr><td>Share from the 5 largest countries</td><td>38%</td></tr></tbody></table><p class="note">Results not masked for double counting, World Bank projects only.</p></figure>
+<figure class="fig avoid"><figcaption><b>Figure 2.</b> A few results make up most of the World Bank health total</figcaption><img src="../output/figures/fig2_concentration.png"><p class="note">Cumulative share of the World Bank total (310.6 million) contributed by the 92 results with a positive value, ranked from largest to smallest. Orange points: vaccination results. Dashed lines: 50% and 80%.</p></figure>
+
+<h3>5.3 Conversions and reported performance</h3>
+<p>Because targets are converted with the same factors as results, conversion does not mechanically change the ratio of achieved to expected
+results. It can, however, change which results look successful. Table 6 shows that unit conversions report 1.20
+times their expected value and 83% of them exceed their target, against
+0.80 and 37% for direct counts. The pattern is
+consistent with the full Scorecard sample, in which rescaled results are significantly less likely to fall behind schedule than comparable
+results (table 9, column 4). A headline that blends methods therefore blends results that are easier and harder to deliver on paper.</p>
+<figure class="tbl avoid "><figcaption><b>Table 6.</b> Reported performance by measurement method</figcaption><table class="simple"><thead><tr><th>Measurement method</th><th>Results</th><th>Achieved (million)</th><th>Expected (million)</th><th>Achieved / expected</th><th>Share of results above target</th></tr></thead><tbody><tr><td>Direct count of people</td><td>49</td><td>116.2</td><td>145.0</td><td>0.80</td><td>37%</td></tr><tr><td>Adjusted count of people</td><td>19</td><td>70.9</td><td>81.6</td><td>0.87</td><td>53%</td></tr><tr><td>Coverage conversion</td><td>29</td><td>90.8</td><td>95.5</td><td>0.95</td><td>33%</td></tr><tr><td>Unit conversion</td><td>6</td><td>32.7</td><td>27.3</td><td>1.20</td><td>83%</td></tr><tr class="tot"><td>All results</td><td>103</td><td>310.6</td><td>349.5</td><td>0.89</td><td>42%</td></tr></tbody></table><p class="note">Results not masked for double counting. Expected = target minus baseline, converted with the same factor as the result. Share above target: results whose achieved value exceeds the expected value, among results with a positive expected value.</p></figure>
+<h3>5.4 Portfolio vintage</h3>
+<p>The headline is cumulative over the strategy period. 43% of the World Bank total comes from operations that had already
+closed by June 2025, and operations scheduled to close by June 2026 account for 69%. Every vaccination
+result belongs to an operation closing by June 2026 (100% of the vaccination total). How the indicator treats
+closed operations in later cycles therefore matters as much for its trajectory as the performance of new ones, and comparisons across cycles
+should be read with the vintage of the portfolio in mind.</p>
+
+<h2>6. Who Relies on Conversions?</h2>
+<p>Reliance on conversions is not spread evenly. Table 7 shows that the South Asia total is almost entirely a coverage conversion (a single
+non-communicable disease screening result), the East Asia and Pacific total is 90% unit conversion
+(outpatient visits converted into people), and coverage conversions supply 48% of the
+Eastern and Southern Africa total, largely through COVID-19 vaccination. Western and Central Africa, Europe and Central Asia, and the Middle East
+and North Africa rely mainly on direct counts. IBRD-financed operations rely more on conversions than IDA operations
+(72% against
+24%), while IDA and fragile settings rely more on
+adjusted counts. Regional comparisons of the indicator therefore compare different kinds of measurement as much as different levels of
+service delivery.</p>
+<figure class="tbl avoid "><figcaption><b>Table 7.</b> Who relies on conversions? Composition of the total by region and financing</figcaption><table class="simple"><thead><tr><th>Group</th><th>Total (million)</th><th>Direct</th><th>Adjusted</th><th>Coverage</th><th>Unit</th></tr></thead><tbody><tr><td>Eastern & Southern Africa</td><td>151.5</td><td>16%</td><td>35%</td><td>48%</td><td>1%</td></tr><tr><td>Western & Central Africa</td><td>57.8</td><td>82%</td><td>18%</td><td>0%</td><td>0%</td></tr><tr><td>East Asia & Pacific</td><td>32.8</td><td>10%</td><td>0%</td><td>0%</td><td>90%</td></tr><tr><td>Europe & Central Asia</td><td>16.0</td><td>89%</td><td>0%</td><td>2%</td><td>9%</td></tr><tr><td>Latin America & Caribbean</td><td>9.3</td><td>73%</td><td>0%</td><td>27%</td><td>0%</td></tr><tr><td>Middle East, N. Africa, Afghanistan & Pakistan</td><td>28.2</td><td>71%</td><td>29%</td><td>0%</td><td>0%</td></tr><tr><td>South Asia</td><td>14.9</td><td>0%</td><td>0%</td><td>100%</td><td>0%</td></tr><tr><td>Not fragile or conflict-affected</td><td>143.7</td><td>30%</td><td>14%</td><td>34%</td><td>21%</td></tr><tr><td>Fragile and conflict-affected</td><td>166.9</td><td>43%</td><td>30%</td><td>25%</td><td>2%</td></tr><tr><td>IBRD and other financing</td><td>101.1</td><td>28%</td><td>0%</td><td>42%</td><td>30%</td></tr><tr><td>IDA-financed</td><td>209.5</td><td>42%</td><td>34%</td><td>23%</td><td>1%</td></tr></tbody></table><p class="note">Shares of each group&rsquo;s contribution to the World Bank health total, by measurement method. Rows within each panel (region; fragility; financing) sum to the World Bank total.</p></figure>
+
+<h2>7. Counting Women</h2>
+<p>The Scorecard reports that 155.4 million of the people reached were women. The female disaggregation rows of the
+health indicator reproduce this figure exactly. Table 8 and figure 4 show that 59% of it (91.9 million)
+comes from 45 results in which the female figure is the total multiplied by a fixed share, rather than a separate count.
+The shares used cluster tightly around one half (median 0.508), so these figures restate an assumption about the
+population rather than measure who was reached. At the level of project &times; indicator pairs, only 25 of the
+69 health pairs with a female figure allow a comparison of the share of women reached with the share planned; 38
+are fixed-share constructions. For an organisation that has made gender equality a corporate priority, the gender breakdown of its largest
+health indicator is therefore mostly modelled.</p>
+<figure class="tbl avoid "><figcaption><b>Table 8.</b> How women reached are counted in the health indicator</figcaption><table class="simple"><thead><tr><th>Component</th><th>Results</th><th>Women reached (million)</th><th>Share</th></tr></thead><tbody><tr><td>Female figure measured directly</td><td>43</td><td>63.4</td><td>41%</td></tr><tr><td>Female figure = total x fixed share</td><td>45</td><td>91.9</td><td>59%</td></tr><tr class="tot"><td>Total (equals published WBG female figure)</td><td>88</td><td>155.4</td><td>100%</td></tr></tbody></table><p class="note">Female disaggregation rows of the health indicator with a positive achieved value, not masked for double counting. &ldquo;Fixed share&rdquo;: the disaggregation factor lies strictly between 0 and 1 (median 0.508, interquartile range 0.503&ndash;0.525).</p></figure>
+<figure class="fig avoid"><figcaption><b>Figure 4.</b> Women reached: measured versus assumed</figcaption><img src="../output/figures/fig4_women.png"><p class="note">See table 8.</p></figure>
+
+<h2>8. Health Compared with Other Results Areas</h2>
+<p>Are these features specific to health? Table 9 compares health results with results in the other four people-level areas, using linear
+probability models with region, fragility, income group, financing, instrument, size and approval-cohort controls and standard errors clustered
+by project. Health results are 44 percentage points more likely to be rescaled by a conversion factor than other
+results with similar characteristics (column 1; mean in other areas 9%), and their female figures are
+33 points more likely to be fixed-share constructions (column 2). Health indicators are somewhat more likely to
+measure outcomes, such as coverage rates (column 3: 9 points; 22% of health results
+against 14% elsewhere). And health results are 31 points less likely to be rated behind
+schedule under a linear on-track rule (column 4), conditional on project age and indicator type; 27% of health results
+are behind against 58% elsewhere.</p>
+<figure class="tbl avoid"><figcaption><b>Table 9.</b> Health results compared with the other Scorecard results areas: linear probability models</figcaption><table class="reg"><thead><tr><th></th><th>(1)<br>Result rescaled</th><th>(2)<br>Female figure is a fixed share</th><th>(3)<br>Outcome indicator</th><th>(4)<br>Rated behind</th></tr></thead><tbody><tr><td>Health results area</td><td>0.442***</td><td>0.333***</td><td>0.092**</td><td>-0.315***</td></tr><tr class="se"><td></td><td>(0.055)</td><td>(0.061)</td><td>(0.036)</td><td>(0.060)</td></tr><tr><td>Outcome indicator</td><td></td><td></td><td></td><td>0.111***</td></tr><tr class="se"><td></td><td></td><td></td><td></td><td>(0.041)</td></tr><tr><td>Rescaled</td><td></td><td></td><td></td><td>-0.099**</td></tr><tr class="se"><td></td><td></td><td></td><td></td><td>(0.040)</td></tr><tr><td>3&ndash;5 years since approval</td><td></td><td></td><td></td><td>-0.060</td></tr><tr class="se"><td></td><td></td><td></td><td></td><td>(0.047)</td></tr><tr><td>5&ndash;7 years</td><td></td><td></td><td></td><td>-0.172**</td></tr><tr class="se"><td></td><td></td><td></td><td></td><td>(0.085)</td></tr><tr><td>7+ years</td><td></td><td></td><td></td><td>-0.307***</td></tr><tr class="se"><td></td><td></td><td></td><td></td><td>(0.106)</td></tr><tr><td>FCV country</td><td>0.032</td><td>0.008</td><td>-0.034</td><td>0.072*</td></tr><tr class="se"><td></td><td>(0.029)</td><td>(0.026)</td><td>(0.023)</td><td>(0.043)</td></tr><tr><td>IDA-financed</td><td>0.033</td><td>-0.018</td><td>-0.006</td><td>0.013</td></tr><tr class="se"><td></td><td>(0.028)</td><td>(0.031)</td><td>(0.041)</td><td>(0.046)</td></tr><tr><td>Log commitment</td><td>0.042***</td><td>0.015</td><td>-0.004</td><td>0.010</td></tr><tr class="se"><td></td><td>(0.013)</td><td>(0.010)</td><td>(0.008)</td><td>(0.017)</td></tr><tr class="stat"><td>Mean of dependent variable, other areas</td><td>0.087</td><td>0.210</td><td>0.139</td><td>0.584</td></tr><tr class="stat2"><td>Region, income group, instrument, approval cohort</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr class="stat2"><td>Observations</td><td>3,132</td><td>1,734</td><td>3,617</td><td>1,709</td></tr><tr class="stat2"><td>R&sup2;</td><td>0.144</td><td>0.051</td><td>0.032</td><td>0.211</td></tr></tbody></table><p class="note">Each column regresses the indicated outcome on a dummy for the health results area (base: the four other people-level areas&mdash;WASH, gender-equality actions, economic opportunity, financial services) and controls. Column (1): results not masked for double counting; (2): project &times; sub-indicator pairs with a female figure; (3): all results; (4): results with a positive target and at least 20% of the implementation period elapsed. &ldquo;Behind&rdquo;: share of target achieved more than 10 percentage points below the share of the implementation period elapsed. Standard errors clustered by project in parentheses. *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.10.</p></figure>
+<p>The last two results fit together. Coverage conversions translate percentage-point gains in mass campaigns, such as vaccination, into large
+numbers of people quickly, and aggregate counts accumulate service contacts continuously. Both make health results look on track. Within the full
+sample, rescaled results are less likely to be behind (column 4), consistent with conversions making progress look faster. None of this implies
+that the underlying services were not delivered; it implies that the indicator mixes measures with very different relationships to people
+helped.</p>
+
+<h2>9. What Is Not Counted: The Health Workforce</h2>
+<p>An indicator that counts service contacts is silent on the inputs that determine whether services are effective. The most prominent of these
+in the universal health coverage agenda is the health workforce (WHO and World Bank 2023). Using a rule-based classification of the development
+objectives and results indicators of all 1,131 projects in the Scorecard release, validated by hand (10
+of 12 sampled matches correct; 95 percent Wilson interval 0.55&ndash;0.95),
+only 15 projects (1.3%) address health workers&mdash;their training, recruitment or
+deployment&mdash;in what they measure. 4 of these also measure jobs or skills, and none addresses migration, although
+189 projects measure jobs or skills and 48 address migration or displacement. Health workforce projects
+are concentrated in Africa (7 in Eastern and Southern Africa, 4 in Western and
+Central Africa). Because the classification is based on text, it measures what projects report, not what they finance; but what is reported is
+what the Scorecard can see.</p>
+
+<h2>10. Discussion</h2>
+<p>Three implications follow. First, the headline is better read as an index of service contact constructed from heterogeneous measures than
+as a count of people. That is not a criticism of any single conversion; it is a statement about what the aggregate can and cannot support. It can
+support statements about whether operations are delivering against their own expectations&mdash;the achieved-to-expected ratio is robust to
+construction. It cannot easily support statements about how many distinct people benefited, let alone whether their health improved.</p>
+
+<p>Second, the composition of the headline matters for its trend. Because a quarter of the World Bank total comes from COVID-19 vaccination
+coverage conversions in operations approved in FY20&ndash;FY22, the headline will fall mechanically as these operations close, regardless of
+how health services evolve. Readers comparing Scorecard cycles need to know which results entered and left, and how each was measured.</p>
+
+<p>Third, the findings connect corporate results measurement to the effective-coverage agenda. Health economists and global health agencies
+have spent two decades moving from counting contacts to measuring whether people in need receive care of sufficient quality to produce health
+gains (Shengelia et al. 2005; Ng et al. 2014; Kruk et al. 2018). The Scorecard indicator includes the word &ldquo;quality&rdquo;, but nothing
+in the public data allows quality to be verified, and a third of the total consists of conversions from coverage or service units. The history
+of administrative vaccination data, where performance-based payments were followed by over-reporting relative to surveys (Lim et al. 2008;
+Sandefur and Glassman 2015), is a reminder that aggregates tied to institutional reputation deserve independent validation. IEG&rsquo;s ongoing formative evaluation of the Scorecard (IEG 2025) offers a natural opportunity to do so.</p>
+
+<p><b>Limitations.</b> The analysis uses one Scorecard cycle and the public release, which omits IFC and MIGA project data and the documentation
+behind each conversion factor. Measurement methods are inferred from the published fields and checked by hand, not confirmed with project teams.
+The comparison in section 8 is descriptive. Finally, the paper does not test whether the services counted improved health; doing so requires
+linking project results to independent coverage data such as household surveys, which is a natural next step.</p>
+
+<h2>11. Recommendations</h2>
+<ol class="recs">
+<li><b>Publish a construction code for every figure.</b> Each contributing result should carry a code&mdash;direct count, adjusted count, coverage
+conversion, unit conversion&mdash;with the factor&rsquo;s source. The Scorecard could then report the headline alongside the share that is
+directly counted (37% today).</li>
+<li><b>Report coverage as coverage.</b> Results measured as coverage rates should be reported as rates against a defined population, not
+converted into people and added to head-counts.</li>
+<li><b>Count women only where women are counted.</b> Report the female figure from direct disaggregation and show modelled figures separately.</li>
+<li><b>Move from contact to effective coverage.</b> For the largest service families&mdash;immunisation, maternal care, outpatient care&mdash;pair
+counts with a quality-adjusted or effective-coverage measure drawn from facility or household surveys.</li>
+<li><b>Track the inputs that matter.</b> Add a health workforce indicator (health workers trained, deployed and retained) to the Scorecard&rsquo;s
+health narrative, so that the system measures capacity as well as contact.</li>
+</ol>
+
+<h2>12. Conclusion</h2>
+<p>The World Bank Group&rsquo;s health headline reconciles to its parts, which is a credit to the transparency of the Scorecard release. But the
+parts are not what the headline suggests. Only about a third of the World Bank&rsquo;s total is a count of people; much of the rest is converted
+from vaccination coverage, outpatient visits and facilities; a handful of results drive most of it; and most of the gender breakdown is assumed.
+Making these choices visible, and moving toward measures of effective coverage, would let the Scorecard say not only how many people were reached,
+but how many were helped.</p>
+
+<h2 class="pb">References</h2><div class="refs"><p>Arora, A. 2026. &ldquo;Counting Reach, Not Welfare: Testing the World Bank Group Scorecard against a Welfare Anchor.&rdquo; Working paper.</p><p>Bevan, G., and C. Hood. 2006. &ldquo;What&rsquo;s Measured Is What Matters: Targets and Gaming in the English Public Health Care System.&rdquo; <i>Public Administration</i> 84 (3): 517&ndash;38.</p><p>Bulman, D., W. Kolkma, and A. Kraay. 2017. &ldquo;Good Countries or Good Projects? Comparing Macro and Micro Correlates of World Bank and Asian Development Bank Project Performance.&rdquo; <i>Review of International Organizations</i> 12 (3): 335&ndash;63.</p><p>Campbell, D. T. 1979. &ldquo;Assessing the Impact of Planned Social Change.&rdquo; <i>Evaluation and Program Planning</i> 2 (1): 67&ndash;90.</p><p>Das, J., and J. Hammer. 2014. &ldquo;Quality of Primary Care in Low-Income Countries: Facts and Economics.&rdquo; <i>Annual Review of Economics</i> 6: 525&ndash;53.</p><p>Holmstr&ouml;m, B., and P. Milgrom. 1991. &ldquo;Multitask Principal&ndash;Agent Analyses: Incentive Contracts, Asset Ownership, and Job Design.&rdquo; <i>Journal of Law, Economics, and Organization</i> 7: 24&ndash;52.</p><p>Honig, D. 2018. <i>Navigation by Judgment: Why and When Top-Down Management of Foreign Aid Doesn&rsquo;t Work</i>. New York: Oxford University Press.</p><p>Hood, C. 2006. &ldquo;Gaming in Targetworld: The Targets Approach to Managing British Public Services.&rdquo; <i>Public Administration Review</i> 66 (4): 515&ndash;21.</p><p>IEG (Independent Evaluation Group). 2016. <i>Behind the Mirror: A Report on the Self-Evaluation Systems of the World Bank Group</i>. Washington, DC: World Bank.</p><p>IEG (Independent Evaluation Group). 2025. <i>World Bank Group Scorecard Formative Evaluation: Approach Paper</i>. Washington, DC: World Bank.</p><p>Jerven, M. 2013. <i>Poor Numbers: How We Are Misled by African Development Statistics and What to Do about It</i>. Ithaca, NY: Cornell University Press.</p><p>Kelley, J. G., and B. A. Simmons. 2015. &ldquo;Politics by Number: Indicators as Social Pressure in International Relations.&rdquo; <i>American Journal of Political Science</i> 59 (1): 55&ndash;70.</p><p>Kruk, M. E., A. D. Gage, N. T. Joseph, G. Danaei, S. Garc&iacute;a-Sais&oacute;, and J. A. Salomon. 2018. &ldquo;Mortality Due to Low-Quality Health Systems in the Universal Health Coverage Era: A Systematic Analysis of Amenable Deaths in 137 Countries.&rdquo; <i>The Lancet</i> 392 (10160): 2203&ndash;12.</p><p>Lim, S. S., D. B. Stein, A. Charrow, and C. J. L. Murray. 2008. &ldquo;Tracking Progress towards Universal Childhood Immunisation and the Impact of Global Initiatives: A Systematic Analysis of Three-Dose Diphtheria, Tetanus, and Pertussis Immunisation Coverage.&rdquo; <i>The Lancet</i> 372 (9655): 2031&ndash;46.</p><p>Narayanaswamy, M. 2021. &ldquo;What Gets Measured Gets Done: Using a Corporate Scorecard to Drive Greater Investment Impact.&rdquo; EM Compass Note 108, International Finance Corporation, Washington, DC.</p><p>Ng, M., N. Fullman, J. L. Dieleman, A. D. Flaxman, C. J. L. Murray, and S. S. Lim. 2014. &ldquo;Effective Coverage: A Metric for Monitoring Universal Health Coverage.&rdquo; <i>PLoS Medicine</i> 11 (9): e1001730.</p><p>Raimondo, E. 2016. &ldquo;What Difference Does Good Monitoring and Evaluation Make to World Bank Project Performance?&rdquo; Policy Research Working Paper 7726, World Bank, Washington, DC.</p><p>Sandefur, J., and A. Glassman. 2015. &ldquo;The Political Economy of Bad Data: Evidence from African Survey and Administrative Statistics.&rdquo; <i>Journal of Development Studies</i> 51 (2): 116&ndash;32.</p><p>Shengelia, B., A. Tandon, O. B. Adams, and C. J. L. Murray. 2005. &ldquo;Access, Utilization, Quality, and Effective Coverage: An Integrated Conceptual Framework and Measurement Strategy.&rdquo; <i>Social Science &amp; Medicine</i> 61 (1): 97&ndash;109.</p><p>WHO and World Bank. 2023. <i>Tracking Universal Health Coverage: 2023 Global Monitoring Report</i>. Geneva: World Health Organization; Washington, DC: World Bank.</p><p>World Bank Group. 2025. <i>World Bank Group Scorecard</i>, FY25 data release (results as of June 30, 2025). https://scorecard.worldbank.org.</p><p>World Bank. 2024a. <i>New World Bank Group Scorecard FY24&ndash;FY30: Driving Action, Measuring Results</i>. Washington, DC: World Bank Group.</p><p>World Bank. 2024b. &ldquo;World Bank Group Announces New Approach to Measuring Impact.&rdquo; Press release, April 9, 2024.</p></div>
+</body></html>

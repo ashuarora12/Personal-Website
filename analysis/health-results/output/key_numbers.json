@@ -1,0 +1,270 @@
+{
+  "n_results": 226,
+  "n_projects": 138,
+  "n_double": 123,
+  "n_counted": 103,
+  "n_positive": 92,
+  "n_countries": 71,
+  "wbg": 378.926567,
+  "wb": 310.552868,
+  "ifc": 68.310599,
+  "miga": 0.0631,
+  "ida": 225.389179,
+  "ibrd": 78.642558,
+  "wb_project_sum": 310.552868,
+  "wb_expected": 349.455163,
+  "reconciliation_gap": -1.500001e-08,
+  "double_counted_achieved": 0,
+  "share_method": {
+    "direct": 0.374148,
+    "adjusted": 0.228286,
+    "coverage": 0.292298,
+    "unit": 0.105268
+  },
+  "share_vaccination": 0.237888,
+  "share_covid": 0.027594,
+  "share_covid_projects": 0.30439,
+  "vacc_from_covid_projects": 0.987666,
+  "share_covid_vacc_of_total": 0.234953,
+  "share_aggregate_family": 0.58,
+  "not_reproducible_n": 4,
+  "not_reproducible_m": 33.108438,
+  "coverage_vacc_share_of_coverage": 0.803814,
+  "facility_example": 1.37,
+  "outpatient_visits_example": 29.374039,
+  "bounds": [
+    {
+      "rule": "(0) As published",
+      "achieved_m": 310.552868,
+      "expected_m": 349.455163,
+      "achieved_over_expected": 0.888677,
+      "wbg_headline_m": 378.926567,
+      "share_of_published": 1
+    },
+    {
+      "rule": "(1) Excluding figures not reproducible from raw progress",
+      "achieved_m": 277.44443,
+      "expected_m": 323.610955,
+      "achieved_over_expected": 0.857339,
+      "wbg_headline_m": 345.818129,
+      "share_of_published": 0.912626
+    },
+    {
+      "rule": "(2) Excluding unit-to-people conversions",
+      "achieved_m": 277.86172,
+      "expected_m": 322.111248,
+      "achieved_over_expected": 0.862627,
+      "wbg_headline_m": 346.235419,
+      "share_of_published": 0.913727
+    },
+    {
+      "rule": "(3) Excluding coverage-to-people conversions",
+      "achieved_m": 219.778831,
+      "expected_m": 253.969538,
+      "achieved_over_expected": 0.865375,
+      "wbg_headline_m": 288.15253,
+      "share_of_published": 0.760444
+    },
+    {
+      "rule": "(4) People counts only (direct + adjusted)",
+      "achieved_m": 187.087683,
+      "expected_m": 226.625623,
+      "achieved_over_expected": 0.825536,
+      "wbg_headline_m": 255.461382,
+      "share_of_published": 0.674171
+    },
+    {
+      "rule": "(5) Rule (4) and reproducible",
+      "achieved_m": 183.720643,
+      "expected_m": 222.663937,
+      "achieved_over_expected": 0.825103,
+      "wbg_headline_m": 252.094342,
+      "share_of_published": 0.665285
+    },
+    {
+      "rule": "(6) Direct counts only (lower bound)",
+      "achieved_m": 116.192798,
+      "expected_m": 144.994016,
+      "achieved_over_expected": 0.801363,
+      "wbg_headline_m": 184.566497,
+      "share_of_published": 0.487077
+    }
+  ],
+  "top_shares": [
+    {
+      "top_k": 1,
+      "share": 0.119958
+    },
+    {
+      "top_k": 5,
+      "share": 0.383564
+    },
+    {
+      "top_k": 10,
+      "share": 0.591615
+    },
+    {
+      "top_k": 20,
+      "share": 0.814277
+    },
+    {
+      "top_k": 46,
+      "share": 0.980464
+    }
+  ],
+  "hhi": 0.048621,
+  "effective_n": 20.567438,
+  "top5_countries": [
+    {
+      "country": "Ethiopia",
+      "achieved_m": 37.253239,
+      "share": 0.119958
+    },
+    {
+      "country": "Indonesia",
+      "achieved_m": 29.374039,
+      "share": 0.094586
+    },
+    {
+      "country": "Burkina Faso",
+      "achieved_m": 21.342846,
+      "share": 0.068725
+    },
+    {
+      "country": "Sudan",
+      "achieved_m": 15.995,
+      "share": 0.051505
+    },
+    {
+      "country": "Afghanistan",
+      "achieved_m": 15.151665,
+      "share": 0.048789
+    }
+  ],
+  "n_countries_positive": 62,
+  "perf": [
+    {
+      "method": "direct",
+      "results": 49,
+      "achieved_m": 116.192798,
+      "expected_m": 144.994016,
+      "achieved_over_expected": 0.801363,
+      "share_exceeding_target": 0.369565
+    },
+    {
+      "method": "adjusted",
+      "results": 19,
+      "achieved_m": 70.894885,
+      "expected_m": 81.631607,
+      "achieved_over_expected": 0.868473,
+      "share_exceeding_target": 0.526316
+    },
+    {
+      "method": "coverage",
+      "results": 29,
+      "achieved_m": 90.774037,
+      "expected_m": 95.485625,
+      "achieved_over_expected": 0.950657,
+      "share_exceeding_target": 0.333333
+    },
+    {
+      "method": "unit",
+      "results": 6,
+      "achieved_m": 32.691148,
+      "expected_m": 27.343915,
+      "achieved_over_expected": 1.195555,
+      "share_exceeding_target": 0.833333
+    },
+    {
+      "method": "all",
+      "results": 103,
+      "achieved_m": 310.552868,
+      "expected_m": 349.455163,
+      "achieved_over_expected": 0.888677,
+      "share_exceeding_target": 0.418367
+    }
+  ],
+  "share_closed": 0.426061,
+  "share_closing_by": {
+    "2025-12-31": 0.524896,
+    "2026-06-30": 0.686478,
+    "2027-06-30": 0.815205
+  },
+  "vacc_closing_by_jun2026": 0.999968,
+  "female_total": 155.351459,
+  "female_published": 155.351459,
+  "female_fixed_share": 0.591691,
+  "female_fixed_n": 45,
+  "female_n": 88,
+  "female_factor_median": 0.508219,
+  "female_factor_iqr": [0.50295, 0.524978],
+  "health_pairs": 69,
+  "health_pair_status": {
+    "fixed_share": 38,
+    "identical_share": 1,
+    "informative": 25,
+    "no_progress": 4,
+    "women_only": 1
+  },
+  "t7": [
+    {
+      "model": "(1) Rescaled",
+      "estimate": 0.441941,
+      "se": 0.05454,
+      "p": 7.615898e-16,
+      "n": 3132,
+      "dep_mean_other": 0.087157
+    },
+    {
+      "model": "(2) Female figure fixed share",
+      "estimate": 0.33327,
+      "se": 0.060773,
+      "p": 4.781213e-08,
+      "n": 1734,
+      "dep_mean_other": 0.20961
+    },
+    {
+      "model": "(3) Outcome indicator",
+      "estimate": 0.09168,
+      "se": 0.036481,
+      "p": 0.012012,
+      "n": 3617,
+      "dep_mean_other": 0.138602
+    },
+    {
+      "model": "(4) Behind schedule",
+      "estimate": -0.314583,
+      "se": 0.059935,
+      "p": 1.725812e-07,
+      "n": 1709,
+      "dep_mean_other": 0.583797
+    }
+  ],
+  "behind_health": 0.271739,
+  "behind_other": 0.583797,
+  "type_health": {
+    "outcome": 0.221239,
+    "output": 0.022124,
+    "reach": 0.707965,
+    "unclassifiable": 0.048673
+  },
+  "hw_projects": 15,
+  "hw_total": 1131,
+  "hw_jobs": 4,
+  "hw_migration": 0,
+  "hw_by_region": {
+    "AFE": 7,
+    "AFW": 4,
+    "ECA": 3,
+    "LCR": 1
+  },
+  "jobs_projects": 189,
+  "migration_projects": 48,
+  "hw_precision": {
+    "label": "Health workforce",
+    "correct": 10,
+    "reviewed": 12,
+    "ci": [0.552, 0.953],
+    "v1": 0.17
+  }
+}
