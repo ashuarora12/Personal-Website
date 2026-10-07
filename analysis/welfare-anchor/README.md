@@ -1,7 +1,9 @@
 # Counting Reach, Not Welfare — replication package
 
 Working paper: *Counting Reach, Not Welfare: Testing the World Bank Group Scorecard Against a Welfare Anchor* (Ashu Arora, draft, October 2026).
-PDF: [`paper/counting-reach-not-welfare.pdf`](paper/counting-reach-not-welfare.pdf)
+PDF: [`paper/counting-reach-not-welfare.pdf`](paper/counting-reach-not-welfare.pdf) · Word: [`paper/counting-reach-not-welfare.docx`](paper/counting-reach-not-welfare.docx)
+
+**To verify every step, follow [`VERIFY.md`](VERIFY.md)** (also as Word: `paper/verification-guide.docx`).
 
 The paper tests whether the people-level results behind the World Bank Group's FY25 Scorecard measure welfare. It has three tests:
 
@@ -16,6 +18,7 @@ code/01_build_dataset.py     raw Scorecard exports -> clean datasets (CSV + Stat
 code/00_validation_scores.py precision / recall / kappa of the indicator classifier
 code/02_analysis.R           all tables, figures and key numbers (base R + sandwich/lmtest, ggplot2)
 code/03_analysis.do          the same models in Stata (built-in commands only)
+code/04_verify_checkpoints.do 39 PASS/FAIL checks of every headline number in Stata
 data/results_clean.*         3,617 results (project indicators), 1,129 projects        <- Tests 1-3
 data/gender_pairs.*          1,734 project x sub-indicator pairs with a female figure  <- Test 2 (gender)
 data/projects_clean.*        1,129 projects
@@ -24,6 +27,7 @@ output/tables/*.csv          every table in the paper
 output/figures/*.png         every figure in the paper
 output/key_numbers.json      every number quoted in the text
 paper/build_paper.py         builds paper.html and the PDF from the outputs above
+paper/html_to_blocks.py, paper/build_docx.js   build the Word version from the same text
 ```
 
 The raw exports are read from `../who-benefits/data/raw/` (FY25 cycle, from scorecard.worldbank.org).
@@ -36,6 +40,7 @@ Run these from this folder:
 python3 code/01_build_dataset.py      # needs pandas, numpy, openpyxl
 Rscript code/02_analysis.R            # needs sandwich, lmtest, ggplot2, jsonlite, scales
 python3 paper/build_paper.py          # needs pandas, playwright (Chromium)
+python3 paper/html_to_blocks.py && node paper/build_docx.js   # Word version (npm install docx)
 ```
 
 To run the same models in Stata (version 15 or later), open Stata in this folder and type `do code/03_analysis.do`. The log is written to `output/stata/`.

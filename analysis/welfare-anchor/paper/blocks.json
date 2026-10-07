@@ -1,0 +1,5851 @@
+[
+ {
+  "type": "kicker",
+  "runs": [
+   {
+    "text": "Working paper · Draft for comment · October 2026"
+   }
+  ]
+ },
+ {
+  "type": "title",
+  "runs": [
+   {
+    "text": "Counting Reach, Not Welfare: Testing the World Bank Group Scorecard Against a Welfare Anchor"
+   }
+  ]
+ },
+ {
+  "type": "author",
+  "runs": [
+   {
+    "text": "Ashu Arora"
+   }
+  ]
+ },
+ {
+  "type": "aff",
+  "runs": [
+   {
+    "text": "Independent researcher [affiliation and contact to be added]"
+   }
+  ]
+ },
+ {
+  "type": "abstract",
+  "runs": [
+   {
+    "text": "Abstract.",
+    "b": true
+   },
+   {
+    "text": " The World Bank Group’s FY24–FY30 Scorecard was presented as a shift from counting inputs to measuring outcomes. This paper tests that claim against a welfare anchor, extending the welfare-economics criterion that González (2026) proposes for private sector development to the Scorecard’s people-level results. Using the public project-level records behind the FY25 Scorecard (3,617 results from 1,129 projects in 124 countries), I apply three tests. "
+   },
+   {
+    "text": "Welfare relevance:",
+    "b": true
+   },
+   {
+    "text": " 62% of contributing project indicators count people or firms reached and only 14% measure a change in welfare (14% in a hand-coded sample); 80% of projects report no outcome indicator at all, and projects approved after the new Scorecard are not significantly more outcome-oriented. "
+   },
+   {
+    "text": "Measurement integrity:",
+    "b": true
+   },
+   {
+    "text": " 91% of results start from a zero baseline, 29% of the reported achieved total (63% in health) comes from figures rescaled by conversion factors, and only 14% of female figures can show whether women were reached as planned. "
+   },
+   {
+    "text": "Progress judgement:",
+    "b": true
+   },
+   {
+    "text": " under a linear on-track rule, 57% of results look “behind”, falling from 80% in projects under three years old to 32% after seven; and outcome indicators are 13 percentage points more likely to be rated behind than reach indicators with the same age, sector and country characteristics. A results system built this way rewards counting reach and penalises measuring welfare. I propose five changes that would anchor the Scorecard in welfare without adding reporting burden."
+   }
+  ]
+ },
+ {
+  "type": "kw",
+  "runs": [
+   {
+    "text": "Keywords:",
+    "b": true
+   },
+   {
+    "text": " results measurement; World Bank; corporate scorecard; performance indicators; gender data; development effectiveness. "
+   },
+   {
+    "text": "JEL:",
+    "b": true
+   },
+   {
+    "text": " F35, O19, H43, C25."
+   }
+  ]
+ },
+ {
+  "type": "h2",
+  "runs": [
+   {
+    "text": "1. Introduction"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "In April 2024 the World Bank Group (WBG) replaced its corporate scorecard of roughly 150 indicators with a new Scorecard of 22 results indicators for FY24–FY30. Management described the change as a milestone in the Group’s efforts “to focus on outcomes, rather than inputs” (World Bank 2024b), and the Scorecard now serves as both a communication device and a management tool that cascades into unit-level targets (World Bank 2024a). Its headline numbers—hundreds of millions of people receiving health services, water, financial services or gender-equality actions—have become the Group’s main public account of what its lending achieves."
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Whether those numbers measure welfare is a question with a long history inside the institution. The Independent Evaluation Group (IEG) has repeatedly found the Bank Group’s self-evaluation systems geared to results reporting and upward accountability rather than learning (IEG 2016), and in November 2025 it launched a formative evaluation of the Scorecard itself, whose approach paper draws on the literature on gaming in centralised performance systems (IEG 2025; see also Hood 2006). From outside, González (2026) argues that the Bank’s private sector work has been reorganised repeatedly because it lacks a fixed objective, and proposes a welfare-economics “anchor”: an operation qualifies only if it addresses a binding market failure, acts on that failure, and changes outcomes that would not otherwise occur."
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "This paper applies the same discipline to the measurement side. If the Scorecard is anchored in welfare, three things should be true of the results it aggregates. First, they should measure changes in people’s welfare, not only how many people a project touched ("
+   },
+   {
+    "text": "welfare relevance",
+    "i": true
+   },
+   {
+    "text": "). Second, the reported figures should be measured rather than constructed from conversion factors, assumed shares and zero baselines ("
+   },
+   {
+    "text": "measurement integrity",
+    "i": true
+   },
+   {
+    "text": "). Third, the way progress is judged should reflect performance rather than the passage of time, and should not penalise teams that choose to measure welfare ("
+   },
+   {
+    "text": "progress judgement",
+    "i": true
+   },
+   {
+    "text": ")."
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "I test each condition with the public project-level records that underlie the FY25 Scorecard: 3,617 project indicators (“results”) from 1,129 IDA- and IBRD-financed projects in 124 countries, feeding five people-level results areas (health, nutrition and population; water, sanitation and hygiene; gender-equality actions; economic opportunity; and financial services). Each indicator is classified by its position in the results chain—reach, output or outcome—using transparent rules validated against a held-out hand-coded sample (κ = 0.66). The econometrics is deliberately simple: linear probability models, a fractional logit, and logit checks, all with standard errors clustered by project."
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "The results are consistent across the three tests. Most of what the Scorecard counts is reach: 62% of contributing indicators count people or firms served, and 80% of projects feed it no outcome indicator at all. A large share of the reported totals is constructed: 29% of the achieved total comes from rescaled figures, and more than half of female figures in health and WASH are the total multiplied by an assumed share. And a linear on-track rule mostly measures project age, while rating outcome indicators as behind 13 percentage points more often than comparable reach indicators—a direct, if unintended, penalty on measuring welfare."
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "The paper contributes in three ways. It provides a systematic, reproducible audit of the Scorecard’s project-level evidence, complementing IEG’s ongoing formative evaluation. It extends the welfare-anchor argument from what the Bank finances to how it counts. And it converts the familiar warning that “what gets measured gets done” (Narayanaswamy 2021) into specific, testable quantities that management could track. Data and code in R and Stata are released with the paper."
+   }
+  ]
+ },
+ {
+  "type": "h2",
+  "runs": [
+   {
+    "text": "2. Background and related literature"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "h3",
+  "runs": [
+   {
+    "text": "2.1 The Scorecard and its project-level evidence"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "The WBG adopted a corporate scorecard in 2011, extended it to IFC and MIGA in 2014 and revised it in 2017 and 2020 (IEG 2025). The FY24–FY30 Scorecard reduced the indicator set to a short list of WBG results indicators alongside vision and client-context indicators (World Bank 2024a). Each people-level results indicator is an aggregate of project indicators: every active or recently closed project that contributes reports a baseline, a target and a latest progress value, and these are converted into the Scorecard’s unit (usually “people”) and summed. The public data release reports, for each contributing project indicator, the original wording, the baseline, progress and target values, the conversion and disaggregation factors applied, and a flag for results masked to avoid double counting. These records are what make the tests in this paper possible."
+   }
+  ]
+ },
+ {
+  "type": "h3",
+  "runs": [
+   {
+    "text": "2.2 Performance measurement and its distortions"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "A large literature warns that quantitative targets change behaviour in ways that can undermine their purpose. Campbell (1979) observed that the more a quantitative indicator is used for decisions, the more it is subject to corruption pressures. Hood (2006) and Bevan and Hood (2006) document ratchet, threshold and output-distortion effects in the British “targets regime”. In principal–agent terms, Holmström and Milgrom (1991) show that when some dimensions of a task are easier to measure than others, strong incentives on the measurable dimension pull effort away from the rest. In aid, Natsios (2010) describes how compliance-driven measurement crowds out the most transformational work, and Honig (2018) shows that tight top-down measurement performs worst precisely where outcomes are hardest to verify. Andrews, Pritchett and Woolcock (2013) and Pritchett, Samji and Hammer (2013) argue for monitoring that supports learning about what works rather than reporting compliance."
+   }
+  ]
+ },
+ {
+  "type": "h3",
+  "runs": [
+   {
+    "text": "2.3 What predicts World Bank project performance"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Studies of the Bank’s own project ratings find that project-level factors explain much more of the variation in outcomes than country characteristics (Denizer, Kaufmann and Kraay 2013; Bulman, Kolkma and Kraay 2017), that preparation matters (Kilby 2015), and that projects with better monitoring and evaluation are rated more highly (Raimondo 2016). IEG’s annual "
+   },
+   {
+    "text": "Results and Performance of the World Bank Group",
+    "i": true
+   },
+   {
+    "text": " reports identify improving results monitoring as one of the main levers for better outcomes (IEG 2024). This literature uses ex-post ratings of closed projects; the present paper looks instead at the indicators that the Scorecard aggregates while projects are under way."
+   }
+  ]
+ },
+ {
+  "type": "h3",
+  "runs": [
+   {
+    "text": "2.4 From a welfare anchor for operations to a welfare anchor for results"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "González (2026) shows that each wave of private sector development doctrine redefined success—privatisation transactions, reforms achieved, capital mobilised, accounts opened—and that “a structural remedy cannot resolve an analytical problem”. His remedy is a test any operation must pass before public money is committed. The analogue for results is a test that any reported result should pass before it is counted as evidence of development impact. Appendix B maps his three hurdles onto the three tests used here."
+   }
+  ]
+ },
+ {
+  "type": "h2",
+  "runs": [
+   {
+    "text": "3. Data"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Source.",
+    "b": true
+   },
+   {
+    "text": " The data are the FY25 Scorecard exports published at scorecard.worldbank.org, with results as of 30 June 2025. I use the project-level sheet of the four files that cover the people-level results areas: health, nutrition and population services; water, sanitation and hygiene; gender-equality and economic-opportunity actions; and financial services. Each record is a project indicator mapped to a Scorecard sub-indicator, with project characteristics (region, country, lead department, lending instrument, financing source, commitment, approval and closing dates, FCV and LDC flags, income group)."
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Unit of analysis.",
+    "b": true
+   },
+   {
+    "text": " A "
+   },
+   {
+    "text": "result",
+    "i": true
+   },
+   {
+    "text": " is one non-disaggregated project indicator contributing to one Scorecard sub-indicator. Female and youth rows are disaggregations of these results and are used only in the gender test, where the unit is a project × sub-indicator pair. Table 1 shows how the samples are built; Table 2 describes the projects."
+   }
+  ]
+ },
+ {
+  "type": "table",
+  "kind": "simple",
+  "label": "Table 1",
+  "caption": [
+   {
+    "text": "Construction of the analysis samples"
+   }
+  ],
+  "note": [
+   {
+    "text": "Source: World Bank Group Scorecard, FY25 cycle (results as of 30 June 2025), sheet “WB Project Information” of the health, WASH, gender and financial-services results files. Rows that appear in two files are counted once."
+   }
+  ],
+  "head": [
+   [
+    {
+     "text": "Step"
+    }
+   ],
+   [
+    {
+     "text": "Records"
+    }
+   ],
+   [
+    {
+     "text": "Projects"
+    }
+   ]
+  ],
+  "rows": [
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Project-indicator records in the FY25 Scorecard exports (four results files)"
+      }
+     ],
+     [
+      {
+       "text": "10,893"
+      }
+     ],
+     [
+      {
+       "text": "1,131"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "of which disaggregation rows (female, youth)"
+      }
+     ],
+     [
+      {
+       "text": "7,276"
+      }
+     ],
+     []
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Results: total (non-disaggregated) project indicators — "
+      },
+      {
+       "text": "Tests 1–2",
+       "i": true
+      }
+     ],
+     [
+      {
+       "text": "3,617"
+      }
+     ],
+     [
+      {
+       "text": "1,129"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "not masked for double counting"
+      }
+     ],
+     [
+      {
+       "text": "3,132"
+      }
+     ],
+     [
+      {
+       "text": "999"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "with positive target, dates, and ≥20% of implementation period elapsed"
+      }
+     ],
+     [
+      {
+       "text": "1,809"
+      }
+     ],
+     [
+      {
+       "text": "762"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "excluding unclassifiable indicators — "
+      },
+      {
+       "text": "Test 3",
+       "i": true
+      }
+     ],
+     [
+      {
+       "text": "1,709"
+      }
+     ],
+     [
+      {
+       "text": "730"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Project × Scorecard sub-indicator pairs with a female figure — "
+      },
+      {
+       "text": "Test 2 (gender)",
+       "i": true
+      }
+     ],
+     [
+      {
+       "text": "1,734"
+      }
+     ],
+     [
+      {
+       "text": "990"
+      }
+     ]
+    ],
+    "span": 1
+   }
+  ]
+ },
+ {
+  "type": "table",
+  "kind": "simple",
+  "label": "Table 2",
+  "caption": [
+   {
+    "text": "Project characteristics"
+   }
+  ],
+  "note": [
+   {
+    "text": "Commitment is the net commitment recorded in the Scorecard export. Regional distribution of projects: AFE 267, AFW 248, EAP 108, ECA 141, LCR 133, MENAAP 131, SAR 101."
+   }
+  ],
+  "head": [
+   [
+    {
+     "text": "Variable (project level, N = 1,129)"
+    }
+   ],
+   [
+    {
+     "text": "Mean"
+    }
+   ],
+   [
+    {
+     "text": "SD"
+    }
+   ],
+   [
+    {
+     "text": "Min"
+    }
+   ],
+   [
+    {
+     "text": "Max"
+    }
+   ]
+  ],
+  "rows": [
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Fragile and conflict-affected (FCV) country"
+      }
+     ],
+     [
+      {
+       "text": "0.29"
+      }
+     ],
+     [
+      {
+       "text": "0.45"
+      }
+     ],
+     [
+      {
+       "text": "0.00"
+      }
+     ],
+     [
+      {
+       "text": "1.00"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Least developed country"
+      }
+     ],
+     [
+      {
+       "text": "0.46"
+      }
+     ],
+     [
+      {
+       "text": "0.50"
+      }
+     ],
+     [
+      {
+       "text": "0.00"
+      }
+     ],
+     [
+      {
+       "text": "1.00"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "IDA-financed"
+      }
+     ],
+     [
+      {
+       "text": "0.67"
+      }
+     ],
+     [
+      {
+       "text": "0.47"
+      }
+     ],
+     [
+      {
+       "text": "0.00"
+      }
+     ],
+     [
+      {
+       "text": "1.00"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Active (not closed) at cutoff"
+      }
+     ],
+     [
+      {
+       "text": "0.78"
+      }
+     ],
+     [
+      {
+       "text": "0.42"
+      }
+     ],
+     [
+      {
+       "text": "0.00"
+      }
+     ],
+     [
+      {
+       "text": "1.00"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Net commitment (US$ million)"
+      }
+     ],
+     [
+      {
+       "text": "190.26"
+      }
+     ],
+     [
+      {
+       "text": "208.01"
+      }
+     ],
+     [
+      {
+       "text": "0.00"
+      }
+     ],
+     [
+      {
+       "text": "1862.00"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Years since approval"
+      }
+     ],
+     [
+      {
+       "text": "4.15"
+      }
+     ],
+     [
+      {
+       "text": "2.91"
+      }
+     ],
+     [
+      {
+       "text": "0.00"
+      }
+     ],
+     [
+      {
+       "text": "16.06"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Planned duration (years)"
+      }
+     ],
+     [
+      {
+       "text": "6.09"
+      }
+     ],
+     [
+      {
+       "text": "2.00"
+      }
+     ],
+     [
+      {
+       "text": "0.86"
+      }
+     ],
+     [
+      {
+       "text": "16.81"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Approved FY25 (after new Scorecard)"
+      }
+     ],
+     [
+      {
+       "text": "0.15"
+      }
+     ],
+     [
+      {
+       "text": "0.36"
+      }
+     ],
+     [
+      {
+       "text": "0.00"
+      }
+     ],
+     [
+      {
+       "text": "1.00"
+      }
+     ]
+    ],
+    "span": 1
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Key variables.",
+    "b": true
+   },
+   {
+    "text": " "
+   },
+   {
+    "text": "Indicator type",
+    "i": true
+   },
+   {
+    "text": " is the results-chain classification described in Section 4.1. "
+   },
+   {
+    "text": "Rescaled",
+    "i": true
+   },
+   {
+    "text": " equals one when the progress conversion factor is positive and different from one, i.e. the project’s own figure is multiplied to express it in the Scorecard unit (for example, sewer connections multiplied by household size, or a vaccination percentage multiplied by a population). "
+   },
+   {
+    "text": "Zero baseline",
+    "i": true
+   },
+   {
+    "text": " equals one when the calculated baseline value is zero. "
+   },
+   {
+    "text": "Fixed-share female figure",
+    "i": true
+   },
+   {
+    "text": " follows the export’s disaggregation factor: when the factor lies strictly between zero and one, the female figure is the total multiplied by an assumed share rather than a separate count. "
+   },
+   {
+    "text": "Behind",
+    "i": true
+   },
+   {
+    "text": " applies a linear on-track rule: a result is behind if the share of its target achieved is more than 10 percentage points below the share of the implementation period elapsed (approval to closing). The rule is not an official WBG rating; it formalises the benchmark implicit whenever cumulative progress is compared with elapsed time, and alternative thresholds are reported."
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Dataset release.",
+    "b": true
+   },
+   {
+    "text": " The clean files "
+   },
+   {
+    "text": "results_clean",
+    "mono": true
+   },
+   {
+    "text": ", "
+   },
+   {
+    "text": "gender_pairs",
+    "mono": true
+   },
+   {
+    "text": " and "
+   },
+   {
+    "text": "projects_clean",
+    "mono": true
+   },
+   {
+    "text": " are released in CSV and Stata (.dta) formats with variable labels, together with the Python build script that produces them from the raw exports, an R script and a Stata do-file that reproduce every table and figure."
+   }
+  ]
+ },
+ {
+  "type": "h2",
+  "runs": [
+   {
+    "text": "4. Methods"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "h3",
+  "runs": [
+   {
+    "text": "4.1 Classifying what each indicator measures"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Each indicator’s wording is classified into one of four types using ordered, transparent rules (Appendix A): "
+   },
+   {
+    "text": "outcome",
+    "b": true
+   },
+   {
+    "text": "—a change in a condition or behaviour of people or firms (income, employment, sales, health status, adoption of a practice, service-use rates); "
+   },
+   {
+    "text": "output",
+    "b": true
+   },
+   {
+    "text": "—something the project produces or does (people trained or certified, works built, loans issued, plans adopted); "
+   },
+   {
+    "text": "reach",
+    "b": true
+   },
+   {
+    "text": "—a count of people, households or firms who receive, access or benefit from project goods or services; and "
+   },
+   {
+    "text": "unclassifiable",
+    "b": true
+   },
+   {
+    "text": "—breakdown labels such as “of which women” or a country name. To guard against tuning the rules to the data used to evaluate them, I drew two independent random samples of 200 results. The first (development set) was used to refine the rules; the second (test set) was coded by hand without sight of the rule labels and is used only for evaluation. On the test set the rules agree with the hand coding in 83.5% of cases (κ = 0.66, “substantial” agreement; Cohen 1960). Reach is identified with high precision and recall; outcome labels are rarely wrong (precision 0.89) but some outcomes are missed (recall 0.57). The rule-based share of outcome indicators should therefore be read as a lower bound, and I report the hand-coded share alongside it (Table 4)."
+   }
+  ]
+ },
+ {
+  "type": "h3",
+  "runs": [
+   {
+    "text": "4.2 Test 1: welfare relevance"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "I estimate linear probability models (LPM) of the form"
+   }
+  ]
+ },
+ {
+  "type": "eq",
+  "runs": [
+   {
+    "text": "Outcome"
+   },
+   {
+    "text": "ip",
+    "sub": true
+   },
+   {
+    "text": " = α + Σ"
+   },
+   {
+    "text": "s",
+    "sub": true
+   },
+   {
+    "text": " β"
+   },
+   {
+    "text": "s",
+    "sub": true
+   },
+   {
+    "text": " Area"
+   },
+   {
+    "text": "s,ip",
+    "sub": true
+   },
+   {
+    "text": " + Σ"
+   },
+   {
+    "text": "c",
+    "sub": true
+   },
+   {
+    "text": " δ"
+   },
+   {
+    "text": "c",
+    "sub": true
+   },
+   {
+    "text": " Cohort"
+   },
+   {
+    "text": "c,p",
+    "sub": true
+   },
+   {
+    "text": " + X′"
+   },
+   {
+    "text": "p",
+    "sub": true
+   },
+   {
+    "text": "γ + μ"
+   },
+   {
+    "text": "d(p)",
+    "sub": true
+   },
+   {
+    "text": " + ε"
+   },
+   {
+    "text": "ip",
+    "sub": true
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "where "
+   },
+   {
+    "text": "i",
+    "i": true
+   },
+   {
+    "text": " indexes results and "
+   },
+   {
+    "text": "p",
+    "i": true
+   },
+   {
+    "text": " projects, "
+   },
+   {
+    "text": "Area",
+    "i": true
+   },
+   {
+    "text": " are Scorecard results areas, "
+   },
+   {
+    "text": "Cohort",
+    "i": true
+   },
+   {
+    "text": " are approval-year groups (the FY25 cohort, approved after the new Scorecard was adopted, is of particular interest), "
+   },
+   {
+    "text": "X",
+    "i": true
+   },
+   {
+    "text": " contains region, FCV status, income group, IDA financing, lending instrument and log commitment, and μ are lead-department fixed effects. The LPM coefficients are directly interpretable as percentage-point differences; logit average marginal effects are reported as a check."
+   }
+  ]
+ },
+ {
+  "type": "h3",
+  "runs": [
+   {
+    "text": "4.3 Test 2: measurement integrity"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "I first document the prevalence of zero baselines, rescaled figures and fixed-share female figures, and the share of the reported achieved total that comes from rescaled figures. I then estimate the same LPM with "
+   },
+   {
+    "text": "Rescaled",
+    "i": true
+   },
+   {
+    "text": "ip",
+    "i": true,
+    "sub": true
+   },
+   {
+    "text": " and, at the pair level, "
+   },
+   {
+    "text": "FixedShare",
+    "i": true
+   },
+   {
+    "text": "jp",
+    "i": true,
+    "sub": true
+   },
+   {
+    "text": " as dependent variables, adding indicator type and a percentage-unit dummy in the rescaling model."
+   }
+  ]
+ },
+ {
+  "type": "h3",
+  "runs": [
+   {
+    "text": "4.4 Test 3: progress judgement"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Two questions matter: how does progress accumulate over a project’s life, and what does the linear on-track rule actually pick up? For the first, I estimate a fractional logit (Papke and Wooldridge 1996) for the share of target achieved, "
+   },
+   {
+    "text": "y",
+    "i": true
+   },
+   {
+    "text": "ip",
+    "sub": true
+   },
+   {
+    "text": " ∈ [0, 1]:"
+   }
+  ]
+ },
+ {
+  "type": "eq",
+  "runs": [
+   {
+    "text": "E[y"
+   },
+   {
+    "text": "ip",
+    "sub": true
+   },
+   {
+    "text": " | ·] = Λ( θ"
+   },
+   {
+    "text": "1",
+    "sub": true
+   },
+   {
+    "text": "E"
+   },
+   {
+    "text": "ip",
+    "sub": true
+   },
+   {
+    "text": " + θ"
+   },
+   {
+    "text": "2",
+    "sub": true
+   },
+   {
+    "text": "E"
+   },
+   {
+    "text": "2",
+    "sup": true
+   },
+   {
+    "text": "ip",
+    "sub": true
+   },
+   {
+    "text": " + λ"
+   },
+   {
+    "text": "1",
+    "sub": true
+   },
+   {
+    "text": "Output"
+   },
+   {
+    "text": "ip",
+    "sub": true
+   },
+   {
+    "text": " + λ"
+   },
+   {
+    "text": "2",
+    "sub": true
+   },
+   {
+    "text": "Outcome"
+   },
+   {
+    "text": "ip",
+    "sub": true
+   },
+   {
+    "text": " + κRescaled"
+   },
+   {
+    "text": "ip",
+    "sub": true
+   },
+   {
+    "text": " + Area′β + X′"
+   },
+   {
+    "text": "p",
+    "sub": true
+   },
+   {
+    "text": "γ )"
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "where "
+   },
+   {
+    "text": "E",
+    "i": true
+   },
+   {
+    "text": " is the share of the implementation period elapsed and Λ is the logistic function. If progress were linear, the predicted curve would track the 45-degree line. For the second, I estimate LPMs of "
+   },
+   {
+    "text": "Behind",
+    "i": true
+   },
+   {
+    "text": "ip",
+    "i": true,
+    "sub": true
+   },
+   {
+    "text": " on project-age bins alone and then add indicator type, rescaling, results area, project characteristics and department fixed effects. Comparing the R² of the timing-only model with the full model shows how much of the explainable variation in “behind” is about time; the coefficient on "
+   },
+   {
+    "text": "Outcome",
+    "i": true
+   },
+   {
+    "text": " shows whether the rule penalises welfare measurement holding age constant."
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Inference.",
+    "b": true
+   },
+   {
+    "text": " Results within a project share design, team and context, so all standard errors are clustered by project (Cameron and Miller 2015); clustering by country is reported as a robustness check. The analysis is descriptive and associational: the tests ask whether the Scorecard’s evidence has the properties a welfare-anchored system would need, not what causes project success."
+   }
+  ]
+ },
+ {
+  "type": "h2",
+  "runs": [
+   {
+    "text": "5. Results"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "h3",
+  "runs": [
+   {
+    "text": "5.1 Test 1: the Scorecard mostly counts reach"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Figure 1 and Table 3 show the composition of the evidence. Across all five results areas, 62% of contributing indicators count people or firms reached, 16% are outputs, and 14% measure a welfare outcome. The hand-coded samples give a very similar picture: 69% reach and 14% outcome (95% CI 11%–17%). Water, sanitation and hygiene results contain essentially no outcome indicators—every result counts people provided with a service—while economic opportunity and health have the highest outcome shares, reflecting indicators such as jobs created, sales or income gains, and vaccination or service-coverage rates."
+   }
+  ]
+ },
+ {
+  "type": "figure",
+  "label": "Figure 1",
+  "caption": [
+   {
+    "text": "What the Scorecard counts, by results area"
+   }
+  ],
+  "note": [
+   {
+    "text": "Share of the 3,617 project indicators feeding each Scorecard results area, by results-chain type. Source: author’s classification of FY25 Scorecard project records."
+   }
+  ],
+  "src": "/home/user/Personal-Website/analysis/welfare-anchor/output/figures/fig1_indicator_types.png",
+  "w": 1950,
+  "h": 1020
+ },
+ {
+  "type": "table",
+  "kind": "simple",
+  "label": "Table 3",
+  "caption": [
+   {
+    "text": "What the Scorecard counts: results-chain type of contributing project indicators"
+   }
+  ],
+  "note": [
+   {
+    "text": "Rule-based classification of the indicator wording (Appendix A). Shares are row percentages."
+   }
+  ],
+  "head": [
+   [
+    {
+     "text": "Scorecard results area"
+    }
+   ],
+   [
+    {
+     "text": "Results"
+    }
+   ],
+   [
+    {
+     "text": "Reach"
+    }
+   ],
+   [
+    {
+     "text": "Output"
+    }
+   ],
+   [
+    {
+     "text": "Outcome"
+    }
+   ],
+   [
+    {
+     "text": "Unclassifiable"
+    }
+   ]
+  ],
+  "rows": [
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Health, nutrition & population"
+      }
+     ],
+     [
+      {
+       "text": "226"
+      }
+     ],
+     [
+      {
+       "text": "71%"
+      }
+     ],
+     [
+      {
+       "text": "2%"
+      }
+     ],
+     [
+      {
+       "text": "22%"
+      }
+     ],
+     [
+      {
+       "text": "5%"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Water, sanitation & hygiene"
+      }
+     ],
+     [
+      {
+       "text": "396"
+      }
+     ],
+     [
+      {
+       "text": "94%"
+      }
+     ],
+     [
+      {
+       "text": "4%"
+      }
+     ],
+     [
+      {
+       "text": "0%"
+      }
+     ],
+     [
+      {
+       "text": "2%"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Gender equality actions"
+      }
+     ],
+     [
+      {
+       "text": "1,725"
+      }
+     ],
+     [
+      {
+       "text": "59%"
+      }
+     ],
+     [
+      {
+       "text": "19%"
+      }
+     ],
+     [
+      {
+       "text": "14%"
+      }
+     ],
+     [
+      {
+       "text": "8%"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Economic opportunity"
+      }
+     ],
+     [
+      {
+       "text": "967"
+      }
+     ],
+     [
+      {
+       "text": "50%"
+      }
+     ],
+     [
+      {
+       "text": "21%"
+      }
+     ],
+     [
+      {
+       "text": "22%"
+      }
+     ],
+     [
+      {
+       "text": "8%"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Financial services"
+      }
+     ],
+     [
+      {
+       "text": "303"
+      }
+     ],
+     [
+      {
+       "text": "75%"
+      }
+     ],
+     [
+      {
+       "text": "8%"
+      }
+     ],
+     [
+      {
+       "text": "8%"
+      }
+     ],
+     [
+      {
+       "text": "10%"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "All results areas"
+      }
+     ],
+     [
+      {
+       "text": "3,617"
+      }
+     ],
+     [
+      {
+       "text": "62%"
+      }
+     ],
+     [
+      {
+       "text": "16%"
+      }
+     ],
+     [
+      {
+       "text": "14%"
+      }
+     ],
+     [
+      {
+       "text": "7%"
+      }
+     ]
+    ],
+    "span": 1
+   }
+  ]
+ },
+ {
+  "type": "table",
+  "kind": "simple",
+  "label": "Table 4",
+  "caption": [
+   {
+    "text": "Validation of the indicator classification"
+   }
+  ],
+  "note": [
+   {
+    "text": "Held-out test set of 200 randomly drawn results coded by hand without sight of the rule labels; overall agreement 83.5%, Cohen’s κ = 0.66. A separate development set of 200 results was used to refine the rules and is not used for these statistics. The last column pools both hand-coded sets. 95% Wilson intervals in brackets."
+   }
+  ],
+  "head": [
+   [
+    {
+     "text": "Type"
+    }
+   ],
+   [
+    {
+     "text": "Precision (test set)"
+    }
+   ],
+   [
+    {
+     "text": "Recall (test set)"
+    }
+   ],
+   [
+    {
+     "text": "Rule-based share, all results"
+    }
+   ],
+   [
+    {
+     "text": "Hand-coded share (n = 400)"
+    }
+   ]
+  ],
+  "rows": [
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Reach"
+      }
+     ],
+     [
+      {
+       "text": "0.92 [0.86, 0.95]"
+      }
+     ],
+     [
+      {
+       "text": "0.90 [0.84, 0.94]"
+      }
+     ],
+     [
+      {
+       "text": "62.4%"
+      }
+     ],
+     [
+      {
+       "text": "68.8% [64.0%, 73.1%]"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Output"
+      }
+     ],
+     [
+      {
+       "text": "0.69 [0.52, 0.81]"
+      }
+     ],
+     [
+      {
+       "text": "0.80 [0.63, 0.90]"
+      }
+     ],
+     [
+      {
+       "text": "15.7%"
+      }
+     ],
+     [
+      {
+       "text": "16.5% [13.2%, 20.5%]"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Outcome"
+      }
+     ],
+     [
+      {
+       "text": "0.89 [0.69, 0.97]"
+      }
+     ],
+     [
+      {
+       "text": "0.57 [0.39, 0.73]"
+      }
+     ],
+     [
+      {
+       "text": "14.4%"
+      }
+     ],
+     [
+      {
+       "text": "13.8% [10.7%, 17.5%]"
+      }
+     ]
+    ],
+    "span": 1
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "At the project level, 80% of the 1,129 projects contribute no outcome indicator to the Scorecard, and 54% contribute only reach indicators. For most projects, then, the Scorecard can say how many people were touched but not whether anything changed for them."
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Table 5 shows that these differences are systematic. Relative to health, WASH results are 23.7 percentage points less likely to be outcome indicators, financial-services results 16.0 points less likely, and gender-equality actions 8.6 points less likely, holding region, fragility, income group, financing, instrument and size constant. Project characteristics other than the results area explain little. Logit average marginal effects are almost identical (for example -16.1 points for financial services). Importantly, there is no sign that the new Scorecard shifted design toward welfare measurement: projects approved in FY25, after its adoption, are 5.7 points more likely to use outcome indicators than pre-FY20 projects (p = 0.07), and the difference falls to 3.0 points (p = 0.33) with department fixed effects. The hand-coded subsample tells the same story (Appendix Table A1)."
+   }
+  ]
+ },
+ {
+  "type": "table",
+  "kind": "reg",
+  "label": "Table 5",
+  "caption": [
+   {
+    "text": "Test 1 — Which results are outcome indicators? Linear probability models"
+   }
+  ],
+  "note": [
+   {
+    "text": "Dependent variable = 1 if the project indicator measures a welfare outcome. Standard errors clustered by project in parentheses. *** p<0.01, ** p<0.05, * p<0.10. A logit version gives the same pattern (average marginal effects in the text); no WASH result is an outcome indicator, so WASH is perfectly predicted in the logit."
+   }
+  ],
+  "head": [
+   [],
+   [
+    {
+     "text": "(1)"
+    }
+   ],
+   [
+    {
+     "text": "(2)"
+    }
+   ],
+   [
+    {
+     "text": "(3)"
+    }
+   ]
+  ],
+  "rows": [
+   {
+    "cls": "grp",
+    "cells": [
+     [
+      {
+       "text": "Results area (base: health, nutrition & population)"
+      }
+     ]
+    ],
+    "span": 4
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "WASH"
+      }
+     ],
+     [
+      {
+       "text": "-0.217***"
+      }
+     ],
+     [
+      {
+       "text": "-0.237***"
+      }
+     ],
+     [
+      {
+       "text": "-0.296***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.038)"
+      }
+     ],
+     [
+      {
+       "text": "(0.037)"
+      }
+     ],
+     [
+      {
+       "text": "(0.041)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Gender equality actions"
+      }
+     ],
+     [
+      {
+       "text": "-0.084**"
+      }
+     ],
+     [
+      {
+       "text": "-0.086**"
+      }
+     ],
+     [
+      {
+       "text": "-0.143***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.038)"
+      }
+     ],
+     [
+      {
+       "text": "(0.036)"
+      }
+     ],
+     [
+      {
+       "text": "(0.034)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Economic opportunity"
+      }
+     ],
+     [
+      {
+       "text": "-0.008"
+      }
+     ],
+     [
+      {
+       "text": "-0.016"
+      }
+     ],
+     [
+      {
+       "text": "-0.099***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.042)"
+      }
+     ],
+     [
+      {
+       "text": "(0.039)"
+      }
+     ],
+     [
+      {
+       "text": "(0.035)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Financial services"
+      }
+     ],
+     [
+      {
+       "text": "-0.146***"
+      }
+     ],
+     [
+      {
+       "text": "-0.160***"
+      }
+     ],
+     [
+      {
+       "text": "-0.238***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.042)"
+      }
+     ],
+     [
+      {
+       "text": "(0.040)"
+      }
+     ],
+     [
+      {
+       "text": "(0.041)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "grp",
+    "cells": [
+     [
+      {
+       "text": "Approval cohort (base: FY19 or earlier)"
+      }
+     ]
+    ],
+    "span": 4
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Approved FY20-21"
+      }
+     ],
+     [
+      {
+       "text": "0.068**"
+      }
+     ],
+     [
+      {
+       "text": "0.075**"
+      }
+     ],
+     [
+      {
+       "text": "0.068**"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.035)"
+      }
+     ],
+     [
+      {
+       "text": "(0.030)"
+      }
+     ],
+     [
+      {
+       "text": "(0.026)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Approved FY22-23"
+      }
+     ],
+     [
+      {
+       "text": "0.037"
+      }
+     ],
+     [
+      {
+       "text": "0.035"
+      }
+     ],
+     [
+      {
+       "text": "0.014"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.024)"
+      }
+     ],
+     [
+      {
+       "text": "(0.024)"
+      }
+     ],
+     [
+      {
+       "text": "(0.023)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Approved FY24"
+      }
+     ],
+     [
+      {
+       "text": "0.025"
+      }
+     ],
+     [
+      {
+       "text": "0.024"
+      }
+     ],
+     [
+      {
+       "text": "-0.002"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.036)"
+      }
+     ],
+     [
+      {
+       "text": "(0.033)"
+      }
+     ],
+     [
+      {
+       "text": "(0.031)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Approved FY25 (new Scorecard)"
+      }
+     ],
+     [
+      {
+       "text": "0.061*"
+      }
+     ],
+     [
+      {
+       "text": "0.057*"
+      }
+     ],
+     [
+      {
+       "text": "0.030"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.032)"
+      }
+     ],
+     [
+      {
+       "text": "(0.031)"
+      }
+     ],
+     [
+      {
+       "text": "(0.031)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "grp",
+    "cells": [
+     [
+      {
+       "text": "Project characteristics"
+      }
+     ]
+    ],
+    "span": 4
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "FCV country"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "-0.035"
+      }
+     ],
+     [
+      {
+       "text": "-0.031"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [],
+     [
+      {
+       "text": "(0.022)"
+      }
+     ],
+     [
+      {
+       "text": "(0.021)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "IDA-financed"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "-0.015"
+      }
+     ],
+     [
+      {
+       "text": "-0.023"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [],
+     [
+      {
+       "text": "(0.039)"
+      }
+     ],
+     [
+      {
+       "text": "(0.035)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Log commitment"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "-0.002"
+      }
+     ],
+     [
+      {
+       "text": "-0.001"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [],
+     [
+      {
+       "text": "(0.008)"
+      }
+     ],
+     [
+      {
+       "text": "(0.008)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "stat",
+    "cells": [
+     [
+      {
+       "text": "Region, income group, instrument"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "Yes"
+      }
+     ],
+     [
+      {
+       "text": "Yes"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "stat",
+    "cells": [
+     [
+      {
+       "text": "Lead department fixed effects"
+      }
+     ],
+     [],
+     [],
+     [
+      {
+       "text": "Yes"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "stat",
+    "cells": [
+     [
+      {
+       "text": "Observations (results)"
+      }
+     ],
+     [
+      {
+       "text": "3,617"
+      }
+     ],
+     [
+      {
+       "text": "3,617"
+      }
+     ],
+     [
+      {
+       "text": "3,617"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "stat",
+    "cells": [
+     [
+      {
+       "text": "Clusters (projects)"
+      }
+     ],
+     [
+      {
+       "text": "1,129"
+      }
+     ],
+     [
+      {
+       "text": "1,129"
+      }
+     ],
+     [
+      {
+       "text": "1,129"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "stat",
+    "cells": [
+     [
+      {
+       "text": "R²"
+      }
+     ],
+     [
+      {
+       "text": "0.041"
+      }
+     ],
+     [
+      {
+       "text": "0.065"
+      }
+     ],
+     [
+      {
+       "text": "0.095"
+      }
+     ]
+    ],
+    "span": 1
+   }
+  ]
+ },
+ {
+  "type": "h3",
+  "runs": [
+   {
+    "text": "5.2 Test 2: much of the reported total is constructed"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Three features of the data show how far the Scorecard’s numbers are built rather than measured (Table 6, Figure 2). First, 91% of results start from a zero baseline, so they record cumulative contact with the project rather than change against a counterfactual or starting level. Second, 10% of results are rescaled by a conversion factor, but these account for 29% of the 803 million achieved “units” reported across the five areas. In health the figure is 63%: most of the reported number of people receiving health services is derived by multiplying project indicators—often coverage percentages—by population or household factors. Among indicators measured in percentages, 49% are converted into counts of people in this way. To take one example, a health project’s count of facilities “constructed, renovated, and/or equipped” (137 against a target of 119) enters the Scorecard as 1.37 million people receiving health services, through a conversion factor of 10,000 people per facility (project P144893). Third, 13% of results are masked to avoid double counting, a sensible correction that also signals how much overlap the aggregation must manage."
+   }
+  ]
+ },
+ {
+  "type": "figure",
+  "label": "Figure 2",
+  "caption": [
+   {
+    "text": "Constructed figures in the Scorecard, by results area"
+   }
+  ],
+  "note": [
+   {
+    "text": "Left: share of the reported achieved total that comes from project figures multiplied by a conversion factor. Right: share of project × sub-indicator pairs whose female figure is the total multiplied by a fixed share."
+   }
+  ],
+  "src": "/home/user/Personal-Website/analysis/welfare-anchor/output/figures/fig2_constructed.png",
+  "w": 1950,
+  "h": 960
+ },
+ {
+  "type": "table",
+  "kind": "simple",
+  "label": "Table 6",
+  "caption": [
+   {
+    "text": "Test 2 — How Scorecard figures are constructed"
+   }
+  ],
+  "note": [
+   {
+    "text": "Results not masked for double counting (N = 3,132). “Rescaled”: the project figure is multiplied by a conversion factor (positive and different from 1) to express it in the Scorecard unit. Last column: project × sub-indicator pairs with a female figure (N = 1,734)."
+   }
+  ],
+  "head": [
+   [
+    {
+     "text": "Scorecard results area"
+    }
+   ],
+   [
+    {
+     "text": "Results"
+    }
+   ],
+   [
+    {
+     "text": "Zero baseline"
+    }
+   ],
+   [
+    {
+     "text": "Rescaled"
+    }
+   ],
+   [
+    {
+     "text": "Share of reported total from rescaled results"
+    }
+   ],
+   [
+    {
+     "text": "Female figure = fixed share of total"
+    }
+   ]
+  ],
+  "rows": [
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Health, nutrition & population"
+      }
+     ],
+     [
+      {
+       "text": "103"
+      }
+     ],
+     [
+      {
+       "text": "65%"
+      }
+     ],
+     [
+      {
+       "text": "52%"
+      }
+     ],
+     [
+      {
+       "text": "63%"
+      }
+     ],
+     [
+      {
+       "text": "55%"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Water, sanitation & hygiene"
+      }
+     ],
+     [
+      {
+       "text": "374"
+      }
+     ],
+     [
+      {
+       "text": "97%"
+      }
+     ],
+     [
+      {
+       "text": "14%"
+      }
+     ],
+     [
+      {
+       "text": "11%"
+      }
+     ],
+     [
+      {
+       "text": "53%"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Gender equality actions"
+      }
+     ],
+     [
+      {
+       "text": "1,552"
+      }
+     ],
+     [
+      {
+       "text": "90%"
+      }
+     ],
+     [
+      {
+       "text": "7%"
+      }
+     ],
+     [
+      {
+       "text": "3%"
+      }
+     ],
+     [
+      {
+       "text": "14%"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Economic opportunity"
+      }
+     ],
+     [
+      {
+       "text": "882"
+      }
+     ],
+     [
+      {
+       "text": "94%"
+      }
+     ],
+     [
+      {
+       "text": "9%"
+      }
+     ],
+     [
+      {
+       "text": "16%"
+      }
+     ],
+     [
+      {
+       "text": "21%"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Financial services"
+      }
+     ],
+     [
+      {
+       "text": "221"
+      }
+     ],
+     [
+      {
+       "text": "88%"
+      }
+     ],
+     [
+      {
+       "text": "13%"
+      }
+     ],
+     [
+      {
+       "text": "13%"
+      }
+     ],
+     [
+      {
+       "text": "4%"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "All results areas"
+      }
+     ],
+     [
+      {
+       "text": "3,132"
+      }
+     ],
+     [
+      {
+       "text": "91%"
+      }
+     ],
+     [
+      {
+       "text": "10%"
+      }
+     ],
+     [
+      {
+       "text": "29%"
+      }
+     ],
+     [
+      {
+       "text": "22%"
+      }
+     ]
+    ],
+    "span": 1
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Gender disaggregation shows the same pattern more sharply. Of 1,734 project × sub-indicator pairs with a female figure, 387 (22%) are fixed-share constructions, 665 report no progress yet, 349 concern women-only interventions and 91 report an identical planned and achieved share. Only 235 (14%) can show whether women were reached in the proportion planned. Fixed-share figures dominate in health (55%) and WASH (53%), the two areas where the Scorecard reports the largest numbers of women reached."
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Table 7 shows that the construction of figures is mainly a property of the results area rather than of the country or project. There is one encouraging trend: projects approved in FY24 and FY25 are 9.9 and 7.9 percentage points less likely than pre-FY20 projects to report fixed-share female figures, and FY25 projects are 9.8 points less likely to be rescaled. Percentage-unit indicators are 31.0 points more likely to be rescaled, as expected."
+   }
+  ]
+ },
+ {
+  "type": "table",
+  "kind": "reg",
+  "label": "Table 7",
+  "caption": [
+   {
+    "text": "Test 2 — Which figures are constructed rather than measured? Linear probability models"
+   }
+  ],
+  "note": [
+   {
+    "text": "Column (1): project × Scorecard sub-indicator pairs with a female figure. Column (2): results not masked for double counting. Standard errors clustered by project. *** p<0.01, ** p<0.05, * p<0.10."
+   }
+  ],
+  "head": [
+   [],
+   [
+    {
+     "text": "(1) Female figure is a fixed share"
+    }
+   ],
+   [
+    {
+     "text": "(2) Result is rescaled"
+    }
+   ]
+  ],
+  "rows": [
+   {
+    "cls": "grp",
+    "cells": [
+     [
+      {
+       "text": "Results area (base: health, nutrition & population)"
+      }
+     ]
+    ],
+    "span": 3
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "WASH"
+      }
+     ],
+     [
+      {
+       "text": "-0.033"
+      }
+     ],
+     [
+      {
+       "text": "-0.295***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.068)"
+      }
+     ],
+     [
+      {
+       "text": "(0.059)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Gender equality actions"
+      }
+     ],
+     [
+      {
+       "text": "-0.398***"
+      }
+     ],
+     [
+      {
+       "text": "-0.404***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.062)"
+      }
+     ],
+     [
+      {
+       "text": "(0.051)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Economic opportunity"
+      }
+     ],
+     [
+      {
+       "text": "-0.337***"
+      }
+     ],
+     [
+      {
+       "text": "-0.370***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.062)"
+      }
+     ],
+     [
+      {
+       "text": "(0.054)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Financial services"
+      }
+     ],
+     [
+      {
+       "text": "-0.504***"
+      }
+     ],
+     [
+      {
+       "text": "-0.341***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.062)"
+      }
+     ],
+     [
+      {
+       "text": "(0.058)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "grp",
+    "cells": [
+     [
+      {
+       "text": "Indicator"
+      }
+     ]
+    ],
+    "span": 3
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Unit is a percentage"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "0.310***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [],
+     [
+      {
+       "text": "(0.056)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Output indicator"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "0.073**"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [],
+     [
+      {
+       "text": "(0.030)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Outcome indicator"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "0.039*"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [],
+     [
+      {
+       "text": "(0.024)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "grp",
+    "cells": [
+     [
+      {
+       "text": "Approval cohort (base: FY19 or earlier)"
+      }
+     ]
+    ],
+    "span": 3
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Approved FY20-21"
+      }
+     ],
+     [
+      {
+       "text": "-0.043"
+      }
+     ],
+     [
+      {
+       "text": "-0.039"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.029)"
+      }
+     ],
+     [
+      {
+       "text": "(0.045)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Approved FY22-23"
+      }
+     ],
+     [
+      {
+       "text": "-0.062**"
+      }
+     ],
+     [
+      {
+       "text": "-0.054"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.027)"
+      }
+     ],
+     [
+      {
+       "text": "(0.038)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Approved FY24"
+      }
+     ],
+     [
+      {
+       "text": "-0.099***"
+      }
+     ],
+     [
+      {
+       "text": "-0.014"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.038)"
+      }
+     ],
+     [
+      {
+       "text": "(0.057)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Approved FY25 (new Scorecard)"
+      }
+     ],
+     [
+      {
+       "text": "-0.079**"
+      }
+     ],
+     [
+      {
+       "text": "-0.098***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.031)"
+      }
+     ],
+     [
+      {
+       "text": "(0.034)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "grp",
+    "cells": [
+     [
+      {
+       "text": "Project characteristics"
+      }
+     ]
+    ],
+    "span": 3
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "FCV country"
+      }
+     ],
+     [
+      {
+       "text": "0.003"
+      }
+     ],
+     [
+      {
+       "text": "0.027"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.025)"
+      }
+     ],
+     [
+      {
+       "text": "(0.027)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "IDA-financed"
+      }
+     ],
+     [
+      {
+       "text": "0.001"
+      }
+     ],
+     [
+      {
+       "text": "0.050*"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.029)"
+      }
+     ],
+     [
+      {
+       "text": "(0.027)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Log commitment"
+      }
+     ],
+     [
+      {
+       "text": "0.011"
+      }
+     ],
+     [
+      {
+       "text": "0.040***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.010)"
+      }
+     ],
+     [
+      {
+       "text": "(0.013)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "stat",
+    "cells": [
+     [
+      {
+       "text": "Region, income group, instrument"
+      }
+     ],
+     [
+      {
+       "text": "Yes"
+      }
+     ],
+     [
+      {
+       "text": "Yes"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "stat",
+    "cells": [
+     [
+      {
+       "text": "Observations"
+      }
+     ],
+     [
+      {
+       "text": "1,734"
+      }
+     ],
+     [
+      {
+       "text": "3,132"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "stat",
+    "cells": [
+     [
+      {
+       "text": "R²"
+      }
+     ],
+     [
+      {
+       "text": "0.145"
+      }
+     ],
+     [
+      {
+       "text": "0.195"
+      }
+     ]
+    ],
+    "span": 1
+   }
+  ]
+ },
+ {
+  "type": "h3",
+  "runs": [
+   {
+    "text": "5.3 Test 3: a linear on-track rule measures time and penalises welfare measurement"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Under the linear rule, 57% of the 1,709 judgeable results are behind schedule. Figure 4 shows that this share falls from 80% for projects less than three years old to 68%, 47% and 32% in successive age groups. Age bins alone explain an R² of 0.125, 48% of the 0.260 explained by the full model with design, project characteristics and department fixed effects (Table 8)."
+   }
+  ]
+ },
+ {
+  "type": "figure",
+  "label": "Figure 4",
+  "caption": [
+   {
+    "text": "Share of results rated “behind” falls steeply with project age"
+   }
+  ],
+  "note": [
+   {
+    "text": "N = 1,709 results in 730 projects. Error bars: 95% Wilson intervals."
+   }
+  ],
+  "src": "/home/user/Personal-Website/analysis/welfare-anchor/output/figures/fig4_behind_by_age.png",
+  "w": 1950,
+  "h": 960
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "The reason is visible in Figure 3. Progress does not accumulate in a straight line: the fractional logit implies that a typical reach result has achieved about 25% of its target at the midpoint of implementation, not 50%, and an outcome result about 16%. Results follow an S-shaped path in which early years are spent on procurement, works and institutional set-up. A benchmark that expects proportional progress will therefore flag most young projects as failing, whatever their eventual performance."
+   }
+  ]
+ },
+ {
+  "type": "figure",
+  "label": "Figure 3",
+  "caption": [
+   {
+    "text": "Results accumulate along a curve, not a straight line"
+   }
+  ],
+  "note": [
+   {
+    "text": "Lines: average predicted share of target achieved from the fractional logit in Table 8, column (1), evaluated over the estimation sample. Dots: binned means (size proportional to the number of results). Dashed line: the linear benchmark implied by comparing cumulative progress with elapsed time."
+   }
+  ],
+  "src": "/home/user/Personal-Website/analysis/welfare-anchor/output/figures/fig3_delivery_curve.png",
+  "w": 1950,
+  "h": 1140
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "The most consequential finding is the coefficient on outcome indicators. Holding project age, rescaling, results area, region, fragility, income group, instrument, size and lead department constant, outcome indicators are 13.3 percentage points more likely to be rated behind than reach indicators (Table 8, column 5; 16.5 points without department fixed effects). In the fractional logit their progress is significantly lower (-0.59 log-odds). Outcomes come later in the results chain, so a time-proportional rule systematically makes them look worse. Rescaled figures move the other way: they are 11.5 points less likely to be behind, and their progress is higher (0.65 log-odds), consistent with constructed numbers flattering performance. Combined with the Scorecard’s role in cascading targets, this creates exactly the multitask incentive that Holmström and Milgrom (1991) describe: teams that choose to measure welfare are penalised on the dimension that is monitored."
+   }
+  ]
+ },
+ {
+  "type": "table",
+  "kind": "reg",
+  "label": "Table 8",
+  "caption": [
+   {
+    "text": "Test 3 — Progress and the “behind” judgement"
+   }
+  ],
+  "note": [
+   {
+    "text": "Column (1): fractional logit (Papke and Wooldridge 1996) of the share of target achieved (capped at 1), coefficients in log-odds. Columns (2)–(5): linear probability models; “behind” = share of target achieved below share of implementation period elapsed minus 10 percentage points. Base age category: under 3 years. Standard errors clustered by project. *** p<0.01, ** p<0.05, * p<0.10."
+   }
+  ],
+  "head": [
+   [],
+   [
+    {
+     "text": "(1) Progress"
+    },
+    {
+     "br": true
+    },
+    {
+     "text": "frac. logit",
+     "small": true
+    }
+   ],
+   [
+    {
+     "text": "(2) Behind"
+    }
+   ],
+   [
+    {
+     "text": "(3) Behind"
+    }
+   ],
+   [
+    {
+     "text": "(4) Behind"
+    }
+   ],
+   [
+    {
+     "text": "(5) Behind"
+    }
+   ]
+  ],
+  "rows": [
+   {
+    "cls": "grp",
+    "cells": [
+     [
+      {
+       "text": "Timing"
+      }
+     ]
+    ],
+    "span": 6
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Share of period elapsed"
+      }
+     ],
+     [
+      {
+       "text": "3.475*"
+      }
+     ],
+     [],
+     [],
+     [],
+     []
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(1.940)"
+      }
+     ],
+     [],
+     [],
+     [],
+     []
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Share elapsed, squared"
+      }
+     ],
+     [
+      {
+       "text": "2.236"
+      }
+     ],
+     [],
+     [],
+     [],
+     []
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(1.471)"
+      }
+     ],
+     [],
+     [],
+     [],
+     []
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "3–5 years since approval"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "-0.115***"
+      }
+     ],
+     [
+      {
+       "text": "-0.106**"
+      }
+     ],
+     [
+      {
+       "text": "-0.139***"
+      }
+     ],
+     [
+      {
+       "text": "-0.139***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [],
+     [
+      {
+       "text": "(0.043)"
+      }
+     ],
+     [
+      {
+       "text": "(0.042)"
+      }
+     ],
+     [
+      {
+       "text": "(0.041)"
+      }
+     ],
+     [
+      {
+       "text": "(0.039)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "5–7 years"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "-0.327***"
+      }
+     ],
+     [
+      {
+       "text": "-0.325***"
+      }
+     ],
+     [
+      {
+       "text": "-0.358***"
+      }
+     ],
+     [
+      {
+       "text": "-0.344***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [],
+     [
+      {
+       "text": "(0.053)"
+      }
+     ],
+     [
+      {
+       "text": "(0.050)"
+      }
+     ],
+     [
+      {
+       "text": "(0.047)"
+      }
+     ],
+     [
+      {
+       "text": "(0.047)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "7+ years"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "-0.480***"
+      }
+     ],
+     [
+      {
+       "text": "-0.487***"
+      }
+     ],
+     [
+      {
+       "text": "-0.511***"
+      }
+     ],
+     [
+      {
+       "text": "-0.496***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [],
+     [
+      {
+       "text": "(0.048)"
+      }
+     ],
+     [
+      {
+       "text": "(0.053)"
+      }
+     ],
+     [
+      {
+       "text": "(0.052)"
+      }
+     ],
+     [
+      {
+       "text": "(0.049)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "grp",
+    "cells": [
+     [
+      {
+       "text": "What is measured (base: reach indicator)"
+      }
+     ]
+    ],
+    "span": 6
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Output indicator"
+      }
+     ],
+     [
+      {
+       "text": "-0.191"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "0.102"
+      }
+     ],
+     [
+      {
+       "text": "0.099"
+      }
+     ],
+     [
+      {
+       "text": "0.087"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.180)"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "(0.065)"
+      }
+     ],
+     [
+      {
+       "text": "(0.061)"
+      }
+     ],
+     [
+      {
+       "text": "(0.064)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Outcome indicator"
+      }
+     ],
+     [
+      {
+       "text": "-0.595***"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "0.175***"
+      }
+     ],
+     [
+      {
+       "text": "0.165***"
+      }
+     ],
+     [
+      {
+       "text": "0.133***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.197)"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "(0.051)"
+      }
+     ],
+     [
+      {
+       "text": "(0.045)"
+      }
+     ],
+     [
+      {
+       "text": "(0.043)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Rescaled figure"
+      }
+     ],
+     [
+      {
+       "text": "0.648***"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "-0.085*"
+      }
+     ],
+     [
+      {
+       "text": "-0.129***"
+      }
+     ],
+     [
+      {
+       "text": "-0.115***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.191)"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "(0.050)"
+      }
+     ],
+     [
+      {
+       "text": "(0.042)"
+      }
+     ],
+     [
+      {
+       "text": "(0.039)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "grp",
+    "cells": [
+     [
+      {
+       "text": "Results area (base: health, nutrition & population)"
+      }
+     ]
+    ],
+    "span": 6
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "WASH"
+      }
+     ],
+     [
+      {
+       "text": "-2.168***"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "0.483***"
+      }
+     ],
+     [
+      {
+       "text": "0.462***"
+      }
+     ],
+     [
+      {
+       "text": "0.339***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.304)"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "(0.068)"
+      }
+     ],
+     [
+      {
+       "text": "(0.070)"
+      }
+     ],
+     [
+      {
+       "text": "(0.103)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Gender equality actions"
+      }
+     ],
+     [
+      {
+       "text": "-1.044***"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "0.248***"
+      }
+     ],
+     [
+      {
+       "text": "0.233***"
+      }
+     ],
+     [
+      {
+       "text": "0.162**"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.278)"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "(0.061)"
+      }
+     ],
+     [
+      {
+       "text": "(0.061)"
+      }
+     ],
+     [
+      {
+       "text": "(0.076)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Economic opportunity"
+      }
+     ],
+     [
+      {
+       "text": "-1.325***"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "0.313***"
+      }
+     ],
+     [
+      {
+       "text": "0.299***"
+      }
+     ],
+     [
+      {
+       "text": "0.206**"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.280)"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "(0.063)"
+      }
+     ],
+     [
+      {
+       "text": "(0.063)"
+      }
+     ],
+     [
+      {
+       "text": "(0.085)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Financial services"
+      }
+     ],
+     [
+      {
+       "text": "-0.838**"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "0.239***"
+      }
+     ],
+     [
+      {
+       "text": "0.228***"
+      }
+     ],
+     [
+      {
+       "text": "0.178*"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.350)"
+      }
+     ],
+     [],
+     [
+      {
+       "text": "(0.076)"
+      }
+     ],
+     [
+      {
+       "text": "(0.076)"
+      }
+     ],
+     [
+      {
+       "text": "(0.098)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "grp",
+    "cells": [
+     [
+      {
+       "text": "Project characteristics"
+      }
+     ]
+    ],
+    "span": 6
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "FCV country"
+      }
+     ],
+     [
+      {
+       "text": "-0.212"
+      }
+     ],
+     [],
+     [],
+     [
+      {
+       "text": "0.061"
+      }
+     ],
+     [
+      {
+       "text": "0.075*"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.177)"
+      }
+     ],
+     [],
+     [],
+     [
+      {
+       "text": "(0.042)"
+      }
+     ],
+     [
+      {
+       "text": "(0.041)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Log commitment"
+      }
+     ],
+     [
+      {
+       "text": "0.136*"
+      }
+     ],
+     [],
+     [],
+     [
+      {
+       "text": "0.001"
+      }
+     ],
+     [
+      {
+       "text": "0.016"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.074)"
+      }
+     ],
+     [],
+     [],
+     [
+      {
+       "text": "(0.016)"
+      }
+     ],
+     [
+      {
+       "text": "(0.017)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "stat",
+    "cells": [
+     [
+      {
+       "text": "Region, income group, instrument"
+      }
+     ],
+     [
+      {
+       "text": "Yes"
+      }
+     ],
+     [],
+     [],
+     [
+      {
+       "text": "Yes"
+      }
+     ],
+     [
+      {
+       "text": "Yes"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "stat",
+    "cells": [
+     [
+      {
+       "text": "Lead department fixed effects"
+      }
+     ],
+     [],
+     [],
+     [],
+     [],
+     [
+      {
+       "text": "Yes"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "stat",
+    "cells": [
+     [
+      {
+       "text": "Observations (results)"
+      }
+     ],
+     [
+      {
+       "text": "1,709"
+      }
+     ],
+     [
+      {
+       "text": "1,709"
+      }
+     ],
+     [
+      {
+       "text": "1,709"
+      }
+     ],
+     [
+      {
+       "text": "1,709"
+      }
+     ],
+     [
+      {
+       "text": "1,709"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "stat",
+    "cells": [
+     [
+      {
+       "text": "Clusters (projects)"
+      }
+     ],
+     [
+      {
+       "text": "730"
+      }
+     ],
+     [
+      {
+       "text": "730"
+      }
+     ],
+     [
+      {
+       "text": "730"
+      }
+     ],
+     [
+      {
+       "text": "730"
+      }
+     ],
+     [
+      {
+       "text": "730"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "stat",
+    "cells": [
+     [
+      {
+       "text": "R²"
+      }
+     ],
+     [
+      {
+       "text": "–"
+      }
+     ],
+     [
+      {
+       "text": "0.125"
+      }
+     ],
+     [
+      {
+       "text": "0.184"
+      }
+     ],
+     [
+      {
+       "text": "0.226"
+      }
+     ],
+     [
+      {
+       "text": "0.260"
+      }
+     ]
+    ],
+    "span": 1
+   }
+  ]
+ },
+ {
+  "type": "h3",
+  "runs": [
+   {
+    "text": "5.4 Robustness"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Table 9 shows that the two central Test 3 results hold across alternative definitions and samples. The outcome-indicator penalty ranges from 10.1 to 13.6 percentage points across thresholds of 0 and 20 points, active projects only, excluding rescaled results, and clustering by country, and is significant in every specification; the logit gives the same sign and significance. The age gradient is large and precise in all specifications. For Test 1, re-estimating on the 400 hand-coded results (Appendix Table A1) reproduces the WASH gap and the absence of a post-Scorecard shift. Misclassification of a binary dependent variable biases LPM coefficients toward zero when it is unrelated to the regressors (Hausman, Abrevaya and Scott-Morton 1998), so the Test 1 differences are, if anything, understated."
+   }
+  ]
+ },
+ {
+  "type": "table",
+  "kind": "simple",
+  "label": "Table 9",
+  "caption": [
+   {
+    "text": "Robustness of the Test 3 results"
+   }
+  ],
+  "note": [
+   {
+    "text": "Each row re-estimates column (5) of Table 8 with one change. Thresholds redefine “behind” as progress below elapsed share (0 pp) or elapsed share minus 20 pp. The logit omits department fixed effects. Clustered standard errors in parentheses. *** p<0.01, ** p<0.05, * p<0.10."
+   }
+  ],
+  "head": [
+   [
+    {
+     "text": "Specification"
+    }
+   ],
+   [
+    {
+     "text": "Outcome indicator"
+    }
+   ],
+   [
+    {
+     "text": "7+ years since approval"
+    }
+   ],
+   [
+    {
+     "text": "N"
+    }
+   ]
+  ],
+  "rows": [
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Baseline (Table 8, column 5)"
+      }
+     ],
+     [
+      {
+       "text": "0.133*** (0.043)"
+      }
+     ],
+     [
+      {
+       "text": "-0.496*** (0.049)"
+      }
+     ],
+     [
+      {
+       "text": "1,709"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Threshold 0 pp"
+      }
+     ],
+     [
+      {
+       "text": "0.101** (0.042)"
+      }
+     ],
+     [
+      {
+       "text": "-0.463*** (0.050)"
+      }
+     ],
+     [
+      {
+       "text": "1,709"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Threshold 20 pp"
+      }
+     ],
+     [
+      {
+       "text": "0.102** (0.044)"
+      }
+     ],
+     [
+      {
+       "text": "-0.559*** (0.047)"
+      }
+     ],
+     [
+      {
+       "text": "1,709"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Active projects only"
+      }
+     ],
+     [
+      {
+       "text": "0.119** (0.046)"
+      }
+     ],
+     [
+      {
+       "text": "-0.440*** (0.063)"
+      }
+     ],
+     [
+      {
+       "text": "1,262"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Excluding rescaled results"
+      }
+     ],
+     [
+      {
+       "text": "0.136*** (0.048)"
+      }
+     ],
+     [
+      {
+       "text": "-0.518*** (0.052)"
+      }
+     ],
+     [
+      {
+       "text": "1,468"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Clustered by country"
+      }
+     ],
+     [
+      {
+       "text": "0.133*** (0.044)"
+      }
+     ],
+     [
+      {
+       "text": "-0.496*** (0.059)"
+      }
+     ],
+     [
+      {
+       "text": "1,709"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Logit (log-odds)"
+      }
+     ],
+     [
+      {
+       "text": "0.850*** (0.240)"
+      }
+     ],
+     [
+      {
+       "text": "-2.640*** (0.318)"
+      }
+     ],
+     [
+      {
+       "text": "1,709"
+      }
+     ]
+    ],
+    "span": 1
+   }
+  ]
+ },
+ {
+  "type": "h2",
+  "runs": [
+   {
+    "text": "6. Discussion"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Taken together, the three tests suggest that the Scorecard is anchored in reach rather than welfare. That is partly by design: aggregating outcomes across heterogeneous projects is hard, and counts of people served are additive in a way that income gains or mortality reductions are not. The 2024 reform recognised this tension and moved some indicators from access toward use (World Bank 2024b). But the project-level evidence shows how far there is still to go. The numbers that headline the Group’s annual reporting are dominated by cumulative counts from zero baselines; a substantial part of them is produced by conversion factors and assumed shares; and the implicit standard for judging progress rewards counting reach early and penalises measuring welfare."
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Three caveats shape the interpretation. First, reach is not worthless: in WASH, for instance, connecting people to safely managed water is itself close to a welfare outcome, and the Scorecard’s vision indicators track country-level welfare separately. The point is that the "
+   },
+   {
+    "text": "results",
+    "i": true
+   },
+   {
+    "text": " layer, the part attributable to WBG operations, rarely measures change. Second, conversion factors are often reasonable (household size is a sensible way to turn connections into people), but they are undocumented in the public release, so readers cannot tell which totals are counted and which are modelled. Third, the “behind” finding concerns a linear rule that any reader of cumulative progress data implicitly applies; it is not a claim about how WBG managers formally rate projects. The concern is that the same benchmark shapes how teams, managers and the Board read the Scorecard."
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "The findings complement those of the project-performance literature. That literature shows that good monitoring and evaluation is associated with better project outcomes (Raimondo 2016) and that most variation in performance is within countries (Bulman, Kolkma and Kraay 2017). Here too, the results area and indicator choice—design decisions made by teams—explain far more than country characteristics. This means the problem is fixable through the rules that govern what projects report."
+   }
+  ]
+ },
+ {
+  "type": "h2",
+  "runs": [
+   {
+    "text": "7. Recommendations"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Five changes would anchor the Scorecard in welfare without adding new reporting burdens."
+   }
+  ]
+ },
+ {
+  "type": "li",
+  "n": 1,
+  "runs": [
+   {
+    "text": "Publish an outcome-coverage ratio for each results area.",
+    "b": true
+   },
+   {
+    "text": " Alongside each people-level total, report the share of contributing projects that also report at least one outcome indicator for the same beneficiaries (currently 20% of projects overall and none in WASH). Setting a rising floor for this ratio would reward teams for measuring change without redesigning the Scorecard."
+   }
+  ]
+ },
+ {
+  "type": "li",
+  "n": 2,
+  "runs": [
+   {
+    "text": "Flag how every number was built.",
+    "b": true
+   },
+   {
+    "text": " Add a method code to each contributing figure—measured, rescaled, fixed-share disaggregation, zero baseline—and publish totals with and without constructed components. In health, where 63% of the achieved total is rescaled, this single change would materially alter how the headline is read."
+   }
+  ]
+ },
+ {
+  "type": "li",
+  "n": 3,
+  "runs": [
+   {
+    "text": "Count women only when women are counted.",
+    "b": true
+   },
+   {
+    "text": " Report the number of women reached only from directly measured disaggregations, and show estimated figures separately. With 14% of female figures currently able to show whether women were reached as planned, the gender headline mostly restates assumptions."
+   }
+  ]
+ },
+ {
+  "type": "li",
+  "n": 4,
+  "runs": [
+   {
+    "text": "Replace linear benchmarks with empirical trajectories.",
+    "b": true
+   },
+   {
+    "text": " Judge progress against curves estimated from closed projects, by results area and indicator type, rather than against elapsed time. The fractional-logit approach used here is one simple way to do this; it would remove most of the spurious “behind” ratings for young projects."
+   }
+  ]
+ },
+ {
+  "type": "li",
+  "n": 5,
+  "runs": [
+   {
+    "text": "Remove the penalty on outcome indicators.",
+    "b": true
+   },
+   {
+    "text": " When the Scorecard cascades into unit targets, assess outcome indicators against later milestones or give them separate weight, so that choosing to measure welfare does not make a team look worse. IEG’s formative evaluation is well placed to test whether this penalty affects indicator choice in practice."
+   }
+  ]
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "For researchers and evaluators, the most valuable single step would be for the WBG to publish earlier Scorecard cycles in the same format. That would allow trajectories, rather than snapshots, to be analysed, and would make it possible to test whether the 2024 reform changed reporting behaviour."
+   }
+  ]
+ },
+ {
+  "type": "h2",
+  "runs": [
+   {
+    "text": "8. Limitations"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "The analysis uses one Scorecard cycle and is therefore cross-sectional; it cannot follow individual results over time or link them to ex-post ratings. The indicator classification is rule-based and imperfect, although validated on a held-out sample and conservative for outcomes. Some fields—notably conversion factors of zero or missing—are not documented in the public release, and I treat only explicit factors different from one as rescaling. Results masked for double counting are excluded from Tests 2 and 3. The “behind” rule is an analytical construct. Finally, the associations reported here are not causal estimates of the effect of indicator choice on project success; they describe the properties of the evidence that the Scorecard aggregates."
+   }
+  ]
+ },
+ {
+  "type": "h2",
+  "runs": [
+   {
+    "text": "9. Conclusion"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "The FY24–FY30 Scorecard set out to measure outcomes rather than inputs. Its own project-level evidence shows that it mostly measures reach: most contributing indicators count people served, a large share of reported totals is constructed from conversion factors and assumed shares, and the implicit standard for judging progress mostly reflects time while penalising the indicators that measure welfare. None of this requires a new Scorecard. It requires the existing one to be anchored: to report how much of each number is measured, to show whether anything changed for the people counted, and to judge progress against realistic trajectories. Those changes would let the Scorecard do what its designers intended—tell the Group’s shareholders and the public whether lives are improving, not just how many were reached."
+   }
+  ]
+ },
+ {
+  "type": "h2",
+  "runs": [
+   {
+    "text": "References"
+   }
+  ],
+  "pagebreak": true
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Andrews, M., Pritchett, L., and Woolcock, M. (2013). Escaping capability traps through problem driven iterative adaptation (PDIA). "
+   },
+   {
+    "text": "World Development",
+    "i": true
+   },
+   {
+    "text": ", 51, 234–244."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Bevan, G., and Hood, C. (2006). What’s measured is what matters: Targets and gaming in the English public health care system. "
+   },
+   {
+    "text": "Public Administration",
+    "i": true
+   },
+   {
+    "text": ", 84(3), 517–538."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Bulman, D., Kolkma, W., and Kraay, A. (2017). Good countries or good projects? Comparing macro and micro correlates of World Bank and Asian Development Bank project performance. "
+   },
+   {
+    "text": "Review of International Organizations",
+    "i": true
+   },
+   {
+    "text": ", 12(3), 335–363."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Cameron, A. C., and Miller, D. L. (2015). A practitioner’s guide to cluster-robust inference. "
+   },
+   {
+    "text": "Journal of Human Resources",
+    "i": true
+   },
+   {
+    "text": ", 50(2), 317–372."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Campbell, D. T. (1979). Assessing the impact of planned social change. "
+   },
+   {
+    "text": "Evaluation and Program Planning",
+    "i": true
+   },
+   {
+    "text": ", 2(1), 67–90."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Cohen, J. (1960). A coefficient of agreement for nominal scales. "
+   },
+   {
+    "text": "Educational and Psychological Measurement",
+    "i": true
+   },
+   {
+    "text": ", 20(1), 37–46."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Denizer, C., Kaufmann, D., and Kraay, A. (2013). Good countries or good projects? Macro and micro correlates of World Bank project performance. "
+   },
+   {
+    "text": "Journal of Development Economics",
+    "i": true
+   },
+   {
+    "text": ", 105, 288–302."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "González, Á. S. (2026). "
+   },
+   {
+    "text": "The World Bank Cannot Stop Reorganizing Its Private Sector Work: The Missing Welfare Anchor",
+    "i": true
+   },
+   {
+    "text": ". CGD Policy Paper 402. Washington, DC: Center for Global Development."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Hausman, J. A., Abrevaya, J., and Scott-Morton, F. M. (1998). Misclassification of the dependent variable in a discrete-response setting. "
+   },
+   {
+    "text": "Journal of Econometrics",
+    "i": true
+   },
+   {
+    "text": ", 87(2), 239–269."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Holmström, B., and Milgrom, P. (1991). Multitask principal–agent analyses: Incentive contracts, asset ownership, and job design. "
+   },
+   {
+    "text": "Journal of Law, Economics, and Organization",
+    "i": true
+   },
+   {
+    "text": ", 7, 24–52."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Honig, D. (2018). "
+   },
+   {
+    "text": "Navigation by Judgment: Why and When Top-Down Management of Foreign Aid Doesn’t Work",
+    "i": true
+   },
+   {
+    "text": ". New York: Oxford University Press."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Hood, C. (2006). Gaming in Targetworld: The targets approach to managing British public services. "
+   },
+   {
+    "text": "Public Administration Review",
+    "i": true
+   },
+   {
+    "text": ", 66(4), 515–521."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "IEG (Independent Evaluation Group) (2016). "
+   },
+   {
+    "text": "Behind the Mirror: A Report on the Self-Evaluation Systems of the World Bank Group",
+    "i": true
+   },
+   {
+    "text": ". Washington, DC: World Bank."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "IEG (2024). "
+   },
+   {
+    "text": "Results and Performance of the World Bank Group 2024",
+    "i": true
+   },
+   {
+    "text": ". Washington, DC: World Bank."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "IEG (2025). "
+   },
+   {
+    "text": "World Bank Group Scorecard Formative Evaluation: Approach Paper",
+    "i": true
+   },
+   {
+    "text": ". Washington, DC: World Bank, November."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Kilby, C. (2015). Assessing the impact of World Bank preparation on project outcomes. "
+   },
+   {
+    "text": "Journal of Development Economics",
+    "i": true
+   },
+   {
+    "text": ", 115, 111–123."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Narayanaswamy, M. (2021). "
+   },
+   {
+    "text": "What Gets Measured Gets Done: Using a Corporate Scorecard to Drive Greater Investment Impact",
+    "i": true
+   },
+   {
+    "text": ". EM Compass Note 108. Washington, DC: International Finance Corporation."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Natsios, A. (2010). "
+   },
+   {
+    "text": "The Clash of the Counter-bureaucracy and Development",
+    "i": true
+   },
+   {
+    "text": ". CGD Essay. Washington, DC: Center for Global Development."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Papke, L. E., and Wooldridge, J. M. (1996). Econometric methods for fractional response variables with an application to 401(k) plan participation rates. "
+   },
+   {
+    "text": "Journal of Applied Econometrics",
+    "i": true
+   },
+   {
+    "text": ", 11(6), 619–632."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Pritchett, L., Samji, S., and Hammer, J. (2013). "
+   },
+   {
+    "text": "It’s All About MeE: Using Structured Experiential Learning (“e”) to Crawl the Design Space",
+    "i": true
+   },
+   {
+    "text": ". CGD Working Paper 322. Washington, DC: Center for Global Development."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Raimondo, E. (2016). "
+   },
+   {
+    "text": "What Difference Does Good Monitoring and Evaluation Make to World Bank Project Performance?",
+    "i": true
+   },
+   {
+    "text": " Policy Research Working Paper 7726. Washington, DC: World Bank."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "Wilson, E. B. (1927). Probable inference, the law of succession, and statistical inference. "
+   },
+   {
+    "text": "Journal of the American Statistical Association",
+    "i": true
+   },
+   {
+    "text": ", 22(158), 209–212."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "World Bank (2024a). "
+   },
+   {
+    "text": "New World Bank Group Scorecard FY24–FY30: Driving Action, Measuring Results",
+    "i": true
+   },
+   {
+    "text": ". Washington, DC: World Bank Group."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "World Bank (2024b). “World Bank Group Announces New Approach to Measuring Impact.” Press release, April 9, 2024."
+   }
+  ]
+ },
+ {
+  "type": "ref",
+  "runs": [
+   {
+    "text": "World Bank Group (2025). "
+   },
+   {
+    "text": "World Bank Group Scorecard",
+    "i": true
+   },
+   {
+    "text": ", FY25 data release (results as of June 30, 2025). scorecard.worldbank.org."
+   }
+  ]
+ },
+ {
+  "type": "h2",
+  "runs": [
+   {
+    "text": "Appendix"
+   }
+  ],
+  "pagebreak": true
+ },
+ {
+  "type": "h3",
+  "runs": [
+   {
+    "text": "Appendix A. Classification rules"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "Indicator wording is lower-cased and stripped of ID prefixes and numbering. Rules are applied in order; the first match determines the type."
+   }
+  ]
+ },
+ {
+  "type": "table",
+  "kind": "simple",
+  "label": null,
+  "caption": null,
+  "note": null,
+  "head": [
+   [
+    {
+     "text": "Order"
+    }
+   ],
+   [
+    {
+     "text": "Type"
+    }
+   ],
+   [
+    {
+     "text": "Rule (abbreviated; full regular expressions in "
+    },
+    {
+     "text": "code/01_build_dataset.py",
+     "mono": true
+    },
+    {
+     "text": ")"
+    }
+   ]
+  ],
+  "rows": [
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "1"
+      }
+     ],
+     [
+      {
+       "text": "Unclassifiable"
+      }
+     ],
+     [
+      {
+       "text": "Breakdown labels (“of which…”, “female”, “regional”) or fewer than four characters"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "2"
+      }
+     ],
+     [
+      {
+       "text": "Reach"
+      }
+     ],
+     [
+      {
+       "text": "Scorecard template wording “benefiting from actions to…”"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "3"
+      }
+     ],
+     [
+      {
+       "text": "Outcome"
+      }
+     ],
+     [
+      {
+       "text": "Income, earnings, sales, profits; mortality, stunting, prevalence; learning; employment status; new firms; people or firms adopting a practice; vaccinated; rates, proportions and shares; “increase/reduction in” (not “in the number of”)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "4"
+      }
+     ],
+     [
+      {
+       "text": "Output"
+      }
+     ],
+     [
+      {
+       "text": "Trained, training, certified, apprenticeship, courses"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "5"
+      }
+     ],
+     [
+      {
+       "text": "Outcome"
+      }
+     ],
+     [
+      {
+       "text": "Jobs, employment (after training rules)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "6"
+      }
+     ],
+     [
+      {
+       "text": "Reach"
+      }
+     ],
+     [
+      {
+       "text": "A person/household/firm noun followed by receiving, provided with, access, benefiting, using, enrolled, reached, supported, covered, served, participating"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "7"
+      }
+     ],
+     [
+      {
+       "text": "Output"
+      }
+     ],
+     [
+      {
+       "text": "Issued, disbursed, loans; constructed, rehabilitated, installed; prepared, approved, established; systems, plans, policies, registries"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "8"
+      }
+     ],
+     [
+      {
+       "text": "Reach"
+      }
+     ],
+     [
+      {
+       "text": "Any remaining person/household/firm noun"
+      }
+     ]
+    ],
+    "span": 1
+   }
+  ]
+ },
+ {
+  "type": "h3",
+  "runs": [
+   {
+    "text": "Appendix B. Mapping the welfare anchor to results"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "table",
+  "kind": "simple",
+  "label": null,
+  "caption": null,
+  "note": null,
+  "head": [
+   [
+    {
+     "text": "González (2026) hurdle for operations"
+    }
+   ],
+   [
+    {
+     "text": "Test for reported results (this paper)"
+    }
+   ],
+   [
+    {
+     "text": "Evidence used"
+    }
+   ]
+  ],
+  "rows": [
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Justification: a binding market failure is diagnosed"
+      }
+     ],
+     [
+      {
+       "text": "Welfare relevance: the result measures a change in welfare"
+      }
+     ],
+     [
+      {
+       "text": "Indicator wording; results-chain type"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Effectiveness: the instrument acts on the distortion"
+      }
+     ],
+     [
+      {
+       "text": "Measurement integrity: the figure is measured, not constructed"
+      }
+     ],
+     [
+      {
+       "text": "Baselines, conversion and disaggregation factors"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Additionality: outcomes would not occur otherwise"
+      }
+     ],
+     [
+      {
+       "text": "Progress judgement: ratings reflect performance, not time"
+      }
+     ],
+     [
+      {
+       "text": "Progress, targets, dates"
+      }
+     ]
+    ],
+    "span": 1
+   }
+  ]
+ },
+ {
+  "type": "table",
+  "kind": "reg",
+  "label": "Table A1",
+  "caption": [
+   {
+    "text": "Test 1 re-estimated on the 400 hand-coded results"
+   }
+  ],
+  "note": [
+   {
+    "text": "Dependent variable = 1 if the hand coder classified the indicator as an outcome. Standard errors clustered by project."
+   }
+  ],
+  "head": [
+   [],
+   [
+    {
+     "text": "Outcome (hand-coded)"
+    }
+   ]
+  ],
+  "rows": [
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "WASH"
+      }
+     ],
+     [
+      {
+       "text": "-0.160**"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.073)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Gender equality actions"
+      }
+     ],
+     [
+      {
+       "text": "-0.012"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.077)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Economic opportunity"
+      }
+     ],
+     [
+      {
+       "text": "0.023"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.084)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Financial services"
+      }
+     ],
+     [
+      {
+       "text": "-0.124"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.077)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Approved FY20-21"
+      }
+     ],
+     [
+      {
+       "text": "0.039"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.057)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Approved FY22-23"
+      }
+     ],
+     [
+      {
+       "text": "0.078"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.052)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Approved FY24"
+      }
+     ],
+     [
+      {
+       "text": "-0.104***"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.035)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "",
+    "cells": [
+     [
+      {
+       "text": "Approved FY25 (new Scorecard)"
+      }
+     ],
+     [
+      {
+       "text": "0.052"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "se",
+    "cells": [
+     [],
+     [
+      {
+       "text": "(0.061)"
+      }
+     ]
+    ],
+    "span": 1
+   },
+   {
+    "cls": "stat",
+    "cells": [
+     [
+      {
+       "text": "Observations"
+      }
+     ],
+     [
+      {
+       "text": "400"
+      }
+     ]
+    ],
+    "span": 1
+   }
+  ]
+ },
+ {
+  "type": "h3",
+  "runs": [
+   {
+    "text": "Data and code availability"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "p",
+  "runs": [
+   {
+    "text": "All data are public WBG Scorecard exports. The replication package contains the clean datasets (CSV and .dta), the Python build script, the R script and the Stata do-file, the hand-coded validation samples, and this paper’s build script: [repository link]."
+   }
+  ]
+ },
+ {
+  "type": "h3",
+  "runs": [
+   {
+    "text": "Use of AI tools"
+   }
+  ],
+  "pagebreak": false
+ },
+ {
+  "type": "authornote",
+  "runs": [
+   {
+    "text": "[Author to confirm before circulation.] The author used Claude (Anthropic) under the author’s direction for drafting analysis code, a first-pass coding of the validation samples, figure preparation and copy editing. All coding decisions, results and interpretations were reviewed by the author, who is responsible for any remaining errors."
+   }
+  ]
+ }
+]

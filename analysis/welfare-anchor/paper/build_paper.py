@@ -466,7 +466,7 @@ of results start from a zero baseline, so they record cumulative contact with th
 level. Second, {pc(K['share_scaled'])} of results are rescaled by a conversion factor, but these account for {pc(K['achieved_from_scaled'])} of the
 {n(ach_tot)} million achieved &ldquo;units&rdquo; reported across the five areas. In health the figure is {pc(T5.loc['health', 'achieved_from_scaled'])}:
 most of the reported number of people receiving health services is derived by multiplying project indicators&mdash;often coverage percentages&mdash;by
-population or household factors. Among indicators measured in percentages, {pc(K['pct_unit_scaled'])} are converted into counts of people in this way.
+population or household factors. Among indicators measured in percentages, {pc(K['pct_unit_scaled'])} are converted into counts of people in this way. To take one example, a health project&rsquo;s count of facilities &ldquo;constructed, renovated, and/or equipped&rdquo; (137 against a target of 119) enters the Scorecard as 1.37 million people receiving health services, through a conversion factor of 10,000 people per facility (project P144893).
 Third, {pc(K['double_counted_share'])} of results are masked to avoid double counting, a sensible correction that also signals how much overlap the
 aggregation must manage.</p>
 {fig2}
